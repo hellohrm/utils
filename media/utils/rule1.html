@@ -1,4 +1,4 @@
-<svg class="calc-rule1 mr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="100">
+﻿<svg class="calc-rule1 mr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="100">
   <defs>
     <path d="M0 0l3 10h-6z" stroke="none" id="A"></path>
     <path d="M0 .5l3 10h-6l3-10h-3v-1h6v1z" stroke="none" id="B"></path>
@@ -11,14 +11,14 @@
     <path fill="none" d="M0 0v39.5"></path>
     <use fill="red" y="50" transform="matrix(-1 0 0 -1 0 100)" xlink:href="#B"></use>
   </g>
-  <text fill="#000" transform="matrix(0 -1 1 0 10.5 86.5)">
+  <text class="txt-before" fill="#000" transform="matrix(0 -1 1 0 10.5 86.5)">
     <tspan x="5.5" y="5.12">08:00</tspan>
   </text>
   <g class="log-after" transform="translate(91.5 19.5)" stroke="red">
     <path fill="none" d="M0 0v39.5"></path>
     <use fill="red" y="50" transform="matrix(-1 0 0 -1 0 100)" xlink:href="#B"></use>
   </g>
-  <text fill="#000" transform="matrix(0 -1 1 0 75.5 87.5)">
+  <text class="txt-after" fill="#000" transform="matrix(0 -1 1 0 75.5 87.5)">
     <tspan x="5.5" y="5.12">08:05</tspan>
   </text>
   <g fill="none" stroke="red">
@@ -32,18 +32,37 @@
   </g>
   <path class="path-arrow" fill="none" d="M46.5 89.5h93" stroke="#00ff2b"></path>
 </svg>
-
+<div>
+    <button type="button" class="btn btn-link">Lay tu trước ra sau</button>
+    <button type="button" class="btn btn-link">Lay tu sau ra truoc</button>
+    <button type="button" class="btn btn-link">Tu giua ra 2 ben</button>
+</div>
 
 
 <style type="text/css">
 
+    #myOverviewDiv {
+      display: none;
+      position: absolute;
+      background-color: white;
+      z-index: 300; /* make sure its in front */
+      border: solid 1px blue;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+
     .sellog-before .log-before,.sellog-after .log-after {
         stroke: #00ff2b;
     }
-    .sellog-before .log-before use,.sellog-after .log-after use{
+
+    .sellog-before .txt-before ,
+    .sellog-after .txt-after, 
+    .sellog-before .log-before use,
+    .sellog-after .log-after use{
             fill: #00ff2b;
         }
-
     .darkcolor text {
         fill: #fff;
     }
@@ -57,45 +76,612 @@
 
 
 </style>
+<style type="text/css">
+    .edit-time-diag-tbar {
+        bottom: 10px;
+        position: absolute;
+        z-index: 2015;
+    }
+        .edit-time-diag-tbar button.btn {
+
+  
+        padding: 1px 6px;
+        border-width: 2px;
+        border-style: outset;
+
+
+            /*border-style: solid;
+          border-width: 1px;
+          border-top-color: black;
+          border-left-color: black;
+          border-right-color: white;
+          border-bottom-color: white;*/
+
+        }
+
+    .keypad .btn.upkeypad {
+        border-top-left-radius: .2rem!important;
+        border-top-right-radius: .2rem!important;
+        border-bottom-right-radius: 0!important;
+        border-left-color: #6c757d!important;
+        /*border-right-color: #6c757d!important;*/
+    }
+
+    /*http://jsfiddle.net/brenna/f4uq9edL/?utm_source=website&utm_medium=embed&utm_campaign=f4uq9edL*/
+    /*https://codepen.io/onyx1812/pen/GRJxmva*/
+    input.levelSlider {
+	    /*-webkit-appearance: none;*/
+	    /*margin: 10px 0;*/
+	    width: 100px;
+        position:relative;
+        /*-moz-appearance: none;*/
+        height:4px;
+    }
+    input.levelSlider:focus {
+	    outline: none;
+    }
+    input.levelSlider::-webkit-slider-runnable-track {
+	    width: 100%;
+	    height: 4px;
+	    cursor: pointer;
+	    animate: 0.2s;
+	    /*background: #03a9f4;*/
+         background: #ddd;
+	    border-radius: 25px;
+        -webkit-appearance: none !important;
+    }
+    input.levelSlider::-webkit-slider-thumb {
+	    height: 20px;
+	    width: 20px;
+	    border-radius: 50%;
+	    /*background: #fff;*/
+	    box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
+	    cursor: pointer;
+	    -webkit-appearance: none;
+	    margin-top: -6px;
+    }
+    input.levelSlider:focus::-webkit-slider-runnable-track,
+    input.levelSlider:focus::-moz-range-track
+     {
+	    background: #03a9f4;
+    }
+
+    input.levelSlider::-moz-range-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -moz-border-radius:50%;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      background: gray;
+      /*border: 1px solid #c5c5c5;*/
+    }
+    input.levelSlider::-moz-range-track {
+        border:none!important;
+        background: #ddd;
+    }
+
+    .zoomctrl .btn{
+        border-radius: 50%!important;
+        padding: 1px 5px!important;
+    }
+
+    .range-value{
+	    position: absolute;
+	    top: 18px;
+    }
+    .range-value span{
+	    width: 30px;
+	    /*height: 24px;
+	    line-height: 24px;*/
+	    text-align: center;
+	    /*background: #03a9f4;*/
+	    color: #fff;
+	    font-size: 11px;
+        top: 5px;
+	    position: absolute;
+	    left: 50%;
+	    transform: translate(-50%, 0);
+	    border-radius: 6px;
+        font-family:"Helvetica Neue","Segoe UI",helvetica,verdana,sans-serif;
+        font-weight:100;
+    }
+    .lightcolor .range-value span {
+        color:#000;
+    }
+
+    .popcontext-menu span{
+        font-size:18px;
+        width:18px;
+        /*height:21px;*/
+    }
+    .popcontext-menu .spansub {
+        font-size:20px;
+        margin-left:auto;
+    }
+    .zoomctrl-0 .zoomctrl,.keypad-0 .keypad ,.closepanel-0 .closepanel,.floatwindow-0 .floatwindow{
+        display:none;
+    }
+
+    .config-size-panel-diag {
+        width:100%;
+        margin-top: -10px;
+        table-layout: fixed;
+    }
+    /*.config-size-panel-diag td:not(:first-child){
+        width:100px;
+    }*/
+        .config-size-panel-diag td {
+            padding: 5px;
+            text-align:right
+        }
+        .config-size-panel-diag thead  td {
+            vertical-align:bottom;
+            text-align:center;
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+
+        .dume-border0 .dx-button-content{
+            padding:0px!important;
+        }
+
+       .pointer-target-back {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            padding-top:10px;
+        }
+</style>
 
 <script type="text/javascript">
     var freeot_rule1=function () { // scoping
         "use strict";
-        function O(elUI, frmEL) { // constructor
+        function O(elUI, e$l,s2Caller, sLA) { // constructor
+            //[0-frmEL, 1-elem, 2-xwindow, 3-terW]
+            var __ = this
+            , s3LA = {
+                vi: {
+                    txR1: ['1. Quy ước chọn thẻ chấm công nếu gần nhau', 'Thời gian chấm công gần nhau bằng hoặc nhỏ hơn:', 'phút', 'Sẽ chọn tính thẻ chấm công phía:'],
+                    iniR1: ["Trước", "Sau"]
+                }
+            }
+            , logMeth = 'html'
+            , tha$ = this;
+            this.WrLOG = function () {
+                e$l[3][logMeth]('<span data-ty="input" data-ty-prompt="⚠"> 1. Quy uoc gom log the gan nhau thanh 1</span>' +
+                    '<span data-ty="input" data-ty-prompt="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"> Cac Log gat the cach nhau nho hon hoac bang 0 ->1 minutes</span>' +
+                    '<span data-ty="input" data-ty-prompt="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"> Log duoc chon de tinh cong Log-1 -> Log-2/span>');
+                logMeth = 'append';
+                //
+                e$l[2].animate({ scrollTop: e$l[2][0].scrollHeight }, 50);
+            };
+
+            this.svg = {};
             this.RU = function (svgR1, logs_effect) {
                 //
-                elUI['step3_utils'].noise_rule = frmEL.find(".timekeeper-rule1").dxCheckBox({
+                var rule1 = e$l[0].find(".timekeeper-rule1")
+                , canel
+                , buildCancel = function (dis) {
+                    if (!canel) {
+                        canel = $('<button style="margin: -3px 10px 0 0; height: 28px;" type="button" class="btn btn-outline-secondary btn-sm cancelSaveAttlog"><i class="fa fa-undo"></i></button>');
+                        rule1.parent().prepend(canel);
+                        canel.on('click', function (e) {
+                            e$l[3].html('');
+                            logMeth = 'html';
+                            e$l[2].scrollTop(0).next().removeClass('d-flex');//xwindow nut tinh lai
+                            canel.css('display', 'none');
+                        });
+                    }
+                    if (dis) {
+                        canel.css('display', '');
+                    } else {
+                    }
+                }
+                , Changing = function () {
+                    e$l[2].next().addClass('d-flex');//xwindow nut tinh lai
+                    buildCancel(true);
+                    tha$.WrLOG();
+                };
+
+
+
+                elUI['step3_utils'].noise_rule = rule1.dxCheckBox({
                     value: true,
+                    onValueChanged: function (e) {
+                        Changing();
+                    }
                 }).dxCheckBox('instance');
 
-                elUI['step3_utils'].noise_spec = frmEL.find(".logs-spacing").html('').dxNumberBox({
+                elUI['step3_utils'].noise_spec = e$l[0].find(".logs-spacing").html('').dxNumberBox({
                     min: 1,
                     max: 500,
                     value: 5,
                     width: 50,
                     onValueChanged: function (e) {
-                        debugger;
+                        var t1 = new Date(new Date('2021/1/1').setHours(8, e.value, 0, 0)),
+                            t2 = dayjs(t1).format('HH:mm');
+                        svgR1.find('.txt-after tspan').text(t2);
+                        //
+                        Changing();
                     }
                 }).dxNumberBox('instance');
                 //
                 elUI['step3_utils'].logs_effect = logs_effect.html('').dxSelectBox({
-                    items: [{ id: "before", dis: "Before" }, { id: "after", dis: "After" }],
+                    items: [{ id: "before", dis: (sLA !== 'en') ? s3LA[sLA].iniR1[0] : "Before" }, { id: "after", dis: (sLA !== 'en') ? s3LA[sLA].iniR1[1] : "After" }],
                     displayExpr: "dis",
                     valueExpr: "id",
                     value: "before",
                     width: 100,
                     onValueChanged: function (e) {
                         //
-                        var v = svgR1.oV[e.value];
+                        var v = __.svg[e.value];
                         svgR1.find('.sel-arrow').attr('transform', v[0]);
                         svgR1.find('.path-arrow').attr('d', v[1]);
                         //
                         svgR1.removeClass().addClass('sellog-' + e.value);
                         //
+                        //
+                        Changing();
                     }
                 }).dxSelectBox('instance');
+                //
+                //var diagConfig = st('getItem', elUI.s3dbTB[0]);
+                elUI['step3_utils'].editConfig = {
+                    focusBack: 1,// 0: timeEditor, 1 Cell this option for recieve back focus,
+                    panelSZ:{ 0: 1000, 1: 500, 2: 1200, 3: 400, 4: 200, 5: 500 }
+                }
+
+                __.svg['before'] = [svgR1.find('.sel-arrow').attr('transform'), svgR1.find('.path-arrow').attr('d')];
+                __.svg['after'] = ["matrix(-.25881905 .96592583 -.96592583 -.25881905 113 77.06018495)", 'M110 89.5h93'];
+                //
+                if (sLA !== 'en') {
+                    rule1.closest('.StepTitle-rule').find('[class^=xt]').each(function (i, el) {
+                        el.innerHTML = s3LA[sLA].txR1[i];
+                    });
+                };
+                //
             };
+
+            this.exPopUp = function (kind) {
+
+                var numB = [],
+                    v$a = elUI['step3_utils'].editConfig.panelSZ,// { 0: 1000, 1: 500, 2: 1200, 3: 400, 4: 200, 5: 500 },
+                    lostFC=0,
+                    fcs0 = function (idx) {
+                        numB[idx].focus();
+                        numB[idx]._$element.find('.dx-texteditor-input').select();
+                        //var cat=numB[0]._$element.find('.dx-texteditor-input')[0];
+                        //cat.setSelectionRange(0, cat.value.length);
+                    },
+                    gMi = function (i) {
+                        if (i < 3) return v$a[1];
+                        return v$a[4];
+                    },
+                    gMa = function (i) {
+                        if (i < 3) return v$a[2];
+                        return v$a[5];
+                    },
+                    change0_3 = function (e, atE) {
+                        var setV = null;
+                        //
+                        //console.log('change0_3 ' + new Date().getTime());
+                        //
+                        if (e.value < numB[atE + 1].option('value')) {
+                            setV = atE + 1;
+                        } else if (e.value > numB[atE + 2].option('value')) {
+                            setV = atE + 2;
+                        };
+                        //
+                        if (setV !== null) {
+                            setV = numB[setV].option('value');
+                            e.component.setV = setV;// trap change lan 2
+                            e.component.option('value', setV);
+                        };
+                        //
+                    },
+                    change1_4 = function (e, atE) {
+                        var setV = null;
+                        //
+                        //console.log('change1_4 ' + new Date().getTime());
+                        //
+                        if (e.value > numB[atE - 1].option('value')) {
+                            setV = atE - 1;
+                            setV = numB[setV].option('value');
+                            e.component.setV = setV;// trap change lan 2
+                            e.component.option('value', setV);
+                        };
+                    },
+                    change2_5 = function (e, atE) {
+                        var setV = null;
+                        //
+                        //console.log('change2_5 ' + new Date().getTime());
+                        //
+                        if (e.value < numB[atE - 2].option('value')) {
+                            setV = atE - 2;
+                            setV = numB[setV].option('value');
+                            e.component.setV = setV;// trap change lan 2
+                            e.component.option('value', setV);
+                        };
+                    },
+                    sizeChanged = function (e) {
+                        //console.log('lostFC: ' + lostFC);
+                        var atE = parseInt(e.element.attr('tabidx'));
+                        if ([0, 3].indexOf(atE) > -1) {
+                            change0_3(e, atE);
+                        } else if ([1, 4].indexOf(atE) > -1) {
+                            change1_4(e, atE);
+                        } else {
+                            change2_5(e, atE);//giong tren
+                        };
+                    },
+
+                    clickXY = null,
+                    pointerBack=[],
+
+                    fuckSZ =$('<div/>').appendTo(kind.el).dxPopup({
+                    contentTemplate: function (el) {
+                        var frm = $('<table class="config-size-panel-diag">' +
+                            '<thead><tr class="mb-1"><td></td><td>gia tri</td><td>Kich thuoc toi thieu</td><td>Kich thuoc toi da</td></tr></thead>' +
+                             '<tbody><tr class="mb-2"><td>chieu dai:</td><td class="w"></td><td class="miw"></td><td class="maw"></td></tr>' +
+                               '<tr><td>chieu rong:</td><td class="h"></td><td class="mih"></td><td class="mah"></td></tr></tbody>' +
+                            '</table>' + 
+                            //'<p class="text-center mt-3">Me kiep may lam kho tao</p>' +
+                            '<div class="second-group pointer-target-back">Quy uoc noi nhan con tro chuot</div>');
+                        //
+                        el.append(frm);
+                        //
+                        pointerBack[0]=$("<div/>").appendTo(el.find('.second-group')).dxSelectBox({
+                            items: [{ id: 0, dis: "(Mac dinh)" }, { id: 1, dis: "Dieu khien nhap lieu ngay gio" }],
+                            displayExpr: "dis",
+                            valueExpr: "id",
+                            value: 0,
+                            onValueChanged: function (e) {
+                                pointerBack[1].option('disabled', false);
+                            }
+                        }).dxSelectBox('instance');
+
+
+                        frm.find('tbody td:not(:first-child)').each(function (i, td) {
+                            numB.push($('<div c tabidx=' + i + '/>').appendTo($(td))
+                                .dxNumberBox({
+                                    value: v$a[i],
+                                    format: "#",
+                                    min:gMi(i),
+                                    max:gMa(i),
+                                    onKeyDown: function (e) {
+                                        e.event.stopPropagation();
+                                        if (e.event.which == 9) {//tab key
+                                            if (e.component._$element.attr('tabidx') == "5") {
+                                                e.event.preventDefault();
+                                                fcs0(0);
+                                            }
+                                        } else if (e.event.which == 13) {//enter
+                                            e.event.preventDefault();
+                                            var atDog = parseInt(e.component._$element.attr('tabidx'));
+                                            if (atDog == 5) {
+                                                fcs0(0);
+                                            } else {
+                                                fcs0(atDog + 1);
+                                            };
+                                        } else if (e.event.which == 27) {//ESC
+                                            fuckSZ.hide();
+                                        };
+                                    },
+                                    onFocusOut: function (e) {
+                                        lostFC = parseInt(e.element.attr('tabidx'));
+                                        //console.log('onFocusOut: ' + lostFC);
+                                    },
+                                    onFocusIn: function (e) {
+                                        lostFC = parseInt(e.element.attr('tabidx'));
+                                        //console.log('onFocusIn: ' + lostFC);
+                                    },
+                                    onValueChanged: function (e) {
+                                        if (e.value === null) {
+                                            var gP = 'max';
+                                            if ([1, 4].indexOf(lostFC) > -1) gP = 'min';
+                                            //
+                                            e.component.option("value", e.component.option(gP));
+                                        };
+                                        if (e.component.setV != e.value) {
+                                            sizeChanged(e);
+                                            pointerBack[1].option('disabled', false);
+                                        };
+                                    }
+                                }).dxNumberBox('instance')
+                            );
+                        });
+
+
+
+                    },
+                    onContentReady: function (e) {
+                        //
+                        e.component._$popupContent.addClass('gridpopupeditor gridpopupeditor').css({ 'padding': '20px 20px 5px', 'height': 'auto' });
+                        //
+                        //
+                        var keyDo = function (e) {//   
+                            //console.log(e.which);
+                        }
+                        , mouseHack = function (e) {
+                            if ($(e.target).closest('.dx-numberbox').length == 0) {// ko click vao numbox thi focus ve cai gan nhat bi lost focus
+                                fcs0(lostFC);
+                            }
+                        }
+                        , dogEL = e.component._$content;
+                        //
+                        if (!dogEL.hasClass('hackkeydown')) {
+                            dogEL.on('keydown', keyDo);
+                            dogEL.on('click', mouseHack);
+                            dogEL.parent().on('click', function (e) {
+                                //e.stopPropagation();
+                                mouseHack(e);
+                                //console.log('click');
+                           
+                            });
+                            dogEL.on('mouseleave', function (e) {
+                                mouseHack(e);
+                                //console.log('mouse leave');
+                            });
+                            
+                            dogEL.addClass('hackkeydown');//flag khong add su kien hack keydown
+                        };
+                        //
+                    },
+
+                    width:400,
+                    height: 290,
+                    container: kind.el.closest('#app'),
+                    visible: false,
+                    shading: true,
+                    //shadingColor:'transparent',
+                    dragEnabled:true,
+                    //closeOnOutsideClick: function (e) {
+                    //    //debugger;
+                    //    //if ($(e.target).hasClass('dx-overlay-wrapper')) {
+                    //    //    //console.log('dx-overlay-wrapper');
+                    //    //    var x = e.clientX, y = e.clientY;
+                    //    //    clickXY = function () {
+                    //    //        clickXY = null;
+                    //    //        var el = document.elementFromPoint(x, y);
+                    //    //        //console.log('if (el) el.click();');
+                    //    //        if (el) el.click();
+                    //    //    }
+                    //    //};
+                    //    return true;
+                    //    //return e.target === $("#someElement").get()[0];
+                    //},
+                    showCloseButton: true,
+                    position: {
+                        at: "top",
+                        my: "top",
+                        of: kind.showat
+                    },
+                    onShowing: function (e) {
+                        pointerBack[1].option('disabled', true);
+                    },
+                    onShown: function (e) {
+                        //
+                        clickXY = null;//reset
+                        elUI['step3_utils'].editPO.fuckSZ_Shown = 1;
+                        fcs0(0);
+                        //
+                    },
+                    onHiding: function (e) {
+                        //
+                        //console.log("exPopUp " + 'onHiding');
+
+                        elUI['step3_utils'].editPO.fuckSZ_Shown = 0;
+                        //
+                        kind.fn['onHiding'](e);
+                        //
+                        // mong muon sau khi hide thi se chuyen focus vao timeedit,
+                        // hide co 2 nguyen nhan, 1: nut close hoac key esc
+                        //2 click out side **** viec nay co the phia sau overlay se la 1 nut lenh...
+                        //=>timeout nay se bi cancel o 2 cho: 
+                        //1. co the user click chuot phai vao diagam de show context menu,
+                        //2. clickXY click command button
+                        //elUI['step3_utils'].editPO.fuckSZ_timeoutFocus = setTimeout(function () {
+                        //    //console.log('onHiding editPO.fuckSZ_timeoutFocus');
+                        //    elUI['step3_utils'].edit_time.focus();
+                        //}, clickXY?500: 200);
+                        //
+                    },
+                    onHidden: function (e) {
+                        //
+                        //console.log("exPopUp " + 'onHidden');
+                        //
+                        //if (clickXY && typeof clickXY === "function") {
+                        //    clickXY();
+                        //};
+                        //
+          
+                    },
+                    toolbarItems: [{
+                        widget: "dxButton",
+                        toolbar: "top",
+                        location: "before",
+                        options: {
+                            stylingMode: "text",
+                            disabled:true,
+                            elementAttr: {
+                                class: "dume-border0"
+                            },
+                            template: function (data, index, element) {
+                                //debugger;
+                                return $('<div class="btn btn-outline-warning btn-sm"><i class="ti-save"></i> Luu Thay doi</div>');
+                            },
+                            onClick: function (e) {
+                                //
+                                srclocked(true);
+                                //
+                                setTimeout(function () {
+                                    kind.fn['save'].diagsetting({
+                                        sz: $.map(numB, function (n, i) {
+                                            return { i: n.option('value') };
+                                        })
+                                        , pt: pointerBack[0].option('value')
+                                    });
+                                }, 10);
+                                //
+                            },
+                            onContentReady: function (e) {
+                                pointerBack[1] = e.component;
+                            }
+                        }
+                    }]
+                    }).dxPopup("instance");
+
+                return fuckSZ;
+            }
+
         };
         return O;
     }();
+
+    
+
+    (function (factory) {
+        "use strict";
+        //debugger;
+        if (!_o$h.hasOwnProperty('test')) _o$h['test'] = factory(null);//pass pubArgs later if need
+    })(function (pubArgs) {
+        "use strict";
+        //debugger;
+
+        return (function () { // scoping
+            var privateSharedVar = 'foo';
+            function privateSharedFunction() {
+                // has access to privateSharedVar
+                // may also access publicSharedVar via explicit O.prototype
+                // can't be called via this
+            }
+            function O(opts) { // constructor
+                //debugger;
+                privateSharedVar = opts;
+                var privateInstanceVar = 'bar';
+                this.publicInstanceVar = 'baz';
+                function privateInstanceFunction() {
+                    // has access to all vars
+                    // can't be called via this
+                };
+                this.publicInstanceMethod = function () {
+                    //debugger;
+                    // has access to all vars
+                    // also known as a privileged method
+                };
+            }
+            O.prototype.publicSharedVar = 'quux';
+            O.prototype.publicSharedMethod = function (param) {
+                // has access to shared and public vars
+                // canonical way for method creation:
+                // try to use this as much as possible
+            };
+            return O;
+            //
+        })();
+        //
+    });
+
 </script>
