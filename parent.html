@@ -74,15 +74,75 @@
         }
     </script>
 
+    <script type="text/javascript">
+        var wait_conn = function (addr) {
 
+            //https://socket.io/docs/v3/client-initialization/
+            //https://stackoverflow.com/questions/8970880/cross-domain-connection-in-socket-io
+            //https://stackoverflow.com/questions/23406163/socket-io-client-how-to-set-request-header-when-making-connection
+
+            var addr = "wdms.dnd.vn",
+                regex = /^(http|https):\/\/[^:\/]+(?::(\d+))?/,
+                match = addr.match(regex),
+                tmp = document.createElement('a'),
+                socOPT = function () {
+                    return {//io(addr, {//
+                        auth: {
+                            token: 'token-secure-socket',
+                            ireg: {
+                                sn: "1234",
+                                tz: "7",
+                                grp: "xyz",
+                                tep: 0
+                            }
+                        }
+                        ,secure: true
+                        //, path: '/octagon/socket.io'
+                        , transports: ["websocket", "polling"] // use WebSocket first, if available
+                    }
+                };
+
+            if (match === null) {
+                addr = 'http://' + addr;
+                //} else {
+                //    return match[2] ? match[2] : { http: "80", https: "443" }[match[1]];
+            };
+
+            tmp.href = addr;
+            //
+            var elUI_socIO = io(tmp.hostname + ":11015", socOPT());
+            //elUI_socIO.emit('joining msg', "abcdef");
+            //
+            //https://viblo.asia/p/mot-so-events-xu-ly-loi-trong-socketio-924lJpEaKPM
+            elUI_socIO.on('connect', function (s) {
+                debugger;
+
+            }).on('connect_error', function (err) {
+                debugger;
+
+            }).on('reconnect', function (n) {
+                debugger;
+            }).on('disconnect', function (r, e) {
+                //
+                debugger;
+            });
+            //
+        }
+        
+        </script>
 </head>
 <body>
 
-    <iframe id="ifrmChild" src="https://zkteco.pages.dev/iframe_content.html" frameborder="0" width="500" height="200" ></iframe>
+    <iframe id="ifrmChild" src="https://zkteco.pages.dev/child.html" frameborder="0" width="500" height="200" ></iframe>
     <br />
 
     <textarea id="taRecvMessage" rows="20" cols="20" ></textarea>
     <input type="button" value="Test" onclick="SendMessage();" />
+
+
+    <input type="button" value="Test" onclick="wait_conn();" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    
 
 </body>
 </html>
