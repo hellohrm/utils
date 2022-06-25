@@ -80,8 +80,8 @@
             //https://socket.io/docs/v3/client-initialization/
             //https://stackoverflow.com/questions/8970880/cross-domain-connection-in-socket-io
             //https://stackoverflow.com/questions/23406163/socket-io-client-how-to-set-request-header-when-making-connection
-
-            var addr = "zkteco.tk",
+            //var socket = io.connect('https://localhost:443/',{secure: true});
+            var addr = "zkteco.dnd.vn",
                 regex = /^(http|https):\/\/[^:\/]+(?::(\d+))?/,
                 match = addr.match(regex),
                 tmp = document.createElement('a'),
@@ -103,14 +103,15 @@
                 };
 
             if (match === null) {
-                addr = 'http://' + addr;
+                addr = 'https://' + addr;
                 //} else {
                 //    return match[2] ? match[2] : { http: "80", https: "443" }[match[1]];
             };
 
             tmp.href = addr;
             //
-            var elUI_socIO = io(tmp.hostname + ":11015", socOPT());
+            var elUI_socIO = io(tmp.hostname + ":444", socOPT());
+            //var elUI_socIO = io.connect('https://zkteco.dnd.vn:444/', { secure: true });
             //elUI_socIO.emit('joining msg', "abcdef");
             //
             //https://viblo.asia/p/mot-so-events-xu-ly-loi-trong-socketio-924lJpEaKPM
