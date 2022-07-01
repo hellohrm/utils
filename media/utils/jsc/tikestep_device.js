@@ -506,7 +506,7 @@
                 };
 
             if (match === null) {
-                addr = window.location.protocol+ '://' + addr;
+                addr = window.location.protocol+ '//' + addr;
                 //} else {
                 //    return match[2] ? match[2] : { http: "80", https: "443" }[match[1]];
             };
