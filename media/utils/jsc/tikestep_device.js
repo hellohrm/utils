@@ -851,7 +851,7 @@
                 //
                 if (!csPrnt) {
                     //debugger;
-                    _gsC(srcpf$ + '/media/js/Termynal.js', 'js', function () {
+                    _gsC(srcpf$ + '/media/js/termynal.js', 'js', function () {
                         csPrnt = new Termynal(terMSG[0], {
                             cbNewLine: function () {
                                 //debugger;
