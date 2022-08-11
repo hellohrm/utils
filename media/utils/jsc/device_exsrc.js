@@ -40,7 +40,7 @@
 
 try {
     _gsC('https://hellohrm.github.io/utils//media/utils/jsc/device_exsrc.css', 'css', function () {
-        alert('device_exsrc.css');
+        __exscr();
     }, 'device_exsrc.css');
 } catch (err) {}
 
