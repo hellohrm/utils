@@ -1,2 +1,12 @@
-﻿body {
-}
+﻿.t_i{max-width:780px; height:auto; margin: auto; border-right:0px solid #000; border-top:0px solid #000} 
+.t_i_h{width:100%; overflow-x:hidden;} 
+.ee{width:100%} 
+.t_i_h table td{border-left:0px solid #000;border-right:0px solid #000; border-bottom:0px solid #000; height:20px; text-align:center} 
+.cc{width:100%; height:380px; border-bottom:0px solid #000; border-right:0px solid #000; overflow:auto;} 
+.cc table,.t_i_h table{width:100%; } 
+.cc table td{font-size: 12px; border-left:0px solid #000;border-bottom:0px solid #000; border-right:0px solid #000; text-align:left} 
+.cc table td:first-child{text-align:center}
+.cc table td:last-child{width:100px; max-width:100px}
+.t_i td{padding:5px;color:#666}
+.Table_Header{font-size:1rem}
+.delmoter{font-size: 0.8rem;position: absolute;right: 15px; background: red;padding: 2px 5px 1px;}

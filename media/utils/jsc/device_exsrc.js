@@ -38,15 +38,11 @@
         }
     };
 
-//try {
-//    _gsC('https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js', 'js', function () {
-//        _gsC('https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css', 'css', function () {
-//            window['loadSWeet']();
-//        }, 'sweetalert2.min.css');
-//    }, 'sweetalert2.min.js');
-//} catch (err) {
-//    console.log('close err');
-//}
+try {
+    _gsC('https://hellohrm.github.io/utils//media/utils/jsc/device_exsrc.css', 'css', function () {
+        alert('device_exsrc.css');
+    }, 'device_exsrc.css');
+} catch (err) {}
 
 
-alert('here');
+
