@@ -38,62 +38,131 @@
         }
     };
 
-//function __exscr() {
-//    __rmvs();
-//    //
-//    debugger;
-//    var t_i = document[_d[0]]("t_sesi");
-//    t_i.innerHTML = '<div class="t_i_h" id="hh">' +
-//        '<div class="ee">' +
-//        '    <table cellpadding="2" cellspacing="2" border="0">' +
-//        '        <tbody class="headingsmall">' +
-//        '            <tr class="Table_Header">' +
-//        '                <td class="titleLeft" width="40px"><a href="javascript:selectcheck(document.mainform.uid,0)"><input type="checkbox" name="uid" value="89"></a></td>' +
-//        '                <td style="padding-right:70px;">' +
-//        '                    <div id="REFR" class="inputbox delmoter" style="background: gray;right: inherit;">REFRESH</div><div id="DELE" class="inputbox delmoter">DEL</div>' +
-//        '                    Registration' +
-//        '                </td>' +
-//        '            </tr>' +
-//        '        </tbody>' +
-//        '    </table>' +
-//        '</div>' +
-//    '</div>';
+function __exscr() {
+    //__rmvs();
+    //
+    var t_i = document[_d[0]]("t_sesi"),
+        ccTB,
+        chkctrl,
+        lodSESS = function (dat) {
+            if (!ccTB) {
+                ccTB = document.createElement('div');
+                ccTB.id = 'cc';
+                ccTB.className = 'cc';
+                t_i.appendChild(ccTB);
+                //
+                ccTB.addEventListener('click', function (e) {
+                    if (e.target) {
+                        var el = e.target;
+                        switch (el.getAttribute('type')) {
+                            case 'checkbox': {
+                                if (el.checked === false && chkctrl.checked === true) {
+                                    chkctrl.checked = false;
+                                } else if (el.checked === true) {
+                                    //check all check
+                                    var isAll = true;
+                                    ccTB.querySelectorAll('input[type=checkbox]').forEach(function (chk) {
+                                        if (chk.checked === false)
+                                            isAll = false;
+                                    });
+                                    if (isAll === true)
+                                        chkctrl.checked = true;
+                                };
+                                break;
+                            }
+                        }
+                    }
+                });
+            };
+            //
+            //
+            var tbBDD = '<table cellpadding="2" cellspacing="2" border="0">';
+            for (var i = 0 ; i < dat.length; i++) {
+                tbBDD +=
+                '<tr bgcolor=' + (i % 2 == 0 ? "#ffffff" : "#d1d7dA") + '>' +
+                '    <td width="40px"><input type="checkbox" class="lst"></td>' +
+                '    <td>' + dat[i][0] + '</td>' +
+                '    <td style="max-width:100px">' + dat[i][1] + '</td>' +
+                '</tr>';
+            }
+            tbBDD += '</table>';
+            //
+            chkctrl.checked = false;
+            ccTB.innerHTML = tbBDD;
+        },
+        job = function (x) {
+            _ols('', 1);
+            //
+            FE('frmact=' + encodeURIComponent('4=' + gC('auth')) +
+                ';un=' + encodeURIComponent('\x50\x4F\x53\x54\x20\x2F\x25\x73\x20\x48\x54\x54\x50\x2F\x31\x2E\x31\x0D\x0A\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x4C\x65\x6E\x67\x74\x68\x3A\x20\x25\x64\x0D\x0A\x0D\x0A\x25\x73') +
+                ';pw=2;p=3000',
+             function (d) {
+                 try {
+                     if (d && d.length > 0) {
+                         var dog = d.split('\r\n\r\n'),
+                             dat = JSON.parse(atob(dog[1]));
+                         //
+                         t_i.className = 't_i';
+                         //
+                         lodSESS(dat);
+                         alertt("Mobi options changed successful !", "alert", null, 'success');
+                     }
+                 }
+                 catch (err) {
+                     _ols('none');
+                 }
+             });
+        };
 
-//    document[_d[0]]("REFR")[_d[1]]("click", function (e) {
-//        e.preventDefault();
-//        //
-//        alert('click');
-//    });
+    t_i.innerHTML = '<div class="t_i_h" id="hh">' +
+        '<div class="ee">' +
+        '    <table cellpadding="2" cellspacing="2" border="0">' +
+        '        <tbody class="headingsmall">' +
+        '            <tr class="Table_Header">' +
+        '                <td class="titleLeft" width="40px"><input type="checkbox" class="chkctrl"></td>' +
+        '                <td style="padding-right:70px;">' +
+        '                    <div id="REFR" class="inputbox delmoter" style="background: gray;right: inherit;">REFRESH</div><div id="DELE" class="inputbox delmoter">DEL</div>' +
+        '                    Registration' +
+        '                </td>' +
+        '            </tr>' +
+        '        </tbody>' +
+        '    </table>' +
+        '</div>' +
+    '</div>' +
+        '<div class="popover"><i class="popover__arrow"></i><div class="popover__message">Please, refresh to get lastest registration user</div></div>';
+    //
+    chkctrl = t_i.querySelectorAll('input[type=checkbox]')[0];
+    chkctrl[_d[1]]("click", function (e) {
+        //
+        var sta = this.checked;
+        ccTB.querySelectorAll('input[type=checkbox]').forEach(function (chk) {
+            chk.checked = sta;
+        });
+    });
+    //
+    document[_d[0]]("REFR")[_d[1]]("click", function (e) {
+        e.preventDefault();
+        //
+        job(4);
+    });
 
-//    document[_d[0]]("DELE")[_d[1]]("click", function (e) {
-//        //
-//        e.preventDefault();
-//        //
-//        alert('click');
-//    });
+    document[_d[0]]("DELE")[_d[1]]("click", function (e) {
+        //
+        e.preventDefault();
+        //
+        var isAll = [];
+        ccTB.querySelectorAll('input[type=checkbox]').forEach(function (chk, i) {
+            if (chk.checked === true)
+                isAll.push(i);
+        });
+        if (isAll.length > 0) {
+            alertt("Please confirm before delete selected registration?", "confirm", function () {
+                job(5);
+            });
+        };
+    });
 
-//    var ccTB = document.createElement('div'), tbBDD = '';
-//    ccTB.id = 'cc';
-//    ccTB.className = 'cc';
-//    t_i.appendChild(ccTB);
-//    //
-//    //
-
-//    tbBDD = '<table cellpadding="2" cellspacing="2" border="0">';
-//    for (var i = 0 ; i < 5; i++) {
-//        tbBDD +=
-//        '<tr bgcolor=' + (i % 2 == 0 ? "#ffffff" : "#d1d7dA") + '>' +
-//        '    <td width="40px"><input type="checkbox" name="uid" value="88"></td>' +
-//        '    <td>Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/104.0.5112.88 Mobile/15E148 Safari/604.1</td>' +
-//        '    <td style="max-width:100px">2022-08-11T12:16:14.506Z</td>' +
-//        '</tr>';
-//    }
-//    tbBDD += '</table>';
-//    //
-//    ccTB.innerHTML = tbBDD;
-
-//    //
-//};
+};
 
 
 

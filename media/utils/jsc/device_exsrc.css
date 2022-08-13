@@ -10,7 +10,14 @@
 .t_i td{padding:5px;color:#666}
 .Table_Header{font-size:1rem}
 .delmoter{font-size: 0.8rem;position: absolute;right: 15px; background: red;padding: 2px 5px 1px;}
+.t_i.empty .chkctrl,.t_i.empty #DELE{
+    display:none!important;
+}
+.t_i.empty .popover{
+    display:block!important;
+}
 .popover {
+    display:none;
     position: absolute;
     max-width: 200px;
     background-color: #fff;
