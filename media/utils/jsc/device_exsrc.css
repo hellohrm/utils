@@ -10,3 +10,41 @@
 .t_i td{padding:5px;color:#666}
 .Table_Header{font-size:1rem}
 .delmoter{font-size: 0.8rem;position: absolute;right: 15px; background: red;padding: 2px 5px 1px;}
+.popover {
+    position: absolute;
+    max-width: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 55px;
+    margin-top: 5px;
+}
+.popover__arrow {
+    position: absolute;
+    left: 13px;
+    bottom: 100%;
+    overflow: hidden;
+    width: 34px;
+    height: 20px;
+}
+.popover__arrow:before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg) skew(-5.19442891deg, -5.19442891deg);
+    background-color: #fff;
+}
+.popover__arrow:before {
+    border: 1px solid #ccc;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1);
+}
+.popover__message {
+    padding: 15px 10px;
+    color: #333;
+    font: 15px/20px sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
