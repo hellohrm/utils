@@ -1,0 +1,1457 @@
+﻿<div class="my_filter_builder no-filter-giua height-transition-hidden">
+    <div class="list-headfilter selfilter-float">
+        <!--<div class="list-before">
+            <button class="btn btn-success btn-sm"><i class="ti-save"></i></button>
+        </div>-->
+        <div class="list-ctrl"></div>
+        <!--<div class="list-after">
+            <button class="btn btn-success btn-sm"><i class="ti-save"></i></button>
+        </div>-->
+    </div>
+    <div class="pfs_scroll mt-1">
+        <div class="card-deck">
+            <!--https://getbootstrap.com/docs/4.0/examples/pricing/-->
+            <div class="card">
+                <div class="card-body">
+                    <div class="left_dieukien my_filter_dieukien"></div>
+                </div>
+            </div>
+            <div class="card chuivaoday">
+                <div class="card-body"></div>
+            </div>
+            <div class="card btncmd-container">
+                <div class="nutlenh card-body d-flex align-self-center m-2">
+                    <div class="btncontainer text-center align-self-center">
+                        <div type="div" class="btn btn-sm btn-outline-success done_loc">Thuc hien loc</div>
+                        <div type="div" class="btn btn-sm btn-outline-warning"><i class="dx-icon dx-icon-runner dx-list-item-icon float-left mr-1"></i> Bo loc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+
+    .part_fullscreen .pfs_scroll{
+        position:relative;    /**************** Dinh hinh Top cho pefect scroll bar */
+        max-height:200px;
+    }
+
+    .my_filter_builder {
+        text-align: center;
+        background-color:#fff;
+       /*position:relative;    *************** khong duoc dung position relative, vi khi moi load len thi listfielter can float, absolute */
+    }
+
+    .darkcolor .my_filter_builder {
+        background-color:#2a2a2a;
+    }
+
+    *::-ms-backdrop, .dx-buttongroup-wrapper{
+        display:inline-flex!important; /*ie11 dut nut nay len so voi 2 nut con lai*/
+    }/*hack ie11*/
+
+    .my_filter_builder .card-deck {
+        margin: 0 !important;
+        /*display: inline-flex;*/
+    }
+
+    .my_filter_builder .card {
+        min-width: 300px;
+        background: none !important;
+        border: none !important;
+        /*border: 1px solid;*/
+        margin: 0 !important;
+        padding: 0 5px;
+    }
+
+    .my_filter_builder .card-body {
+        padding: 0 !important;
+    }
+    /**************************************************************************
+    **************** START css dung cho combobox list filter *****************/
+    .my_filter_builder .selfilter-float div[data-dx_placeholder] ,.my_filter_builder .selfilter-float input{
+        font-style:italic;
+    }
+    .my_filter_builder .selfilter-float{
+        width: 100%;
+        /*display:flex;*/
+    }
+    .my_filter_builder .selfilter-float .list-ctrl{/*https://codepen.io/jesuarva/pen/qowdxR*/
+        width: 100%;
+        height:auto;
+        visibility: visible; 
+        position: relative;
+        border-width: 0 0 1px 0;
+    }
+
+    .height-transition-hidden.my_filter_builder .selfilter-float{ /*** khi moi load len ******/
+        height:0px;
+        visibility: hidden; 
+        position: absolute;
+    }
+    .height-transition-hidden.my_filter_builder .selfilter-float.opened .list-ctrl,
+    .height-transition-hidden.my_filter_builder .selfilter-float.focused .list-ctrl{/*** nhan nut filter, nhung chua chon value ******/
+        z-index:1;
+        height:auto;
+        visibility: visible; 
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        max-width: 500px;
+        border-width:  1px;
+    }
+    /**************** END css dung cho combobox list filter *****************
+    *************************************************************************/
+
+    .mobil-min-w .card {
+        min-width: 220px !important;
+    }
+
+    .my_filter_builder.mobil-min-w .dx-filterbuilder-item-value-text {
+        display: inline-grid;
+    }
+
+    .my_filter_dieukien .dx-filterbuilder-group-item {
+        display: inline-flex !important;
+        align-items: flex-start; /*thuoc tinh nay dung de prevent child strech height IE11 */
+        max-width: 100%;
+    }
+
+    .my_filter_dieukien .dx-filterbuilder-text:not(.dx-filterbuilder-item-value) {
+        align-self: start; /*thuoc tinh nay dung de prevent child strech height*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap !important;
+    }
+
+    .my_filter_dieukien .dx-filterbuilder-item-value .dx-filterbuilder-range {
+        display: inline-flex !important;
+    }
+
+    @media (min-width: 990px) {
+        .no-filter-giua.my_filter_builder .left_dieukien {
+            display: inline-block;
+        }
+        /*.my_filter_builder.no-filter-giua .btncmd-container{
+            max-width:400px;
+        }*/
+    }
+
+    .no-filter-giua.my_filter_builder .chuivaoday {
+        display: none;
+    }
+
+    .in-popup-state .duy-nhat-scroll{
+        height: calc(100% - 75px);
+        overflow: auto;
+        position: absolute;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .in-popup-state .hieu-filter-header {
+        display: none !important;
+    }
+
+    .luutenkhac .in-popup-state,.luutenkhac .nut-loc{/*save as other filter name*/
+        display:none!important;
+    }
+    .luutenkhac .dx-popup-normal{
+        width:500px!important;
+        max-width:100%!important;
+        height:150px!important;
+    }
+    .other-more,.show-orther-more{
+        display:none;
+    }
+    .luutenkhac .other-more,.luutenkhac .show-orther-more{
+        display:block;
+    }
+    .canthiep-menu-dropdown .dx-list-item:not(.dx-state-invisible){
+        display:block!important;/*dropdown width fixed 100% content*/
+    }
+    /**************************************************************************
+    https://codepen.io/colinkeany/pen/wBOQQZ
+    **************** START dau hieu nhan biet dang active filter **************/
+    .sigloc {
+      height: 120px;
+      width: 120px;
+      margin: 250px auto 0;
+      position: relative;
+    }
+    .vtron {
+      background-color:#fff;
+      height: 120px;
+      width: 120px;
+      display: block;
+      border: 5px solid #00baff;
+      border-radius: 100px;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      animation-name:vtron;
+      animation-duration:1s;
+      animation-timing-function:linear;
+      animation-delay:0s;
+      animation-iteration-count:infinite;
+      animation-direction:normal;
+      animation-play-state:running;
+      -webkit-animation-name:vtron;
+      -webkit-animation-duration:1s;
+      -webkit-animation-timing-function:linear;
+      -webkit-animation-delay:0s;
+      -webkit-animation-iteration-count:infinite;
+      -webkit-animation-direction:normal;
+      -webkit-animation-play-state:running;
+    }
+    .faa {
+      font-size: 42px;
+      color: #00baff;
+      bottom: 27px;
+      position: absolute;
+      left: 50%;
+      margin-left: -18px;
+      animation-name:mten;
+      animation-duration:1s;
+      animation-timing-function:linear;
+      animation-delay:0s;
+      animation-iteration-count:infinite;
+      animation-direction:normal;
+      animation-play-state:running;
+      -webkit-animation-name:mten;
+      -webkit-animation-duration:1s;
+      -webkit-animation-timing-function:linear;
+      -webkit-animation-delay:0s;
+      -webkit-animation-iteration-count:infinite;
+      -webkit-animation-direction:normal;
+      -webkit-animation-play-state:running;
+    }
+    .xung {
+	    margin: 0 auto;
+	    border-radius: 100px;
+	    position: absolute;
+      left: 5px;
+	    top: 5px;
+	    z-index: 0;
+	    background-color: transparent;
+	    opacity: 0;
+	    width: 110px;
+	    height: 110px;
+	    border: 10px solid #00baff;
+	    -webkit-border-radius: 100px;
+	    -moz-border-radius: 100px;
+	    -o-border-radius: 100px;
+	    -ms-border-radius: 100px;
+	    border-radius: 100px;
+	    /* Giving Animation Function */
+	    -webkit-animation: xung 1s linear infinite 0.3s;
+	    -moz-animation: xung 1s linear infinite 0.3s; 
+	    border-image: initial;
+    }
+    @keyframes mten
+	    {
+	    0%   {bottom:0;}
+	    75% {bottom:90px;}
+	    100% {bottom:0;}
+	    }
+    @-webkit-keyframes mten
+	    {
+	    0%   {bottom:0;}
+      75% {bottom:90px;}
+	    100% {bottom:0;}
+      }
+    @keyframes vtron
+	    {
+	    0%   {height:120px;}
+	    10% {height: 120px;}
+      50% {height: 130px;}
+	    75% {height: 150px;}
+      90% {height: 130px;}
+	    100% {height: 120px;}
+	    }
+    @-webkit-keyframes vtron
+	    {
+	    0%   {height:120px;}
+	    10% {height: 120px;}
+      50% {height: 130px;}
+	    75% {height: 150px;}
+      90% {height: 130px;}
+	    100% {height: 120px;}
+	    }
+    @-webkit-keyframes xung {       
+      0% {-webkit-transform: scale(0); opacity: 0;}
+      8% {-webkit-transform: scale(0); opacity: 0;}
+      15% {-webkit-transform: scale(0.1); opacity: 1;}
+      30% {-webkit-transform: scale(0.5); opacity: 1;}
+      100% {opacity: 0; -webkit-transform: scale(1.5);}
+    }
+    @-moz-keyframes xung {       
+      0% {-webkit-transform: scale(0); opacity: 0;}
+      8% {-webkit-transform: scale(0); opacity: 0;}
+      15% {-webkit-transform: scale(0.1); opacity: 1;}
+      30% {-webkit-transform: scale(0.5); opacity: 1;}
+      100% {opacity: 0; -webkit-transform: scale(1.5);}
+    }
+
+    .msgfilter {/*https://www.cssscript.com/elegant-alerts-notices-css/       https://www.cssscript.com/demo/elegant-alerts-notices-css/***/
+        transition: .5s ease-in-out;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        overflow: hidden;
+        animation-name: showAlert;
+        animation-duration: .5s;
+        animation-fill-mode: both;
+    }
+    .alert_warning {
+        border-color: #ffa502;
+        background: #ffdb9b;
+        color: #ce8500;
+    }
+    .msgfilter {
+        margin: auto; /*canh phai flex*/
+        width: 100%;
+        max-width:350px;
+        padding: 5px;
+        position: relative;
+        border-left: 8px solid  #e39121;
+        background:transparent;
+        color: #a1a1a1;
+        border-radius: 4px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: left;
+        box-shadow: rgba(142, 142, 153, 0.25) 0px 30px 60px -12px inset, rgba(251, 251, 251, 0.3) 0px 18px 36px -18px inset;
+    }
+    .msgfilter .msgfilter--icon {
+        margin-right: 10px;
+        cursor:default!important;
+    }
+    .msgfilter .msgfilter--close, .msgfilter .msgfilter--icon {
+        height: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 20px;
+        cursor:pointer;
+    }
+    .msgfilter .msgfilter--content {
+        width: 100%;
+        line-height: 18px;
+        margin-top: auto; /*day vertical xuong duoi chut*/
+    }
+</style>
+
+<script id="Ncfhl5bP0IvN0p2IzdUwMWY2kKhWlpClXJaQnV2ZmaBUoZilMDFlN8fhl9fF41LLxTAxZA==" type="text/javascript">
+    //(function (a) {
+    //    if (!_o$h.hasOwnProperty('c')) _o$h['c'] = a();//pass pubArgs later if need
+    //})
+    var xxx=[];(function (pAs) {//pAs:public args - hien chua xai
+        "use strict";
+        //var privateSharedVar = 'foo';
+        //function privateSharedFunction() {
+        //    // has access to privateSharedVar
+        //    // may also access publicSharedVar via explicit O.prototype
+        //    // can't be called via this
+        //}
+        function O(opts) { // constructor
+            var isPH = DevExpress.devices._currentDevice.phone
+            , luag=apisvr.a$.selected_language
+            , fiLA = {//filter language
+                vi: {
+                    grCa: ['(Mặc định)', 'Khách hàng'],
+                    fNA: {//filter name
+                        '-1': 'Lọc bằng thông tin nhân viên'
+                    }
+                }
+                ,
+                en: {
+                    grCa: ['(Default)', 'Custom'],
+                }
+            }
+            , filterDIV = $(opts[0]).find('.my_filter_builder').addClass(isPH ? 'mobil-min-w' : '')//mobil-min-w de cho command card nhay xuong phia duoi va center
+            , categories = [
+                "Video Players",
+                "Televisions",
+                "Monitors",
+                "Projectors",
+                "Automation"
+            ]
+            , myF = function (f) {
+                return $.grep(opts[2], function (v) {
+                    return v && f.indexOf(v.dataField) > -1;
+                });
+            }
+            , cusHeadF
+            , ungroupedData//'1. Quy ước chọn thẻ chấm công nếu gần nhau'
+            , wting = function () {
+                //
+                ////them vao day doan code de luu dau lai cho lan goi sau.
+                if (opts[3]) w0w.dynload[opts[3]] = filterDIV[0].outerHTML;
+                //
+                var lo = helloguy.clone();
+                lo.insertBefore(filterDIV)
+                    .css({ 'display': 'none', 'position': 'absolute' }).removeAttr('id')
+                    .find('.dx-loadindicator-wrapper').parent().css({ width: 40, height: 40 })//set lai size cho smaller
+                    .prev().remove();//remove luon bgwaitcolor trong wait
+
+                var lstF = opts[1];
+                if (lstF) {//o day se phan tich cac source filer dau vao dung cho toan bo filer ...
+                    var d = lstF.def, r = $.extend(true, [], d)
+                        , rep = function (na,mo) {
+                            r.forEach(function (im) {
+                                var x = na[im.id];
+                                if (x) {//neu language dictionary co chua thong tin cua item nay.
+                                    im.na = x;
+                                    if (mo) im.mo = mo;
+                                };
+                            });
+                        };//clone d to r
+                    cusHeadF = lstF && lstF.cus || {};
+                    //
+                    if (luag !== 'en') {//default mac dinh language la english
+                        rep(fiLA[luag].fNA);
+                    };
+                    //
+                    var dumeA = [],dumeB=[];
+                    if (cusHeadF[luag]) {//uu tien custom cao nhat
+                        //
+                        rep(cusHeadF[luag], true);//only language
+                        //
+                        //xu ly copy or new filter head
+                        $.map(cusHeadF[luag], function (n, i) {
+                            if (Number(i) > 0) {
+                                dumeB.push(i);//luu lai lam dau de detect other language .!
+                                dumeA.push({
+                                    'id': i,
+                                    'na': n,
+                                    'ca': 1
+                                });
+                            };
+                        });
+                    };
+                    //
+                    //nhung cai head khac ngon ngu, do khi custom o ngon ngu nay, nhung pm chay o ngon ngu khac
+                    $.map(cusHeadF, function (n, ln) {
+                        if ([luag, 'fite'].indexOf(ln) == -1) {//khac language
+                            for (var k in n) {
+                                if (n.hasOwnProperty(k) && Number(k) > 0 && dumeB.indexOf(k)==-1) {
+                                    dumeA.push({
+                                        'id': k,
+                                        'na': n[k],
+                                        'ca': 1
+                                    });
+                                };
+                            };
+                        };
+                    });
+                    //
+                    ungroupedData = r.concat(dumeA);//datasource of head filter combobox
+                    //
+                    if (cusHeadF.fite) {//filter condition
+                        $.map(cusHeadF['fite'], function (cusFITER, fi) {
+                            var resI = $.grep(ungroupedData, function (rn, ri) {//check xem filterB co modify value
+                                return rn.id == fi;
+                            });
+                            //
+                            if (resI.length > 0) {//match source
+                                var advF = {}, isADV = false;
+                                $.map(cusFITER, function (x, y) {
+                                    if (y == 'filterBase') {//update base fiter
+                                        resI[0].fi = $.extend(true, [], x);
+                                    } else {//advance filter
+                                        advF[y] = $.extend(true, [], x);
+                                        isADV = true;
+                                    };
+                                });
+                                if (isADV) {
+                                    resI[0].fiADV = advF;//advance condition
+                                };
+                            };
+                            //
+                        });
+                    };
+                    //
+                };
+
+                return function (c) {
+                    lo.css('display', c==1?'':'none');
+                };
+            }()
+            , find$e=function(f){
+                return filterDIV.closest('.kiem-the').find(f);
+            }
+            , resizeHeight = function (el,b) {
+                if (b === 1) {//enable
+                    if (!selA.observerRZ) {//chua co
+                        //set up your configuration
+                        //this will watch to see if you insert or remove any children
+                        var config = { subtree: true, childList: true, attributes: true },
+                            rzel = $(el).closest('.log_filter'),
+                            lsi = 0,
+                            csi=0,
+                            eTO = 0,
+                            rz = function () {
+                                csi = rzel.height();
+                                if (csi != lsi) {
+                                    //console.log('trigger reheight' + new Date().getTime());
+                                    filterDIV.trigger('mystate', ['reHeight', csi])//df:do filter
+                                    lsi = csi;//update
+                                };
+                            };
+                        //
+                        selA.observerRZ = new MutationObserver(function (mutations) {
+                            clearTimeout(eTO);
+                            eTO = setTimeout(rz, 50);
+                            //console.log('MutationObserver ' + new Date().getTime());
+                        });
+                        //start observing
+                        selA.observerRZ.observe(el, config);
+                    };
+                } else {//disable
+                    if (selA.observerRZ) {
+                        selA.observerRZ.disconnect();
+                        delete selA.observerRZ;
+                    };
+                };
+            }
+            , mainPFS = function (b) {
+                if (b == 'add') {
+                    mainPFS.PFS = new PerfectScrollbar(filterDIV.find('.pfs_scroll')[0], { suppressScrollX: true })//dung khi full screen se gioi han lai
+                    resizeHeight(mainPFS.PFS.element, 1);
+                } else {
+                    if (mainPFS.PFS) resizeHeight(null,0),mainPFS.PFS.destroy();
+                };
+            }
+            , do_reset = function () {
+                //
+                listen_2_tabpage.off('listen_2_me');
+                //
+                //alert('here');
+                if (filterB) filterB.dispose();//filter builder
+                selB.dispose(); // combobox header filter
+                //
+                if (dxPU['ctrl']) {//vi khi moi vao thi no chua build poup filer cho nhe.
+                    dxPU['ctrl'].dispose();//popup contain filter editor condition
+                    delete dxPU['ctrl'];
+                };
+                //
+                filterDIV.trigger('mystate', ['-1']);//thong bao voi parent la toi da bi reset
+                //
+            }
+            , listen_2_tabpage = filterDIV.closest('[id^="tabBODY_"]').on('listen_2_me', function (e, a, b) {//lang nghe tam tu,tinh cam cua TabPage!
+                switch (a) {
+                    case 'part_fullscreen': {
+                        mainPFS(b);
+                        break;
+                    }
+                    case 'disposing': {
+                        do_reset();
+                        break;
+                    }
+                };
+            })
+
+            , fromUngroupedData = new DevExpress.data.DataSource({
+                store:{
+                    type: "array",
+                    key: "id",
+                    data: ungroupedData
+                },
+                //key: "id",
+                group: "ca"
+            })
+            , dx = filterDIV.find('.left_dieukien')
+            , headFilter = filterDIV.find('.list-headfilter')
+            , selA = { 'icoExCo': $("<span class='ti-angle-down'></span>"), saveas: {} }
+            , selB = headFilter.find('.list-ctrl').dxSelectBox({
+                dataSource: fromUngroupedData,
+                valueExpr: "id",
+                displayExpr: "na",
+                placeholder:"go vao de tim kiem, hoac chon tu danh sach xo ra ben duoi ...",
+                searchEnabled: true,
+                grouped: true,
+                groupTemplate: function (data) {
+                    return $("<div class='custom-icon'><span class='dx-icon-box icon'></span> " + fiLA[luag].grCa[data.key] + "</div>");
+                },
+                itemTemplate: function (d) {
+                    if (d.mo) {
+                        return "<i class='icon dx-icon-rename'/> <span>" +
+                            d.na + "</span>";
+                    } else {
+                        return d.na;
+                    };
+                },
+                //width:'100%',
+                //height: 0,
+                buttons: [
+                    //{
+                    //    name: "today",
+                    //    location: "before",
+            
+                    //    options: {
+                    //        text: "Today",
+                    //        onClick: function() {
+                    //            dateEditor.option("value", new Date().getTime());
+                    //        }
+                    //    }
+                    //},
+                "dropDown", {
+                    name: "currency",
+                    location: "after",
+                    options: {
+                        template: function() {
+                            return selA['icoExCo'];
+                        },
+                        visible:false,
+                        width:32,
+                        stylingMode: "text",
+                        onClick: function (e) {
+                            //
+                            selB.close();//close dropdown
+                            selA.nut3cham.close();//nut 3 cham close dropdown menu
+                            //
+                            selA['btn'][1]('slideToggle');// vi nut click nen dao nguoc trang thai
+                        },
+                        onContentReady: function (e) {
+                            selA['btn'] = [e.component,//nut nay dung de expand/collapse filter build region div
+                            function (s) {
+                                filterDIV.find('.pfs_scroll')[s]("fast", function (e) {
+                                    selA.icoExCo.removeClass().addClass('ti-angle-' + ($(this).is(':visible') ? 'down' : 'up'));
+                                });
+                            }]
+                        }
+                    }
+                }],
+                onValueChanged: function (e) {
+                    //
+                    if (selB.ignoreVALC && typeof selB.ignoreVALC === "function"){
+                        selB.ignoreVALC(e);
+                        return;
+                    };
+                    //
+                    wting(1);
+                    _Y['slideToggle']({
+                        cb: function (x) {
+                            selA['btn'][1]('slideDown');// xo ra neu no dang bi collapse
+                            //
+                            var selI = selB.option('selectedItem'),//get data of selectbox
+                                chuivaoday = filterDIV.find('.chuivaoday').find('.card-body'),
+                                isADV = false;
+                            //
+                            //reset advance condition filter hien co.
+                            for (var k in dxPU) {
+                                if (k != 'ctrl' && dxPU.hasOwnProperty(k)) {
+                                    dxPU[k].dispose();
+                                    delete dxPU[k];
+                                };
+                            };
+                            //base condition filter
+                            filterB.option({value: selI.fi});
+                            //advance condition filter
+                            if (selI.fiADV) {
+                                $.map(selI.fiADV, function (x, y) {
+                                    isADV = true;
+                                    popupContentTemplate.bind(y)(
+                                        filterDIV.removeClass('no-filter-giua').find('.chuivaoday').find('.card-body')
+                                    , -1)
+                                });
+                            };
+                            //
+                            filterDIV[(isADV ? 'remove' : 'add') + 'Class']('no-filter-giua');
+                            //
+                            selA.nut3cham.dkChanged = 0;//reset
+                            wting(0);
+                        }
+                    });
+                },
+                onFocusIn: function (e) {
+                    headFilter.addClass('focused');
+                },
+                onFocusOut: function (e) {
+                    headFilter.removeClass('focused');
+                },
+                onOpened: function (e) {
+                    e.component.state = 1;
+                },
+                onClosed: function (e) {
+                    e.component.state = 0;
+                    headFilter.removeClass('opened');
+                }
+            }).dxSelectBox("instance")
+            , andchorFilter = function () {
+                var pud = dxPU['ctrl']._$content;
+                var pos = pud[0].getBoundingClientRect(),
+                    pa = pud.parent()[0].getBoundingClientRect(),
+                    tagr = filterDIV.removeClass('no-filter-giua').find('.chuivaoday').find('.card-body'),
+                    tag = tagr[0].getBoundingClientRect();
+
+                //
+                pud.css({ transform: 'none', top: pos.top - pa.top, left: pos.left - pa.left })
+                    //.add($this.find("img"))
+                    .animate({ top: tag.top - pa.top, left: tag.left - pa.left, width: 0, height: 0 }, 200, function () {
+                        //dxPU['ctrl'].hide();
+                        //
+                        var pu = dxPU['ctrl'],
+                            bd = dxPU[pu.idx], //filter builder
+                            PFSI = bd.PFSI;//perfect scrollbar
+                        //
+                        //ft.addClass('in-popup-state')
+                        $(PFSI.element).removeClass('duy-nhat-scroll');
+                        PFSI.destroy();//dispose perfect scrollbar none mobile device
+                        //
+                        tagr.append(bd._$element.removeClass('in-popup-state'));
+                        pu.hide();
+                        //
+                        //thong bao cho cac nut update, copy dieu kien
+                        selA.nut3cham.dkChanged = 1;
+                        //
+                    });
+            }
+            , PUcontent
+            , PUTitle = $('<div>Fuck Title</div>')
+            , dxPU = {}
+
+            , cusBuildFilt=function (e) {
+                //
+                var filterID = this[0], hasPFSI = this[1], dis = this[2];//send here via bind method
+                //
+                if (!dxPU[filterID]) {//chua co nghia la build lan dau
+                    //
+                    var $e = e.component._$element,
+                    headF = $e.find('.dx-filterbuilder-group-operation:first-child').parent(),
+                    hasC = headF.next().length > 0 && headF.next().children().length > 0,
+
+                    nEL = $('<div class="hieu-filter-header text-large">' + dis + '</div>' +
+                    (hasC ? '<div class="hieu-filter-header act1 dx-filterbuilder-action-icon ti-angle-down dx-filterbuilder-action"></div>' : '') +
+                    (([1,-1].indexOf(hasPFSI)>-1 ||hasC&& hasPFSI==0) ?'<div class="hieu-filter-header act2 dx-filterbuilder-action-icon dx-icon-clear dx-filterbuilder-action color-red"></div>':''));
+                    //
+                    headF.find('.hieu-filter-header').remove();//loai bo 
+                    headF.append(nEL);
+                    //
+                    //
+                    if (hasPFSI===1) {
+                        e.component.PFSI = new PerfectScrollbar(
+                            headF.next()
+                            .addClass('duy-nhat-scroll')// group ngoai cung builder filter scroll , vi height cua popup limit
+                            .slideDown('fast')//xo xuong
+                            [0] //tra ve element de build perfect scroll bar.
+                        );
+                    };
+                    //
+                    //
+                    headF.find('.hieu-filter-header').on('click', function (e) {//nut expand-collapse / nut close
+                        //
+                        var clikA = $(e.currentTarget), ic = ["ti-angle-down", "ti-angle-up"];
+                        //
+                        if (clikA.hasClass('act1')) {
+                            headF.next().slideToggle('fast', function () {
+                                clikA.removeClass(ic).addClass(headF.next().is(':visible') ? ic[0] : ic[1]);
+                            });
+                        } else {
+                            alert('act2');
+                            if ([1,-1].indexOf(hasPFSI)>-1) {
+                                var ft = dxPU[filterID]._$element, chuivaoday = ft.closest('.card-body');
+                                ft.slideUp('fast', function () {
+                                    //
+                                    dxPU[filterID].dispose();
+                                    $(this).remove();
+                                    //
+                                    delete dxPU[filterID];//reset variable
+                                    //
+                                    if (chuivaoday.children().length == 0) {
+                                        filterDIV.addClass('no-filter-giua');
+                                    };
+                                    //
+                                });
+                            } else {
+                                headF.next().slideUp('fast', function () {
+                                    filterB.option('value', ["or"]);
+                                });
+                            };
+                        };
+                    });
+                    //
+                } else {
+                    if (e.component.PFSI) e.component.PFSI.update();//update la prefect scrollbar
+                };
+            }
+
+            , popupContentTemplate = function (_pa,is_popup) {
+
+                var filterID = this, in_popup_state = is_popup === 1 ? 'in-popup-state' : '';
+
+                if (dxPU[filterID]) {
+                    //
+                    var bd = dxPU[filterID],//filter builder
+                        ft = bd._$element,
+                        headF = ft.find('.dx-filterbuilder-group-operation:first-child').parent(),
+                        chuivaoday = ft.closest('.card-body');
+                    //
+                    ft.addClass(in_popup_state)//hide cac title,nut expand-colapse, nut close
+                        .appendTo(_pa);//add builder filter vao popup container
+                    //
+                    headF.next().addClass('duy-nhat-scroll');
+                    bd.PFSI = new PerfectScrollbar(headF.next()[0]);//phone thi ko can perfect scroll 
+                    //
+                    if (chuivaoday.children().length == 0) { // div chua tren form ko con cai nao.
+                        filterDIV.addClass('no-filter-giua');
+                    };
+                    //
+                } else {
+                    var categories = [
+                        "Video Players",
+                        "Televisions",
+                        "Monitors",
+                        "Projectors",
+                        "Automation"
+                    ],
+                    ds = [{
+                            caption: 'A1',
+                            dataField: "Name"
+                        }, {
+                            caption: 'A2',
+                            dataField: "Price",
+                            dataType: "number",
+                            format: "currency"
+                        }, {
+                            caption: "Inventory",
+                            dataField: "Current_Inventory",
+                            dataType: "number"
+                        }, {
+                            caption: 'A4',
+                            dataField: "Category",
+                            filterOperations: ["=", "anyof"],
+                            lookup: {
+                                dataSource: categories
+                            }
+                        }
+                    ];
+
+                    dxPU[filterID] = $('<div class="text-left ' + in_popup_state + ' my_filter_dieukien"/>').appendTo(_pa).dxFilterBuilder({
+                        fields: ds,
+                        value: [
+                            "or",
+                            ["Price", "between", [2000, 4000]]
+                        ],
+                        maxGroupLevel: 1,
+                        groupOperations: ["and", "or"],
+
+                        onValueChanged: function (e) {
+                            //thong bao cho cac nut update, copy dieu kien
+                            selA.nut3cham.dkChanged = 1;
+                        },
+
+                        onContentReady: cusBuildFilt.bind([filterID, is_popup, 'In-Out ' + filterID]),
+
+                        customOperations: [{
+                            name: "anyof",
+                            caption: "Is any of",
+                            icon: "check",
+                            editorTemplate: function (conditionInfo) {
+                                return $("<div>").dxTagBox({
+                                    value: conditionInfo.value,
+                                    items: categories,
+                                    onValueChanged: function (e) {
+                                        conditionInfo.setValue(e.value && e.value.length ? e.value : null);
+                                    },
+                                    width: "auto"
+                                });
+                            },
+                            calculateFilterExpression: function (filterValue, field) {
+                                return filterValue && filterValue.length
+                                    && Array.prototype.concat.apply([], filterValue.map(function (value) {
+                                        return [[field.dataField, "=", value], "or"];
+                                    })).slice(0, -1);
+                            }
+                        }]
+
+                    }).dxFilterBuilder('instance');
+                };
+                //
+                return dxPU[filterID];
+                //
+            }
+            , editDB = function (cusHeadF,cb) {
+                //ben caller se truyen vao 1 element de trigger save '.calc_setting'
+                find$e(opts[4]).trigger('click', {
+                    a: 'editFilter', d: [cusHeadF, cb]
+                });//save ket qua tinh cong vao db / srcATT[0][3]:min date - dung lam base offset second
+            }
+            , editFil = function () {
+                var ac = this, pu = dxPU['ctrl'],
+                    heaD = selB.option('value');//, fDAT;
+
+                pu._$content.css('opacity', 0);
+                devDlg(1, 'vui long xac nhan truoc khi reset du lieu chinh sua?').show().done(function (rst) {
+                    if (rst == 1) {
+                        pu.hide();
+                        //
+                        var saveD = {}, fite = {},
+                            isBASE = false, isADV = false,
+                            resI = {},
+                            fnBase = function () {
+                                fite['filterBase'] = filterB.option('value');
+                                resI.fi = $.extend(true, [], fite['filterBase']);//update vao store de khi chon lai cung session
+                                isBASE = true;
+                            };
+
+                        //
+                        saveD['fite'] = cusHeadF.fite || {};
+                        //
+                        if (ac == 'c') {//copy
+                            heaD = new Date().getTime();
+                            fnBase();
+                        } else {
+                            //
+                            if (saveD.fite[heaD]) delete saveD.fite[heaD];//xoa bo luu tru custom truoc.
+                            //
+                            resI = $.grep(ungroupedData, function (n, i) {//check xem filterB co modify value
+                                return n.id == heaD;
+                            })[0];
+                            //
+                            //check xem base condition con thay doi k?
+                            if (JSON.stringify(resI.fi) != JSON.stringify(filterB.option('value'))) {
+                                fnBase();
+                            };
+                        };
+                        //
+                        //
+                        saveD[luag] = {};
+                        saveD[luag][heaD] = selA.saveas['t'].option('value');
+                        //
+                        //
+                        resI['fiADV'] = {};
+                        //tiep tuc advance condition filter giua
+                        for (var k in dxPU) {
+                            if (k != 'ctrl' && dxPU.hasOwnProperty(k)) {
+                                fite[k] = dxPU[k].option('value');
+                                resI['fiADV'][k] = $.extend(true, [], fite[k]);
+                                isADV = true;
+                            };
+                        };
+                        //
+                        if (!isADV) delete resI['fiADV'];//advance condition
+                        //
+                        //
+                        //neu da co thay doi thi store lai.
+                        if (isBASE || isADV) saveD.fite[heaD] = fite;//save filter condition.
+                        //
+                        //
+                        cusHeadF = $.extend(true,  cusHeadF, saveD);// Merge them recursively.
+                        //
+                        editDB(cusHeadF, function (z) {
+                            //
+                            var dataSource = selB.getDataSource(), store = dataSource.store();
+
+                            if (ac == 'c') {//copy
+                                //update client
+                                resI.id = heaD; resI.na = saveD[luag][heaD]; resI.ca = 1;
+                                //
+                                store.insert(resI).done(function (d, k) {
+                                    dataSource.reload();
+                                    selB.ignoreVALC = function () {
+                                        //prevent onValueChanged event ...
+                                    };
+                                    selB.option('value', heaD);
+                                    selB.ignoreVALC = null;
+                                });
+                            } else {
+                                store.update(heaD, { 'na': saveD[luag][heaD] }).done(function (d, k) {
+                                    if (d.ca == 0) {
+                                        d.mo = true;
+                                    };
+                                    dataSource.reload();
+                                });
+                                //dung repaint() no se lam mat cai nut expand/collapse
+                                selB._renderInputValue();
+                            };
+                            //
+                            //thong bao cho cac nut update, copy dieu kien
+                            selA.nut3cham.dkChanged = 0;//reset
+                            //
+                        });
+                        //
+                    };
+                    pu._$content.css('opacity', 1);
+                });
+            }
+            , popupInstance = function () {
+                // append o cho nay, nhung ma action thi sau khi load???? tam thoi chua ban toi!!!
+                return dxPU['ctrl'] = $('<div/>').appendTo(filterDIV.closest('.kiem-the')).dxPopup({
+                    contentTemplate: function (container) {
+                        //var scrl = $("<div/>");
+                        PUcontent = $("<div class='filter_fucking'/>").appendTo(container);
+                        //
+                        $('<div class="other-more" style="padding:40px 5px"/>').appendTo(container);//dung de lam cac muc dich khac
+
+                        ////content.text("test content").height(1000);
+                        //scrl.dxScrollView({
+                        //    height: '100%',
+                        //    width: '100%',
+                        //    direction: 'both'
+                        //});
+
+                        //container.append(scrl);
+
+                        return container;
+                    },
+                    deferRendering: false,//de cho no add scrollview ngay,  va luon
+                    width: '100%',
+                    maxWidth: 400,
+                    height: 250,
+
+                    //container: filterDIV.closest('.kiem-the'),
+                    showTitle: true,
+                    //title: "Information",
+                    visible: false,
+                    dragEnabled: true,
+                    //closeOnOutsideClick: true,
+                    showCloseButton: true,
+                    animation: {
+                        show: {
+                            type: 'pop' //bat buoc iphone cung phai pop
+                        }
+                    },
+                    onShown: function (e) {
+                        var fc = e.component.focusCTRL;
+                        if (fc) {
+                            fc.focus();
+                            fc = null;//reset
+                        };
+                    },
+                    onContentReady: function (e) {
+                        //
+                        e.component._$wrapper.addClass('tbh-filter-popup');
+                        //
+                        var dogEL = e.component._$content;
+                        dogEL.find('.dx-closebutton').off('click').on('click', function (e) {
+                            var pu = dxPU['ctrl'],
+                                PFSI = dxPU[pu.idx]&&dxPU[pu.idx].PFSI;
+                            //
+                            if (PFSI) {
+                                $(PFSI.element).removeClass('duy-nhat-scroll');
+                                PFSI.destroy();
+                                //
+                                dxPU[pu.idx].dispose(); //huy builder filter
+                                delete dxPU[pu.idx];
+                                //
+                            };
+                            //
+                        });
+                    },
+                    toolbarItems: [{//
+                        html: PUTitle,
+                        location: "after"
+                    }, {
+                        widget: "dxButton",
+                        toolbar: "bottom",
+                        location: "before",
+                        options: {
+                            icon: "fa fa-thumb-tack",
+                            elementAttr:{'class':'nut-loc'},
+                            text: "Anchor",
+                            onClick: function (e) {
+                                //debugger;
+                                _Y['slideToggle']({
+                                    cb: function (x) {
+                                        andchorFilter();//neofilter lai 
+                                    }
+                                });
+                            },
+                        }
+                    },
+                    {
+                        html: '<i class="ti-pencil"/>',
+                        location: "before"
+                    },
+                    {
+                        widget: "dxButton",
+                        toolbar: "bottom",
+                        location: "center",
+                        options: {
+                            icon: "ti ti-save",
+                            elementAttr: { 'class': 'show-orther-more' },
+                            text: "Cap nhat",
+                            type: "default",
+                            stylingMode: "outlined",
+                            disabled: true,
+                            onContentReady: function (e) {
+                                selA.saveas['u'] = e.component;//udpate button
+                            },
+                            onClick: editFil.bind('u')
+                        }
+                    }
+                    ,
+                    {
+                        widget: "dxButton",
+                        toolbar: "bottom",
+                        location: "center",
+                        options: {
+                            icon: "fa fa-files-o",
+                            elementAttr: { 'class': 'show-orther-more' },
+                            text: "Luu thanh cai khac",
+                            stylingMode: "outlined",
+                            disabled: true,
+                            onContentReady: function (e) {
+                                selA.saveas['c'] = e.component;//copy button
+                            },
+                            onClick: editFil.bind('c')
+                        }
+                    }
+
+                    , {
+                        widget: "dxButton",
+                        toolbar: "bottom",
+                        location: "after",
+                        options: {
+                            icon: 'filter',
+                            elementAttr: { 'class': 'nut-loc' },
+                            text: "Thuc Hien",
+                            onClick: function (e) {
+
+                            }
+                        }
+                    }]
+                }).dxPopup("instance");
+            }
+            , filterB
+            , luutenkhac = function (pu) {
+                //
+                PUTitle.html(this[1]);
+                //
+                var btn = function (n, t) {
+                    selA.saveas[n].option('disabled', t);
+                }
+                ,tx=apisvr.a$.trim(selB.option('text'));
+
+                if (!PUcontent.next().hasClass('da-build-roi')) {
+                    $('<div/>')
+                        .appendTo(PUcontent.next().addClass('da-build-roi'))
+                        .dxTextBox({
+                            placeholder: "nhap ten moi vao day ...",
+                            valueChangeEvent: "keyup blur change input focusout",
+                            value:selB.option('text'),
+                            onValueChanged: function (e) {
+                                var val=apisvr.a$.trim(e.value);
+                                if (e.component.thaidoi != !(val)) {
+                                    btn('u', !(val));//update button
+                                    btn('c', !(val));//copy button
+                                    e.component.thaidoi = !(val);
+                                };
+                            },
+                            onContentReady: function (e) {
+                                selA.saveas['t'] = e.component;//textbox
+                            },
+                        });
+                } else {
+                    selA.saveas['t'].option('value', tx);//reset bang text hien tai tren selectbox
+                };
+                //
+                btn('c', !(tx != ''));//copy button
+                btn('u', tx == '' || selA.nut3cham.dkChanged !== 1);//copy button
+                //
+                pu.focusCTRL = selA.saveas['t'];
+            }
+            , _Y = {//tat ca cac private method place here de co the call bang string
+                'slideToggle': function (_p) {//tongle filter
+                    if (filterDIV.hasClass('height-transition-hidden')) {
+                        filterDIV.removeClass('height-transition-hidden').css('display', 'none');
+                        filterDIV.slideToggle("fast", function (e) {
+                            //
+                            selA['btn'][0].option('visible', true);//hien thi nut expand collapse o custom filer list box
+                            //
+                            if (_p.cb) _p.cb(1);
+                            //
+                        });
+                    } else {
+                        if (_p.cb) _p.cb(0);
+                    };
+                }
+                , 'showFilter': function (_p) {
+                    //debugger;
+                    var idx = _p[0]//.getAttribute('idx')
+                        , pu = dxPU['ctrl'],otheC='remove';
+                    //
+                    if (!pu) pu = popupInstance();//đi build cai da
+                    //
+                    pu.idx = idx;
+                    //
+                    if (idx == 'saveas') {
+                        otheC = 'add';
+                        luutenkhac.bind(_p)(pu);
+                    } else {
+                        popupContentTemplate.bind(idx)(PUcontent,1);
+                    };
+                    //
+                    pu._$wrapper[otheC+'Class']('luutenkhac');//hien thi filer or save as
+                    //
+                    pu._positionChangeHandled = false;
+                    pu.show();
+                }
+                , 'lstFilter': function (_p) {
+                    headFilter[(selB.state === 1 ? 'remove' : 'add') + 'Class']('opened');
+                    selB[selB.state===1?'close':'open']();
+                }
+            };
+            //
+            filterB = $('<div/>').appendTo($('<div class="text-left"/>').appendTo(dx)).dxFilterBuilder({
+                //width: '100%',
+                //maxGroupLevel: 1,
+                fields: myF(['acno', 'ten']),
+                groupOperations: ["and", "or"],
+                onValueChanged: function (e) {
+                    //thong bao cho cac nut update, copy dieu kien
+                    selA.nut3cham.dkChanged = 1;
+                },
+                onInitialized: updateTexts,
+
+                onContentReady: cusBuildFilt.bind(['filterID', 0 , 'Employee Infos']),
+
+                //filterOperationDescriptions: {
+                //    greaterThan: ">",
+                //    greaterThanOrEqual: ">="
+                //}
+                //customOperations: [{
+                //    name: "anyof",
+                //    caption: "Is any of",
+                //    icon: "check",
+                //    editorTemplate: function (conditionInfo) {
+                //        return $("<div>").dxTagBox({
+                //            value: conditionInfo.value,
+                //            items: categories,
+                //            onValueChanged: function (e) {
+                //                conditionInfo.setValue(e.value && e.value.length ? e.value : null);
+                //            },
+                //            width: "auto"
+                //        });
+                //    },
+                //    calculateFilterExpression: function (filterValue, field) {
+                //        return filterValue && filterValue.length
+                //            && Array.prototype.concat.apply([], filterValue.map(function (value) {
+                //                return [[field.dataField, "=", value], "or"];
+                //            })).slice(0, -1);
+                //    }
+                //}]
+            }).dxFilterBuilder('instance');
+            //
+            function updateTexts(e) {
+                $("#filterText").text(formatValue(e.component.option("value")));
+                $("#dataSourceText").text(formatValue(e.component.getFilterExpression()));
+            }
+
+            function formatValue(value, spaces) {
+                if (value && Array.isArray(value[0])) {
+                    var TAB_SIZE = 4;
+                    spaces = spaces || TAB_SIZE;
+                    return "[" + getLineBreak(spaces) + value.map(function (item) {
+                        return Array.isArray(item[0]) ? formatValue(item, spaces + TAB_SIZE) : JSON.stringify(item);
+                    }).join("," + getLineBreak(spaces)) + getLineBreak(spaces - TAB_SIZE) + "]";
+                }
+                return JSON.stringify(value);
+            }
+
+            function getLineBreak(spaces) {
+                return "\r\n" + new Array(spaces + 1).join(" ");
+            };
+            //
+            //
+            mainPFS($("body").hasClass('part_fullscreen') ? 'add' : 'remove');//detect xem hien tai co dang o fullscreen?
+            //
+            //
+            var fmenu = [
+                { id: 'saveas', name: "Cap nhat - sao chep", icon: "ti ti-pencil" },
+                { id: 4, name: "Messages", icon: "email", badge: "5", disabled: true },
+                { id: 'del', name: "Xoa khoi danh sach loc", icon: "trash", visible: false },
+                { id: 'reset', name: "Khoi phuc ve mac dinh", icon: "ti ti-reload", visible: false }
+            ]
+            , fmnuClick = function (ac) {
+                devDlg(1, 'vui long xac nhan truoc khi del?').show().done(function (rst) {
+                    if (rst == 1) {
+                        var heaD = selB.option('value'),
+                            dataSource = selB.getDataSource(),
+                            store = dataSource.store();
+
+                        //remove ra khoi custom raw list de dung cho lan load sau...
+                        $.map(cusHeadF, function (n, ln) {
+                            for (var k in n) {
+                                if (heaD == k) {
+                                    delete n[k];
+                                };
+                            };
+                        });
+
+                        editDB(cusHeadF, function (z) {
+                            if (ac == 'del') {
+                                store.remove(heaD).done(function (d, k) {
+                                    dataSource.reload();
+                                    selB.ignoreVALC = function () {
+                                        selA['btn'][1]('slideUp');// vi nut click nen dao nguoc trang thai
+                                    };
+                                    selB.option('value', null);
+                                    selB.ignoreVALC = null;
+                                    //
+                                });
+                            } else if (ac == 'reset') {
+                                var resI= $.grep(opts[1].def,function(n,i){
+                                    return n.id==heaD;
+                                });
+                                if (resI) {
+                                    if (luag !== 'en' && fiLA[luag].fNA) {//default mac dinh language la english
+                                        resI.forEach(function (im) {
+                                            var x = fiLA[luag].fNA[im.id];
+                                            if (x) {//neu language dictionary co chua thong tin cua item nay.
+                                                im.na = x;
+                                            };
+                                        });
+                                    };
+                                    //
+                                    store.update(heaD, $.extend(true, {
+                                        'mo': false,
+                                        'fiADV': null//phai dung null moi update duoc
+                                    }, resI[0])).done(function (d, k) {
+                                        dataSource.reload();
+                                        selB._raiseValueChangeAction(d.id);//force raise event change de draw lai advance condition
+                                    });
+                                    //dung repaint() no se lam mat cai nut expand/collapse
+                                    selB._renderInputValue();
+                                };
+                            };
+                            //
+                            //thong bao cho cac nut update, copy dieu kien
+                            selA.nut3cham.dkChanged = 0;//reset
+                            //
+                        });
+                    };
+                });
+            };
+            $("<div/>").appendTo(filterDIV.find('.nutlenh')
+                    .on('click', '.btn', function (e) {
+                        if ($(e.currentTarget).hasClass('done_loc')) {
+                            //
+                            if (!e.currentTarget.sigF) {
+                                var sigF = $('<div style="padding: 5px;"/>'), H = 0;
+                                //
+                                filterDIV.append(
+                                    sigF.append($('<div class="msgfilter alert_warning"><div class="msgfilter--icon">' +
+                                        '<i class="fa fa-filter"></i></div><div class="msgfilter--content">' +
+                                            'Dang o trang thai filter ...' +
+                                          '</div>' +
+                                          '<div class="msgfilter--close">' +
+                                            '<i class="fa fa-times-circle"></i>' +
+                                          '</div>' +
+                                        '</div>').on('click', '.msgfilter--close', function (ex) {
+                                            sigF.fadeOut(function () {
+                                                sigF.remove();
+                                                e.currentTarget.sigF = null;
+                                                filterDIV.trigger('mystate', ['rdf'])//df:do filter
+                                            });
+                                        })
+                                     )
+                                );
+                                //
+                                e.currentTarget.sigF = sigF;
+                            };
+                            //
+                            filterDIV.trigger('mystate', ['df', filterB.option("value")])//df:do filter
+                            //
+                        } else {//reset lai
+                            do_reset();
+                        };
+                    }).find('.btncontainer')
+
+                ).dxDropDownButton({
+                    showArrowIcon: false,
+                    icon: "ti ti-more",
+                    dropDownOptions: {
+                        width: 'auto',//phai co + voi css can thiep thi no moi fixed width voi items
+                        onContentReady: function (e) {
+                            e.component._$content.addClass('canthiep-menu-dropdown');//can thiep nhung phai careful voi option visible
+                        },
+                        onShown: function (e) {
+                            srclocked(false);
+                        },
+                        onShowing: function (e) {
+                            srclocked(true);
+                            console.log('onShowing: ' + new Date().getTime());
+                            //e.component._$popupContent.addClass('canthiep-menu-dropdown');
+                            var atI = selB.option('selectedItem'), lst = selA.nut3cham._list, isPai = false;
+                            //
+                            lst._dataSource._items.map(function (n, i) {
+                                if (n.id == 'reset') {
+                                    n.visible = !!(atI.mo && atI.ca == 0) ;
+                                } else if (n.id == 'del') {
+                                    n.visible = (atI.ca == 1);//default ko can
+                                };
+                            });
+                            lst.repaint();
+                            //
+                        }
+                    },
+                    onContentReady: function (e) {
+                        //var _T = e.component;
+                        //if (_T._popup) {
+                        //    _T._popup.off('shown hidden').on('shown hidden', function () {
+                        //        srclocked(false);
+                        //        //
+                        //    });
+                        //};
+                        //_T._$element.off('click').on('click', function () {
+                        //    console.log('click: ' + new Date().getTime());
+                 
+                        //    //while (DevExpress.hideTopOverlay()) { }//hide cac popup, popover ... cua devexpress
+                        //    _T.dogHide = true; setTimeout(function () { srclocked(false); }, 100);
+                        //});
+                        selA.nut3cham = e.component;
+                    },
+                    onItemClick: function (e) {
+                        switch (e.itemData.id) {
+                            case 'saveas': {
+                                //
+                                _Y['showFilter']([e.itemData.id, e.itemData.name]);
+                                //
+                                break;
+                            }
+                            case 'del': {
+                                fmnuClick('del');
+                                break;
+                            }
+                            case 'reset': {
+                                fmnuClick('reset');
+                                break;
+                            }
+                        };
+                    },
+                    items: fmenu,
+                    displayExpr: "name",
+                    keyExpr: "id",
+                    useSelectMode: false
+                });
+
+            this.A = function (_p) { //function do job A
+
+                _Y[_p[0]](_p[1]);//0:private method name , [1]: arguments
+
+                return this;
+            };
+        };
+        //O.prototype.publicSharedVar = 'quux';
+        //O.prototype.publicSharedMethod = function (param) {
+        //    // has access to shared and public vars
+        //    // canonical way for method creation:
+        //    // try to use this as much as possible
+        //};
+
+        return {
+            'O': function (a) { return new O(a); }
+        };
+        //
+    });
+</script>
