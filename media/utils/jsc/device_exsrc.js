@@ -1,5 +1,5 @@
 ﻿var w0w = window,
-    _gsC = function (url, filetype, success, id) {
+    _gsC = function (url, filetype, success, id,cberr) {
         var script, head = document.getElementsByTagName('head')[0], done = false;
         if (id && id != '' && w0w.dynload && w0w.dynload.indexOf(id) > -1) {
             done = true;
@@ -32,14 +32,17 @@
                 }
             };
             script.onerror = function (e) {
-                // w0w.location.replace( '//' + ((w0w.location.hostname.indexOf('www.') > -1) ? 'www.' : '') + 'hrpro.cf/unluckyday');
+                if (cberr && typeof cberr === "function") {
+                    cberr(e);
+                };
             }
             head.appendChild(script);
         }
     };
 
 function __exscr() {
-    //__rmvs();
+    //
+    __rmvs();
     //
     var t_i = document[_d[0]]("t_sesi"),
         ccTB,
