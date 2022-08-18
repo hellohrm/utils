@@ -615,11 +615,1218 @@
 </style>
 
 <script type="text/javascript">
-    _o$h.hasOwnProperty("a")||(_o$h.a=function(t){"use strict";var n=function(t,n,e){var i="cusfilter_akq",s=function(){t.d[1](),srclocked(!1),toastMsg("save thanh cong","success")};if("noU"==e.hasUA)a.call(n,e,t.d[0],i,function(t){s()});else{var c="cusf_cusL_calcR";o.bind(n[0])(btoa(JSON.stringify({id:"-3",bd:"0",m:c})),btoa(unescape(encodeURIComponent(JSON.stringify(t.d[0])))),void 0,3,i,c,"cusfilter",void 0,void 0,s)}},e=function(t,n,e,i){var s,c=t[1],l=e.saveBadge,d=t[0].reduce(function(t,n){t[n.acno]=t[n.acno]||[[],n.ten,n.TongTG];for(var e=n.ngay.getTime(),i=[0],o=[],a=[[Math.floor((e-c)/864e5),i,o,n.mmT]],s=1;s<=8;s++)if(n.hasOwnProperty("fio"+s)){var l=n["fio"+s];l&&(a[s]=Math.floor((l.getTime()-e)/6e4),n.hasOwnProperty("noi"+s)&&n["noi"+s]&&(i[s]=[],n["noi"+s].forEach(function(t,n){i[s].push(Math.floor((t.getTime()-l.getTime())/6e4))})))}return n.freL.forEach(function(t,n){if(t[0]){var i=[Math.floor((t[0].getTime()-e)/6e4)];t[1]&&(i[1]=t[1].reduce(function(t,n){return t.push(Math.floor((n.getTime()-e)/6e4)),t},[])),o.push(i)}else o.push(null)}),t[n.acno][0].push(a),t},{}),r=function(){i(),srclocked(!1),toastMsg("save thanh cong","success")},u=(new Date).getTime().toString(),p=l[2],h=l.exDAT||{},f=e.step3_utils.calcRule,v=t[5][0];if(p.Is.cellValue&&(s={},p.Is.cellValue.each(function(t,n){var e,i=new Date(Number(t.split("|")[1])),o=i.getFullYear().toString(),a=o+pad$(i.getMonth()+1,2),c=t+"~"+JSON.stringify([n[0],n[1]]);s[a]?e=s[a]:h[a]?s[a]=e=h[a]:(e=[],s[a]=h[a]=e),function(){for(var n=e.length-1;n>=0;n--)if(e[n].split("~")[0]==t)return void(e[n]=c);e.push(c)}()})),"noU"==e.hasUA)s||$.map(h,function(t,n){t&&0!=t.length||delete h[n]}),a.call(n,e,[d,s||h],"akq",function(n){v||(e.akq=[u,c/1e3,t[2]/1e3,t[3],t[4],{calcR:f,cIO:t[5][1]}],st("setItem",e.s3dbTB[0],JSON.stringify(e.akq))),r()});else{var g=c/1e3+"~"+t[2]/1e3+"|"+t[3]+"|"+t[4]+"|"+t[5][1],m={cusL:s?1:l.cusL,calcR:f?JSON.stringify(f):void 0},b=v?"-1":1;v||(e.akq=["1|"+u,2,g]),s||$.map(h,function(t,n){t&&0!=t.length||(delete h[n],(s=s||{})[n]=[])}),o.bind(n[0])(btoa(JSON.stringify({id:"-1",bd:c/1e3,m:u})),btoa(JSON.stringify(d)),s?btoa(JSON.stringify(s)):void 0,2,"akq",u,g,m,b,r)}},i=function(t,n){var e,i=this[0],o=(this[1],[{id:0,title:"General",editor:[],template:function(n,i){var o=$("<div/>");return o.dxAccordion({items:[{template:function(i,o,a){a.prev().html('Da luong tinh toan (Mutithread calculation <button type="button" halp="calc_sl" class="btn btn-sm btn-outline-warning" style="padding: 0px 2px 0px;"><i class="ti-help"></i></button>'),a.prev().find("button").on("mouseenter",function(n){t.step3_cmd_help.fn($(n.currentTarget))});var s=$('<div><table width=100%><tr><td class="pl-1"><span>quy cach (specifications)</td><td  class="pl-3">Gia tri</td></tr><tr><td></td><td class="pl-2"></td></tr></table></div>'),c=s.find("tr:nth-child(2) td");return n.editor[0]=$('<div class="mt-1"/>').appendTo($(c[0])).dxSelectBox({items:[{id:0,dis:"Quy dinh so luong max / thread"},{id:1,dis:"Quy dinh so luong toi da thread"}],displayExpr:"dis",valueExpr:"id",value:0,width:"100%",onValueChanged:function(t){1==t.value?n.editor[1].option({min:1,max:10,value:2}):n.editor[1].option({min:100,max:1e3,value:100}),e.option("disabled",!1)}}).dxSelectBox("instance"),n.editor[1]=$('<div class="mt-1"/>').appendTo($(c[1]).css("width","120px")).dxNumberBox({value:100,format:"#",min:1,max:10}).dxNumberBox("instance"),s}}],animationDuration:300,collapsible:!1,multiple:!0,onSelectionChanged:function(t){}}).dxAccordion("instance"),o}}]);return $("<div/>").appendTo(n).dxPopup({contentTemplate:function(t){$("<div/>").appendTo(t).dxTabPanel({width:"100%",height:"100%",items:o,selectedIndex:0,loop:!1,animationEnabled:!0,swipeEnabled:!0,onSelectionChanged:function(t){}}).dxTabPanel("instance")},onContentReady:function(t){var n=t.component._$popupContent;n.css({padding:0,margin:0}),n.prev().css({height:"70px"}).addClass("edit-log-diag-float-header"),n.css("margin-top","-20px")},width:500,height:400,container:app_container.closest("#app"),visible:!0,shading:!0,dragEnabled:!0,showCloseButton:!0,onShowing:function(t){},onShown:function(t){},onHiding:function(t){},onHidden:function(t){},toolbarItems:[{location:"after",text:"Calculation Setting"},{widget:"dxButton",toolbar:"top",location:"before",options:{stylingMode:"text",disabled:!0,elementAttr:{class:"dume-border0"},template:function(t,n,e){return $('<div class="btn btn-outline-warning btn-sm"><i class="ti-save"></i> Luu Thay doi</div>')},onClick:function(n){devDlg(1,"vui long xac nhan truoc khi save?").show().done(function(n){1==n&&a.call(i,t,o[0].editor.map(function(t,n){return t.option("value")}),"s3_config",function(n){t.s3_settingPopup.hide(),toastMsg("cap nhat hoan tat","success")})})},onContentReady:function(t){e=t.component}}}]}).dxPopup("instance")},o=function(t,n,e,i,o,a,s,c,l,d){var r,u=$.Deferred(),p=$.Deferred(),h=function(a){return a({logh:t,dat:n,exDAT:e,logkind:i,evt:o},function(t){p.resolve(t)})},f=this("se",function(t,n){n&&(r=n),h.alog=t});r||(f=h(f)),$.when(u,p).then(function(t,n){d()}),f.comm1.uaShift({mak:a,i:s,alog:h.alog.key,isModL:c,I3:l},o,!1).then(function(t){var n=JSON.parse(t);r&&(n.logRMT?(h.alog.addr=n.logRMT.addr,h.alog.key=n.logRMT.key,h(r)):p.resolve()),u.resolve()})},a=function(t,n,e,i){if(this[0],"noU"==t.hasUA){t.s3dbTB[1];var o=t.s3dbTB[0];lo$DB(function(t){if(0==t.kq){var a=t.e.target.result;a.objectStoreNames.contains(o)&&a.deleteObjectStore(o),a.createObjectStore(o,{keyPath:"id"})}else if(1==t.kq){var s=t.rst.transaction([o],"readwrite"),c=s.objectStore(o);c.put({id:e,dat:n}).onsuccess=function(t){i()}}},"hellohrm_s3tinhcong")}},s=function(t,n,e,i){var o={vi:{txR1:["1. Quy ước chọn thẻ chấm công nếu gần nhau","Thời gian chấm công gần nhau bằng hoặc nhỏ hơn:","phút","Sẽ chọn tính thẻ chấm công phía:","<strong>Chú ý!</strong> Đã có thay đổi quy ước tính công. Nhấn nút “ Tính lại ” để tính lại !"],iniR1:["Trước","Sau"],help:{expE:"vi day la nut export excel",savE:"vi day la nut save to database",calc_sl:"vi so luong calc dung de  tinh toan"}},en:{help:{expE:"en day la nut export excel",savE:"en day la nut save to database",calc_sl:"en so luong calc dung de  tinh toan"}}},a="html",s=[0,""],c=function(e){var i=new Date,o=~(i.getTime()/6e4);o!=s[0]?(e='<span data-ty="input" data-ty-prompt="⚠ '+i.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})+'"> '+e,s[0]=o):e='<span data-ty="input" data-ty-prompt="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"> '+e,n[3][a](e),a="append",n[2].animate({scrollTop:n[2][0].scrollHeight},50),t.cmdS3_scroPerf&&t.cmdS3_scroPerf.update()},l={};return{RU:function(e,d,r){t.step3_utils.editConfig={focusBack:0,panelSZ:{0:1e3,1:500,2:1200,3:400,4:200,5:500}},t.step3_utils.RULE1=JSON.parse(this[0]);var u,p,h,f=n[0].find(".timekeeper-rule1"),v=t.step3_utils.RULE1[2],g=!1,m=t.step3_utils.RULE1[v],b=function(t,e){m[e[0]]=e[1],n[2].next().addClass("d-flex"),h||(h=$('<div class="chu_y chu_y-warning chu_y-white rounded"><div class="icon"><i class="fa fa-warning"></i></div><div class="chu_y-msg">'+("en"!==i?o[i].txR1[4]:"<strong>Warning!</strong> Calculation rules has been changed. Press the “ Re-Calc ” button to recalculate !")+"</div></div>"),f.closest(".StepTitle-rule").prepend(h).parent().addClass("logrule-changed").removeClass("in-calc").on("re-calc",function(t,n,e){alert("re-calc"),$(this).off("re-calc").removeClass("logrule-changed"),a="html",s=[0,""],h.remove(),h=null})),c(t)},x=function(t){var n=l[t];return e.find(".sel-arrow").attr("transform",n[0]),e.find(".path-arrow").attr("d",n[1]),e.removeClass().addClass("sellog-"+t),t},y=function(t){var n=new Date(new Date("2021/1/1").setHours(8,t,0,0)),i=dayjs(n).format("HH:mm");return e.find(".txt-after tspan").text(i),t},w=function(){m=t.step3_utils.RULE1[v],g=!0,p.option("value",m[2]),u.option("value",m[1]),g=!1};l.before=[e.find(".sel-arrow").attr("transform"),e.find(".path-arrow").attr("d")],l.after=["matrix(-.25881905 .96592583 -.96592583 -.25881905 113 77.06018495)","M110 89.5h93"],"en"!==i&&f.closest(".StepTitle-rule").find("[class^=xt]").each(function(t,n){n.innerHTML=o[i].txR1[t]}),$('<div style="text-align: center;"><div class="tab-slider--nav"><ul class="tab-slider--tabs '+(1==v?"slide":"")+'"><li class="tab-slider--trigger '+(0==v?"active":"")+'" rel="0">Time-in</li><li class="tab-slider--trigger '+(1==v?"active":"")+'" rel="1"> Time-out</li></ul></div></div>').insertAfter(f.parent()).find(".tab-slider--nav li").on("click",function(n){var e=$(this);v=Number(e.attr("rel")),t.step3_utils.RULE1[2]=v,setTimeout(w,10),e.parent()[(1==v?"add":"remove")+"Class"]("slide"),e.parent().find("li").removeClass("active"),e.addClass("active")}),u=n[0].find(".logs-spacing").html("").dxNumberBox({min:0,max:500,value:y(m[1]),width:50,onValueChanged:function(t){if(y(t.value),!g){var n=t.component._$element;b(n.prev().text()+" "+t.value+" "+n.next().text(),[1,t.value])}}}).dxNumberBox("instance"),p=d.html("").dxSelectBox({items:[{id:"before",dis:"en"!==i?o[i].iniR1[0]:"Before"},{id:"after",dis:"en"!==i?o[i].iniR1[1]:"After"}],displayExpr:"dis",valueExpr:"id",value:x(m[2]),width:100,onValueChanged:function(t){if(x(t.value),!g){var n=t.component._$element;b(n.prev().text()+" "+t.component.option("text"),[2,t.value])}}}).dxSelectBox("instance");var T=$("<div/>"),_=$("<div/>").appendTo(r).dxPopover({contentTemplate:function(t){t.append(T)},showEvent:"mouseenter",hideEvent:"mouseleave",width:300}).dxPopover("instance");_.tmpl=T,_.des=o[i].help,_.fn=function(t){this.option("target",t),this.tmpl.html(this.des[t.attr("halp")]),this.show()},t.step3_cmd_help=_},exPopUp:function(n){var e=[],i=t.step3_utils.editConfig.panelSZ,o=0,a=function(t){e[t].focus(),e[t]._$element.find(".dx-texteditor-input").select()},s=function(t){var n=parseInt(t.element.attr("tabidx"));[0,3].indexOf(n)>-1?function(t,n){var i=null;t.value<e[n+1].option("value")?i=n+1:t.value>e[n+2].option("value")&&(i=n+2),null!==i&&(i=e[i].option("value"),t.component.setV=i,t.component.option("value",i))}(t,n):[1,4].indexOf(n)>-1?function(t,n){var i=null;t.value>e[n-1].option("value")&&(i=e[i=n-1].option("value"),t.component.setV=i,t.component.option("value",i))}(t,n):function(t,n){var i=null;t.value<e[n-2].option("value")&&(i=e[i=n-2].option("value"),t.component.setV=i,t.component.option("value",i))}(t,n)},c=[],l=$("<div/>").appendTo(n.el).dxPopup({contentTemplate:function(t){var n=$('<table class="config-size-panel-diag"><thead><tr class="mb-1"><td></td><td>gia tri</td><td>Kich thuoc toi thieu</td><td>Kich thuoc toi da</td></tr></thead><tbody><tr class="mb-2"><td>chieu dai:</td><td class="w"></td><td class="miw"></td><td class="maw"></td></tr><tr><td>chieu rong:</td><td class="h"></td><td class="mih"></td><td class="mah"></td></tr></tbody></table><div class="second-group pointer-target-back">Quy uoc noi nhan con tro chuot</div>');t.append(n),c[0]=$("<div/>").appendTo(t.find(".second-group")).dxSelectBox({items:[{id:0,dis:"(Mac dinh)"},{id:1,dis:"Dieu khien nhap lieu ngay gio"}],displayExpr:"dis",valueExpr:"id",value:0,onValueChanged:function(t){c[1].option("disabled",!1)}}).dxSelectBox("instance"),n.find("tbody td:not(:first-child)").each(function(t,n){e.push($("<div c tabidx="+t+"/>").appendTo($(n)).dxNumberBox({value:i[t],format:"#",min:function(t){return t<3?i[1]:i[4]}(t),max:function(t){return t<3?i[2]:i[5]}(t),onKeyDown:function(t){if(t.event.stopPropagation(),9==t.event.which)"5"==t.component._$element.attr("tabidx")&&(t.event.preventDefault(),a(0));else if(13==t.event.which){t.event.preventDefault();var n=parseInt(t.component._$element.attr("tabidx"));a(5==n?0:n+1)}else 27==t.event.which&&l.hide()},onFocusOut:function(t){o=parseInt(t.element.attr("tabidx"))},onFocusIn:function(t){o=parseInt(t.element.attr("tabidx"))},onValueChanged:function(t){if(null===t.value){var n="max";[1,4].indexOf(o)>-1&&(n="min"),t.component.option("value",t.component.option(n))}t.component.setV!=t.value&&(s(t),c[1].option("disabled",!1))}}).dxNumberBox("instance"))})},onContentReady:function(t){t.component._$popupContent.addClass("gridpopupeditor gridpopupeditor").css({padding:"20px 20px 5px",height:"auto"});var n=function(t){0==$(t.target).closest(".dx-numberbox").length&&a(o)},e=t.component._$content;e.hasClass("hackkeydown")||(e.on("keydown",function(t){}),e.on("click",n),e.parent().on("click",function(t){n(t)}),e.on("mouseleave",function(t){n(t)}),e.addClass("hackkeydown"))},width:400,height:290,container:n.el.closest("#app"),visible:!1,shading:!0,dragEnabled:!0,showCloseButton:!0,position:{at:"top",my:"top",of:n.showat},onShowing:function(t){c[1].option("disabled",!0)},onShown:function(n){t.step3_utils.editPO.fuckSZ_Shown=1,a(0)},onHiding:function(e){t.step3_utils.editPO.fuckSZ_Shown=0,n.fn.onHiding(e)},onHidden:function(t){},toolbarItems:[{widget:"dxButton",toolbar:"top",location:"before",options:{stylingMode:"text",disabled:!0,elementAttr:{class:"dume-border0"},template:function(t,n,e){return $('<div class="btn btn-outline-warning btn-sm"><i class="ti-save"></i> Luu Thay doi</div>')},onClick:function(t){srclocked(!0),setTimeout(function(){n.fn.save.diagsetting({sz:$.map(e,function(t,n){return{i:t.option("value")}}),pt:c[0].option("value")})},10)},onContentReady:function(t){c[1]=t.component}}}]}).dxPopup("instance");return l},WrLOG:c}};return{fa:function(t){var o=this,a=t[0],s=t[1],c=t[2];c.hasClass("l-o-a-d")||(c.html('<i class="dx-icon dx-icon-preferences calc-setting"></i>'),c.addClass("l-o-a-d calc_setting"),c.off("click").on("click",function(c,l){if(l)switch(l.a){case"_uv":setTimeout(function(){e(l.d,o,a,function(t){delete a.step3_utils.calcRule,s.trigger("giaotiepevt","resetS3BADGE")})},10);break;case"editFilter":n(l,o,a,function(t){})}else a.s3_settingPopup?a.s3_settingPopup.show():a.s3_settingPopup=i.apply(o,t)}))},fi:function(t){return[{id:-1,na:"Filter by Employee information",ca:0,fi:[["acno",">",0],"or"],ac:1},{id:-2,na:"Loc bang ngay thang",ca:0,fi:["or"],ac:1},{id:-3,na:"Loc bang thu trong tuan",ca:0,fi:["or"],ac:1},{id:-4,na:"Ket hop thong tin nhan vien + ngay thang",ca:0,fi:["or"],ac:1},{id:-5,na:"Ket hop thong tin nhan vien + thu trong tuan",ca:0,fi:["or"],ac:1},{id:-6,na:"Ket ngay thang + thu trong tuan",ca:0,fi:["or"],ac:1}]},fo:s,fn:function(t){this.publicInstanceVar="baz",this.publicInstanceMethod=function(){}}}}());
+    //id="M5CoVpaQpVyWkJ1dmZmgVKGYpTAxYjTH4ZeWz9CLzdKdiM3VMDFlNcfhl9fF41LLxTAxZA==" 
+
+    (function (a) {
+        if (!_o$h.hasOwnProperty('a')) _o$h['a'] = a();//pass pubArgs later if need
+    })
+    (function (pubArgs) {
+        "use strict";
+        //debugger;
+
+        var s3calConf = function (args) {
+            // args [step3_rst, elUI]
+            //debugger;
+            var tha$ = this,
+                elUI = args[0],
+                step3_rst = args[1],
+                calc_setting = args[2];
+
+            if (!calc_setting.hasClass('l-o-a-d')) {
+                calc_setting.html('<i class="dx-icon dx-icon-preferences calc-setting"></i>');
+                calc_setting.addClass('l-o-a-d calc_setting');
+                calc_setting.off('click').on('click', function (e, _d) {
+                    if (_d) { // thong qua trigger nut lenh nay de
+                        switch (_d.a) {
+                            case '_uv': {
+                                setTimeout(function () {
+                                    _uv(_d.d, tha$, elUI, function (mg) {
+                                        //
+                                        //truoc khi tinh lai thi calRule nay da duoc gan cho s3in.ruleLogN
+                                        delete elUI['step3_utils'].calcRule;
+                                        //giaotiepevt,resetS3BADGE === lam kho degger nguoi khac
+                                        step3_rst.trigger("\x67\x69\x61\x6F\x74\x69\x65\x70\x65\x76\x74", "\x72\x65\x73\x65\x74\x53\x33\x42\x41\x44\x47\x45");
+                                    });//b la array result ket qua tinh cua step 3 truyen qua.
+                                }, 10);
+                                break;
+                            }
+                            case 'editFilter': {
+                                //
+                                _editFilter(_d, tha$, elUI, function (mg) {
+                                    //chua xai
+                                });
+                                //
+                                break;
+                            }
+                        }
+                    } else {//popup setting o man hinh console screen.
+                        if (!elUI.s3_settingPopup) {
+                            elUI.s3_settingPopup = s3_settingPopup.apply(tha$, args);
+                        } else {
+                            elUI.s3_settingPopup.show();
+                        }
+                    };
+                });
+            };
+        }
+        , _editFilter = function (b, tha$, elUI) {
+            var evt = 'cusfilter_akq'
+            , ok = function () {
+                //
+                b.d[1]();//callback save sucess...
+                //
+                srclocked(false);//release
+                toastMsg('save thanh cong', 'success');
+            };
+
+            if (elUI.hasUA == 'noU') {//con nhieu thu de save lam, nen tach ra nhu vay hay hon
+                storeDAT.call(tha$, elUI, b.d[0], evt, function (e) {
+                    ok();
+                });
+            } else {
+                var mak = 'cusf_cusL_calcR';
+                remoteDAT.bind(tha$[0])(
+                     btoa(JSON.stringify({ 'id': '-3', 'bd': '0', 'm': mak })),//bd la begin base date, dung de tinh offeset time
+                     //https://base64.guru/developers/javascript/examples/unicode-strings
+                     btoa(unescape(encodeURIComponent(JSON.stringify(b.d[0])))),//btoa(unescape(encodeURIComponent(data))); co unicode, nen phai luu y.
+                     undefined,//de khong truyen ve server
+                     3,
+                     evt,
+                     mak,
+                     'cusfilter',
+                     undefined,//de khong truyen ve server
+                     undefined,//de khong truyen ve server
+                     ok
+                );
+            };
+        }
+        , _uv = function (b, tha$, elUI, fnOK) {//save ket qua tinh cong vao db.
+            //b[0]:aRST, b[1]:srcATT[0][3], b[2]:srcATT[0][4], b[3]:_W, b[4]:cntJ
+            //phai tap trung nen du lieu tu b
+            var bd = b[1], // min date dung de base offset second
+                _d = 1000 * 60 * 60 * 24,
+                _h = 1000 * 60 * 60,
+                _m = 1000 * 60,
+                _s = 1000,
+                evt = 'akq',
+                bdg = elUI.saveBadge,
+                grpEMP = b[0].reduce(function (grp, e) {//du lieu nam index 0
+                    //
+                    grp[e.acno] = grp[e.acno] || [[], e.ten, e.TongTG];
+                    //
+                    var nga = e.ngay.getTime()
+                        , zN = [0]//zip noise log, bo luon index 0
+                        , zF = []//zip free log
+                        , zp = [[Math.floor((nga - bd) / _d), zN, zF, e.mmT]];// ngay
+                    //
+                    for (var x = 1; x <= 8; x++) {
+                        if (e.hasOwnProperty('fio' + x)) {
+                            var _lo = e['fio' + x];
+                            if (_lo) {
+                                //
+                                zp[x] = Math.floor((_lo.getTime() - nga) / _m);//offset phut
+                                //
+                                //co log the moi tinh den chuyen noise ....
+                                if (e.hasOwnProperty('noi' + x) && e['noi' + x]) {//noise co the bi null
+                                    zN[x] = [];//array chua offset second
+                                    e['noi' + x].forEach(function (v, g) {
+                                        zN[x].push(Math.floor((v.getTime() - _lo.getTime()) / _m));//offset minute
+                                    });
+                                };
+                                //
+                            };
+                        };
+                    };
+                    //
+                    e['freL'].forEach(function (v, g) {
+                        debugger;
+                        if (v[0]) {
+                            var _vv = [Math.floor((v[0].getTime() - nga) / _m)];//offset minute
+                            if (v[1]) {
+                                _vv[1] = v[1].reduce(function (_vvV, gg) {
+                                    _vvV.push(Math.floor((gg.getTime() - nga) / _m));//offset minute
+                                    return _vvV;
+                                }, []);
+                            };
+                            zF.push(_vv);//offset second
+                        } else {
+                            //bi shift right ...
+                            zF.push(null);
+                        };
+                    });
+                    //
+                    grp[e.acno][0].push(zp);//nen thoi gian vao index 0 theo offset second
+                    //
+                    return grp;
+                }, {})
+                , ok = function () {
+                    //
+                    fnOK();
+                    //
+                    srclocked(false);//release
+                    toastMsg('save thanh cong', 'success');
+                }
+                , mak = new Date().getTime().toString()
+                , modL = bdg[2]
+                , modDB
+                , exDAT = bdg.exDAT || {}//new co bdg.exDAT thi khoi tao luon
+                , calcRule = elUI['step3_utils'].calcRule
+                , isVIEWBACK =b[5][0];//neu view back, save thi se ko reset akq
+
+            //
+            debugger;
+            if (modL.Is['cellValue']) {//tinh toan de save s3editlog
+                modDB = {};
+                modL.Is['cellValue'].each(function (k, v) {
+
+                    var nga = new Date(Number(k.split('|')[1]))
+                        , _Y = nga.getFullYear().toString()//nga
+                        , YM = _Y + pad$(nga.getMonth() + 1, 2)
+                        , nI
+                        , dA = k + '~' + JSON.stringify([v[0], v[1]])//chi 2 cai dau thoi, cai thu 3 la backup custom log de dung so sanh
+                        , finI = function () {
+                            //
+                            for (var i = nI.length - 1; i >= 0; i--) {
+                                if (nI[i].split('~')[0] == k) {
+                                    nI[i] = dA;//update
+                                    return;
+                                    break;
+                                };
+                            };
+                            //
+                            nI.push(dA);//add new
+                            //
+                        };
+
+                    if (!modDB[YM]) {
+                        if (exDAT[YM]) {//copy tu cai cu ra, va modify
+                            modDB[YM] = nI = exDAT[YM];
+                        } else {
+                            nI = [];
+                            modDB[YM] = exDAT[YM] = nI;//modify nI, se dong thoi modify ca 2
+                        };
+                    } else {
+                        nI = modDB[YM];//hy vong la object se modify theo
+                    };
+                    //
+                    finI();
+                    //
+                });
+            };
+            //
+            //
+            if (elUI.hasUA == 'noU') {
+                //
+                if (!modDB) {//remove cac thang ko co modify, co the do change rule1 and re-calc
+                    $.map(exDAT, function (v, k) {
+                        if (!v || v.length == 0) delete exDAT[k];
+                    });
+                };
+                //
+                storeDAT.call(tha$, elUI, [grpEMP
+
+                    , modDB ? modDB : exDAT//ko co db thi luu toan bo modify attlog vao local db
+
+                ], evt, function (e) {
+                    debugger;
+                    if (!isVIEWBACK) {
+                        elUI.akq = [mak, bd / 1000, b[2] / 1000, b[3], b[4]
+                            , {
+                                calcR: calcRule
+                                , cIO: b[5][1]//in-out column view
+                            }//hyvong calcRule=undefinded khi stringify se ko co key nay!
+                        ];//danh dau la s3 da co save // tuong duong voi khi load len;
+                        st('setItem', elUI.s3dbTB[0], JSON.stringify(elUI.akq));//lay ten table index 0 lam key local storage !
+                    };
+                    //
+                    ok();
+                });
+                //
+            } else {
+                //
+                debugger;
+                var info = (bd / 1000 + '~' + b[2] / 1000 + '|' + b[3] + '|' + b[4] + '|' + b[5][1]),
+                    isModL = {
+                        'cusL': modDB ? 1 : bdg.cusL,//khong can update lai bdg.cusL=1 <==> vi log nay da duoc cap nhat vao exDAT
+                        'calcR': calcRule ? JSON.stringify(calcRule) : undefined,//hyvong calcRule=undefinded khi stringify se ko co key nay!
+                    },
+                    I3 = isVIEWBACK ? '-1' : 1;
+                //
+                if (!isVIEWBACK) {
+                    elUI.akq = ['1|' + mak, 2, info];//danh dau la s3 da co save // tuong duong voi khi load len
+                };
+                //
+                if (!modDB) {//remove cac thang ko co modify, co the do change rule1 and re-calc
+                    $.map(exDAT, function (v, k) {
+                        if (!v || v.length == 0) {
+                            delete exDAT[k];
+                            modDB = modDB || {};
+                            modDB[k] = [];//quy uoc array empty de server delete record
+                        }
+                    });
+                };
+                //
+                remoteDAT.bind(tha$[0])(
+                     btoa(JSON.stringify({ 'id': '-1', 'bd': bd / 1000, 'm': mak })),//bd la begin base date, dung de tinh offeset time
+                     btoa(JSON.stringify(grpEMP)),
+                     modDB ? btoa(JSON.stringify(modDB)):undefined,
+                     2,
+                     evt,
+                     mak,
+                     info,
+                     isModL,
+                     I3,
+                     ok
+                );
+            };
+        }
+        , s3_settingPopup = function (elUI, container) {
+            debugger;
+            var _pSelf = this[0],
+                frmEL = this[1],
+                tabPanel,
+                btnSave,
+                tabs = [{
+                    id: 0,
+                    title: "General",
+                    editor: [],
+                    template: function (t, k) {
+                        //debugger
+
+                        var div = $('<div/>'), accordion = div.dxAccordion({
+                            items: [{
+                                template: function (d, i, e) {
+                                    //debugger
+                                    //
+                                    e.prev().html("Da luong tinh toan (Mutithread calculation " + '<button type="button" halp="calc_sl" class="btn btn-sm btn-outline-warning" style="padding: 0px 2px 0px;"><i class="ti-help"></i></button>');//title
+                                    e.prev().find('button').on('mouseenter', function (e) {
+                                        elUI['step3_cmd_help'].fn($(e.currentTarget));//show help cho nut lenh nay
+                                    });
+                                    //
+                                    var frm = $('<div><table width=100%><tr><td class="pl-1"><span>quy cach (specifications)</td><td  class="pl-3">Gia tri</td></tr><tr><td></td><td class="pl-2"></td></tr></table></div>'),
+                                        tds = frm.find('tr:nth-child(2) td'),
+                                        val;
+
+
+                                    t.editor[0] = $('<div class="mt-1"/>').appendTo($(tds[0])).dxSelectBox({
+                                        items: [{ id: 0, dis: 'Quy dinh so luong max / thread' }, { id: 1, dis: 'Quy dinh so luong toi da thread' }],
+                                        displayExpr: "dis",
+                                        valueExpr: "id",
+                                        value: 0,
+                                        width: '100%',
+                                        onValueChanged: function (e) {
+                                            //
+                                            if (e.value == 1) {
+                                                t.editor[1].option({ min: 1, max: 10, value: 2 });
+                                            } else {
+                                                t.editor[1].option({ min: 100, max: 1000, value: 100 });
+                                            };
+                                            btnSave.option('disabled', false);//enable nut save
+                                            //
+                                        }
+                                    }).dxSelectBox('instance');
+
+                                    t.editor[1] = $('<div class="mt-1"/>').appendTo($(tds[1]).css('width', '120px')).dxNumberBox({
+                                        value: 100,
+                                        format: "#",
+                                        //width: 100,
+                                        min: 1,
+                                        max: 10,
+                                        //onKeyDown: function (e) {
+                                        //    e.event.stopPropagation();
+                                        //    if (e.event.which == 9) {//tab key
+                                        //        if (e.component._$element.attr('tabidx') == "5") {
+                                        //            e.event.preventDefault();
+                                        //            fcs0(0);
+                                        //        }
+                                        //    } else if (e.event.which == 13) {//enter
+                                        //        e.event.preventDefault();
+                                        //        var atDog = parseInt(e.component._$element.attr('tabidx'));
+                                        //        if (atDog == 5) {
+                                        //            fcs0(0);
+                                        //        } else {
+                                        //            fcs0(atDog + 1);
+                                        //        };
+                                        //    } else if (e.event.which == 27) {//ESC
+                                        //        fuckSZ.hide();
+                                        //    };
+                                        //}
+                                    }).dxNumberBox('instance');
+
+                                    return frm;
+                                }
+                            }
+                            //, {
+                            //    title: "Contacts",
+                            //    template: function () {
+                            //        debugger
+                            //        return $("<p>").text("This is Info Tab");
+                            //    }
+                            //}
+                            ],
+                            animationDuration: 300,
+                            collapsible: false,
+                            multiple: true,
+                            //selectedItems: [accordionItems[0]],
+                            //itemTitleTemplate: $("#title"),
+                            //itemTemplate: $("#customer"),
+                            onSelectionChanged: function (e) {
+                                debugger;
+                                //tagBox.option("value", e.component.option("selectedItems"));
+                            }
+                        }).dxAccordion("instance");
+
+                        return div;
+                    }
+                }
+                //, {
+                //    id: 1,
+                //    title: "Contacts",
+                //    template: function (t, k) {
+                //        debugger
+                //        return $("<p>").text("This is Info Tab");
+                //    }
+                //}
+                ];
+
+            return $('<div/>').appendTo(container).dxPopup({
+
+                contentTemplate: function (el) {
+
+                    tabPanel = $("<div/>").appendTo(el);
+                    tabPanel = tabPanel.dxTabPanel({
+                        width: '100%',
+                        height: '100%',
+                        items: tabs,
+                        selectedIndex: 0,
+                        loop: false,
+                        animationEnabled: true,
+                        swipeEnabled: true,
+                        //itemTitleTemplate: $("#title"),
+                        //itemTemplate: $("#customer"),
+                        onSelectionChanged: function (e) {
+                            //debugger;
+                            //$(".selected-index")
+                            //    .text(e.component.option("selectedIndex") + 1);
+                        },
+                        //onContentReady: function (e) {
+                        //    debugger;
+                        //}
+                    }).dxTabPanel("instance");
+
+                },
+                onContentReady: function (e) {
+                    var cont = e.component._$popupContent;
+                    cont.css({ 'padding': 0, 'margin': 0 });
+                    cont.prev().css({ 'height': '70px' })//height 70px mouse drag place
+                        .addClass('edit-log-diag-float-header');
+                    cont.css('margin-top', '-20px');
+                },
+
+                width: 500,
+                height: 400,
+
+                container: app_container.closest('#app'),
+                visible: true,
+                shading: true,
+                //shadingColor:'transparent',
+                //showTitle: true,
+                //title: "",
+                dragEnabled: true,
+                //closeOnOutsideClick:true,
+                showCloseButton: true,
+
+                onShowing: function (e) {
+
+                },
+                onShown: function (e) {
+                    //);
+                    //
+                },
+                onHiding: function (e) {
+                    //
+                },
+                onHidden: function (e) {
+                    //
+                },
+                toolbarItems: [{ location: "after", text: "Calculation Setting" }, {
+                    widget: "dxButton",
+                    toolbar: "top",
+                    location: "before",
+                    options: {
+                        stylingMode: "text",
+                        disabled: true,
+                        elementAttr: {
+                            class: "dume-border0"
+                        },
+                        template: function (data, index, element) {
+                            //debugger;
+                            return $('<div class="btn btn-outline-warning btn-sm"><i class="ti-save"></i> Luu Thay doi</div>');
+                        },
+                        onClick: function (e) {
+                            devDlg(1, 'vui long xac nhan truoc khi save?').show().done(function (rst) {
+                                debugger;
+                                if (rst == 1) {
+                                    storeDAT.call(_pSelf, elUI
+                                        , tabs[0].editor.map(function (v, i) { return v.option('value') })
+                                        , 's3_config'
+                                        , function (r) {
+                                            elUI.s3_settingPopup.hide();
+                                            toastMsg('cap nhat hoan tat', 'success');
+                                        });
+                                };
+                            });
+                        },
+                        onContentReady: function (e) {
+                            btnSave = e.component;
+                        }
+                    }
+                }]
+            }).dxPopup("instance");
+        }
+        , remoteDAT = function (logh, dat,exDAT, logkind,evt, mak, i,isModL,I3, ok) {
+            var isH = $.Deferred()//cho cho update header main db xong
+            , isD = $.Deferred()//cho cho update log db xong
+            , logRemoteBackup
+            , logREMOTE = function (dume) {
+                return dume({//bd/1000 luu vao col i1 cho khong tran kieu du lieu
+                    logh:logh,
+                    dat: dat,
+                    exDAT:exDAT,
+                    logkind: logkind,
+                    evt: evt
+                }, function (e) {
+                    //
+                    isD.resolve(e);
+                    //
+                });
+            }
+            , ___$ = this('se', function (alog, s__r) {
+                if (s__r) logRemoteBackup = s__r;
+                logREMOTE.alog = alog;
+            });//get server engine from step-3
+            //
+            //
+            if (!logRemoteBackup) {//kong co backup nghia la already rmote log url
+                ___$ = logREMOTE(___$);
+            };
+            //
+            //
+            $.when(isH, isD).then(function (h$, d$) {
+                ok();
+            });
+
+            //debugger;//https://24ways.org/2019/five-interesting-ways-to-use-array-reduce/
+            //
+            //// call main hole update header
+            ___$.comm1.uaShift({ mak: mak, i: i, alog: logREMOTE.alog.key, isModL: isModL, I3: I3 }, evt, false).then(function (r) {
+                var rst = JSON.parse(r);
+                if (logRemoteBackup) {//da lay duc dia chi save
+                    if (rst.logRMT) {
+                        //
+                        logREMOTE.alog.addr = rst.logRMT.addr;
+                        logREMOTE.alog.key = rst.logRMT.key;
+                        //
+                        logREMOTE(logRemoteBackup);//save dat sau !!!
+                        //
+                    } else {
+                        isD.resolve();//du me cho may finish
+                    };
+                };
+                isH.resolve();
+            });
+            //
+            //isH.promise();
+            //isD.promise();
+        }
+        , storeDAT = function (elUI, a, b, cb) {
+            var _pSelf = this[0];
+            if (elUI.hasUA == 'noU') {
+                //
+                var tc4 = elUI.s3dbTB[1], _diag = elUI.s3dbTB[0];
+                //
+                lo$DB(function (db) {
+                    if (db.kq == 0) {//create new
+                        //
+                        var D$b = db.e.target.result;//var Db = e.target.result;
+                        //
+                        //uncomment if we want to start clean
+                        if (D$b.objectStoreNames.contains(_diag)) D$b.deleteObjectStore(_diag);
+                        //
+                        var tc = D$b.createObjectStore(_diag, { keyPath: "id" });
+                        //
+                    } else if (db.kq == 1) { //ok
+                        var req
+                            , ts = db.rst.transaction([_diag], "readwrite")
+                            , remStore = ts.objectStore(_diag);
+                        //
+                        req = remStore.put({ id: b, dat: a });
+                        //
+                        req.onsuccess = function (e) {
+                            cb();
+                        };
+                    }
+                }, 'hellohrm_s3tinhcong');
+
+            } else {
+
+            };
+        }
+        , freeot_rule1 = function () { // scoping
+            "use strict";
+            function O(elUI, e$l, s2Caller, sLA) { // constructor
+                //[0-frmEL, 1-elem, 2-xwindow, 3-terW]
+                var __ = this
+                , s3LA = {//s3 language
+                    vi: {
+                        txR1: ['1. Quy ước chọn thẻ chấm công nếu gần nhau', 'Thời gian chấm công gần nhau bằng hoặc nhỏ hơn:', 'phút', 'Sẽ chọn tính thẻ chấm công phía:'
+                        , '<strong>Chú ý!</strong> Đã có thay đổi quy ước tính công. Nhấn nút “ Tính lại ” để tính lại !'],
+                        iniR1: ["Trước", "Sau"],
+                        help: {
+                            expE: "vi day la nut export excel",
+                            savE: "vi day la nut save to database",
+                            calc_sl: "vi so luong calc dung de  tinh toan"
+                        }
+                    }
+                    ,
+                    en: {
+                        help: {
+                            expE: "en day la nut export excel",
+                            savE: "en day la nut save to database",
+                            calc_sl: "en so luong calc dung de  tinh toan"
+                        }
+                    }
+                }
+                , logMeth = 'html'
+                , cacheMsg=[0,'']
+                , WrLOG = function (_m) {
+                    var n = new Date(),
+                        _n = ~(n.getTime() / (1000 * 60));
+                    //
+                    if (_n != cacheMsg[0]) {
+                        _m = '<span data-ty="input" data-ty-prompt="⚠ ' + n.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '"> ' + _m;
+                        cacheMsg[0] = _n;
+                    } else {
+                        _m ='<span data-ty="input" data-ty-prompt="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"> ' + _m;
+                    };
+                    e$l[3][logMeth](_m);
+
+                    //e$l[3][logMeth]('<span data-ty="input" data-ty-prompt="⚠ ' + new Date().toLocaleTimeString() + '"> 1. Quy uoc gom log the gan nhau thanh 1</span>' +
+                    //    '<span data-ty="input" data-ty-prompt="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"> Cac Log gat the cach nhau nho hon hoac bang 0 ->1 minutes</span>' +
+                    //    '<span data-ty="input" data-ty-prompt="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"> Log duoc chon de tinh cong Log-1 -> Log-2/span>');
+                    logMeth = 'append';
+                    //
+                    e$l[2].animate({ scrollTop: e$l[2][0].scrollHeight }, 50);
+                    //udate lai perfect scrollbar cua cmd screen
+                    if (elUI['cmdS3_scroPerf']) elUI['cmdS3_scroPerf'].update();
+                    //
+                    //elUI['step3_utils'].saveBadge[1]();
+                    //
+                }
+                , svg = {};
+                return {
+                    'RU': function (svgR1, logs_effect, step3_rst) {
+                        //
+                        //var diagConfig = st('getItem', elUI.s3dbTB[0]);
+                        elUI['step3_utils'].editConfig = {
+                            focusBack: 0,// 0: timeEditor, 1 Cell this option for recieve back focus,
+                            panelSZ: { 0: 1000, 1: 500, 2: 1200, 3: 400, 4: 200, 5: 500 }
+                        };
+                        //
+                        elUI['step3_utils'].RULE1 = JSON.parse(this[0]);
+                        //
+                        var rule1 = e$l[0].find(".timekeeper-rule1")
+                            , tabRULE = elUI['step3_utils'].RULE1[2]
+                            , preventCHANGED = false
+                            , noise_VAL
+                            , logs_SEL
+                        , iniRULE = elUI['step3_utils'].RULE1[tabRULE]
+                        , canel
+                        , clsCh = 'logrule-changed'
+                        , buildCancel = function (dis) {
+                            if (!canel) {
+                                canel = $('<div class="chu_y chu_y-warning chu_y-white rounded">' +
+                                                '<div class="icon">' +
+                                                    '<i class="fa fa-warning"></i>' +
+                                                '</div>' +
+                                                '<div class="chu_y-msg">' +
+                                                (sLA !== 'en' ? s3LA[sLA].txR1[4] : '<strong>Warning!</strong> Calculation rules has been changed. Press the “ Re-Calc ” button to recalculate !') + '</div>' +
+                                               //'<div class="closeX"><i class="fa fa-times-circle"></i></div>' +
+                                            '</div>');
+
+
+                                rule1.closest('.StepTitle-rule').prepend(canel)
+                                    .parent().addClass(clsCh).removeClass('in-calc')
+                                //hung su kien re-calc
+                                .on('re-calc', function (e, a, b) {
+                                    alert('re-calc');
+                                    $(this).off('re-calc').removeClass(clsCh);
+                                    //
+                                    logMeth = 'html';//de khi change lan nua thi no se clear log-console
+                                    cacheMsg = [0, ''];//reset de hien thi lai log-time
+                                    //
+                                    canel.remove();
+                                    canel = null;
+                                    //
+                                });
+                            };
+                        }
+                        , Changing = function (msg,val) {
+                            //
+                            debugger;
+                            iniRULE[val[0]] = val[1];//vi la object nen no change luon elUI['step3_utils'].RULE1
+                            //
+                            e$l[2].next().addClass('d-flex');//xwindow nut tinh lai
+                            buildCancel(true);
+                            WrLOG(msg);
+                        }
+                        , selLOG = function (val) {
+                            var v = svg[val];
+                            svgR1.find('.sel-arrow').attr('transform', v[0]);
+                            svgR1.find('.path-arrow').attr('d', v[1]);
+                            //
+                            svgR1.removeClass().addClass('sellog-' + val);
+                            //
+                            return val;
+                        }
+                        , noiVAL = function (val) {
+                            var t1 = new Date(new Date('2021/1/1').setHours(8,val, 0, 0)),
+                                t2 = dayjs(t1).format('HH:mm');
+                            svgR1.find('.txt-after tspan').text(t2);
+                            //
+                            return val;
+                        }
+                        , tabChanged = function () {
+                            iniRULE = elUI['step3_utils'].RULE1[tabRULE];
+                            preventCHANGED = true;
+                            logs_SEL.option('value', iniRULE[2]);
+                            noise_VAL.option('value', iniRULE[1]);
+                            preventCHANGED = false;
+                        };
+                        //
+                        svg['before'] = [svgR1.find('.sel-arrow').attr('transform'), svgR1.find('.path-arrow').attr('d')];
+                        svg['after'] = ["matrix(-.25881905 .96592583 -.96592583 -.25881905 113 77.06018495)", 'M110 89.5h93'];
+                        //
+                        if (sLA !== 'en') {
+                            rule1.closest('.StepTitle-rule').find('[class^=xt]').each(function (i, el) {
+                                el.innerHTML = s3LA[sLA].txR1[i];
+                            });
+                        };
+                        //
+                        //elUI['step3_utils'].noise_rule = rule1.dxCheckBox({
+                        //    value: true,
+                        //    onValueChanged: function (e) {
+
+                        //    }
+                        //}).dxCheckBox('instance');
+                        //
+
+                        $('<div style="text-align: center;">' +
+                            '<div class="tab-slider--nav">' +
+                                '<ul class="tab-slider--tabs ' + (tabRULE == 1 ? 'slide' : '') + '">' +
+                                    '<li class="tab-slider--trigger ' + (tabRULE == 0 ? 'active' : '') + '" rel="0">Time-in</li>' +
+                                    '<li class="tab-slider--trigger ' + (tabRULE == 1 ? 'active' : '') + '" rel="1"> Time-out</li>' +
+                                '</ul>' +
+                            '</div>' +
+                        '</div>')
+
+                        .insertAfter(rule1.parent())
+                        .find(".tab-slider--nav li")
+                        .on('click', function (e) {
+                            //
+                            var me = $(this);
+                            tabRULE = Number(me.attr("rel"));
+                            elUI['step3_utils'].RULE1[2] = tabRULE;//gan lai
+                            //
+                            setTimeout(tabChanged, 10);
+                            //
+                            me.parent()[(tabRULE == 1 ? 'add' : 'remove') + 'Class']('slide');
+                            me.parent().find('li').removeClass("active");
+                            me.addClass("active");
+                            //
+                        });
+
+                      
+
+                        noise_VAL = e$l[0].find(".logs-spacing").html('').dxNumberBox({
+                            min: 0,//0 ignore
+                            max: 500,
+                            value: noiVAL(iniRULE[1]),//khoang cach 2 log gan nhau
+                            width: 50,
+                            onValueChanged: function (e) {
+                                //
+                                noiVAL(e.value);
+                                //
+                                if (preventCHANGED) return;
+                                //
+                                var $el = e.component._$element;
+                                Changing($el.prev().text() + ' ' + e.value + ' ' + $el.next().text(), [1, e.value]);
+                            }
+                        }).dxNumberBox('instance');
+                        //
+                        logs_SEL = logs_effect.html('').dxSelectBox({
+                            items: [{ id: "before", dis: (sLA !== 'en') ? s3LA[sLA].iniR1[0] : "Before" }, { id: "after", dis: (sLA !== 'en') ? s3LA[sLA].iniR1[1] : "After" }],
+                            displayExpr: "dis",
+                            valueExpr: "id",
+                            value:selLOG( iniRULE[2]),//lay log before hay log after
+                            width: 100,
+                            onValueChanged: function (e) {
+                                //
+                                selLOG(e.value);
+                                //
+                                //
+                                if (preventCHANGED) return;
+                                //
+                                //
+                                var $el = e.component._$element;
+                                Changing($el.prev().text() + ' ' + e.component.option('text'), [2, e.value]);
+                                //
+                            }
+                        }).dxSelectBox('instance');
+                        //
+                        //
+                        // tao 1 cai popover help cac nut lenh
+                        var tmpl = $('<div/>'), hep = $('<div/>').appendTo(step3_rst).dxPopover({
+                            contentTemplate: function (ce) {
+                                ce.append(tmpl);
+                            },
+                            //target: e.prev().find('button'),
+                            showEvent: "mouseenter",
+                            hideEvent: "mouseleave",
+                            //closeOnOutsideClick: true,
+                            //position: "top",
+                            width: 300
+                        }).dxPopover("instance");
+                        hep.tmpl = tmpl;
+                        hep.des = s3LA[sLA].help;
+                        hep.fn = function (_a) {
+                            var _b = this;//elUI['step3_cmd_help'];//_b nay duoc khoi tao khi load rule1.html, ko co trong file nay
+                            _b.option('target', _a);
+                            _b.tmpl.html(_b.des[_a.attr('halp')]);
+                            _b.show();
+                        };
+                        elUI['step3_cmd_help'] = hep;
+                        //
+                        //dem language ve cho help mouse hover popover
+                    },
+                    'exPopUp': function (kind) {
+
+                        var numB = [],
+                            v$a = elUI['step3_utils'].editConfig.panelSZ,// { 0: 1000, 1: 500, 2: 1200, 3: 400, 4: 200, 5: 500 },
+                            lostFC = 0,
+                            fcs0 = function (idx) {
+                                numB[idx].focus();
+                                numB[idx]._$element.find('.dx-texteditor-input').select();
+                                //var cat=numB[0]._$element.find('.dx-texteditor-input')[0];
+                                //cat.setSelectionRange(0, cat.value.length);
+                            },
+                            gMi = function (i) {//min
+                                if (i < 3) return v$a[1];
+                                return v$a[4];
+                            },
+                            gMa = function (i) {//max
+                                if (i < 3) return v$a[2];
+                                return v$a[5];
+                            },
+                            change0_3 = function (e, atE) {
+                                var setV = null;
+                                //
+                                //console.log('change0_3 ' + new Date().getTime());
+                                //
+                                if (e.value < numB[atE + 1].option('value')) {
+                                    setV = atE + 1;
+                                } else if (e.value > numB[atE + 2].option('value')) {
+                                    setV = atE + 2;
+                                };
+                                //
+                                if (setV !== null) {
+                                    setV = numB[setV].option('value');
+                                    e.component.setV = setV;// trap change lan 2
+                                    e.component.option('value', setV);
+                                };
+                                //
+                            },
+                            change1_4 = function (e, atE) {
+                                var setV = null;
+                                //
+                                //console.log('change1_4 ' + new Date().getTime());
+                                //
+                                if (e.value > numB[atE - 1].option('value')) {
+                                    setV = atE - 1;
+                                    setV = numB[setV].option('value');
+                                    e.component.setV = setV;// trap change lan 2
+                                    e.component.option('value', setV);
+                                };
+                            },
+                            change2_5 = function (e, atE) {
+                                var setV = null;
+                                //
+                                //console.log('change2_5 ' + new Date().getTime());
+                                //
+                                if (e.value < numB[atE - 2].option('value')) {
+                                    setV = atE - 2;
+                                    setV = numB[setV].option('value');
+                                    e.component.setV = setV;// trap change lan 2
+                                    e.component.option('value', setV);
+                                };
+                            },
+                            sizeChanged = function (e) {
+                                //console.log('lostFC: ' + lostFC);
+                                var atE = parseInt(e.element.attr('tabidx'));
+                                if ([0, 3].indexOf(atE) > -1) {
+                                    change0_3(e, atE);
+                                } else if ([1, 4].indexOf(atE) > -1) {
+                                    change1_4(e, atE);
+                                } else {
+                                    change2_5(e, atE);//giong tren
+                                };
+                            },
+
+                            clickXY = null,
+                            pointerBack = [],
+
+                            fuckSZ = $('<div/>').appendTo(kind.el).dxPopup({
+                                contentTemplate: function (el) {
+                                    var frm = $('<table class="config-size-panel-diag">' +
+                                        '<thead><tr class="mb-1"><td></td><td>gia tri</td><td>Kich thuoc toi thieu</td><td>Kich thuoc toi da</td></tr></thead>' +
+                                         '<tbody><tr class="mb-2"><td>chieu dai:</td><td class="w"></td><td class="miw"></td><td class="maw"></td></tr>' +
+                                           '<tr><td>chieu rong:</td><td class="h"></td><td class="mih"></td><td class="mah"></td></tr></tbody>' +
+                                        '</table>' +
+                                        //'<p class="text-center mt-3">Me kiep may lam kho tao</p>' +
+                                        '<div class="second-group pointer-target-back">Quy uoc noi nhan con tro chuot</div>');
+                                    //
+                                    el.append(frm);
+                                    //
+                                    pointerBack[0] = $("<div/>").appendTo(el.find('.second-group')).dxSelectBox({
+                                        items: [{ id: 0, dis: "(Mac dinh)" }, { id: 1, dis: "Dieu khien nhap lieu ngay gio" }],
+                                        displayExpr: "dis",
+                                        valueExpr: "id",
+                                        value: 0,
+                                        onValueChanged: function (e) {
+                                            pointerBack[1].option('disabled', false);
+                                        }
+                                    }).dxSelectBox('instance');
+
+
+                                    frm.find('tbody td:not(:first-child)').each(function (i, td) {
+                                        numB.push($('<div c tabidx=' + i + '/>').appendTo($(td))
+                                            .dxNumberBox({
+                                                value: v$a[i],
+                                                format: "#",
+                                                min: gMi(i),
+                                                max: gMa(i),
+                                                onKeyDown: function (e) {
+                                                    e.event.stopPropagation();
+                                                    if (e.event.which == 9) {//tab key
+                                                        if (e.component._$element.attr('tabidx') == "5") {
+                                                            e.event.preventDefault();
+                                                            fcs0(0);
+                                                        }
+                                                    } else if (e.event.which == 13) {//enter
+                                                        e.event.preventDefault();
+                                                        var atDog = parseInt(e.component._$element.attr('tabidx'));
+                                                        if (atDog == 5) {
+                                                            fcs0(0);
+                                                        } else {
+                                                            fcs0(atDog + 1);
+                                                        };
+                                                    } else if (e.event.which == 27) {//ESC
+                                                        fuckSZ.hide();
+                                                    };
+                                                },
+                                                onFocusOut: function (e) {
+                                                    lostFC = parseInt(e.element.attr('tabidx'));
+                                                    //console.log('onFocusOut: ' + lostFC);
+                                                },
+                                                onFocusIn: function (e) {
+                                                    lostFC = parseInt(e.element.attr('tabidx'));
+                                                    //console.log('onFocusIn: ' + lostFC);
+                                                },
+                                                onValueChanged: function (e) {
+                                                    if (e.value === null) {
+                                                        var gP = 'max';
+                                                        if ([1, 4].indexOf(lostFC) > -1) gP = 'min';
+                                                        //
+                                                        e.component.option("value", e.component.option(gP));
+                                                    };
+                                                    if (e.component.setV != e.value) {
+                                                        sizeChanged(e);
+                                                        pointerBack[1].option('disabled', false);
+                                                    };
+                                                }
+                                            }).dxNumberBox('instance')
+                                        );
+                                    });
+
+
+
+                                },
+                                onContentReady: function (e) {
+                                    //
+                                    e.component._$popupContent.addClass('gridpopupeditor gridpopupeditor').css({ 'padding': '20px 20px 5px', 'height': 'auto' });
+                                    //
+                                    //
+                                    var keyDo = function (e) {//
+                                        //console.log(e.which);
+                                    }
+                                    , mouseHack = function (e) {
+                                        if ($(e.target).closest('.dx-numberbox').length == 0) {// ko click vao numbox thi focus ve cai gan nhat bi lost focus
+                                            fcs0(lostFC);
+                                        }
+                                    }
+                                    , dogEL = e.component._$content;
+                                    //
+                                    if (!dogEL.hasClass('hackkeydown')) {
+                                        dogEL.on('keydown', keyDo);
+                                        dogEL.on('click', mouseHack);
+                                        dogEL.parent().on('click', function (e) {
+                                            //e.stopPropagation();
+                                            mouseHack(e);
+                                            //console.log('click');
+
+                                        });
+                                        dogEL.on('mouseleave', function (e) {
+                                            mouseHack(e);
+                                            //console.log('mouse leave');
+                                        });
+
+                                        dogEL.addClass('hackkeydown');//flag khong add su kien hack keydown
+                                    };
+                                    //
+                                },
+
+                                width: 400,
+                                height: 290,
+                                container: kind.el.closest('#app'),
+                                visible: false,
+                                shading: true,
+                                //shadingColor:'transparent',
+                                dragEnabled: true,
+                                //closeOnOutsideClick: function (e) {
+                                //    //debugger;
+                                //    //if ($(e.target).hasClass('dx-overlay-wrapper')) {
+                                //    //    //console.log('dx-overlay-wrapper');
+                                //    //    var x = e.clientX, y = e.clientY;
+                                //    //    clickXY = function () {
+                                //    //        clickXY = null;
+                                //    //        var el = document.elementFromPoint(x, y);
+                                //    //        //console.log('if (el) el.click();');
+                                //    //        if (el) el.click();
+                                //    //    }
+                                //    //};
+                                //    return true;
+                                //    //return e.target === $("#someElement").get()[0];
+                                //},
+                                showCloseButton: true,
+                                position: {
+                                    at: "top",
+                                    my: "top",
+                                    of: kind.showat
+                                },
+                                onShowing: function (e) {
+                                    pointerBack[1].option('disabled', true);
+                                },
+                                onShown: function (e) {
+                                    //
+                                    clickXY = null;//reset
+                                    elUI['step3_utils'].editPO.fuckSZ_Shown = 1;
+                                    fcs0(0);
+                                    //
+                                },
+                                onHiding: function (e) {
+                                    //
+                                    //console.log("exPopUp " + 'onHiding');
+
+                                    elUI['step3_utils'].editPO.fuckSZ_Shown = 0;
+                                    //
+                                    kind.fn['onHiding'](e);
+                                    //
+                                    // mong muon sau khi hide thi se chuyen focus vao timeedit,
+                                    // hide co 2 nguyen nhan, 1: nut close hoac key esc
+                                    //2 click out side **** viec nay co the phia sau overlay se la 1 nut lenh...
+                                    //=>timeout nay se bi cancel o 2 cho:
+                                    //1. co the user click chuot phai vao diagam de show context menu,
+                                    //2. clickXY click command button
+
+                                    //
+                                },
+                                onHidden: function (e) {
+                                    //
+                                    //console.log("exPopUp " + 'onHidden');
+                                    //
+                                    //if (clickXY && typeof clickXY === "function") {
+                                    //    clickXY();
+                                    //};
+                                    //
+
+                                },
+                                toolbarItems: [{
+                                    widget: "dxButton",
+                                    toolbar: "top",
+                                    location: "before",
+                                    options: {
+                                        stylingMode: "text",
+                                        disabled: true,
+                                        elementAttr: {
+                                            class: "dume-border0"
+                                        },
+                                        template: function (data, index, element) {
+                                            //debugger;
+                                            return $('<div class="btn btn-outline-warning btn-sm"><i class="ti-save"></i> Luu Thay doi</div>');
+                                        },
+                                        onClick: function (e) {
+                                            //
+                                            srclocked(true);
+                                            //
+                                            setTimeout(function () {
+                                                kind.fn['save'].diagsetting({
+                                                    sz: $.map(numB, function (n, i) {
+                                                        return { i: n.option('value') };
+                                                    })
+                                                    , pt: pointerBack[0].option('value')
+                                                });
+                                            }, 10);
+                                            //
+                                        },
+                                        onContentReady: function (e) {
+                                            pointerBack[1] = e.component;
+                                        }
+                                    }
+                                }]
+                            }).dxPopup("instance");
+
+                        return fuckSZ;
+                    },
+                    'WrLOG': WrLOG
+                };
+            };
+            return O;
+        }()
+        , s3_kq_filter = function () {//default thi id<0
+            return [{
+                "id": -1,
+                "na": "Filter by Employee information",
+                "ca": 0,
+                "fi": [["acno", ">", 0], "or"],
+                "ac":1 // active
+            }, {
+                "id": -2,
+                "na": "Loc bang ngay thang",
+                "ca": 0,
+                "fi": ["or"],
+                "ac": 1 // active
+            }, {
+                "id": -3,
+                "na": "Loc bang thu trong tuan",
+                "ca": 0,
+                "fi": ["or"],
+                "ac": 1 // active
+            }, {
+                "id": -4,
+                "na": "Ket hop thong tin nhan vien + ngay thang",
+                "ca": 0,
+                "fi": ["or"],
+                "ac": 1 // active
+            }, {
+                "id": -5,
+                "na": "Ket hop thong tin nhan vien + thu trong tuan",
+                "ca": 0,
+                "fi": ["or"],
+                "ac": 1 // active
+            }, {
+                "id": -6,
+                "na": "Ket ngay thang + thu trong tuan",
+                "ca": 0,
+                "fi": ["or"],
+                "ac": 1 // active
+            }];
+        };
+
+
+        return {
+            'fa': s3calConf
+            , 'fi': function (k) {//fi:filter - default filter header he he.
+                return s3_kq_filter();
+            }
+            ,'fo': freeot_rule1
+            ,'fn': (function () { // scoping
+                var privateSharedVar = 'foo';
+                function privateSharedFunction() {
+                    // has access to privateSharedVar
+                    // may also access publicSharedVar via explicit O.prototype
+                    // can't be called via this
+                }
+                function O(opts) { // constructor
+                    //debugger;
+                    privateSharedVar = opts;
+                    var privateInstanceVar = 'bar';
+                    this.publicInstanceVar = 'baz';
+                    function privateInstanceFunction() {
+                        // has access to all vars
+                        // can't be called via this
+                    };
+                    this.publicInstanceMethod = function () {
+                        //debugger;
+                        // has access to all vars
+                        // also known as a privileged method
+                    };
+                }
+                //O.prototype.publicSharedVar = 'quux';
+
+                //O.prototype.s3calConf = s3calConf  // has access to shared and public vars
+
+                return O;
+                //
+            })()
+        }
+    });
+
+
+
+    //(function (factory) {
+    //    "use strict";
+    //    debugger;
+    //    factory.bind(_o$h)();//pass pubArgs later if need
+    //})
+    //http://th.atguy.com/mycode/xor_js_encryption/
+
+    //'YJOlmpamn5qcWGGUl5ammaexX65Yo6aVWKampqCXpFdvlJSYo5KTk6dvkpiXpJqor1uYn5uWYIqbVKFhYGBvq2A='(function (pubArgs) {
+    //    "use strict";
+    //    debugger;
+    //    if (!this.hasOwnProperty('b')) {
+    //        var c = d;
+    //    }
+    //});
+
+    //$('body').on('hack', function (e) {
+    //});
+
+
+
+
+
+
 
 </script>
 
 <script type="text/javascript">
-_o$h.hasOwnProperty("b")||(_o$h.b=function(n){"use strict";return{z:function(){window.location.hostname},u:function(){}}}());
+    // id="M5CoVpaQpVyWkJ1dmZmgVKGYpTAxYTTH4ZeWz9CLzdKdiM3VMDFmNcfhl9fF41LLxTAxZw=="
+
+    (function (_) {
+        if (!_o$h.hasOwnProperty('b')) _o$h['b'] = _();//pass pubArgs later if need
+    })
+    (function (c) {
+        "use strict";
+        return {
+            z: function () {
+                var c = window.location.hostname;
+                //debugger;
+            },
+            u: function () {
+                //debugger;
+            }
+        }
+    });
+
 
 </script>
