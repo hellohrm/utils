@@ -82,7 +82,7 @@ function __exscr() {
                 '<tr bgcolor=' + (i % 2 == 0 ? "#ffffff" : "#d1d7dA") + '>' +
                 '    <td width="40px"><input type="checkbox" class="lst"></td>' +
                 '    <td>' + dat[i][0] + '</td>' +
-                '    <td style="max-width:100px">' + dat[i][1] + '</td>' +
+                '    <td style="max-width:100px">' + new Date(parseInt(dat[i][1])).toISOString() + '</td>' +
                 '</tr>';
             }
             tbBDD += '</table>';
@@ -90,12 +90,12 @@ function __exscr() {
             chkctrl.checked = false;
             ccTB.innerHTML = tbBDD;
         },
-        job = function (x) {
+        job = function (x, mg) {
             _ols('', 1);
             //
             FE('frmact=' + encodeURIComponent('4=' + gC('auth')) +
-                ';un=' + encodeURIComponent('\x50\x4F\x53\x54\x20\x2F\x25\x73\x20\x48\x54\x54\x50\x2F\x31\x2E\x31\x0D\x0A\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x4C\x65\x6E\x67\x74\x68\x3A\x20\x25\x64\x0D\x0A\x0D\x0A\x25\x73') +
-                ';pw=2;p=3000',
+                ';un=' + encodeURIComponent('\x50\x4F\x53\x54\x20\x2F\x25\x73\x3F\x78\x3D\x25\x73\x20\x48\x54\x54\x50\x2F\x31\x2E\x31\x0D\x0A\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x4C\x65\x6E\x67\x74\x68\x3A\x20\x25\x64\x0D\x0A\x0D\x0A\x25\x73') +
+                ';pw=' + x + ';p=3000',
              function (d) {
                  try {
                      if (d && d.length > 0) {
@@ -105,7 +105,7 @@ function __exscr() {
                          t_i.className = 't_i';
                          //
                          lodSESS(dat);
-                         alertt("Mobi options changed successful !", "alert", null, 'success');
+                         alertt(mg, "alert", null, 'success');
                      }
                  }
                  catch (err) {
@@ -143,28 +143,40 @@ function __exscr() {
     document[_d[0]]("REFR")[_d[1]]("click", function (e) {
         e.preventDefault();
         //
-        job(4);
+        job(4, "Refresh registration successful !");
     });
 
     document[_d[0]]("DELE")[_d[1]]("click", function (e) {
         //
         e.preventDefault();
         //
-        var isAll = [];
-        ccTB.querySelectorAll('input[type=checkbox]').forEach(function (chk, i) {
-            if (chk.checked === true)
-                isAll.push(i);
-        });
-        if (isAll.length > 0) {
+        var dodog = function (p) {
             alertt("Please confirm before delete selected registration?", "confirm", function () {
-                job(5);
+                job(p, "Delete selected registration successful !");
             });
+        }
+        if (chkctrl.checked === true) {
+            dodog(5);
+        } else {
+            var isAll = [];
+            ccTB.querySelectorAll('input[type=checkbox]').forEach(function (chk, i) {
+                if (chk.checked === true)
+                    isAll.push(i);
+            });
+            if (isAll.length > 0) {
+                var arws = ccTB.querySelectorAll("tr"), kY = [];
+                arws.forEach(function (tr, i) {
+                    if (isAll.indexOf(i) > -1) {
+                        kY.push(new Date(tr.lastChild.innerText).getTime());
+                    }
+                });
+                dodog(btoa(JSON.stringify(kY)));
+            } else {
+                alertt("Please select at least one registration in list !", "alert", null, '');
+            };
         };
     });
-
 };
-
-
 
 try {
     _gsC('https://hellohrm.github.io/utils//media/utils/jsc/device_exsrc.css', 'css', function () {
