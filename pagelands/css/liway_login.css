@@ -10,8 +10,8 @@ body {
     font-family: "Helvetica Neue","Segoe UI",helvetica,verdana,sans-serif;
     font-weight: 100;
 
-/*min-height: 100vh;
-min-height: -webkit-fill-available;*/
+min-height: 100vh;
+min-height: -webkit-fill-available;
 
 }
 
