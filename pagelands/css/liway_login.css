@@ -174,22 +174,23 @@ html {
     height: 32px;
     /*text-align: center;*/
     /* vertical-align: bottom; */
-    /* line-height: 32px; */
-    display: inline-block;
+    /* line-height: 32px; 
+    display: inline-block;*/
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
+
 .eye-opened{
     fill:#ff652f;
 }
 .eye-opened, .eye-closed {
-    display: none;
+    visibility: hidden;
 }
 
 .eyepass.opened .eye-opened, .eyepass.closed .eye-closed {
-    display: block !important;
+    visibility: visible !important;
 }
 
 #loginPassword {
