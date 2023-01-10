@@ -715,152 +715,6 @@
 
 <script type="text/javascript">
 
-    var products = [{
-        ID: 1,
-        Name: 'HD Video',
-        Price: 330,
-        Current_Inventory: 225,
-        Backorder: 0,
-        Manufacturing: 10,
-        Category: 'Video Players',
-        ImageSrc: 'https://hrm.dnd.vn/media/images/user-icon.jpg',
-    }, {
-        ID: 3,
-        Name: 'SuperPlasma 50',
-        Price: 2400,
-        Current_Inventory: 0,
-        Backorder: 0,
-        Manufacturing: 0,
-        Category: 'Televisions',
-        ImageSrc: 'https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/02.png',
-    }, {
-        ID: 4,
-        Name: 'SuperLED 50',
-        Price: 1600,
-        Current_Inventory: 77,
-        Backorder: 0,
-        Manufacturing: 55,
-        Category: 'Televisions',
-        ImageSrc: 'https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/03.png',
-    }, {
-        ID: 5,
-        Name: 'SuperLED 42',
-        Price: 1450,
-        Current_Inventory: 445,
-        Backorder: 0,
-        Manufacturing: 0,
-        Category: 'Televisions',
-        ImageSrc: 'https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/04.png',
-    }, {
-        ID: 6,
-        Name: 'SuperLCD 55',
-        Price: 1350,
-        Current_Inventory: 345,
-        Backorder: 0,
-        Manufacturing: 5,
-        Category: 'Televisions',
-        ImageSrc: 'https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/05.png',
-    }, {
-        ID: 7,
-        Name: 'SuperLCD 42',
-        Price: 1200,
-        Current_Inventory: 210,
-        Backorder: 0,
-        Manufacturing: 20,
-        Category: 'Televisions',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 8,
-        Name: 'SuperPlasma 65',
-        Price: 3500,
-        Current_Inventory: 0,
-        Backorder: 0,
-        Manufacturing: 0,
-        Category: 'Televisions',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 9,
-        Name: 'SuperLCD 70',
-        Price: 4000,
-        Current_Inventory: 95,
-        Backorder: 0,
-        Manufacturing: 5,
-        Category: 'Televisions',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 10,
-        Name: 'DesktopLED 21',
-        Price: 175,
-        Current_Inventory: null,
-        Backorder: 425,
-        Manufacturing: 75,
-        Category: 'Monitors',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 12,
-        Name: 'DesktopLCD 21',
-        Price: 170,
-        Current_Inventory: 210,
-        Backorder: 0,
-        Manufacturing: 60,
-        Category: 'Monitors',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 13,
-        Name: 'DesktopLCD 19',
-        Price: 160,
-        Current_Inventory: 150,
-        Backorder: 0,
-        Manufacturing: 210,
-        Category: 'Monitors',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 14,
-        Name: 'Projector Plus',
-        Price: 550,
-        Current_Inventory: null,
-        Backorder: 55,
-        Manufacturing: 10,
-        Category: 'Projectors',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 15,
-        Name: 'Projector PlusHD',
-        Price: 750,
-        Current_Inventory: 110,
-        Backorder: 0,
-        Manufacturing: 90,
-        Category: 'Projectors',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 17,
-        Name: 'ExcelRemote IR',
-        Price: 150,
-        Current_Inventory: 650,
-        Backorder: 0,
-        Manufacturing: 190,
-        Category: 'Automation',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 18,
-        Name: 'ExcelRemote BT',
-        Price: 180,
-        Current_Inventory: 310,
-        Backorder: 0,
-        Manufacturing: 0,
-        Category: 'Automation',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }, {
-        ID: 19,
-        Name: 'ExcelRemote IP',
-        Price: 200,
-        Current_Inventory: 0,
-        Backorder: 325,
-        Manufacturing: 225,
-        Category: 'Automation',
-        ImageSrc: 'https://www.markuptag.com/images/user-icon.jpg',
-    }];
-
     var dume_validationSYNC = function (params) {
         //
         const d = $.Deferred(),
@@ -884,9 +738,9 @@
 
             d.resolve({ isValid: true, message: 'du me' });
             //
-            console.log('dume ' + new Date().getTime());
+            //console.log('dume ' + new Date().getTime());
             //tha._$element.find('input.dx-texteditor-input').trigger('change');
-        }, 1000);
+        }, 1);
 
         return d.promise();
 
@@ -903,7 +757,7 @@
     }, tong_SEL = {
 
         lookup: {
-            dataSource: [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10,10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15],
+            dataSource: [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15],
         }
         , editorOptions: {
 
@@ -1142,28 +996,28 @@
             }
 
         }
-, "validationRules": [
-    {
-        type: 'range',
-        min: 0.5,
-        max: 24,
-        message: 'Sorry, we submit only the age from 0.5 to 24.',
-    }
-    ,
-    //{ 
-    //    type: "async", 
-    //    validationCallback: 
+    , "validationRules": [
+        {
+            type: 'range',
+            min: 0.5,
+            max: 24,
+            message: 'Sorry, we submit only the age from 0.5 to 24.',
+        }
+        ,
+        //{ 
+        //    type: "async", 
+        //    validationCallback: 
 
-    {
-        type: "custom",
-        reevaluate: false,
-        validationCallback: dume_validationCUS
-    }
+        {
+            type: "custom",
+            reevaluate: false,
+            validationCallback: dume_validationCUS
+        }
 
-]
+    ]
 
     }
-, RZ_HWND = -1;
+    , RZ_HWND = -1;
 
     function checkEmail(email) {
         //return $.ajax({
@@ -1196,7 +1050,25 @@
 
     var __columns = function (lagu) {
         //
-        var masOT = JSON.parse(lagu.rawD.ma$ter).filter(function (v) { return v.typ == 4; });
+        var masOT = JSON.parse(lagu.rawD.ma$ter).filter(function (v) { return v.typ == 4; }),
+            chkOverlapOT = function (its, nV) {
+                for (var i = its.length - 1; i > -1; i--) {
+                    if (its[i].isEditing === false) {
+                        var r = its[i].data,
+                            otu = new Date(r.tugio).setMilliseconds(0),
+                            ode = new Date(r.dengio).setMilliseconds(0),
+                            ntu = new Date(nV.tugio).setMilliseconds(0),
+                            nde = new Date(nV.dengio).setMilliseconds(0);
+
+                        if (otu <= ntu && ntu < ode && (nde < ode || nde >= ode)) {// 
+                            return false;
+                        } else if (ntu < otu && nde > otu) {
+                            return false;
+                        };
+                    };
+                };
+                return true;
+            };
         //
         return {
             editing: {
@@ -1289,7 +1161,12 @@
                                     srclocked(true);
                                     // debugger;
                                     //var dog= e.component.validate();
-                                    //dog.brokenRules.every(function (it) {
+                                    e.component.validate().brokenRules.forEach(function (it) {
+                                        if (it.type == 'custom') {
+                                            it.isValid = true;
+                                        };
+                                    });
+                                    //    .every(function (it) {
                                     //    it.validator.validate();
                                     //    var c = 0;
                                     //});
@@ -1334,8 +1211,31 @@
                             .off('rowValidating').on('rowValidating', function (v) {
                                 if (v.brokenRules.length == 0) {
                                     v.promise = dume_validationSYNC().done(function (result) {
-                                        v.errorText = 'result.errorText';
-                                        v.isValid = true;
+                                        //
+                                        v.isValid = chkOverlapOT(grd._controllers.data._items, v.newData);
+                                        //
+                                        if (v.isValid === false) {
+
+                                            v.errorText = 'result.errorText';
+
+
+
+                                            var dog = e.component.validate();
+                                            dog.validators.forEach(function (it) {
+                                                //it._validationRules[0].isValid = false;
+                                                if (it._validationRules[0].type == 'custom') {
+                                                    var cusAC = it._validationRules[0];
+                                                    cusAC.isValid = false;
+                                                    cusAC.message = lagu.js_011_35 || "Overtime overlapping";
+                                                    //cusAC.validate();
+                                                    cusAC.validator.validate();
+                                                    cusAC.validator._getEditor().focus();
+                                                } else {
+                                                    return false;
+                                                }
+                                            });
+                                        };
+
                                     });
                                 } else {
                                     srclocked(false);
@@ -1388,7 +1288,7 @@
                     tugio: new Date().setHours(17, 0, 0),
                     tong: 1,
                     dengio: new Date().setHours(18, 0, 0),
-                    notes:''
+                    notes: ''
                 };
                 //e.data.hireDate = new Date();
                 //e.promise = getDefaultData().done(function (data) {
@@ -1455,7 +1355,9 @@
                                 //    e.element.find('.dx-texteditor-input').attr('type', 'datetime-local');
                                 //}
                             }
-                            , validationRules: [{ type: 'required', message: "My custom message" }]
+                            , validationRules: [
+                                { type: 'required', message: "My custom message" },
+                            ]
                         }
                         ,
 
@@ -1466,7 +1368,15 @@
                              dataType: 'number',
                              minWidth: 75,
                              format: "#.#"
-
+                             , validationRules: [
+                                 {
+                                     type: "custom",
+                                     validationCallback: function (e) {
+                                         return true;
+                                     },
+                                     message: "An even number is expected"
+                                 }
+                             ]
                          }, tong_SEL)
                         ,
 
@@ -1591,7 +1501,7 @@
                             //hidingPriority: 1,
 
                             widget: 'dxDateBox',
-                            caption: "(" + (lagu.js_011_20 ||'To time') + ")",
+                            caption: "(" + (lagu.js_011_20 || 'To time') + ")",
                             dataField: 'dengio',
                             dataType: 'datetime',
                             format: "HH:mm",
@@ -1699,7 +1609,6 @@
                                 //    // ep.element.find('input').val("00:00");
                                 //}
                             }
-
                         }
 
                         ,
@@ -1726,6 +1635,7 @@
         }
 
     };
+
 
     
 
@@ -1830,7 +1740,7 @@
 
 
         return {
-            products: products,
+            //products: products,
             col: {
                 widget: 'dxDateBox',
                 caption: "Ngay",
