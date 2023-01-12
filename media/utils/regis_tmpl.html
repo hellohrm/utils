@@ -1,5 +1,9 @@
 ﻿<style type="text/css">
 
+.xemdangky .chon_valid_e{
+    visibility:hidden;
+}
+
 .dx-device-mobile .duma_registration .dx-toolbar-before{
     max-width: calc(100% - 50px);
     overflow: hidden;
@@ -715,6 +719,7 @@
 
 <script type="text/javascript">
 
+
     var dume_validationSYNC = function (params) {
         //
         const d = $.Deferred(),
@@ -1059,12 +1064,16 @@
                             ode = new Date(r.dengio).setMilliseconds(0),
                             ntu = new Date(nV.tugio).setMilliseconds(0),
                             nde = new Date(nV.dengio).setMilliseconds(0);
-
-                        if (otu <= ntu && ntu < ode && (nde < ode || nde >= ode)) {// 
-                            return false;
-                        } else if (ntu < otu && nde > otu) {
+                        if (nde <= otu || ode <= ntu) {
+                            //ok
+                        } else {
                             return false;
                         };
+                        //if (otu <= ntu && ntu < ode && (nde < ode || nde >= ode)) {// 
+                        //    return false;
+                        //} else if (ntu < otu && nde > otu) {
+                        //    return false;
+                        //};
                     };
                 };
                 return true;
@@ -1247,14 +1256,14 @@
                                     //
                                     nx[nx.dxComponents[0]].off('valueChanged').on('valueChanged', function (x) {
                                         var fiNa = this.__x.fi;
-                                        if (['tugio', 'tong'].indexOf(fiNa) > -1) {
+                                        if (['EachDate', 'tugio', 'tong'].indexOf(fiNa) > -1) {
                                             grd._fieldChg(dumaEDT, fiNa, x.value, dogEdt.data().options.data);
                                         };
                                         //
                                     }).__x = {
                                         fi: v.dataField
                                     };
-                                    if (v.dataField === 'dengio') {
+                                    if (['tugio', 'dengio'].indexOf(v.dataField) > -1) {
                                         dumaEDT[v.dataField] = nx[nx.dxComponents[0]];
                                     };
                                 };
@@ -1635,6 +1644,9 @@
         }
 
     };
+
+
+
 
 
     
