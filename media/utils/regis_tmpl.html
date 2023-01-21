@@ -260,6 +260,16 @@
         padding: 0;
     }
 
+    .reg_action .viewmode > button{
+        margin-right: 5px;
+        margin-top:5px;
+    }
+
+    .reg_action .viewmode > button:last-child{
+        margin-right: 0;
+    }
+
+
     .dume_overflow > div {
         overflow:visible;
     }
@@ -1777,8 +1787,17 @@
                     //}
                 }
             }
-            ,columns: __columns
+            , columns: __columns
 
+            ,err_block:['<div class="col-12 col-sm-6 d-flex flex-column dx-validationsummary-item mb-3">' +
+                                                        '<div class="dx-fieldset-header reg-step-no mb-0" style="font-weight: 100;"><span class="bl-no">1</span><span class="bl-txt"></span></div>' +
+                                                    '</div>'
+                    ,
+                    //index[1] la nut luu tam
+                    ,
+                    '<div class="viewmode m-auto"></div>'
+                        
+            ]
 
         };
     };
