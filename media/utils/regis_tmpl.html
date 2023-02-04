@@ -222,13 +222,50 @@
         margin-right: 5px;
     }
 
-.lstregemp .dx-list-item-before-bag.dx-list-select-checkbox-container{
+.lstregemp.only_read .dx-list-select-all,
+.lstregemp.only_read div[mnu='reglk_emps'],
+
+.lstregemp.duyet_rmv .dx-list-select-all,
+.lstregemp.duyet_rmv div[mnu='reglk_emps']
+{
+    display:none;
+}
+
+
+
+.lstregemp:not(.duyet_rmv) .dx-list-item-before-bag.dx-list-select-checkbox-container{
     display:none!important;
 }
-.lstregemp .dx-list-item-before-bag.dx-list-toggle-delete-switch-container{
+.lstregemp:not(.duyet_rmv) .dx-list-item-before-bag.dx-list-toggle-delete-switch-container{
     visibility:hidden;
     width: 20px;
 }
+
+.lstregemp.duyet_rmv .dx-list-item-before-bag.dx-list-toggle-delete-switch-container{
+    display:none!important;
+}
+
+.prevent_point{
+    pointer-events: none!important;
+}
+
+.lstregemp.duyet_rmv .dx-list-item-selected:not(.prevent_point) .dx-list-item-content,
+.lstregemp.only_read .dx-list-item-selected:not(.prevent_point) .dx-list-item-content,
+
+.only_read tr.dx-selection:not(.prevent_point) td {
+    color:#dc3545!important;
+    text-decoration:line-through!important;
+}
+
+.prevent_point td, 
+.prevent_point.dx-list-item-selected .dx-list-item-content{
+    text-decoration:line-through!important;
+    color:#6c757d !important;
+}
+.hideselectchk .dx-command-select{
+   pointer-events: none!important;
+}
+
 .dx-device-mobile .lstregemp .dx-icon-toggle-delete{
     margin-left:10px!important;
 }
@@ -1320,7 +1357,7 @@
             columns: [
                         {
                             type: "selection",//https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/columns/#type
-                            width: 40,
+                            width: 40
                             //minWidth: 30,
                         }
                         ,
