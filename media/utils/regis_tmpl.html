@@ -696,12 +696,17 @@
     padding-bottom: 1px;
 }
  .dog_rdio .dx-widget.dx-collection{
-    justify-content: center;
+    justify-content: stretch;
 }
     .dx-validationsummary-item .bl-no {
          border-color:#d9534f;
     }
-
+    .dog_tong .dx-texteditor {
+        margin-top: 0!important;
+    }
+    .dog_tab .dx-multiview-item:last-of-type .dx-item-content {
+        align-items: center!important;
+    }
 
 </style>
 <div>
@@ -1106,7 +1111,23 @@
     var __columns = function (lagu) {
         //
         var masOT = JSON.parse(lagu.rawD.ma$ter).filter(function (v) { return v.typ == 4; }),
-            chkOverlapOT = function (its, nV) {
+            chkOverlapOT = function (its, dogV) {
+                debugger;
+                var nV = dogV.newData, oV = dogV.oldData;
+                //
+                if (oV) {
+                    if (!nV.tugio) {
+                        nV.tugio = oV.tugio;
+                    }
+                    if (!nV.dengio) {
+                        nV.dengio = oV.dengio;
+                    }
+                };
+                //
+                //
+                //gia tri moi, ko bao gom tu gio va den gio
+                if (!nV.tugio || !nV.tugio) return true;
+                //
                 for (var i = its.length - 1; i > -1; i--) {
                     if (its[i].isEditing === false) {
                         var r = its[i].data,
@@ -1131,6 +1152,9 @@
         //
         return {
             editing: {
+
+                confirmDelete:false,
+
                 allowUpdating: true,
                 mode: "form",
 
@@ -1209,7 +1233,7 @@
                     ],
                     onContentReady: function (e) {
                         //console.log('  onContentReady: function (e) {');
-
+                        //
                         if (!e.component._fuckCLK) {
                             //
                             e.component._fuckCLK = 1;
@@ -1252,12 +1276,52 @@
                     onInitialized: function (e) {
                         //
                         var dogEdt = e.element.closest('tr'),
+
+                            bk_DAT = JSON.stringify(dogEdt.data().options.data),
+
                              dog_edit_frm = dogEdt.closest('.luoi_head'),
+
                              fnFRM = function (ex, bc, de) {
-                                 e.component.dispose();
+                                 //
                                  window._fuckingEditing = null;
                                  dog_edit_frm.css('display', '').prev().empty();
+                                 //
+                                 //
+                                 if (this == 0 && ex.changes.length > 0 && ex.changes[0].type == 'update') {
+
+                                     bk_DAT = JSON.parse(bk_DAT);
+
+
+                                     grd.getDataSource()._items.some(function (fD) {
+                                         //debugger;
+                                         if (fD.aid == bk_DAT.aid) { //phuc hoi lai
+                                             //
+                                             for (var f in ex.changes[0].data) {
+                                                 // check if the property/key is defined in the object itself, not in parent
+                                                 if (ex.changes[0].data.hasOwnProperty(f)) {
+
+                                                     fD[f] = bk_DAT[f];
+
+                                                 };
+                                             };
+                                             //
+                                             return true;//exit some
+                                             //
+                                         }
+                                     });
+                                     //
+                                     grd.refresh();
+                                     //
+                                 };
+                                 //off all event
+                                 grd._controllers.editing.off('editCanceled');
+                                 grd._controllers.editing.off('saved');
+                                 grd._controllers.editing.off('rowValidating');
+                                 //
+                                 e.component.dispose();
+                                 //
                                  srclocked(false);
+                                 //
                              };
                         //
                         var grd = dogEdt.data().options.component,
@@ -1271,7 +1335,7 @@
                                 if (v.brokenRules.length == 0) {
                                     v.promise = dume_validationSYNC().done(function (result) {
                                         //
-                                        v.isValid = chkOverlapOT(grd._controllers.data._items, v.newData);
+                                        v.isValid = chkOverlapOT(grd._controllers.data._items, v);
                                         //
                                         if (v.isValid === false) {
 
@@ -1301,13 +1365,16 @@
                                 };
                             })
                             .off('editorPrepared').on('editorPrepared', function (v) {
+                                //
                                 if (v.dataField) {//datafield moi listen
                                     var nx = v.editorElement.data();
                                     //
                                     nx[nx.dxComponents[0]].off('valueChanged').on('valueChanged', function (x) {
                                         var fiNa = this.__x.fi;
                                         if (['EachDate', 'tugio', 'tong'].indexOf(fiNa) > -1) {
+                                            //
                                             grd._fieldChg(dumaEDT, fiNa, x.value, dogEdt.data().options.data);
+                                            //
                                         };
                                         //
                                     }).__x = {
