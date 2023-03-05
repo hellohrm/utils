@@ -1,1 +1,929 @@
-var _0x94d3=["\x75\x73\x65\x20\x73\x74\x72\x69\x63\x74","\x6C\x65\x6E\x67\x74\x68","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x64\x6E\x6A\x73\x2E\x63\x6C\x6F\x75\x64\x66\x6C\x61\x72\x65\x2E\x63\x6F\x6D\x2F\x61\x6A\x61\x78\x2F\x6C\x69\x62\x73\x2F\x74\x6F\x61\x73\x74\x72\x2E\x6A\x73\x2F\x6C\x61\x74\x65\x73\x74\x2F\x74\x6F\x61\x73\x74\x72\x2E\x63\x73\x73","\x63\x73\x73","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x64\x6E\x6A\x73\x2E\x63\x6C\x6F\x75\x64\x66\x6C\x61\x72\x65\x2E\x63\x6F\x6D\x2F\x61\x6A\x61\x78\x2F\x6C\x69\x62\x73\x2F\x74\x6F\x61\x73\x74\x72\x2E\x6A\x73\x2F\x6C\x61\x74\x65\x73\x74\x2F\x74\x6F\x61\x73\x74\x72\x2E\x6D\x69\x6E\x2E\x6A\x73","\x6A\x73","\x2F\x6D\x65\x64\x69\x61\x2F\x63\x73\x73\x2F\x74\x6F\x61\x73\x74\x72\x5F\x65\x78\x2E\x63\x73\x73","\x6F\x70\x74\x69\x6F\x6E\x73","\x74\x6F\x61\x73\x74\x2D\x62\x6F\x74\x74\x6F\x6D\x2D\x72\x69\x67\x68\x74","\x30","\x73\x77\x69\x6E\x67","\x6C\x69\x6E\x65\x61\x72","\x66\x61\x64\x65\x49\x6E","\x66\x61\x64\x65\x4F\x75\x74","\x72\x74\x76\x5F\x6D\x73\x67","\x72\x74\x76\x2D\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x63\x61\x72\x64\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x3A\x20\x6E\x6F\x6E\x65\x3B\x22\x3E","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x64\x69\x61\x20\x6D\x6C\x2D\x31\x20\x6D\x72\x2D\x33\x22\x3E\x3C\x69\x20\x63\x6C\x61\x73\x73\x3D\x22\x74\x69\x2D\x63\x68\x65\x63\x6B\x20\x6D\x73\x67\x69\x63\x6F\x6E\x22\x3E\x3C\x2F\x69\x3E","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x64\x69\x61\x2D\x62\x6F\x64\x79\x22\x3E","\x3C\x68\x36\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x74\x2D\x31\x20\x6D\x62\x2D\x30\x22\x3E\x4E\x6F\x2E","\x20\x2F\x20\x55\x73\x72\x3A\x20","\x3C\x2F\x68\x36\x3E\x3C\x73\x70\x61\x6E\x3E","\x3C\x2F\x73\x70\x61\x6E\x3E","\x3C\x2F\x64\x69\x76\x3E","\x69\x6E\x66\x6F","\x73\x75\x63\x63\x65\x73\x73","\x74\x6F\x61\x73\x74\x72\x5F\x65\x78\x2E\x63\x73\x73","\x74\x6F\x61\x73\x74\x72\x2E\x6D\x69\x6E\x2E\x6A\x73","\x74\x6F\x61\x73\x74\x72\x2E\x63\x73\x73","\x09","\x73\x70\x6C\x69\x74","\x57\x6F\x72\x6B\x65\x72","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x64\x6E\x6A\x73\x2E\x63\x6C\x6F\x75\x64\x66\x6C\x61\x72\x65\x2E\x63\x6F\x6D\x2F\x61\x6A\x61\x78\x2F\x6C\x69\x62\x73\x2F\x73\x6F\x63\x6B\x65\x74\x2E\x69\x6F\x2F\x34\x2E\x35\x2E\x31\x2F\x73\x6F\x63\x6B\x65\x74\x2E\x69\x6F\x2E\x6D\x69\x6E\x2E\x6A\x73","\x70\x61\x74\x68\x6E\x61\x6D\x65","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x72\x65\x66","\x2F\x6D\x65\x64\x69\x61\x2F\x75\x74\x69\x6C\x73\x2F\x6A\x73\x63\x2F\x67\x6C\x6F\x62\x61\x6C\x65\x76\x74\x73\x2E\x6A\x73","\x31\x32\x33\x34\x35\x36\x37\x38\x39","\x68\x61\x73\x4F\x77\x6E\x50\x72\x6F\x70\x65\x72\x74\x79","\x65\x76\x74\x44\x61\x74\x61","\x66\x75\x6E\x63\x74\x69\x6F\x6E","\x62\x69\x6E\x64","\x73\x65\x6C\x66\x5F\x5F","\x69\x6E\x64\x65\x78\x4F\x66","\x67\x6C\x6F\x45","\x73\x68\x69\x66\x74","\x61\x70\x70\x6C\x79","\x70\x6F\x73\x74\x4D\x65\x73\x73\x61\x67\x65","\x69\x66\x72\x61\x6D\x65","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x73\x74\x79\x6C\x65","\x68\x65\x69\x67\x68\x74\x3A\x31\x70\x78\x3B\x77\x69\x64\x74\x68\x3A\x31\x70\x78\x3B\x62\x6F\x72\x64\x65\x72\x3A\x6E\x6F\x6E\x65\x3B\x6F\x70\x61\x63\x69\x74\x79\x3A\x30","\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x62\x6F\x64\x79","\x64\x6F\x63\x75\x6D\x65\x6E\x74","\x63\x6F\x6E\x74\x65\x6E\x74\x57\x69\x6E\x64\x6F\x77","\x6F\x70\x65\x6E","\x3C\x73\x63\x72\x69\x70\x74\x20\x20\x74\x79\x70\x65\x3D\x22\x74\x65\x78\x74\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x22\x20\x73\x72\x63\x3D\x22","\x22\x3E\x3C\x2F\x73\x63\x72\x69\x70\x74\x3E\x3C\x73\x63\x72\x69\x70\x74\x20\x73\x65\x73\x6F\x6E\x3D\x22","\x7C","\x6F\x72\x69\x67\x69\x6E","\x22\x20\x74\x79\x70\x65\x3D\x22\x74\x65\x78\x74\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x22\x20\x73\x72\x63\x3D\x22","\x22\x3E\x3C\x2F\x73\x63\x72\x69\x70\x74\x3E","\x77\x72\x69\x74\x65","\x63\x6C\x6F\x73\x65","\x6F\x6E\x6C\x6F\x61\x64","\x69\x6E\x69\x74\x5F\x69\x66\x72\x6D","\x2A","\x73\x65\x73\x73\x69\x6F\x6E\x73","\x61\x24","\x6A\x6F\x62","\x69\x6D\x70\x6F\x72\x74\x53\x63\x72\x69\x70\x74\x73\x28\x27","\x27\x2C\x27","\x6A\x6F\x69\x6E","\x27\x29\x3B","\x74\x65\x78\x74\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x4F\x62\x6A\x65\x63\x74\x55\x52\x4C","\x55\x52\x4C","\x6F\x6E\x6D\x65\x73\x73\x61\x67\x65","\x64\x61\x74\x61","\x4A\x4F","\x67\x65\x74\x54\x69\x6D\x65","\x69\x6E\x69\x53\x4F\x43\x4B","\x77\x64\x6D\x73","\x6F\x6E","\x70\x75\x73\x68","\x6F\x66\x66","\x69\x6E\x41\x72\x72\x61\x79","\x73\x70\x6C\x69\x63\x65","\x24","\x72\x65\x64\x75\x63\x65","\x63\x6C\x6F\x73\x65\x53\x4F\x43\x4B","\x65\x6D\x69\x74","\x65\x6D\x69\x74\x53\x4F\x43\x4B","\x53\x54\x41\x52\x54\x64","\x73\x6F\x63\x6B\x41\x55\x54","\x73\x30\x63\x6B","\x61\x75\x74\x68","\x73\x65\x74\x41\x55\x54\x48","\x5F\x70\x61\x67\x65\x53\x69\x7A\x65\x45\x64\x69\x74\x6F\x72","\x6F\x6E\x4F\x70\x65\x6E\x65\x64","\x66\x75\x63\x6B\x2D\x70\x61\x67\x65\x72","\x61\x64\x64\x43\x6C\x61\x73\x73","\x5F\x24\x6C\x69\x73\x74","\x63\x6F\x6D\x70\x6F\x6E\x65\x6E\x74","\x6F\x70\x74\x69\x6F\x6E","\x5F\x75\x70\x64\x61\x74\x65\x4C\x69\x67\x68\x74\x4D\x6F\x64\x65","\x63\x61\x6C\x6C","\x70\x72\x6F\x74\x6F\x74\x79\x70\x65","\x63\x6F\x6E\x73\x74\x72\x75\x63\x74\x6F\x72","\x48\x54\x4D\x4C\x45\x76\x65\x6E\x74\x73","\x63\x72\x65\x61\x74\x65\x45\x76\x65\x6E\x74","\x63\x6C\x69\x63\x6B","\x69\x6E\x69\x74\x45\x76\x65\x6E\x74","\x64\x69\x73\x70\x61\x74\x63\x68\x45\x76\x65\x6E\x74","\x2E\x63\x68\x72\x6F\x6D\x65\x2D\x74\x61\x62\x5B\x61\x63\x74\x69\x76\x65\x5D\x20\x2E\x63\x68\x72\x6F\x6D\x65\x2D\x74\x61\x62\x2D\x63\x6C\x6F\x73\x65","","\x72\x65\x70\x6C\x61\x63\x65","\x44\x65\x76\x45\x78\x70\x72\x65\x73\x73","\x33\x30\x30\x70\x78","\x62\x6F\x74\x74\x6F\x6D\x20\x63\x65\x6E\x74\x65\x72","\x6E\x6F\x74\x69\x66\x79","\x75\x69","\x3C\x64\x69\x76\x3E","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x64\x69\x61\x20\x6D\x6C\x2D\x31\x20\x6D\x72\x2D\x33\x22\x3E","\x67\x65\x74\x44\x69\x63\x74\x69\x6F\x6E\x61\x72\x79","\x6D\x65\x73\x73\x61\x67\x65","\x6C\x6F\x63\x61\x6C\x69\x7A\x61\x74\x69\x6F\x6E","\x59\x65\x73","\x4F\x4B","\x4E\x6F","\x43\x61\x6E\x63\x65\x6C","\x66\x6F\x63\x75\x73","\x73\x68\x6F\x77\x54\x69\x74\x6C\x65","\x74\x69\x74\x6C\x65","\x62\x75\x74\x74\x6F\x6E\x73","\x63\x75\x73\x74\x6F\x6D","\x64\x69\x61\x6C\x6F\x67","\x73\x68\x6F\x77","\x6D\x6F\x64\x61\x6C","\x64\x6F\x6E\x65","\x64","\x3C\x2F\x73\x70\x61\x6E\x3E\x3C\x2F\x64\x69\x76\x3E","\x70\x6F\x70\x75\x70","\x72\x65\x6D\x6F\x76\x65","\x23\x70\x6F\x70\x75\x70\x64\x6F\x6E\x65","\x66\x69\x6E\x64","\x62\x6F\x6F\x74\x73\x74\x72\x61\x70\x2D\x64\x6C\x67","\x5F\x6B\x4C\x4B","\x5F\x72\x65\x67\x56\x45\x4C","\x63\x6C\x6F\x73\x65\x4F\x6E\x4F\x75\x74\x73\x69\x64\x65\x43\x6C\x69\x63\x6B","\x68\x69\x64\x65\x4F\x6E\x4F\x75\x74\x73\x69\x64\x65\x43\x6C\x69\x63\x6B","\x63\x74\x78","\x65\x6C","\x61\x70\x70\x65\x6E\x64","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x64\x65\x76\x43\x54\x58\x6D\x6E\x75\x22\x3E\x3C\x2F\x64\x69\x76\x3E","\x68\x69\x64\x69\x6E\x67","\x74\x61\x72\x67\x65\x74","\x61\x74\x4D\x4E\x55","\x69\x6E\x73\x74\x61\x6E\x63\x65","\x64\x78\x50\x6F\x70\x6F\x76\x65\x72","\x64\x78\x63\x6C\x69\x63\x6B","\x72\x67\x62\x61\x28\x30\x2C\x20\x30\x2C\x20\x30\x2C\x20\x30\x2E\x35\x29","\x70\x61\x64\x64\x69\x6E\x67","\x31\x30\x70\x78","\x5F\x24\x70\x6F\x70\x75\x70\x43\x6F\x6E\x74\x65\x6E\x74","\x6F\x70","\x65\x78\x74\x65\x6E\x64","\x61\x70\x70\x65\x6E\x64\x54\x6F","\x3C\x64\x69\x76\x3E\x3C\x2F\x64\x69\x76\x3E","\x63\x74\x78\x43\x4C\x45\x41\x52","\x72\x65\x6D\x6F\x76\x65\x44\x61\x74\x61","\x75\x6E\x62\x69\x6E\x64","\x64\x69\x76\x5B\x63\x6C\x61\x73\x73\x2A\x3D\x27\x5F\x6B\x2D","\x27\x5D","\x66\x6F\x72\x45\x61\x63\x68","\x5F\x6B","\x5F\x73","\x68\x69\x64\x65","\x64\x69\x76\x5B\x63\x6C\x61\x73\x73\x2A\x3D\x27\x5F\x6B\x2D\x27\x5D","\x2E\x64\x65\x76\x43\x54\x58\x6D\x6E\x75","\x63\x6C\x6F\x73\x65\x73\x74","\x5F\x6B\x2D","\x68\x61\x73\x43\x6C\x61\x73\x73","\x64\x2D\x6E\x6F\x6E\x65","\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73","\x6D\x61\x70","\x37\x36\x37\x32\x66\x36\x62\x32\x62\x30\x33\x38\x30\x38\x61","\x31\x65\x64\x34\x66\x64\x32\x66\x36\x36\x66\x39\x38\x32\x31","\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x6D\x75\x6C\x74\x69\x70\x61\x72\x74\x2F\x66\x6F\x72\x6D\x2D\x64\x61\x74\x61","\x50\x4F\x53\x54","\x74\x79\x70\x65","\x73\x74\x72\x69\x6E\x67","\x69\x6D\x61\x67\x65","\x3B\x62\x61\x73\x65\x36\x34\x2C","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x61\x70\x69\x2E\x69\x6D\x67\x75\x72\x2E\x63\x6F\x6D\x2F\x33\x2F\x69\x6D\x61\x67\x65","\x43\x6C\x69\x65\x6E\x74\x2D\x49\x44\x20","\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x6A\x73\x6F\x6E","\x45\x52\x52","\x65\x72\x72\x6F\x72","\x72\x65\x73\x70\x6F\x6E\x73\x65\x54\x65\x78\x74","\x70\x61\x72\x73\x65","\x66\x61\x69\x6C","\x61\x6A\x61\x78","\x6E\x61\x6D\x65","\x53\x65\x73\x73\x69\x6F\x6E","\x4C\x6F\x63\x61\x6C","\x3D","\x73\x75\x62\x73\x74\x72\x69\x6E\x67","\x2D","\x68\x65\x6C\x6C\x6F\x68\x72\x6D\x2D\x62\x72\x6F\x77\x73\x65\x72\x2D\x74\x61\x62","\x73\x77\x65\x65\x74\x61\x6C\x65\x72\x74\x32\x5F\x44\x4C\x47","\x5F\x6B\x68\x61\x63\x68\x68\x61\x6E\x67","\x64\x75\x70\x48\x45\x4C\x4C\x4F","\x2F\x64\x75\x70\x62\x72\x6F\x77\x73\x65\x72\x74\x61\x62\x5F\x6C\x61\x6E\x6A\x73\x2E\x70\x68\x70\x3F\x6B\x3D\x31\x26\x58\x44\x45\x42\x55\x47\x5F\x53\x45\x53\x53\x49\x4F\x4E\x5F\x53\x54\x41\x52\x54\x3D\x31\x35\x34\x41\x35\x33\x34\x38","\x73\x63\x6F\x64","\x67\x65\x74","\x62\x65\x66\x6F\x72\x65\x75\x6E\x6C\x6F\x61\x64","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72"];_0x94d3[0];var test_toast=function(_0xe40fx5){if(_0xe40fx5[_0x94d3[1]]== 0|| _0xe40fx5[0][_0x94d3[1]]< 2){return};_gsC(_0x94d3[2],_0x94d3[3],function(_0xe40fx6){_gsC(_0x94d3[4],_0x94d3[5],function(_0xe40fx6){_gsC(srcpf$+ _0x94d3[6],_0x94d3[3],function(){toastr[_0x94d3[7]]= {"\x63\x6C\x6F\x73\x65\x42\x75\x74\x74\x6F\x6E":false,"\x64\x65\x62\x75\x67":false,"\x6E\x65\x77\x65\x73\x74\x4F\x6E\x54\x6F\x70":true,"\x70\x72\x6F\x67\x72\x65\x73\x73\x42\x61\x72":false,"\x70\x6F\x73\x69\x74\x69\x6F\x6E\x43\x6C\x61\x73\x73":_0x94d3[8],"\x70\x72\x65\x76\x65\x6E\x74\x44\x75\x70\x6C\x69\x63\x61\x74\x65\x73":false,"\x6F\x6E\x63\x6C\x69\x63\x6B":null,"\x73\x68\x6F\x77\x44\x75\x72\x61\x74\x69\x6F\x6E":_0x94d3[9],"\x68\x69\x64\x65\x44\x75\x72\x61\x74\x69\x6F\x6E":_0x94d3[9],"\x73\x68\x6F\x77\x45\x61\x73\x69\x6E\x67":_0x94d3[10],"\x68\x69\x64\x65\x45\x61\x73\x69\x6E\x67":_0x94d3[11],"\x73\x68\x6F\x77\x4D\x65\x74\x68\x6F\x64":_0x94d3[12],"\x68\x69\x64\x65\x4D\x65\x74\x68\x6F\x64":_0x94d3[13],toastClass:_0x94d3[14],containerId:_0x94d3[15]};toastr[_0xe40fx5[2]=== 1?_0x94d3[24]:_0x94d3[25]](_0x94d3[16]+ _0x94d3[17]+ _0x94d3[18]+ _0x94d3[19]+ _0xe40fx5[1][0]+ _0x94d3[20]+ _0xe40fx5[0][0]+ _0x94d3[21]+ _0xe40fx5[0][1]+ _0x94d3[22]+ _0x94d3[23]+ _0x94d3[23]+ _0x94d3[23])},_0x94d3[26])},_0x94d3[27])},_0x94d3[28])},gloEVTs={RTEVT:function(_0xe40fx7){var _0xe40fx8=this;if(_0xe40fx8&& _0xe40fx8[_0x94d3[1]]> 3&& _0xe40fx8[3]== _0xe40fx7){test_toast([_0xe40fx8[4][_0x94d3[30]](_0x94d3[29]),_0xe40fx8[2],_0xe40fx8[5]])}}},sockjo=function(){var _0xe40fx9=!w0w[_0x94d3[31]]|| false,_0xe40fxa=_0x94d3[32],_0xe40fxb=(srcp$f?srcp$f:w0w[_0x94d3[34]][_0x94d3[35]][_0x94d3[30]](w0w[_0x94d3[34]][_0x94d3[33]])[0])+ _0x94d3[36]+ src$id,_0xe40fxc=_0x94d3[37],_0xe40fxd=[[],,0],_0xe40fxe,_0xe40fxf=_0x94d3[38],_0xe40fx10=function(_0xe40fx14,_0xe40fx7){var _0xe40fx15=_0xe40fx7[_0x94d3[39]];if(_0xe40fx11[_0xe40fxf](_0xe40fx15[0])){var _0xe40fx16=_0xe40fx11[_0xe40fx15[0]];if( typeof _0xe40fx16=== _0x94d3[40]){_0xe40fx16[_0x94d3[41]](_0xe40fx15[0])()}else {for(var _0xe40fx17 in _0xe40fx16){if(_0xe40fx16[_0xe40fxf](_0xe40fx17)){if(_0xe40fx17[_0x94d3[43]](_0x94d3[42])== 0){var _0xe40fx18=_0xe40fx16[_0xe40fx17],_0xe40fx19=_0xe40fx15[1];if(_0xe40fx18[_0xe40fxf](_0xe40fx19)){_0xe40fx18[_0xe40fx19][_0x94d3[41]](_0xe40fx15[2])();if(_0xe40fx16[_0x94d3[44]][_0xe40fxf](_0xe40fx19)){if(_0xe40fx16[_0x94d3[44]][_0xe40fxf](_0xe40fx19)){var _0xe40fx1a=_0xe40fx16[_0x94d3[44]][_0xe40fx19];gloEVTs[_0xe40fx1a][_0x94d3[41]](_0xe40fx15[2])(_0xe40fx1a)}}}}}}}}},_0xe40fx11={'\x62\x6D\x39\x6B\x5A\x57\x70\x7A\x58\x33\x4E\x76\x59\x32\x74\x6C\x64\x46\x39\x76\x61\x77':function(){while(_0xe40fxd[0][_0x94d3[1]]> 0){_0xe40fxe[_0x94d3[47]][_0x94d3[46]](_0xe40fxe,[_0xe40fxd[0][_0x94d3[45]](),_0xe40fxd[1]])};_0xe40fxd[2]= 1;delete _0xe40fx11[this]}},_0xe40fx12=function(_0xe40fx1b){var _0xe40fx16=_0xe40fx11[_0xe40fx1b];for(var _0xe40fx17 in _0xe40fx16){if(_0xe40fx16[_0x94d3[38]](_0xe40fx17)){return 1;break}};delete _0xe40fx11[_0xe40fx1b];return 0},_0xe40fx13=function(){if(_0xe40fx9){var _0xe40fx1c=document[_0x94d3[49]](_0x94d3[48]);_0xe40fx1c[_0x94d3[52]](_0x94d3[50],_0x94d3[51]);document[_0x94d3[54]][_0x94d3[53]](_0xe40fx1c);var _0xe40fx1d=_0xe40fx1c[_0x94d3[56]][_0x94d3[55]];_0xe40fx1d[_0x94d3[57]]();_0xe40fx1d[_0x94d3[64]](_0x94d3[58]+ _0xe40fxa+ _0x94d3[59]+ btoa(_0xe40fxc+ _0x94d3[60]+ w0w[_0x94d3[34]][_0x94d3[61]]+ _0x94d3[60]+ _0xe40fx9)+ _0x94d3[62]+ _0xe40fxb+ _0x94d3[63]);_0xe40fx1d[_0x94d3[65]]();_0xe40fx1c[_0x94d3[66]]= function(){_0xe40fxe= _0xe40fx1c[_0x94d3[56]];_0xe40fxe[_0x94d3[67]]()};_0xe40fxd[1]= _0x94d3[68];apisvr[_0x94d3[70]][_0x94d3[69]][_0xe40fxc]= {id:_0xe40fxc,fn:function(_0xe40fx1e,_0xe40fx1f,_0xe40fx20){if(_0xe40fx1e== _0x94d3[71]){_0xe40fx10(0,_0xe40fx1f,_0xe40fx20)}}}}else {_0xe40fxe=  new Worker(window[_0x94d3[78]][_0x94d3[77]]( new Blob([_0x94d3[72]+ [_0xe40fxa,_0xe40fxb][_0x94d3[74]](_0x94d3[73])+ _0x94d3[75]],{type:_0x94d3[76]})));_0xe40fxe[_0x94d3[79]]= function(_0xe40fx7){_0xe40fx10(1,_0xe40fx7[_0x94d3[80]])}}};window[_0x94d3[81]]= (function(){return (function(_0xe40fx21,_0xe40fx22,_0xe40fx23){var _0xe40fx24=this,_0xe40fx25=_0xe40fx23[0],_0xe40fx26=_0x94d3[42]+  new Date()[_0x94d3[82]](),_0xe40fx19=[],_0xe40fx27={},_0xe40fx8={messageType:_0x94d3[83],evtData:{id:_0xe40fx25,s0ck:[_0xe40fx21,_0xe40fx22,_0xe40fx19]}},_0xe40fx28={};this[_0x94d3[84]]= {};this[_0x94d3[85]]= function(_0xe40fx7,_0xe40fx29,_0xe40fx2a){_0xe40fx19[_0x94d3[86]](_0xe40fx7);_0xe40fx28[_0xe40fx7]= function(){_0xe40fx29[_0x94d3[41]](_0xe40fx24)(this)};if(_0xe40fx2a&&  !_0xe40fx27[_0xe40fxf](_0xe40fx7)){_0xe40fx27[_0xe40fx7]= _0xe40fx2a};return _0xe40fx24};this[_0x94d3[87]]= function(_0xe40fx7){_0xe40fx19[_0x94d3[89]]($[_0x94d3[88]](_0xe40fx7,_0xe40fx19),1);delete _0xe40fx28[_0xe40fx7];return _0xe40fx24};this[_0x94d3[65]]= function(_0xe40fx2b){if(_0xe40fx11[_0xe40fxf](_0xe40fx25)){var _0xe40fx2c=0,_0xe40fx2d=_0xe40fx2b&& _0xe40fx2b[0]== 1?[]:_0xe40fx19[_0x94d3[91]](function(_0xe40fx2e,_0xe40fx2f){if(_0xe40fx27[_0xe40fxf](_0xe40fx2f)){_0xe40fx2c++;_0xe40fx2e[_0x94d3[86]](_0x94d3[90]+ _0xe40fx2f);_0xe40fx28[_0xe40fx2f]= function(){}}else {delete _0xe40fx28[_0xe40fx2f]};return _0xe40fx2e},[]);_0xe40fxe[_0x94d3[47]][_0x94d3[46]](_0xe40fxe,[{messageType:_0x94d3[92],evtData:{id:_0xe40fx25,pe:_0xe40fx2d}},_0xe40fxd[1]]);if(_0xe40fx2c== 0){delete _0xe40fx11[_0xe40fx25]};_0xe40fx19= []};return _0xe40fx24};this[_0x94d3[93]]= function(_0xe40fx7,_0xe40fx30){if(_0xe40fxd[2]== 1){_0xe40fxe[_0x94d3[47]][_0x94d3[46]](_0xe40fxe,[{messageType:_0x94d3[94],evtData:{id:_0xe40fx25,s0ck:[_0xe40fx7,_0xe40fx30]}},_0xe40fxd[1]])};return _0xe40fx24};this[_0x94d3[95]]= function(_0xe40fx31){if(!_0xe40fx11[_0xe40fxf](_0xe40fx25)){_0xe40fx11[_0xe40fx25]= {instance:this,gloE:_0xe40fx27}};_0xe40fx11[_0xe40fx25][_0xe40fx26]= _0xe40fx28;if(_0xe40fxd[2]== 0){_0xe40fxd[0][_0x94d3[86]](_0xe40fx8);_0xe40fx13()}else {_0xe40fxe[_0x94d3[47]][_0x94d3[46]](_0xe40fxe,[_0xe40fx8,_0xe40fxd[1]])};return _0xe40fx24};this[_0x94d3[96]]= function(){return (_0xe40fx8[_0x94d3[39]][_0x94d3[97]],_0xe40fx8[_0x94d3[39]][_0x94d3[97]][1][_0x94d3[98]])};this[_0x94d3[99]]= function(_0xe40fx32){if(_0xe40fxd[2]== 1){_0xe40fxe[_0x94d3[47]][_0x94d3[46]](_0xe40fxe,[{messageType:_0x94d3[99],evtData:{id:_0xe40fx25,auth:_0xe40fx32}},_0xe40fxd[1]])};return _0xe40fx24}})})();return {getSOCK:function(_0xe40fx25){return _0xe40fx11[_0xe40fx25]},soclib:_0xe40fxa}}(),pagerAll=function(_0xe40fx33){var _0xe40fx34=function(_0xe40fx33){if(_0xe40fx33[_0x94d3[100]]){_0xe40fx33[_0x94d3[100]][_0x94d3[106]](_0x94d3[101],function(_0xe40fx7){_0xe40fx7[_0x94d3[105]][_0x94d3[104]][_0x94d3[103]](_0x94d3[102])})}};_0xe40fx33[_0x94d3[107]]= function(_0xe40fx7){_0xe40fx33[_0x94d3[110]][_0x94d3[109]][_0x94d3[107]][_0x94d3[108]](this);_0xe40fx34(this)};setTimeout(function(){_0xe40fx34(_0xe40fx33)})};function activeTabClose(){var _0xe40fx36=document[_0x94d3[112]](_0x94d3[111]);_0xe40fx36[_0x94d3[114]](_0x94d3[113],false,false);$(_0x94d3[116])[0][_0x94d3[115]](_0xe40fx36)}function is$Date(_0xe40fx38){try{var _0xe40fx39=parseInt(_0xe40fx38[1][_0x94d3[118]](/^0+/,_0x94d3[117])),_0xe40fx3a=parseInt(_0xe40fx38[2][_0x94d3[118]](/^0+/,_0x94d3[117])),_0xe40fx3b=parseInt(_0xe40fx38[0][_0x94d3[118]](/^0+/,_0x94d3[117]));if(_0xe40fx3b< 1900|| _0xe40fx3b> 2100){return false}else {if(_0xe40fx39< 1|| _0xe40fx39> 12){return false}else {if(_0xe40fx3a< 1|| _0xe40fx3a> 31){return false}else {if((_0xe40fx39== 4|| _0xe40fx39== 6|| _0xe40fx39== 9|| _0xe40fx39== 11)&& _0xe40fx3a== 31){return false}else {if(_0xe40fx39== 2){var _0xe40fx3c=(_0xe40fx3b% 4== 0&& (_0xe40fx3b% 100!= 0|| _0xe40fx3b% 400== 0));if(_0xe40fx3a> 29|| (_0xe40fx3a== 29&&  !_0xe40fx3c)){return false}}}}}};return true}catch(err){};return false}function _uniARR(_0xe40fx1e){var _0xe40fx3e=[];for(var _0xe40fx3f=0;_0xe40fx3f< _0xe40fx1e[_0x94d3[1]];_0xe40fx3f++){if(_0xe40fx3e[_0x94d3[43]](_0xe40fx1e[_0xe40fx3f])==  -1){_0xe40fx3e[_0x94d3[86]](_0xe40fx1e[_0xe40fx3f])}};return _0xe40fx3e}function toastMsg(_0xe40fx8,_0xe40fx41,_0xe40fx30,_0xe40fx42){if(window[_0x94d3[119]]){DevExpress[_0x94d3[123]][_0x94d3[122]]({hideOnOutsideClick:true,message:_0xe40fx8,type:_0xe40fx41,displayTime:!_0xe40fx30?1000:_0xe40fx30,maxWidth:_0x94d3[120],position:!_0xe40fx42?_0x94d3[121]:_0xe40fx42})}else {_gsC(_0x94d3[2],_0x94d3[3],function(_0xe40fx6){_gsC(_0x94d3[4],_0x94d3[5],function(_0xe40fx6){_gsC(srcpf$+ _0x94d3[6],_0x94d3[3],function(){toastr[_0x94d3[7]]= {"\x63\x6C\x6F\x73\x65\x42\x75\x74\x74\x6F\x6E":false,"\x64\x65\x62\x75\x67":false,"\x6E\x65\x77\x65\x73\x74\x4F\x6E\x54\x6F\x70":true,"\x70\x72\x6F\x67\x72\x65\x73\x73\x42\x61\x72":false,"\x70\x6F\x73\x69\x74\x69\x6F\x6E\x43\x6C\x61\x73\x73":_0x94d3[8],"\x70\x72\x65\x76\x65\x6E\x74\x44\x75\x70\x6C\x69\x63\x61\x74\x65\x73":false,"\x6F\x6E\x63\x6C\x69\x63\x6B":null,"\x73\x68\x6F\x77\x44\x75\x72\x61\x74\x69\x6F\x6E":_0x94d3[9],"\x68\x69\x64\x65\x44\x75\x72\x61\x74\x69\x6F\x6E":_0x94d3[9],"\x74\x69\x6D\x65\x4F\x75\x74":!_0xe40fx30?1000:_0xe40fx30,"\x73\x68\x6F\x77\x45\x61\x73\x69\x6E\x67":_0x94d3[10],"\x68\x69\x64\x65\x45\x61\x73\x69\x6E\x67":_0x94d3[11],"\x73\x68\x6F\x77\x4D\x65\x74\x68\x6F\x64":_0x94d3[12],"\x68\x69\x64\x65\x4D\x65\x74\x68\x6F\x64":_0x94d3[13],"\x74\x61\x70\x54\x6F\x44\x69\x73\x6D\x69\x73\x73":true};toastr[_0xe40fx41](_0x94d3[124]+ _0x94d3[125]+ _0x94d3[18]+ _0xe40fx8+ _0x94d3[23]+ _0x94d3[23]+ _0x94d3[23])},_0x94d3[26])},_0x94d3[27])},_0x94d3[28])}}function devMSG(_0xe40fx44){return DevExpress[_0x94d3[128]][_0x94d3[127]][_0x94d3[126]]()[_0xe40fx44]}function devDlg(_0xe40fx46,_0xe40fx8,_0xe40fx47){if(window[_0x94d3[119]]){var _0xe40fx48,_0xe40fx49={text:devMSG(_0x94d3[129]),onClick:function(_0xe40fx7){return 6}},_0xe40fx4a={text:devMSG(_0x94d3[130]),onClick:function(_0xe40fx7){return 1}},_0xe40fx4b={text:devMSG(_0x94d3[131]),onClick:function(_0xe40fx7){return 7},onContentReady:function(_0xe40fx7){_0xe40fx48= _0xe40fx7[_0x94d3[105]]}},_0xe40fx4c={text:devMSG(_0x94d3[132]),onClick:function(_0xe40fx7){return 2},onContentReady:function(_0xe40fx7){_0xe40fx48= _0xe40fx7[_0x94d3[105]]}},_0xe40fx4d=[],_0xe40fx22={showTitle:false,messageHtml:_0xe40fx8,popupOptions:{onShown:function(_0xe40fx7){if(_0xe40fx48){_0xe40fx48[_0x94d3[133]]()}}}};if(_0xe40fx47){_0xe40fx22[_0x94d3[134]]= true;_0xe40fx22[_0x94d3[135]]= _0xe40fx47};switch(_0xe40fx46){case 0:{_0xe40fx4d= [_0xe40fx4a];break};case 1:{_0xe40fx4d= [_0xe40fx4a,_0xe40fx4c];break};case 4:{_0xe40fx4d= [_0xe40fx49,_0xe40fx4b];break}};_0xe40fx22[_0x94d3[136]]= _0xe40fx4d;return DevExpress[_0x94d3[123]][_0x94d3[138]][_0x94d3[137]](_0xe40fx22)}else {var _0xe40fx4e={show:function(){_0xe40fx4f[_0x94d3[140]](_0x94d3[139]);return this},done:function(_0xe40fx50){this[_0x94d3[141]]= _0xe40fx50}},_0xe40fx4f=admin$[_0x94d3[144]]({a:_0x94d3[142],m:_0xe40fx8+ _0x94d3[143],cbClosed:function(){_0xe40fx4e[_0x94d3[141]](_0x94d3[65])}});_0xe40fx4f[_0x94d3[147]](_0x94d3[146])[_0x94d3[145]]();_0xe40fx4f[_0x94d3[103]](_0x94d3[148]);return _0xe40fx4e}}var glbK={_kLK:null,kLK:function(){if(!this[_0x94d3[149]]){this[_0x94d3[149]]=  new Date()[_0x94d3[82]]()};return this[_0x94d3[149]]},_regVEL:null,regVEL:function(){if(!this[_0x94d3[150]]){this[_0x94d3[150]]=  new Date()[_0x94d3[82]]()};return this[_0x94d3[150]]},regDYN:function(_0xe40fx52){if(!this[_0xe40fx52]){this[_0xe40fx52]=  new Date()[_0x94d3[82]]()};return this[_0xe40fx52]}};function dogOutCLK(_0xe40fx54,_0xe40fx55){_0xe40fx54[GetIEVersion()== 11?_0x94d3[151]:_0x94d3[152]]= _0xe40fx55;return _0xe40fx54}function devCTXmnu(_0xe40fx57,_0xe40fx58,_0xe40fx59){if(!devDlg[_0x94d3[153]]){var _0xe40fx5a=$(_0x94d3[156])[_0x94d3[155]](_0xe40fx58[_0x94d3[154]]);devDlg[_0x94d3[153]]= [$(_0x94d3[170])[_0x94d3[169]]($(document[_0x94d3[54]]))[_0x94d3[161]]($[_0x94d3[168]]({},{contentTemplate:function(_0xe40fx7){return _0xe40fx5a},target:_0xe40fx57,showEvent:_0x94d3[162],maxWidth:400,hideOnOutsideClick:false,shading:false,shadingColor:_0x94d3[163],onDisposing:function(_0xe40fx7){},onContentReady:function(_0xe40fx7){_0xe40fx7[_0x94d3[105]][_0x94d3[166]][_0x94d3[3]](_0x94d3[164],_0x94d3[165]);if(_0xe40fx59&&  typeof _0xe40fx59=== _0x94d3[40]){_0xe40fx59()}}},_0xe40fx58[_0x94d3[167]]))[_0x94d3[161]](_0x94d3[160])[_0x94d3[85]](_0x94d3[157],function(_0xe40fx5b){_0xe40fx5b[_0x94d3[105]][_0x94d3[106]](_0x94d3[158],null);devDlg[_0x94d3[159]]= {}}),[_0xe40fx58],_0xe40fx5a];devDlg[_0x94d3[171]]= function(_0xe40fx5c){_0xe40fx5c[_0x94d3[176]](function(_0xe40fx5d){_0xe40fx5a[_0x94d3[147]](_0x94d3[174]+ _0xe40fx5d+ _0x94d3[175])[_0x94d3[173]]()[_0x94d3[172]]()[_0x94d3[145]]()});devDlg[_0x94d3[159]]= {_k:-1,_s:false}}}else {if(devDlg[_0x94d3[159]]&& devDlg[_0x94d3[159]][_0x94d3[177]]== _0xe40fx58[_0x94d3[177]]&& devDlg[_0x94d3[159]][_0x94d3[178]]=== true){devDlg[_0x94d3[153]][0][_0x94d3[179]]();srclocked(false);return};var _0xe40fx5e=devDlg[_0x94d3[153]][2][_0x94d3[182]](_0x94d3[181])[_0x94d3[147]](_0x94d3[180]),_0xe40fx5f=0;_0xe40fx5e[_0x94d3[187]](function(_0xe40fx1e,_0xe40fx54){var _0xe40fx60=$(_0xe40fx54);if(_0xe40fx60[_0x94d3[184]](_0x94d3[183]+ _0xe40fx58[_0x94d3[177]])){_0xe40fx5f= 1;_0xe40fx60[_0x94d3[186]](_0x94d3[185])}else {_0xe40fx60[_0x94d3[103]](_0x94d3[185])}});if(_0xe40fx5f== 0){devDlg[_0x94d3[153]][2][_0x94d3[155]](_0xe40fx58[_0x94d3[154]]);if(_0xe40fx59&&  typeof _0xe40fx59=== _0x94d3[40]){_0xe40fx59()}};devDlg[_0x94d3[153]][0][_0x94d3[106]]($[_0x94d3[168]]({},{'\x6F\x6E\x48\x69\x64\x64\x65\x6E':null,'\x6F\x6E\x48\x69\x64\x69\x6E\x67':null,'\x6F\x6E\x53\x68\x6F\x77\x6E':null,'\x6F\x6E\x53\x68\x6F\x77\x69\x6E\x67':null,'\x68\x69\x64\x65\x4F\x6E\x4F\x75\x74\x73\x69\x64\x65\x43\x6C\x69\x63\x6B':null,'\x6D\x61\x78\x57\x69\x64\x74\x68':400,'\x74\x61\x72\x67\x65\x74':_0xe40fx57},_0xe40fx58[_0x94d3[167]]|| {}))};devDlg[_0x94d3[153]][0][_0x94d3[139]]();devDlg[_0x94d3[159]]= {_k:_0xe40fx58[_0x94d3[177]],_s:true};srclocked(false)}function sav_e_i(_0xe40fx62,_0xe40fx50,_0xe40fx63,_0xe40fx64){var _0xe40fx65=[_0x94d3[188],_0x94d3[189]],_0xe40fx66=_0xe40fx65[Math[_0x94d3[191]](Math[_0x94d3[190]]()* 2)],_0xe40fx67= new FormData(),_0xe40fx14={async:false,crossDomain:true,processData:false,contentType:false,mimeType:_0x94d3[192],url:_0xe40fx63,type:_0x94d3[193],data:_0xe40fx67};if(_0xe40fx62){if($[_0x94d3[194]](_0xe40fx62)=== _0x94d3[195]){_0xe40fx67[_0x94d3[155]](_0x94d3[196],_0xe40fx62[_0x94d3[30]](_0x94d3[197])[1])}else {_0xe40fx67[_0x94d3[155]](_0x94d3[196],_0xe40fx62)}};if(!_0xe40fx63){_0xe40fx14= $[_0x94d3[168]]({url:_0x94d3[198],headers:{Authorization:_0x94d3[199]+ _0xe40fx66,Accept:_0x94d3[200]}},_0xe40fx14)}else {if(_0xe40fx64){for(var _0xe40fx42 in _0xe40fx64){if(_0xe40fx64[_0x94d3[38]](_0xe40fx42)){_0xe40fx67[_0x94d3[155]](_0xe40fx42,_0xe40fx64[_0xe40fx42])}}}};$[_0x94d3[206]](_0xe40fx14)[_0x94d3[141]](function(_0xe40fx6a){_0xe40fx50({msg:_0x94d3[130],type:_0x94d3[25],res:JSON[_0x94d3[204]](_0xe40fx6a)})})[_0x94d3[205]](function(_0xe40fx68,_0xe40fx69){_0xe40fx50({msg:_0x94d3[201],type:_0x94d3[202],res:JSON[_0x94d3[204]](_0xe40fx68[_0x94d3[203]])})})}(function(){var _0xe40fx6b=function(_0xe40fx75){var _0xe40fx76=_0x94d3[117];switch(_0xe40fx75){case _0xe40fx72[_0x94d3[208]]:_0xe40fx76= w0w[_0x94d3[207]];break;case _0xe40fx72[_0x94d3[209]]:_0xe40fx76= gcok(_0xe40fx70);if(_0xe40fx76== undefined){_0xe40fx76= _0x94d3[117]};break};return _0xe40fx76},_0xe40fx6c=function(_0xe40fx75,_0xe40fx76){switch(_0xe40fx75){case _0xe40fx72[_0x94d3[208]]:w0w[_0x94d3[207]]= _0xe40fx76;break;case _0xe40fx72[_0x94d3[209]]:cok(_0xe40fx70+ _0x94d3[210]+ (_0xe40fx76|| _0x94d3[117]));break}},_0xe40fx6d=function(){var _0xe40fx77=function(){return Math[_0x94d3[191]]((1+ Math[_0x94d3[190]]())* 0x10000).toString(16)[_0x94d3[211]](1)};return _0xe40fx77()+ _0xe40fx77()+ _0x94d3[212]+ _0xe40fx77()+ _0x94d3[212]+ _0xe40fx77()+ _0x94d3[212]+ _0xe40fx77()+ _0x94d3[212]+ _0xe40fx77()+ _0xe40fx77()+ _0xe40fx77()},_0xe40fx6e=(5)* 1000,_0xe40fx6f=(8/ 2)* 1000,_0xe40fx70=_0x94d3[213],_0xe40fx71=_0xe40fx6d(),_0xe40fx72={Session:1,Local:2},_0xe40fx73=function(){var _0xe40fx76=_0xe40fx6b(_0xe40fx72.Local)|| _0x94d3[117];if(_0xe40fx71!= _0xe40fx76){if(_0xe40fx76== _0x94d3[117]){_0xe40fx6c(_0xe40fx72.Local,_0xe40fx71);_0xe40fx6e= setTimeout(_0xe40fx73,_0xe40fx6f)}else {window[_0x94d3[214]]= function(){window[_0x94d3[216]](apisvr[_0x94d3[215]]?{showConfirmButton:false,showCancelButton:false}:null,function(_0xe40fx15){if(apisvr[_0x94d3[215]]){$(document)[_0x94d3[87]]()[_0x94d3[173]]()[_0x94d3[172]]()[_0x94d3[147]](_0x94d3[68])[_0x94d3[87]]()[_0x94d3[173]]()[_0x94d3[172]]()}})};$[_0x94d3[219]](_0x94d3[217],function(_0xe40fx6){apisvr[_0x94d3[70]][_0x94d3[218]](_0xe40fx6)})}}else {_0xe40fx6e= setTimeout(_0xe40fx73,_0xe40fx6f)}},_0xe40fx74=function(){_0xe40fx6c(_0xe40fx72.Local,_0x94d3[117])};w0w[_0x94d3[221]](_0x94d3[220],_0xe40fx74,false);_0xe40fx6c(_0xe40fx72.Local,_0xe40fx71);_0xe40fx6e= setTimeout(_0xe40fx73,_0xe40fx6f)})()
+'use strict';
+
+var test_toast = function (log) {
+    //
+    if (log.length == 0 || log[0].length<2) return;
+    //
+    _gsC('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css', 'css', function (data) {
+        _gsC('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js', 'js', function (data) {
+            //
+            _gsC(srcpf$ + '/media/css/toastr_ex.css', 'css', function () {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": false,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "0",
+                    "hideDuration": "0",
+
+                    //"timeOut": "0",
+                    //"extendedTimeOut": "0",
+
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut",
+                    //tapToDismiss: false,
+                    toastClass: 'rtv_msg',
+                    containerId: 'rtv-container',
+                };//
+                //debugger;
+                toastr[log[2]===1?'info':'success']('<div class="card" style="background: none;">' +
+                    '<div class="media ml-1 mr-3"><i class="ti-check msgicon"></i>' +
+                        '<div class="media-body">' +
+                            '<h6 class="mt-1 mb-0">No.' + log[1][0] + ' / Usr: ' + log[0][0] + '</h6><span>' + log[0][1] + '</span>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>');
+
+            }, 'toastr_ex.css');
+            //
+        }, 'toastr.min.js');
+    }, 'toastr.css');
+},
+
+gloEVTs = {
+    RTEVT: function (e) {//device realtime event log
+        var msg = this;
+        if (msg && msg.length > 3 && msg[3] == e) {
+            //debugger;
+            test_toast([msg[4].split('\t'), msg[2], msg[5]]);
+        };
+    }
+},
+
+sockjo = function () {
+
+    var isfrm = !w0w.Worker || false,
+        soclib = 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.min.js',
+        socjs = (srcp$f ? srcp$f : w0w.location.href.split(w0w.location.pathname)[0]) + '/media/utils/jsc/globalevts.js' + src$id,
+        calcSession = '123456789',
+        postArgs = [[], , 0],
+        so$io,
+        hwp = 'hasOwnProperty',
+        jobRST = function (s, e) {
+            //
+            //s:0 : from iframe, 1:job worker
+            //
+            //debugger;
+            var rst = e.evtData;
+            if (f_n[hwp](rst[0])) { //event bind collection
+                var bindEVT = f_n[rst[0]];
+                if (typeof bindEVT === "function") {
+
+                    bindEVT.bind(rst[0])();//moi load xong  call bm9kZWpzX3NvY2tldF9vaw
+
+                } else {
+                    for (var _self in bindEVT) {
+                        if (bindEVT[hwp](_self)) {
+                            //
+                            if (_self.indexOf('self__') == 0) {//property nay moi la event
+                                var EVTs = bindEVT[_self], ename = rst[1];
+                                if (EVTs[hwp](ename)) {//event name
+                                    //
+                                    EVTs[ename].bind(rst[2])();
+                                    //
+                                    //
+                                    //detect global event
+                                    if (bindEVT.gloE[hwp](ename)) {
+                                        if (bindEVT.gloE[hwp](ename)) {
+                                            var pubevt=bindEVT.gloE[ename];
+                                            gloEVTs[pubevt].bind(rst[2])(pubevt);
+                                        }
+                                    };
+                                    //
+                                };
+                            };
+                            //
+                        };
+                    };
+                };
+            };
+        },
+
+
+        f_n = {//default se co event loaded ????
+            'bm9kZWpzX3NvY2tldF9vaw': function () {
+                //
+                while (postArgs[0].length > 0) {
+                    so$io.postMessage.apply(so$io, [postArgs[0].shift(), postArgs[1]]);//postArgs[1]="*" if iframe
+                };
+                postArgs[2] = 1;//alreaddy load
+                //
+                delete f_n[this];//remove luon item nay khoi collection f_n
+                //
+            }
+        }//nodejs_socket_ok
+
+        , clean_f_n = function (__k) {
+            var bindEVT = f_n[__k];
+            for (var _self in bindEVT) {
+                if (bindEVT.hasOwnProperty(_self)) {
+                    return 1;
+                    break;
+                };
+            };
+            delete f_n[__k];//clean luon
+            return 0;
+        }
+
+        , __ = function () {
+            //
+
+            if (isfrm) {
+                var gevt = document.createElement('iframe');
+                gevt.setAttribute("style", "height:1px;width:1px;border:none;opacity:0");
+                //
+                document.body.appendChild(gevt);//append vao step 3 main div
+                var te = gevt.contentWindow.document;
+                te.open();
+                te.write('<script  type="text/javascript" src="' + soclib + '"></script><script seson="' + btoa(calcSession + '|' + w0w.location.origin + '|' + isfrm) + '" type="text/javascript" src="' + socjs + '"></script>');
+                te.close();
+                gevt.onload = function () {
+                    //
+                    //debugger;
+                    so$io = gevt.contentWindow;
+                    so$io.init_ifrm();
+                    //
+                };
+                postArgs[1] = "*";
+                apisvr.a$.sessions[calcSession] = {
+                    id: calcSession,
+                    fn: function (a, b, c) {
+                        if (a == 'job') {
+                            jobRST(0, b, c);
+                        };
+                    }
+                };
+            } else {//job worker
+                so$io = new Worker(window.URL.createObjectURL(
+                        new Blob(["importScripts('" + [soclib, socjs].join("','") + "');"],
+                        {
+                            type: 'text/javascript'
+                        })
+                    ));
+                so$io.onmessage = function (e) { jobRST(1, e.data); };
+            };
+        };
+
+    window.JO = (function () { // scoping
+
+        return (function (addr, opts, MORs) { // constructor
+
+            var th$t = this,
+                sockid = MORs[0],
+                myself = 'self__' + new Date().getTime(),
+                ename = [],
+                gloE = {},
+                msg = {
+                    messageType: 'iniSOCK', evtData: {
+                        id: sockid,
+                        s0ck: [addr, opts, ename]
+                    }
+                },
+                evts = {};
+            //
+            this.wdms = {};//wdms options
+            //
+            this.on = function (e, fn,pubE) {
+                //debugger;
+                //
+                ename.push(e);//event name
+                //
+                //ko sao ca, cai moi chong len cai cu cua global
+                evts[e] = function () {
+                    fn.bind(th$t)(this);
+                };//this la parameter bind
+                //
+                if (pubE && !gloE[hwp](e)) gloE[e] = pubE;
+                //
+                return th$t;
+            };
+            //
+            //
+            this.off = function (e) {
+                //
+                ename.splice($.inArray(e, ename), 1);//dung jquery
+                //
+                delete evts[e];
+                return th$t;
+            };
+            //
+            //
+            this.close = function (ags) {
+                //
+                //debugger;
+                //
+                if (f_n[hwp](sockid)) {//chua da ton tai listen cua server socket io
+                    //
+                    var isPUB = 0,
+                        pe = ags && ags[0]==1 ? [] : ename.reduce(function (ge, n) {//pe:public event
+                            if (gloE[hwp](n)) {
+                                //
+                                isPUB++;
+                                ge.push("$" + n);//dua sang engine de giu lai
+                                //
+                                //chua no lai de bat su kien de truyen sang global....
+                                evts[n] = function () { };
+                                //
+                            } else {
+                                //
+                                delete evts[n];//off event hien tai *****
+                            };
+                            //
+                            //
+                            return ge;
+                        }, []);
+                    //
+                    so$io.postMessage.apply(so$io, [{
+                        messageType: 'closeSOCK', evtData: {
+                            id: sockid,
+                            pe: pe
+                        }
+                    }, postArgs[1]]);//postArgs[1]="*" if iframe
+                    //
+                    //
+                    if (isPUB == 0) {//ko co global event
+                        //remove socket instance, event ....
+                        delete f_n[sockid];
+                    };
+                    //
+                    ename=[];//empty luon
+                    //
+                };
+                return th$t;
+            };
+            //
+            this.emit = function (e, d) {
+                if (postArgs[2] == 1) {//already
+                    so$io.postMessage.apply(so$io, [{
+                        messageType: 'emitSOCK', evtData: {
+                            id: sockid,
+                            s0ck: [e, d]
+                        }
+                    }, postArgs[1]]);//postArgs[1]="*" if iframe
+                }
+                return th$t;
+            };
+            //
+            //
+            this.STARTd = function (newO) {
+                //
+                //debugger;
+                //
+                if (!f_n[hwp](sockid))//chua da ton tai listen cua server socket io
+                    f_n[sockid] = {
+                        instance: this,
+                        gloE: gloE//global event cua socket, <=> khi socket close, neu ton tai tham so nay thi se tiep tuc chay
+                    };
+                //
+                //
+                f_n[sockid][myself] = evts;
+                //
+                //
+                if (postArgs[2] == 0) {
+                    postArgs[0].push(msg);//luu tru o day de khi load xong se postmessage
+                    __();
+                } else {
+                    so$io.postMessage.apply(so$io, [msg, postArgs[1]]);//postArgs[1]="*" if iframe
+                };
+                //
+                return th$t;
+                //
+            };
+
+            this.sockAUT = function () {
+                return (msg.evtData.s0ck,msg.evtData.s0ck[1].auth);
+            }
+
+            this.setAUTH = function (aut) {
+                if (postArgs[2] == 1) {//already
+                    so$io.postMessage.apply(so$io, [{
+                        messageType: 'setAUTH', evtData: {
+                            id: sockid,
+                            auth: aut
+                        }
+                    }, postArgs[1]]);//postArgs[1]="*" if iframe
+                }
+                return th$t;
+            }
+
+        });
+
+    })();
+    //
+    return {
+        getSOCK: function (sockid) {
+            return f_n[sockid];
+        },
+        soclib: soclib
+    };
+    //
+}()
+
+
+, pagerAll = function (pager) {
+    var addFuckCss = function (pager) {
+        if (pager._pageSizeEditor) {
+            pager._pageSizeEditor.option('onOpened', function (e) {
+                e.component._$list.addClass('fuck-pager');
+            });
+        };
+    };
+    pager._updateLightMode = function (e) {
+        pager.constructor.prototype._updateLightMode.call(this);
+        addFuckCss(this);
+    };
+    setTimeout(function () { addFuckCss(pager); });
+};
+
+function activeTabClose() {
+    var evt = document.createEvent('HTMLEvents');
+    evt.initEvent('click', false, false);
+    $('.chrome-tab[active] .chrome-tab-close')[0].dispatchEvent(evt);//.trigger('click');
+}
+
+function is$Date(dtArray) {
+    try {
+        var dtMonth = parseInt(dtArray[1].replace(/^0+/, ""))
+        , dtDay = parseInt(dtArray[2].replace(/^0+/, ""))
+        , dtYear = parseInt(dtArray[0].replace(/^0+/, ""));
+        if (dtYear < 1900 || dtYear > 2100) {
+            return false;
+        }
+        else if (dtMonth < 1 || dtMonth > 12)
+            return false;
+        else if (dtDay < 1 || dtDay > 31)
+            return false;
+        else if ((dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) && dtDay == 31)
+            return false;
+        else if (dtMonth == 2) {
+            var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+            if (dtDay > 29 || (dtDay == 29 && !isleap))
+                return false;
+        };
+        return true;
+    } catch (err) {
+
+    }
+    return false;
+}
+
+function _uniARR(a) {
+    var arr = [];
+    for (var i = 0; i < a.length; i++) {
+        if (arr.indexOf(a[i]) == -1) {
+            arr.push(a[i]);
+        }
+    }
+    return arr;
+}
+
+function toastMsg(msg, type, d,p) {
+    if (window['DevExpress']) {
+        //
+        //cho nay gay loi de len setting tab, --> lam click 2 lan nut save ...
+
+        //DevExpress.ui.dxOverlay.baseZIndex = function () { return 9999999; };
+
+        DevExpress.ui.notify({
+            hideOnOutsideClick:true,
+            message: msg, type: type, displayTime: !d ? 1000 /* 30 * 60000*/: d, maxWidth: '300px', position: !p ? 'bottom center' : p
+        });
+
+    } else {
+        //ko co dev thi dung toast
+
+        _gsC('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css', 'css', function (data) {
+            _gsC('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js', 'js', function (data) {
+                //
+                _gsC(srcpf$ + '/media/css/toastr_ex.css', 'css', function () {
+                    toastr.options = {
+                        "closeButton": false,
+                        "debug": false,
+                        "newestOnTop": true,
+                        "progressBar": false,
+                        "positionClass": "toast-bottom-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "0",
+                        "hideDuration": "0",
+
+                        "timeOut": !d ? 1000 /* 30 * 60000*/ : d,
+                        //"extendedTimeOut": "0",
+
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut",
+                        "tapToDismiss": true,
+                        //toastClass: 'rtv_msg',
+                        //containerId: 'rtv-container',
+                    };//
+                    //debugger;
+                    toastr[type]('<div>' +
+                        '<div class="media ml-1 mr-3">' +
+                            '<div class="media-body">' +
+                                msg +
+                            '</div>' +
+                        '</div>' +
+                    '</div>');
+
+                }, 'toastr_ex.css');
+                //
+            }, 'toastr.min.js');
+        }, 'toastr.css');
+    }
+};
+
+function devMSG(key) {
+    return DevExpress.localization.message.getDictionary()[key];
+};
+
+function devDlg(vbBOX, msg, t) {
+
+    //AbortRetryIgnore	2	//OK	0	//OKCancel	1	//RetryCancel	5	//YesNo	4	//YesNoCancel	3	
+    // Abort	3	Cancel	2	Ignore	5	No	7	None	0	OK	1	Retry	4	Yes	6	
+
+    if (window['DevExpress']) {
+        var defF, Yes = { text: devMSG('Yes'), onClick: function (e) { return 6 } }, OK = { text: devMSG('OK'), onClick: function (e) { return 1 } }
+        , No = {
+            text: devMSG('No'), onClick: function (e) { return 7 }, onContentReady: function (e) {
+                defF = e.component;
+            }
+        }
+        , Cancel = {
+            text: devMSG('Cancel'), onClick: function (e) { return 2 }, onContentReady: function (e) {
+                defF = e.component;
+            }
+        }
+        , btn = []
+        , opts = {
+            showTitle: false,
+            //title: "Custom dialog",
+            messageHtml: msg,
+            popupOptions: {
+                onShown: function (e) {
+                    if (defF) defF.focus();
+                }
+            }
+        };
+        if (t) {
+            opts.showTitle = true;
+            opts.title = t;
+        }
+        switch (vbBOX) {
+            case 0: {
+                btn = [OK];
+                break;
+            }
+            case 1: {
+                btn = [OK, Cancel];
+                break;
+            }
+            case 4: {
+                btn = [Yes, No];
+                break;
+            }
+        }
+        opts['buttons'] = btn;
+        return DevExpress.ui.dialog.custom(opts);
+    } else {
+        //dung message boottrap popup
+        var dag = {
+            show: function () {
+                puhwnd.modal('show');
+                return this;
+            }
+            ,
+            done: function (cb) {
+                this.done = cb;
+            }
+        }
+        ,
+        puhwnd = admin$.popup({
+            a: 'd', m: msg + '</span></div>', cbClosed: function () {
+                dag.done('close');
+            }
+        });
+        //
+        puhwnd.find('#popupdone').remove();
+        puhwnd.addClass('bootstrap-dlg');
+        //
+        return dag;
+        //
+    };
+};
+var glbK = {
+    _kLK:null,
+    kLK: function () {//lockup devexpress employees
+        if (!this._kLK) this._kLK = new Date().getTime();
+        return this._kLK;
+    }
+    , _regVEL: null,//registration V:valid E:emp L:list
+    regVEL: function () { //regis form valid em
+        if (!this._regVEL) this._regVEL = new Date().getTime();
+        return this._regVEL;
+    }
+
+    ,
+
+    regDYN: function (na) { //hom mua may tinh DELL 7520 , phat sinh key dynamic cho look, (bat dat la nut menu ben desktop list
+        //JS_SJ_reglv.js  : glbK.regDYN('frm_regis')
+        if (!this[na]) this[na] = new Date().getTime();
+        return this[na];
+    }
+
+}
+function dogOutCLK(o, v) {
+    o[GetIEVersion() == 11 ? 'closeOnOutsideClick' : 'hideOnOutsideClick'] = v;
+    return o;
+};
+
+function devCTXmnu(target, cont, buildCB) {
+
+    // if this constructor is used without `new`, it adds `new` before itself:
+    //if (!(this instanceof JSZip)) {
+    //    return new JSZip();
+    //}
+    if (!devDlg.ctx) {//muon tam devDlg // cap nay se di cung nhau neu ko bi loi
+        //
+        var tmpl = $('<div class="devCTXmnu"></div>').append(cont.el);
+        //
+        //choi lon, append to body luon
+        //https://stackoverflow.com/questions/12307112/difference-between-document-body-and-body
+        devDlg.ctx = [$('<div></div>').appendTo($(document.body)).dxPopover($.extend({}, {
+            contentTemplate: function (e) {
+                return tmpl;
+            },
+            target: target,
+            showEvent: 'dxclick',
+            //position: 'bottom',
+            maxWidth: 400,
+            hideOnOutsideClick: false,
+            shading: false,
+            shadingColor: 'rgba(0, 0, 0, 0.5)',
+            onDisposing: function (e) {
+                //console.log('onDisposing: function (e)');
+            },
+            onContentReady: function (e) {
+                e.component._$popupContent.css('padding', '10px');
+                if (buildCB && typeof buildCB === 'function') buildCB();
+            },
+        }, cont.op)).dxPopover("instance").on('hiding', function (xyz) {
+            xyz.component.option('target', null);//reset target
+            devDlg.atMNU = {};//reset show status
+        })
+
+        ,
+
+        [cont],
+
+        tmpl
+
+        ];
+        //
+        //
+        devDlg.ctxCLEAR = function (MNU) {
+            //
+            MNU.forEach(function (m) {
+                tmpl.find("div[class*='_k-" + m + "']").unbind().removeData().remove();
+            });
+            //
+            devDlg.atMNU = {//reset
+                _k: -1,
+                _s: false //s:show
+            };
+        };
+        //
+    } else {
+        //neu bang voi cai load truoc
+        if (devDlg.atMNU && devDlg.atMNU._k == cont._k && devDlg.atMNU._s === true) {
+            devDlg.ctx[0].hide();
+            srclocked(false);
+            return;
+        };
+        //
+        var old_po = devDlg.ctx[2].closest('.devCTXmnu').find("div[class*='_k-']"), isOld = 0;
+        //
+        old_po.map(function (a, o) {
+            var O = $(o);
+            if (O.hasClass('_k-' + cont._k)) {
+                isOld = 1;
+                O.removeClass("d-none");
+            } else {
+                O.addClass("d-none");
+            };
+        });
+        //
+        if (isOld == 0) {
+            devDlg.ctx[2].append(cont.el);
+            if (buildCB && typeof buildCB === 'function') buildCB();
+        };
+        //
+        devDlg.ctx[0].option($.extend({}, {
+            'onHidden': null,
+            'onHiding': null,
+            'onShown': null,
+            'onShowing': null,
+            //'closeOnOutsideClick':null,
+            'hideOnOutsideClick': null,
+            'maxWidth': 400,
+            'target': target
+        }, cont.op || {}));
+        //
+    };
+
+
+    devDlg.ctx[0].show();
+
+    devDlg.atMNU = {
+        _k: cont._k,
+        _s:true //s:show
+    }
+
+    srclocked(false);
+};
+
+//function mobPULL() {
+//    var isChrome = window.chrome || navigator.userAgent.match('CriOS');
+//    var isTouch = 'ontouchstart' in document.documentElement;
+
+//    if (!isChrome || !isTouch) {
+//        return;
+//    }
+
+//    var supportsOverscroll = false;
+//    var supportsPassive = false;
+//    var lastTouchY = 0;
+//    var maybePrevent = false;
+
+//    try {
+//        if (CSS.supports('overscroll-behavior-y', 'contain')) {
+//            supportsOverscroll = true;
+//        }
+//    } catch (e) { }
+
+//    if (supportsOverscroll) {
+//        return (document.body.style.overscrollBehaviorY = 'contain');
+//    } else {
+//        var head = document.head || document.body;
+//        var style = document.createElement('style');
+//        var css =
+//          '\n      ::-webkit-scrollbar {\n        width: 5px;\n      }\n      ::-webkit-scrollbar-thumb {\n        border-radius: 5px;\n        background-color: rgba(0, 0, 0, 0.2);\n      }\n      body {\n        -webkit-overflow-scrolling: auto!important;\n      }\n    ';
+//        style.type = 'text/css';
+
+//        if (style.styleSheet) {
+//            style.styleSheet.cssText = css;
+//        } else {
+//            style.appendChild(document.createTextNode(css));
+//        }
+
+//        head.appendChild(style);
+//    }
+
+//    try {
+//        window.addEventListener('test', null, {
+//            get passive() {
+//                supportsPassive = true;
+//            },
+//        });
+//    } catch (e) { }
+
+//    var setTouchStartPoint = function setTouchStartPoint(event) {
+//        lastTouchY = event.touches[0].clientY;
+//    };
+
+//    var isScrollingUp = function isScrollingUp(event) {
+//        var touchY = event.touches[0].clientY;
+//        var touchYDelta = touchY - lastTouchY;
+//        lastTouchY = touchY;
+//        return touchYDelta > 0;
+//    };
+
+//    var touchstartHandler = function touchstartHandler(event) {
+//        if (event.touches.length !== 1) return;
+//        setTouchStartPoint(event);
+//        maybePrevent = window.pageYOffset === 0;
+//    };
+
+//    var touchmoveHandler = function touchmoveHandler(event) {
+//        if (maybePrevent) {
+//            maybePrevent = false;
+
+//            if (isScrollingUp(event)) {
+//                return event.preventDefault();
+//            }
+//        }
+//    };
+
+//    document.addEventListener(
+//      'touchstart',
+//      touchstartHandler,
+//      supportsPassive
+//        ? {
+//            passive: true,
+//        }
+//        : false
+//    );
+//    document.addEventListener(
+//      'touchmove',
+//      touchmoveHandler,
+//      supportsPassive
+//        ? {
+//            passive: false,
+//        }
+//        : false
+//    );
+//};
+
+//if (Main.isMobile()) {
+//    mobPULL();
+//};
+function sav_e_i(img, cb, apiUrl,$p) {
+    // Replace ctrlq with your own API key
+    // 0 -> 10
+    //Math.floor(Math.random() * 11);
+    // 1 -> 10
+    //Math.floor(Math.random() * 10) + 1;
+    // 5 -> 20
+    //Math.floor(Math.random() * 16) + 5;
+    // -10 -> (-2)
+    //Math.floor(Math.random() * 9) - 10;
+    var apiKey = ['7672f6b2b03808a', '1ed4fd2f66f9821'], k = apiKey[Math.floor(Math.random() * 2)],
+        fd = new FormData(), s={
+        async: false,
+        crossDomain: true,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+
+        url: apiUrl,
+
+        type :"POST",
+        data: fd
+
+    };
+    //
+    //
+    if (img) {//co the chi post change password
+        if ($.type(img) === "string") {
+            fd.append('image', img.split(';base64,')[1]);
+        } else {
+            fd.append('image', img);
+        };
+    };
+    //
+    //
+    if (!apiUrl) {
+        s = $.extend({
+            url: 'https://api.imgur.com/3/image',
+            headers: {
+                Authorization: 'Client-ID ' + k,
+                Accept: 'application/json',
+            }
+        }, s);
+    } else {
+        if ($p) {
+            for (var p in $p) {
+                if ($p.hasOwnProperty(p)) {
+                    fd.append(p, $p[p]);
+                };
+            };
+        };
+    };
+    //
+    // Response contains stringified JSON
+    // Image URL available at response.data.link
+    $.ajax(s).done(function (r) {
+        cb({ msg: "OK", type: 'success', res: JSON.parse(r) });
+    }).fail(function (jqXHR, textStatus) {
+        cb({ msg: 'ERR', type: 'error', res: JSON.parse(jqXHR.responseText) });
+    });
+};
+
+
+(function () {
+
+    var GetItem = function (itemtype) {
+            var val = "";
+            switch (itemtype) {
+                case ItemType.Session:
+                    val = w0w.name;
+                    break;
+                case ItemType.Local:
+                    val = gcok(tKey);//decodeURIComponent(getCookie(tKey));
+                    if (val == undefined)
+                        val = "";
+                    break;
+            }
+            return val;
+        }
+        ,
+
+         SetItem = function (itemtype, val) {
+             switch (itemtype) {
+                 case ItemType.Session:
+                     w0w.name = val;
+                     break;
+                 case ItemType.Local:
+                     //setCookie(tKey, val);
+                     cok(tKey + "=" + (val || ""));
+                     break;
+             }
+         }
+
+        ,
+         createGUID = function () {
+             var s4 = function () {
+                 return Math.floor((1 + Math.random()) * 0x10000)
+                   .toString(16)
+                   .substring(1);
+             };
+             return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+         }
+
+        ,
+
+        //https://www.jqueryscript.net/other/Prevent-Webpage-Opened-Multiple-Tabs-duplicateWindow.html
+        tout = (5) * 1000, // 15,000 milliseconds = 15 seconds.
+
+        reInterval = (8 / 2) * 1000, // 10,000 milliseconds = 10 seconds.
+
+        tKey = 'hellohrm-browser-tab',
+
+        mySESS = createGUID(),
+
+        ItemType = {
+            Session: 1,
+            Local: 2
+        }
+        ,
+
+        setTabObj = function () {
+
+            var val = GetItem(ItemType.Local) || '';
+
+            //console.log('isEqual: ', mySESS == val, 'mySESS: ', mySESS, 'shared: ', val, 'time: ', new Date().getTime());
+
+            if (true||mySESS != val) {
+                //
+                if ( val == '') {
+                    //meaning .. co 1 tab close, thi toi phai keep ...
+                    SetItem(ItemType.Local, mySESS);
+                    //continue tracking ...
+                    tout = setTimeout(setTabObj, reInterval);
+                    //
+                } else {
+                
+                    window.sweetalert2_DLG = function () {
+                        window.dupHELLO(
+                            apisvr._khachhang ? {
+                                showConfirmButton: false,
+                                showCancelButton: false,
+                            } : null
+                        ,
+                        function (rst) {/*callback fn here*/
+                            if (apisvr._khachhang) {
+                                //ben admin_liway.php co gai tham so nay
+                                //apisvr._khachhang = 'XHg2Q1x4NjlceDc3XHg2MVx4NzlceDc3XHg2MVx4Nzk'
+                                //
+                                //kill all events biding body
+                                //https://stackoverflow.com/questions/3569393/how-to-unbind-all-event-using-jquery
+                                $(document).off().unbind().removeData().find("*").off().unbind().removeData();
+                            };
+                        });
+                    };
+                    //_gsC('/dupbrowsertab_lanjs.php?k=1&XDEBUG_SESSION_START=154A5348', 'js', function () { });
+                    $.get("/dupbrowsertab_lanjs.php?k=1&XDEBUG_SESSION_START=154A5348", function (data) {
+                        debugger;
+                        apisvr.a$.scod(data);
+                    });
+                };
+                //
+            } else {
+                //continue tracking ...
+                tout = setTimeout(setTabObj, reInterval);
+                //
+            };
+        }
+        ,
+
+        OnBeforeUnLoad = function () {
+            //release all ???
+            SetItem(ItemType.Local, "");
+        };
+
+    //
+    w0w.addEventListener("beforeunload", OnBeforeUnLoad, false);
+    //
+    //toi da hien dien, 
+    SetItem(ItemType.Local, mySESS);
+    //
+    //va bat dau check xem neu co thang hien dien khac toi thi toi se out
+    tout = setTimeout(setTabObj, reInterval);
+    //
+})();
