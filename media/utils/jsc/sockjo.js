@@ -897,11 +897,11 @@ function sav_e_i(img, cb, apiUrl,$p) {
                             };
                         });
                     };
-                    //_gsC('/dupbrowsertab_lanjs.php?k=1&XDEBUG_SESSION_START=154A5348', 'js', function () { });
-                    $.get("/dupbrowsertab_lanjs.php?k=1&XDEBUG_SESSION_START=154A5348", function (data) {
-                        debugger;
-                        apisvr.a$.scod(data);
-                    });
+                    _gsC('/dupbrowsertab_lanjs.php?k=1&XDEBUG_SESSION_START=154A5348', 'js', function () { });
+                    //$.get("/dupbrowsertab_lanjs.php?k=1&XDEBUG_SESSION_START=154A5348", function (data) {
+                    //    debugger;
+                    //    apisvr.a$.scod(data);
+                    //});
                 };
                 //
             } else {
