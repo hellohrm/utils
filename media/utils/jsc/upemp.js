@@ -95,9 +95,11 @@ function embbed(responseText) {
     var vF = encodeURIComponent(href + apath.join('/')),
 
     _iframeUrl = decodeURIComponent('https:\u002f\u002fPSG3-excel.officeapps.live.com\u002fx\u002f_layouts\u002fxlembed.aspx?ui=en\u00252DUS\u0026rs=en\u00252DUS\u0026WOPISrc=http\u00253A\u00252F\u00252Fpsg3\u00252Dview\u00252Dwopi\u00252Ewopi\u00252Eonline\u00252Eoffice\u00252Enet\u00253A808\u00252Foh\u00252Fwopi\u00252Ffiles\u00252F\u002540\u00252FwFileId\u00253FwFileId\u00253D' +
+        vF +
     //'https\u0025253A\u0025252F\u0025252Fapphrm\u0025252E000webhostapp\u0025252Ecom\u0025253A443\u0025252Fupemp\u0025252Fliway\u0025255Flv\u0025252Exlsx' +
     //'https%3A%2F%2Fapphrm.000webhostapp.com%3A443%2Fupemp%2Fliway_lv.xlsx%3Fname%3D%3Cscript%3Ealert%28%22HERE%22%29%3C%2Fscript%3E' +
     '\u0026access_token_ttl=0\u0026hid=3fc0b1e4-03a8-4207-b1a9-acf9c76373d5');
+
     console.log(_iframeUrl);
 
     var _windowTitle = 'liway_lv.xlsx';
