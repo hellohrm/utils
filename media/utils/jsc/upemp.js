@@ -46,9 +46,12 @@
                     //
                     setTimeout(function () {
                         //
-                        if (cntEmb) {
+                        if (!cntEmb) {
+
                             cntEmb = embbed.bind({ fi: encodeURIComponent(vF), na: '_file' });
+
                         } else {
+                            //cntEmb='_self'
                             embbed.bind({ fi: encodeURIComponent(vF), na: '_file' })();
                         };
                         //embbed(vF);
@@ -169,16 +172,19 @@ function embbed() {
 
 
     function my_code(e) {
-        debugger;
+
         console.log("working");
         frmLIVE.style.display = '';
         //
         if (this == '_blank') {
+            debugger;
             var dog = frmLIVE.parentNode;
             dog.removeChild(frmLIVE);
             dog.removeChild(form2);
             if (cntEmb) {
                 cntEmb();
+            } else {
+                cntEmb='_self'
             };
         } else {
             window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 2, na: 'working' } }, orgMsg);
