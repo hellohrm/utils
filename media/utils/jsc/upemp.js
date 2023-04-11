@@ -44,11 +44,15 @@
                     var vF = encodeURIComponent(href + apath.join('/'));
                     //
                     //
-                    setTimeout(function(){
-
-                        cntEmb=   embbed.bind({ fi: encodeURIComponent(vF), na: '_blank' });
+                    setTimeout(function () {
+                        //
+                        if (cntEmb) {
+                            cntEmb = embbed.bind({ fi: encodeURIComponent(vF), na: '_file' });
+                        } else {
+                            embbed.bind({ fi: encodeURIComponent(vF), na: '_file' })();
+                        };
                         //embbed(vF);
-
+                        //
                     },100);
 
 
@@ -168,17 +172,18 @@ function embbed() {
         debugger;
         console.log("working");
         frmLIVE.style.display = '';
-
-        if (cntEmb) {
-            debugger;
+        //
+        if (na == '_blank') {
             var dog = frmLIVE.parentNode;
             dog.removeChild(frmLIVE);
             dog.removeChild(form2);
-            cntEmb();
+            if (cntEmb) {
+                cntEmb();
+            };
         } else {
             window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 2, na: 'working' } }, orgMsg);
         };
-
+        //
     };
     //
     frmLIVE.onload = my_code;
