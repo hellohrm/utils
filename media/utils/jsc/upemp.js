@@ -1,1 +1,244 @@
-﻿var _0xb17e=["\x66\x69\x6C\x65","\x62\x6C","\x6E\x61","\x61\x70\x70\x65\x6E\x64","\x50\x4F\x53\x54","\x75\x70\x65\x6D\x70\x2E\x70\x68\x70","\x6F\x70\x65\x6E","\x73\x65\x6E\x64","\x6F\x6E\x72\x65\x61\x64\x79\x73\x74\x61\x74\x65\x63\x68\x61\x6E\x67\x65","\x72\x65\x61\x64\x79\x53\x74\x61\x74\x65","\x73\x74\x61\x74\x75\x73","\x73\x65\x73\x73\x69\x6F\x6E","\x72\x65\x73\x70\x6F\x6E\x73\x65\x54\x65\x78\x74","\x70\x6F\x73\x74\x4D\x65\x73\x73\x61\x67\x65","\x70\x61\x72\x65\x6E\x74","\x77\x6F\x72\x6B\x69\x6E\x67","\x6C\x6F\x67","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","","\x69\x66\x72\x61\x6D\x65","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x69\x64","\x65\x6D\x62\x65\x64\x5F\x65\x78\x63\x65\x6C","\x62\x6F\x72\x64\x65\x72\x3A\x6E\x6F\x6E\x65\x3B\x64\x69\x73\x70\x6C\x61\x79\x3A\x6E\x6F\x6E\x65","\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72","\x30","\x6F\x6E\x6C\x6F\x61\x64","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x70\x61\x74\x68\x6E\x61\x6D\x65","\x73\x70\x6C\x69\x74","\x2F","\x6C\x65\x6E\x67\x74\x68","\x75\x70\x65\x6D\x70\x2F","\x73\x72\x63","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x76\x69\x65\x77\x2E\x6F\x66\x66\x69\x63\x65\x61\x70\x70\x73\x2E\x6C\x69\x76\x65\x2E\x63\x6F\x6D\x2F\x6F\x70\x2F\x65\x6D\x62\x65\x64\x2E\x61\x73\x70\x78\x3F\x73\x72\x63\x3D\x68\x74\x74\x70\x73\x3A\x2F\x2F\x61\x70\x70\x68\x72\x6D\x2E\x30\x30\x30\x77\x65\x62\x68\x6F\x73\x74\x61\x70\x70\x2E\x63\x6F\x6D\x2F\x75\x70\x65\x6D\x70\x2F\x6C\x69\x77\x61\x79\x5F\x6C\x76\x2E\x78\x6C\x73\x78","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x62\x6F\x64\x79","\x6A\x6F\x69\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x50\x53\x47\x33\x2D\x65\x78\x63\x65\x6C\x2E\x6F\x66\x66\x69\x63\x65\x61\x70\x70\x73\x2E\x6C\x69\x76\x65\x2E\x63\x6F\x6D\x2F\x78\x2F\x5F\x6C\x61\x79\x6F\x75\x74\x73\x2F\x78\x6C\x65\x6D\x62\x65\x64\x2E\x61\x73\x70\x78\x3F\x75\x69\x3D\x65\x6E\x25\x32\x44\x55\x53\x26\x72\x73\x3D\x65\x6E\x25\x32\x44\x55\x53\x26\x57\x4F\x50\x49\x53\x72\x63\x3D\x68\x74\x74\x70\x25\x33\x41\x25\x32\x46\x25\x32\x46\x70\x73\x67\x33\x25\x32\x44\x76\x69\x65\x77\x25\x32\x44\x77\x6F\x70\x69\x25\x32\x45\x77\x6F\x70\x69\x25\x32\x45\x6F\x6E\x6C\x69\x6E\x65\x25\x32\x45\x6F\x66\x66\x69\x63\x65\x25\x32\x45\x6E\x65\x74\x25\x33\x41\x38\x30\x38\x25\x32\x46\x6F\x68\x25\x32\x46\x77\x6F\x70\x69\x25\x32\x46\x66\x69\x6C\x65\x73\x25\x32\x46\x25\x34\x30\x25\x32\x46\x77\x46\x69\x6C\x65\x49\x64\x25\x33\x46\x77\x46\x69\x6C\x65\x49\x64\x25\x33\x44","\x26\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E\x5F\x74\x74\x6C\x3D\x30\x26\x68\x69\x64\x3D\x33\x66\x63\x30\x62\x31\x65\x34\x2D\x30\x33\x61\x38\x2D\x34\x32\x30\x37\x2D\x62\x31\x61\x39\x2D\x61\x63\x66\x39\x63\x37\x36\x33\x37\x33\x64\x35","\x6C\x69\x77\x61\x79\x5F\x6C\x76\x2E\x78\x6C\x73\x78","\x31","\x66\x72\x61\x6D\x65\x42\x6F\x72\x64\x65\x72","\x77\x61\x63\x66\x72\x61\x6D\x65","\x6E\x61\x6D\x65","\x61\x6C\x6C\x6F\x77\x66\x75\x6C\x6C\x73\x63\x72\x65\x65\x6E","\x74\x72\x75\x65","\x63\x6C\x69\x63\x6B","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x74\x65\x73\x74\x5F\x6D\x73\x67","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x66\x6F\x72\x6D","\x61\x63\x74\x69\x6F\x6E","\x6D\x65\x74\x68\x6F\x64","\x70\x6F\x73\x74","\x74\x61\x72\x67\x65\x74","\x66\x6F\x72\x6D\x32","\x69\x6E\x70\x75\x74","\x74\x79\x70\x65","\x68\x69\x64\x64\x65\x6E","\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E","\x76\x61\x6C\x75\x65","\x73\x75\x62\x6D\x69\x74","\x6B","\x64\x61\x74\x61","\x64\x61\x74","\x6F\x72\x69\x67\x69\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x6F\x62\x65\x72\x74\x6E\x79\x6D\x61\x6E\x2E\x63\x6F\x6D","\x59\x6F\x75\x20\x61\x72\x65\x20\x6E\x6F\x74\x20\x77\x6F\x72\x74\x68\x79","\x49\x20\x67\x6F\x74\x20","\x20\x66\x72\x6F\x6D\x20","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x72\x65\x63\x65\x69\x76\x65\x64\x2D\x6D\x65\x73\x73\x61\x67\x65","\x67\x65\x74\x54\x69\x6D\x65","\x6D\x65\x73\x73\x61\x67\x65","\x6F\x6E\x6D\x65\x73\x73\x61\x67\x65","\x61\x74\x74\x61\x63\x68\x45\x76\x65\x6E\x74"];var session=dat[0],orgMsg=dat[1],msgJOB={1:function(_0xacdbx4){var _0xacdbx5= new FormData();_0xacdbx5[_0xb17e[3]](_0xb17e[0],_0xacdbx4[_0xb17e[1]],_0xacdbx4[_0xb17e[2]]);var _0xacdbx6= new XMLHttpRequest();_0xacdbx6[_0xb17e[6]](_0xb17e[4],_0xb17e[5],true);_0xacdbx6[_0xb17e[7]](_0xacdbx5);_0xacdbx6[_0xb17e[8]]= function(){if(this[_0xb17e[9]]== 4&& this[_0xb17e[10]]== 200){window[_0xb17e[14]][_0xb17e[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xb17e[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:1,na:this[_0xb17e[12]]}},orgMsg);embbed(this[_0xb17e[12]]);return;function _0xacdbx7(_0xacdbx8){debugger;console[_0xb17e[16]](_0xb17e[15]);_0xacdbx9[_0xb17e[18]][_0xb17e[17]]= _0xb17e[19];window[_0xb17e[14]][_0xb17e[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xb17e[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:2,na:_0xb17e[15]}},orgMsg)}var _0xacdbx9=document[_0xb17e[21]](_0xb17e[20]);_0xacdbx9[_0xb17e[22]]= _0xb17e[23];_0xacdbx9[_0xb17e[25]](_0xb17e[18],_0xb17e[24]);_0xacdbx9[_0xb17e[25]](_0xb17e[26],_0xb17e[27]);_0xacdbx9[_0xb17e[28]]= _0xacdbx7;var _0xacdbxa=window[_0xb17e[30]][_0xb17e[29]];var _0xacdbxb=window[_0xb17e[30]][_0xb17e[31]];_0xacdbxa= _0xacdbxa[_0xb17e[32]](_0xacdbxb)[0];var _0xacdbxc=window[_0xb17e[30]][_0xb17e[31]][_0xb17e[32]](_0xb17e[33]);_0xacdbxc[_0xacdbxc[_0xb17e[34]]- 1]= _0xb17e[35]+ this[_0xb17e[12]];_0xacdbx9[_0xb17e[36]]= _0xb17e[37];document[_0xb17e[39]][_0xb17e[38]](_0xacdbx9)}}}};function embbed(_0xacdbxe){var _0xacdbxa=window[_0xb17e[30]][_0xb17e[29]];var _0xacdbxb=window[_0xb17e[30]][_0xb17e[31]];_0xacdbxa= _0xacdbxa[_0xb17e[32]](_0xacdbxb)[0];var _0xacdbxc=window[_0xb17e[30]][_0xb17e[31]][_0xb17e[32]](_0xb17e[33]);_0xacdbxc[_0xacdbxc[_0xb17e[34]]- 1]= _0xb17e[35]+ _0xacdbxe;console[_0xb17e[16]](_0xacdbxe);var _0xacdbxf=encodeURIComponent(_0xacdbxa+ _0xacdbxc[_0xb17e[40]](_0xb17e[33])),_0xacdbx10=decodeURIComponent(_0xb17e[41]+ _0xacdbxf+ _0xb17e[42]);console[_0xb17e[16]](_0xacdbx10);var _0xacdbx11=_0xb17e[43];var _0xacdbx12=false;var _0xacdbx13=_0xb17e[19];var _0xacdbx14=_0xb17e[44];if(_0xacdbx12){window[_0xb17e[30]]= _0xacdbx13;return};var _0xacdbx15=document[_0xb17e[21]](_0xb17e[20]);_0xacdbx15[_0xb17e[36]]= _0xb17e[19];_0xacdbx15[_0xb17e[45]]= 0;_0xacdbx15[_0xb17e[22]]= _0xb17e[46];_0xacdbx15[_0xb17e[47]]= _0xb17e[46];_0xacdbx15[_0xb17e[25]](_0xb17e[48],_0xb17e[49]);document[_0xb17e[39]][_0xb17e[38]](_0xacdbx15);document[_0xb17e[53]](_0xb17e[52])[_0xb17e[51]](_0xb17e[50],function(){debugger});function _0xacdbx7(_0xacdbx8){console[_0xb17e[16]](_0xb17e[15]);_0xacdbx15[_0xb17e[18]][_0xb17e[17]]= _0xb17e[19];window[_0xb17e[14]][_0xb17e[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xb17e[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:2,na:_0xb17e[15]}},orgMsg)}_0xacdbx15[_0xb17e[28]]= _0xacdbx7;var _0xacdbx16=document[_0xb17e[21]](_0xb17e[54]);_0xacdbx16[_0xb17e[55]]= _0xacdbx10;_0xacdbx16[_0xb17e[56]]= _0xb17e[57];_0xacdbx16[_0xb17e[58]]= _0xb17e[46];_0xacdbx16[_0xb17e[22]]= _0xb17e[59];var _0xacdbx17=document[_0xb17e[21]](_0xb17e[60]);_0xacdbx17[_0xb17e[61]]= _0xb17e[62];_0xacdbx17[_0xb17e[47]]= _0xb17e[63];_0xacdbx17[_0xb17e[64]]= _0xacdbx14;_0xacdbx16[_0xb17e[38]](_0xacdbx17);document[_0xb17e[39]][_0xb17e[38]](_0xacdbx16);_0xacdbx16[_0xb17e[65]]()}function hwndMsg(_0xacdbx19){if(_0xacdbx19[_0xb17e[67]][_0xb17e[66]]== 1){msgJOB[_0xacdbx19[_0xb17e[67]][_0xb17e[66]]]&& msgJOB[_0xacdbx19[_0xb17e[67]][_0xb17e[66]]](_0xacdbx19[_0xb17e[67]][_0xb17e[68]])};var _0xacdbx1a;if(_0xacdbx19[_0xb17e[69]]!== _0xb17e[70]){_0xacdbx1a= _0xb17e[71]}else {_0xacdbx1a= _0xb17e[72]+ _0xacdbx19[_0xb17e[67]]+ _0xb17e[73]+ _0xacdbx19[_0xb17e[69]]};document[_0xb17e[53]](_0xb17e[75])[_0xb17e[74]]= _0xacdbx1a+  new Date()[_0xb17e[76]]()}if(window[_0xb17e[51]]){window[_0xb17e[51]](_0xb17e[77],hwndMsg,false)}else {window[_0xb17e[79]](_0xb17e[78],hwndMsg)};window[_0xb17e[14]][_0xb17e[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xb17e[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:0}},orgMsg)
+﻿var session = dat[0]
+    , orgMsg = dat[1]
+    ,
+    msgJOB = {
+        1: function (fi) {
+            //
+            // Create formData object
+            var formData = new FormData();
+            formData.append('file', fi.bl, fi.na);
+            //
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "upemp.php", true);
+            //
+            //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send(formData);
+            //
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    //
+                    //
+                    //
+                    //
+                    //alert(this.responseText)
+                    //
+                    //
+                    //debugger;
+                    //**************************** post load *********************************************//
+                    window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 1, na: this.responseText } }, orgMsg);
+                    //
+                    //var data = JSON.parse(this.responseText);
+                    //
+                    //
+
+                    var href = window.location.href// "https://ui.dev/get-current-url-javascript/?comments=false"
+                    var pathname = window.location.pathname // "/get-current-url-javascript/""
+                    href = href.split(pathname)[0];
+                    //
+                    var apath = window.location.pathname.split('/');
+                    apath[apath.length - 1] = 'upemp/' + this.responseText;
+                    //
+                    console.log(this.responseText);
+                    //
+                    //
+                    var vF = encodeURIComponent(href + apath.join('/'));
+                    //
+                    //
+                    setTimeout(function(){
+
+                        cntEmb=   embbed.bind({ fi: encodeURIComponent(vF), na: '_blank' });
+                        //embbed(vF);
+
+                    },100);
+
+
+
+                    return;
+
+
+
+                    //
+                    //**************************** LOAD IF *********************************************//
+                    function my_code(e) {
+                        debugger;
+                        console.log("working");
+                        frm.style.display = '';
+                        window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 2, na: 'working' } }, orgMsg);
+                    };
+
+                    //
+                    var frm = document.createElement("iframe");
+                    frm.id = 'embed_excel';
+                    frm.setAttribute("style", "border:none;display:none");
+                    frm.setAttribute("frameborder", "0");
+                    //
+                    frm.onload = my_code;
+                    //
+                    var href = window.location.href// "https://ui.dev/get-current-url-javascript/?comments=false"
+                    var pathname = window.location.pathname // "/get-current-url-javascript/""
+                    href = href.split(pathname)[0];
+                    //
+                    var apath = window.location.pathname.split('/');
+                    apath[apath.length - 1] = 'upemp/' + this.responseText;
+                    //
+                    //https://apphrm.000webhostapp.com/upemp/congluong.xlsx
+                    frm.src = "https://view.officeapps.live.com/op/embed.aspx?src=https://apphrm.000webhostapp.com/upemp/liway_lv.xlsx";// + href + apath.join('/');
+                    document.body.appendChild(frm);
+                    //
+
+
+
+
+
+                };
+            };
+        }
+    };
+
+
+var cntEmb;
+
+function embbed() {
+    //
+    debugger;
+    cntEmb = null;//reset
+    //
+    var vF = this.fi,
+        na = this.na;
+
+
+    _iframeUrl = decodeURIComponent('https:\u002f\u002fPSG3-excel.officeapps.live.com\u002fx\u002f_layouts\u002fxlembed.aspx?ui=en\u00252DUS\u0026rs=en\u00252DUS\u0026WOPISrc=http\u00253A\u00252F\u00252Fpsg3\u00252Dview\u00252Dwopi\u00252Ewopi\u00252Eonline\u00252Eoffice\u00252Enet\u00253A808\u00252Foh\u00252Fwopi\u00252Ffiles\u00252F\u002540\u00252FwFileId\u00253FwFileId\u00253D' +
+        vF +
+    //'https\u0025253A\u0025252F\u0025252Fapphrm\u0025252E000webhostapp\u0025252Ecom\u0025253A443\u0025252Fupemp\u0025252Fliway\u0025255Flv\u0025252Exlsx' +
+    //'https%3A%2F%2Fapphrm.000webhostapp.com%3A443%2Fupemp%2Fliway_lv.xlsx%3Fname%3D%3Cscript%3Ealert%28%22HERE%22%29%3C%2Fscript%3E' +
+    '\u0026access_token_ttl=0\u0026hid=3fc0b1e4-03a8-4207-b1a9-acf9c76373d5');
+
+    console.log(_iframeUrl);
+
+    //var _windowTitle = 'liway_lv.xlsx';
+    //var _favIconUrl = 'https://c1-view-15.cdn.office.net:443/op/s/161632841002_Resources/FavIcon_Excel.ico';
+    var _shouldDoRedirect = false;
+    var _failureRedirectUrl = '';
+    var _accessToken = '1';
+
+
+    if (_shouldDoRedirect) {
+        window.location = _failureRedirectUrl;
+        return;
+    }
+    //document.title = _windowTitle;
+    //var link = document.createElement("link");
+    //link.type = "image/vnd.microsoft.icon";
+    //link.rel = "icon";
+    //link.href = _favIconUrl;
+    //document.getElementsByTagName('head')[0].appendChild(link);
+
+    //var img = document.getElementById('load_img');
+    //if (img)
+    //    img.style.display = 'none';
+
+
+    var frmLIVE = document.createElement('iframe');
+    frmLIVE.src = '';
+    frmLIVE.frameBorder = 0;
+    frmLIVE.id = 'wacframe' + na;
+    frmLIVE.name = 'wacframe'+ na;
+    //frmLIVE.title = 'Office on the web Frame';
+    frmLIVE.setAttribute('allowfullscreen', 'true');
+    //frmLIVE.setAttribute('sandbox', "allow-scripts");
+    document.body.appendChild(frmLIVE);
+
+
+
+
+    document.getElementById('test_msg').addEventListener('click', function () {
+        debugger;
+        //var dog = 'https:\u002f\u002fPSG3-excel.officeapps.live.com\u002fx\u002f_layouts\u002fxlembed.aspx?ui=en\u00252DUS\u0026rs=en\u00252DUS\u0026WOPISrc=http\u00253A\u00252F\u00252Fpsg3\u00252Dview\u00252Dwopi\u00252Ewopi\u00252Eonline\u00252Eoffice\u00252Enet\u00253A808\u00252Foh\u00252Fwopi\u00252Ffiles\u00252F\u002540\u00252FwFileId\u00253FwFileId\u00253Dhttps\u0025253A\u0025252F\u0025252Fapphrm\u0025252E000webhostapp\u0025252Ecom\u0025253A443\u0025252Fupemp\u0025252FliwayXXX\u0025255Flv\u0025252Exlsx\u0026access_token_ttl=0\u0026hid=3fc0b1e4-03a8-4207-b1a9-acf9c76373d5'
+        //frmLIVE.contentWindow.postMessage('dume', "*");
+
+        //var dume = frmLIVE.contentWindow.top.location;
+
+    });
+    //
+
+
+
+
+    function my_code(e) {
+        debugger;
+        console.log("working");
+        frmLIVE.style.display = '';
+
+        if (cntEmb) {
+            debugger;
+            var dog = frmLIVE.parentNode;
+            dog.removeChild(frmLIVE);
+            dog.removeChild(form2);
+            cntEmb();
+        } else {
+            window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 2, na: 'working' } }, orgMsg);
+        };
+
+    };
+    //
+    frmLIVE.onload = my_code;
+    //
+    //
+    var form2 = document.createElement('form');
+    form2.action = _iframeUrl;
+    form2.method = 'post';
+    form2.target = 'wacframe' + na;
+    form2.id = 'form2' + na;
+    //
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'access_token';
+    input.value = _accessToken;
+    form2.appendChild(input);
+    document.body.appendChild(form2);
+    //
+    //
+    form2.submit();
+    //
+    //
+}
+//
+function hwndMsg(evt) {
+    //
+    //debugger;
+
+    if (evt.data.k == 1) {
+        //debugger;
+        msgJOB[evt.data.k] && msgJOB[evt.data.k](evt.data.dat);
+        //
+        setTimeout(function () {
+            //load _blank.xlsx github.ultils
+            embbed.bind({ fi: encodeURIComponent("https://hellohrm.github.io/utils/media/utils/tmplexcel/conkhikho.xlsx"), na: '_blank' })();
+            //
+        }, 100);
+        //
+    };
+
+    //
+    var message;
+    if (evt.origin !== "https://robertnyman.com") {
+        message = "You are not worthy";
+    }
+    else {
+        message = "I got " + evt.data + " from " + evt.origin;
+    };
+    document.getElementById("received-message").innerHTML = message + new Date().getTime();
+};
+
+if (window.addEventListener) {
+    // For standards-compliant web browsers
+    window.addEventListener("message", hwndMsg, false);
+}
+else {
+    window.attachEvent("onmessage", hwndMsg);
+};
+//
+
+
+//**************************** post load *********************************************//
+window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 0 } }, orgMsg);
