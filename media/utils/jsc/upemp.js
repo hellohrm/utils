@@ -173,7 +173,7 @@ function embbed() {
         console.log("working");
         frmLIVE.style.display = '';
         //
-        if (na == '_blank') {
+        if (this == '_blank') {
             var dog = frmLIVE.parentNode;
             dog.removeChild(frmLIVE);
             dog.removeChild(form2);
@@ -186,7 +186,7 @@ function embbed() {
         //
     };
     //
-    frmLIVE.onload = my_code;
+    frmLIVE.onload = my_code.bind(na);
     //
     //
     var form2 = document.createElement('form');
