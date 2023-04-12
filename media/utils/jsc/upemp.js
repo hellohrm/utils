@@ -234,11 +234,13 @@ function hwndMsg(evt) {
         //debugger;
         msgJOB[evt.data.k] && msgJOB[evt.data.k](evt.data.dat);
         //
-        setTimeout(function () {
-            //load _blank.xlsx github.ultils
-            embbed.bind({ fi: encodeURIComponent("https://hellohrm.github.io/utils/media/utils/tmplexcel/view_live_embed.xlsx"), na: '_blank' })();
-            //
-        }, 100);
+        cntEmb = '_self';
+        //
+        //setTimeout(function () {
+        //    //load _blank.xlsx github.ultils
+        //    embbed.bind({ fi: encodeURIComponent("https://hellohrm.github.io/utils/media/utils/tmplexcel/view_live_embed.xlsx"), na: '_blank' })();
+        //    //
+        //}, 100);
         //
     };
 
