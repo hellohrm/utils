@@ -1,1 +1,267 @@
-﻿var _0xcdfc=["\x66\x69\x6C\x65","\x62\x6C","\x6E\x61","\x61\x70\x70\x65\x6E\x64","\x50\x4F\x53\x54","\x75\x70\x65\x6D\x70\x2E\x70\x68\x70","\x6F\x70\x65\x6E","\x73\x65\x6E\x64","\x6F\x6E\x72\x65\x61\x64\x79\x73\x74\x61\x74\x65\x63\x68\x61\x6E\x67\x65","\x72\x65\x61\x64\x79\x53\x74\x61\x74\x65","\x73\x74\x61\x74\x75\x73","\x73\x65\x73\x73\x69\x6F\x6E","\x72\x65\x73\x70\x6F\x6E\x73\x65\x54\x65\x78\x74","\x70\x6F\x73\x74\x4D\x65\x73\x73\x61\x67\x65","\x70\x61\x72\x65\x6E\x74","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x70\x61\x74\x68\x6E\x61\x6D\x65","\x73\x70\x6C\x69\x74","\x2F","\x6C\x65\x6E\x67\x74\x68","\x75\x70\x65\x6D\x70\x2F","\x6C\x6F\x67","\x6A\x6F\x69\x6E","\x5F\x66\x69\x6C\x65","\x62\x69\x6E\x64","\x66\x69","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x50\x53\x47\x33\x2D\x65\x78\x63\x65\x6C\x2E\x6F\x66\x66\x69\x63\x65\x61\x70\x70\x73\x2E\x6C\x69\x76\x65\x2E\x63\x6F\x6D\x2F\x78\x2F\x5F\x6C\x61\x79\x6F\x75\x74\x73\x2F\x78\x6C\x65\x6D\x62\x65\x64\x2E\x61\x73\x70\x78\x3F\x75\x69\x3D\x65\x6E\x25\x32\x44\x55\x53\x26\x72\x73\x3D\x65\x6E\x25\x32\x44\x55\x53\x26\x57\x4F\x50\x49\x53\x72\x63\x3D\x68\x74\x74\x70\x25\x33\x41\x25\x32\x46\x25\x32\x46\x70\x73\x67\x33\x25\x32\x44\x76\x69\x65\x77\x25\x32\x44\x77\x6F\x70\x69\x25\x32\x45\x77\x6F\x70\x69\x25\x32\x45\x6F\x6E\x6C\x69\x6E\x65\x25\x32\x45\x6F\x66\x66\x69\x63\x65\x25\x32\x45\x6E\x65\x74\x25\x33\x41\x38\x30\x38\x25\x32\x46\x6F\x68\x25\x32\x46\x77\x6F\x70\x69\x25\x32\x46\x66\x69\x6C\x65\x73\x25\x32\x46\x25\x34\x30\x25\x32\x46\x77\x46\x69\x6C\x65\x49\x64\x25\x33\x46\x77\x46\x69\x6C\x65\x49\x64\x25\x33\x44","\x26\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E\x5F\x74\x74\x6C\x3D\x30\x26\x68\x69\x64\x3D","\x67\x65\x74\x54\x69\x6D\x65","","\x31","\x69\x66\x72\x61\x6D\x65","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x73\x72\x63","\x66\x72\x61\x6D\x65\x42\x6F\x72\x64\x65\x72","\x69\x64","\x77\x61\x63\x66\x72\x61\x6D\x65","\x6E\x61\x6D\x65","\x61\x6C\x6C\x6F\x77\x66\x75\x6C\x6C\x73\x63\x72\x65\x65\x6E","\x74\x72\x75\x65","\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x62\x6F\x64\x79","\x63\x6C\x69\x63\x6B","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x74\x65\x73\x74\x5F\x6D\x73\x67","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x77\x6F\x72\x6B\x69\x6E\x67","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x5F\x62\x6C\x61\x6E\x6B","\x72\x61\x77\x6C\x69\x76\x65","\x70\x61\x72\x65\x6E\x74\x4E\x6F\x64\x65","\x72\x65\x6D\x6F\x76\x65\x43\x68\x69\x6C\x64","\x5F\x73\x65\x6C\x66","\x6F\x6E\x6C\x6F\x61\x64","\x66\x6F\x72\x6D","\x61\x63\x74\x69\x6F\x6E","\x6D\x65\x74\x68\x6F\x64","\x70\x6F\x73\x74","\x74\x61\x72\x67\x65\x74","\x66\x6F\x72\x6D\x32","\x69\x6E\x70\x75\x74","\x74\x79\x70\x65","\x68\x69\x64\x64\x65\x6E","\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E","\x76\x61\x6C\x75\x65","\x73\x75\x62\x6D\x69\x74","\x6B","\x64\x61\x74\x61","\x64\x61\x74","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x68\x65\x6C\x6C\x6F\x68\x72\x6D\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x75\x74\x69\x6C\x73\x2F\x6D\x65\x64\x69\x61\x2F\x75\x74\x69\x6C\x73\x2F\x74\x6D\x70\x6C\x65\x78\x63\x65\x6C\x2F\x76\x69\x65\x77\x5F\x6C\x69\x76\x65\x5F\x65\x6D\x62\x65\x64\x2E\x78\x6C\x73\x78","\x6F\x72\x69\x67\x69\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x6F\x62\x65\x72\x74\x6E\x79\x6D\x61\x6E\x2E\x63\x6F\x6D","\x59\x6F\x75\x20\x61\x72\x65\x20\x6E\x6F\x74\x20\x77\x6F\x72\x74\x68\x79","\x49\x20\x67\x6F\x74\x20","\x20\x66\x72\x6F\x6D\x20","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x72\x65\x63\x65\x69\x76\x65\x64\x2D\x6D\x65\x73\x73\x61\x67\x65","\x6D\x65\x73\x73\x61\x67\x65","\x6F\x6E\x6D\x65\x73\x73\x61\x67\x65","\x61\x74\x74\x61\x63\x68\x45\x76\x65\x6E\x74"];var session=dat[0],orgMsg=dat[1],msgJOB={1:function(_0xd958x4){var _0xd958x5= new FormData();_0xd958x5[_0xcdfc[3]](_0xcdfc[0],_0xd958x4[_0xcdfc[1]],_0xd958x4[_0xcdfc[2]]);var _0xd958x6= new XMLHttpRequest();_0xd958x6[_0xcdfc[6]](_0xcdfc[4],_0xcdfc[5],true);_0xd958x6[_0xcdfc[7]](_0xd958x5);_0xd958x6[_0xcdfc[8]]= function(){if(this[_0xcdfc[9]]== 4&& this[_0xcdfc[10]]== 200){window[_0xcdfc[14]][_0xcdfc[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xcdfc[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:1,na:this[_0xcdfc[12]]}},orgMsg);var _0xd958x7=window[_0xcdfc[16]][_0xcdfc[15]];var _0xd958x8=window[_0xcdfc[16]][_0xcdfc[17]];_0xd958x7= _0xd958x7[_0xcdfc[18]](_0xd958x8)[0];var _0xd958x9=window[_0xcdfc[16]][_0xcdfc[17]][_0xcdfc[18]](_0xcdfc[19]);_0xd958x9[_0xd958x9[_0xcdfc[20]]- 1]= _0xcdfc[21]+ this[_0xcdfc[12]];console[_0xcdfc[22]](this[_0xcdfc[12]]);var _0xd958xa=encodeURIComponent(_0xd958x7+ _0xd958x9[_0xcdfc[23]](_0xcdfc[19]));if(!cntEmb){cntEmb= embbed[_0xcdfc[25]]({fi:encodeURIComponent(_0xd958xa),na:_0xcdfc[24]})}else {setTimeout(function(){embbed[_0xcdfc[25]]({fi:encodeURIComponent(_0xd958xa),na:_0xcdfc[24]})()},100)};return}}}};var cntEmb;function embbed(){cntEmb= null;var _0xd958xa=this[_0xcdfc[26]],_0xd958xd=this[_0xcdfc[2]];_iframeUrl= decodeURIComponent(_0xcdfc[27]+ _0xd958xa+ _0xcdfc[28]+  new Date()[_0xcdfc[29]]());console[_0xcdfc[22]](_iframeUrl);var _0xd958xe=false;var _0xd958xf=_0xcdfc[30];var _0xd958x10=_0xcdfc[31];if(_0xd958xe){window[_0xcdfc[16]]= _0xd958xf;return};var _0xd958x11=document[_0xcdfc[33]](_0xcdfc[32]);_0xd958x11[_0xcdfc[34]]= _0xcdfc[30];_0xd958x11[_0xcdfc[35]]= 0;_0xd958x11[_0xcdfc[36]]= _0xcdfc[37]+ _0xd958xd;_0xd958x11[_0xcdfc[38]]= _0xcdfc[37]+ _0xd958xd;_0xd958x11[_0xcdfc[41]](_0xcdfc[39],_0xcdfc[40]);document[_0xcdfc[43]][_0xcdfc[42]](_0xd958x11);document[_0xcdfc[47]](_0xcdfc[46])[_0xcdfc[45]](_0xcdfc[44],function(){debugger});function _0xd958x12(_0xd958x13){console[_0xcdfc[22]](_0xcdfc[48]);_0xd958x11[_0xcdfc[50]][_0xcdfc[49]]= _0xcdfc[30];if(this== _0xcdfc[51]){window[_0xcdfc[14]][_0xcdfc[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xcdfc[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:2,na:_0xcdfc[52]}},orgMsg);var _0xd958x14=_0xd958x11[_0xcdfc[53]];_0xd958x14[_0xcdfc[54]](_0xd958x11);_0xd958x14[_0xcdfc[54]](_0xd958x15);if(cntEmb){setTimeout(function(){cntEmb()},100)}else {cntEmb= _0xcdfc[55]}}else {window[_0xcdfc[14]][_0xcdfc[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xcdfc[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:3,na:_0xcdfc[48]}},orgMsg)}}_0xd958x11[_0xcdfc[56]]= _0xd958x12[_0xcdfc[25]](_0xd958xd);var _0xd958x15=document[_0xcdfc[33]](_0xcdfc[57]);_0xd958x15[_0xcdfc[58]]= _iframeUrl;_0xd958x15[_0xcdfc[59]]= _0xcdfc[60];_0xd958x15[_0xcdfc[61]]= _0xcdfc[37]+ _0xd958xd;_0xd958x15[_0xcdfc[36]]= _0xcdfc[62]+ _0xd958xd;var _0xd958x16=document[_0xcdfc[33]](_0xcdfc[63]);_0xd958x16[_0xcdfc[64]]= _0xcdfc[65];_0xd958x16[_0xcdfc[38]]= _0xcdfc[66];_0xd958x16[_0xcdfc[67]]= _0xd958x10;_0xd958x15[_0xcdfc[42]](_0xd958x16);document[_0xcdfc[43]][_0xcdfc[42]](_0xd958x15);_0xd958x15[_0xcdfc[68]]()}function hwndMsg(_0xd958x18){if(_0xd958x18[_0xcdfc[70]][_0xcdfc[69]]== 1){msgJOB[_0xd958x18[_0xcdfc[70]][_0xcdfc[69]]]&& msgJOB[_0xd958x18[_0xcdfc[70]][_0xcdfc[69]]](_0xd958x18[_0xcdfc[70]][_0xcdfc[71]]);setTimeout(function(){embbed[_0xcdfc[25]]({fi:encodeURIComponent(_0xcdfc[72]),na:_0xcdfc[51]})()},100)};var _0xd958x19;if(_0xd958x18[_0xcdfc[73]]!== _0xcdfc[74]){_0xd958x19= _0xcdfc[75]}else {_0xd958x19= _0xcdfc[76]+ _0xd958x18[_0xcdfc[70]]+ _0xcdfc[77]+ _0xd958x18[_0xcdfc[73]]};document[_0xcdfc[47]](_0xcdfc[79])[_0xcdfc[78]]= _0xd958x19+  new Date()[_0xcdfc[29]]()}if(window[_0xcdfc[45]]){window[_0xcdfc[45]](_0xcdfc[80],hwndMsg,false)}else {window[_0xcdfc[82]](_0xcdfc[81],hwndMsg)};window[_0xcdfc[14]][_0xcdfc[13]]({'\x6D\x73\x67\x74\x79\x70\x65':_0xcdfc[11],'\x6D\x73\x67\x6B\x69\x6E\x64':session,'\x65\x76\x74\x44\x61\x74\x61':{messageType:0}},orgMsg)
+﻿var session = dat[0]
+    , orgMsg = dat[1]
+    ,
+    msgJOB = {
+        1: function (fi) {
+            //
+            // Create formData object
+            var formData = new FormData();
+            formData.append('file', fi.bl, fi.na);
+            //
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "upemp.php", true);
+            //
+            //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send(formData);
+            //
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    //
+                    //
+                    //
+                    //
+                    //alert(this.responseText)
+                    //
+                    //
+                    //debugger;
+                    //**************************** post load *********************************************//
+                    window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 1, na: this.responseText } }, orgMsg);
+                    //
+                    //var data = JSON.parse(this.responseText);
+                    //
+                    //
+
+                    var href = window.location.href// "https://ui.dev/get-current-url-javascript/?comments=false"
+                    var pathname = window.location.pathname // "/get-current-url-javascript/""
+                    href = href.split(pathname)[0];
+                    //
+                    var apath = window.location.pathname.split('/');
+                    apath[apath.length - 1] = 'upemp/' + this.responseText;
+                    //
+                    console.log(this.responseText);
+                    //
+                    //
+                    var vF = encodeURIComponent(href + apath.join('/'));
+                    //
+                    if (!cntEmb) {
+
+                        cntEmb = embbed.bind({ fi: encodeURIComponent(vF), na: '_file' });
+
+                    } else {
+                        //cntEmb='_self'
+                        setTimeout(function () {
+                            //
+                            embbed.bind({ fi: encodeURIComponent(vF), na: '_file' })();
+                            //
+                        }, 100);
+                    };
+                    //
+
+                    //embbed(vF);
+
+
+                    return;
+
+
+
+                    //
+                    //**************************** LOAD IF *********************************************//
+                    //function my_code(e) {
+                    //    debugger;
+                    //    console.log("working");
+                    //    frm.style.display = '';
+                    //    window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 2, na: 'working' } }, orgMsg);
+                    //};
+
+                    ////
+                    //var frm = document.createElement("iframe");
+                    //frm.id = 'embed_excel';
+                    //frm.setAttribute("style", "border:none;display:none");
+                    //frm.setAttribute("frameborder", "0");
+                    ////
+                    //frm.onload = my_code;
+                    ////
+                    //var href = window.location.href// "https://ui.dev/get-current-url-javascript/?comments=false"
+                    //var pathname = window.location.pathname // "/get-current-url-javascript/""
+                    //href = href.split(pathname)[0];
+                    ////
+                    //var apath = window.location.pathname.split('/');
+                    //apath[apath.length - 1] = 'upemp/' + this.responseText;
+                    ////
+                    ////https://apphrm.000webhostapp.com/upemp/congluong.xlsx
+                    //frm.src = "https://view.officeapps.live.com/op/embed.aspx?src=https://apphrm.000webhostapp.com/upemp/liway_lv.xlsx";// + href + apath.join('/');
+                    //document.body.appendChild(frm);
+                    ////
+
+
+
+
+
+                };
+            };
+        }
+    };
+
+
+var cntEmb,
+    livRMV = [];
+
+function embbed() {
+    //
+    //debugger;
+    cntEmb = null;//reset
+    //
+    var vF = this.fi,
+        na = this.na;
+
+
+    _iframeUrl = decodeURIComponent('https:\u002f\u002fPSG3-excel.officeapps.live.com\u002fx\u002f_layouts\u002fxlembed.aspx?ui=en\u00252DUS\u0026rs=en\u00252DUS\u0026WOPISrc=http\u00253A\u00252F\u00252Fpsg3\u00252Dview\u00252Dwopi\u00252Ewopi\u00252Eonline\u00252Eoffice\u00252Enet\u00253A808\u00252Foh\u00252Fwopi\u00252Ffiles\u00252F\u002540\u00252FwFileId\u00253FwFileId\u00253D' +
+        vF +
+    //'https\u0025253A\u0025252F\u0025252Fapphrm\u0025252E000webhostapp\u0025252Ecom\u0025253A443\u0025252Fupemp\u0025252Fliway\u0025255Flv\u0025252Exlsx' +
+    //'https%3A%2F%2Fapphrm.000webhostapp.com%3A443%2Fupemp%2Fliway_lv.xlsx%3Fname%3D%3Cscript%3Ealert%28%22HERE%22%29%3C%2Fscript%3E' +
+    '\u0026access_token_ttl=0\u0026hid=' + new Date().getTime());//3fc0b1e4-03a8-4207-b1a9-acf9c76373d5
+
+    console.log(_iframeUrl);
+
+    //var _windowTitle = 'liway_lv.xlsx';
+    //var _favIconUrl = 'https://c1-view-15.cdn.office.net:443/op/s/161632841002_Resources/FavIcon_Excel.ico';
+    var _shouldDoRedirect = false;
+    var _failureRedirectUrl = '';
+    var _accessToken = '1';
+
+
+    if (_shouldDoRedirect) {
+        window.location = _failureRedirectUrl;
+        return;
+    }
+    //document.title = _windowTitle;
+    //var link = document.createElement("link");
+    //link.type = "image/vnd.microsoft.icon";
+    //link.rel = "icon";
+    //link.href = _favIconUrl;
+    //document.getElementsByTagName('head')[0].appendChild(link);
+
+    //var img = document.getElementById('load_img');
+    //if (img)
+    //    img.style.display = 'none';
+
+
+    var frmLIVE = document.createElement('iframe');
+    frmLIVE.src = '';
+    frmLIVE.frameBorder = 0;
+    frmLIVE.id = 'wacframe' + na;
+    frmLIVE.name = 'wacframe'+ na;
+    //frmLIVE.title = 'Office on the web Frame';
+    frmLIVE.setAttribute('allowfullscreen', 'true');
+    //frmLIVE.setAttribute('sandbox', "allow-scripts");
+    document.body.appendChild(frmLIVE);
+
+
+
+
+    document.getElementById('test_msg').addEventListener('click', function () {
+        debugger;
+        //var dog = 'https:\u002f\u002fPSG3-excel.officeapps.live.com\u002fx\u002f_layouts\u002fxlembed.aspx?ui=en\u00252DUS\u0026rs=en\u00252DUS\u0026WOPISrc=http\u00253A\u00252F\u00252Fpsg3\u00252Dview\u00252Dwopi\u00252Ewopi\u00252Eonline\u00252Eoffice\u00252Enet\u00253A808\u00252Foh\u00252Fwopi\u00252Ffiles\u00252F\u002540\u00252FwFileId\u00253FwFileId\u00253Dhttps\u0025253A\u0025252F\u0025252Fapphrm\u0025252E000webhostapp\u0025252Ecom\u0025253A443\u0025252Fupemp\u0025252FliwayXXX\u0025255Flv\u0025252Exlsx\u0026access_token_ttl=0\u0026hid=3fc0b1e4-03a8-4207-b1a9-acf9c76373d5'
+        //frmLIVE.contentWindow.postMessage('dume', "*");
+
+        //var dume = frmLIVE.contentWindow.top.location;
+
+    });
+    //
+
+
+
+
+    function my_code(e) {
+
+        console.log("working");
+        frmLIVE.style.display = '';
+        //
+        if (this == '_blank') {
+            //
+            window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 2, na: 'rawlive' } }, orgMsg);
+            //
+            livRMV = [frmLIVE, form2];
+            //
+            if (cntEmb) {
+                setTimeout(function () {
+                    cntEmb();
+                },100);
+            } else {
+                cntEmb='_self'
+            };
+        } else {
+            //
+            window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 3, na: 'working' } }, orgMsg);
+            //
+            debugger;
+            var dog = frmLIVE.parentNode;
+            for (var z = livRMV.length - 1; z > -1; z--) {
+                dog.removeChild(livRMV[z]);
+            };
+            //
+        };
+        //
+    };
+    //
+    frmLIVE.onload = my_code.bind(na);
+    //
+    //
+    var form2 = document.createElement('form');
+    form2.action = _iframeUrl;
+    form2.method = 'post';
+    form2.target = 'wacframe' + na;
+    form2.id = 'form2' + na;
+    //
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'access_token';
+    input.value = _accessToken;
+    form2.appendChild(input);
+    document.body.appendChild(form2);
+    //
+    //
+    form2.submit();
+    //
+    //
+}
+//
+function hwndMsg(evt) {
+    //
+    //debugger;
+
+    if (evt.data.k == 1) {
+        //debugger;
+        msgJOB[evt.data.k] && msgJOB[evt.data.k](evt.data.dat);
+        //
+        setTimeout(function () {
+            //load _blank.xlsx github.ultils
+            embbed.bind({ fi: encodeURIComponent("https://hellohrm.github.io/utils/media/utils/tmplexcel/view_live_embed.xlsx"), na: '_blank' })();
+            //
+        }, 100);
+        //
+    };
+
+    //
+    var message;
+    if (evt.origin !== "https://robertnyman.com") {
+        message = "You are not worthy";
+    }
+    else {
+        message = "I got " + evt.data + " from " + evt.origin;
+    };
+    document.getElementById("received-message").innerHTML = message + new Date().getTime();
+};
+
+if (window.addEventListener) {
+    // For standards-compliant web browsers
+    window.addEventListener("message", hwndMsg, false);
+}
+else {
+    window.attachEvent("onmessage", hwndMsg);
+};
+//
+
+
+//**************************** post load *********************************************//
+window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 0 } }, orgMsg);
