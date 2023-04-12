@@ -242,6 +242,13 @@ function hwndMsg(evt) {
         //    //
         //}, 100);
         //
+    } if (evt.data.k == 2) {
+        //remove 
+        var ifr = document.getElementsByTagName("iframe");
+        if (ifr.length > 0) {
+            ifr = ifr[0];
+            ifr.parentNode.removeChild(ifr);
+        };
     };
 
     //
