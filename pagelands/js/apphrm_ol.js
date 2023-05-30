@@ -76,7 +76,7 @@
 
         libs = {
 
-            shared: '../media_shared'//'https://apphrm.github.io/media_shared'//
+            shared: 'https://apphrm.github.io/media_shared'//'../media_shared'//
             ,
             vs2010: 'hellodat.dnd.vn'//'hellodat.pages.dev' //'localhost:5114'//  //(1 in 2)     vs2010
             ,
