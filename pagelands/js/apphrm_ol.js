@@ -3,22 +3,28 @@
 
     "use strict";
 
-    String.prototype.utoa = function () {
-        return window.btoa(unescape(encodeURIComponent(this)));
-    };
-    // base64 encoded ascii to ucs-2 string
-    String.prototype.atou = function () {
-        return decodeURIComponent(escape(window.atob(this)));
-    };
-    //
 
-    var cok = function (a, b, u) {
+    var
 
-        u = u || 'Date';
+        _utoa = function (s) {
 
-        var exdate = new Date(), st_hn = window.location.hostname; exdate['set' + u](exdate['get' + u]() + b);
-        document.cookie = a + '; domain=' + (/^((\d){1,3}\.){3}(\d){1,3}$/.test(st_hn) ? '' : '.') + st_hn.replace('www.', '') + (window.location.protocol.indexOf('https:') >= 0 ? '; SameSite=None; Secure' : '') + ';path=/ ; expires=' + exdate.toUTCString();
-    }
+            return window.btoa(unescape(encodeURIComponent(s)));
+
+        }
+
+        ,
+        _atou = function (s) {
+            return decodeURIComponent(escape(window.atob(s)));
+        }
+        , 
+
+        cok = function (a, b, u) {
+
+            u = u || 'Date';
+
+            var exdate = new Date(), st_hn = window.location.hostname; exdate['set' + u](exdate['get' + u]() + b);
+            document.cookie = a + '; domain=' + (/^((\d){1,3}\.){3}(\d){1,3}$/.test(st_hn) ? '' : '.') + st_hn.replace('www.', '') + (window.location.protocol.indexOf('https:') >= 0 ? '; SameSite=None; Secure' : '') + ';path=/ ; expires=' + exdate.toUTCString();
+        }
 
         ,
 
@@ -226,7 +232,8 @@
 
         debugger;
 
-        var demoargs = JSON.parse(gQRY[gQRY['lan']].atou());
+        var demoargs = JSON.parse(_atou(gQRY[gQRY['lan']]));
+
         libs.testARG = JSON.stringify(demoargs[1]); // JSON.stringify({ 'mnu': 'JS_nhapxuat', 'arg': {} });
         libs.shared = demoargs[0].shr;
         libs.srcpf$ = demoargs[0].jcs;
