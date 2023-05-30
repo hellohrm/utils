@@ -948,7 +948,7 @@ String.prototype.atou = function () {
         ,
         srcpf$: 'https://hrm.dnd.vn'
         ,
-        shared: '../media_shared'//'https://apphrm.github.io/media_shared'//
+        shared: 'https://apphrm.github.io/media_shared'//'../media_shared'//
         ,
         src$id: new Date().getTime()
         }
