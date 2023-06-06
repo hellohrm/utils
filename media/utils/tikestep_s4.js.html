@@ -5,8 +5,8 @@
 
     .service-wrap {
         height: 100%;
-        display:flex;
-        flex-direction:column;
+        display: flex;
+        flex-direction: column;
     }
 
     .service-title h4 {
@@ -99,7 +99,7 @@
             font-size: 14px;
             font-weight: 600;
             position: relative;
-            margin-top:auto; /*anchor bottom card*/
+            margin-top: auto; /*anchor bottom card*/
         }
 </style>
 <section class="service-grid py-4 my-5">
@@ -178,330 +178,333 @@
 
 <div class="container keepbs">
     <style type="text/css">
-                .page-header {
-                    padding: 50px 0 20px 0;
-                    margin-bottom: 50px;
-                    position: relative;
+        .page-header {
+            padding: 50px 0 20px 0;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+            .page-header:after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: #009bd9;
+                left: calc(50% - 30px);
+                bottom: 0;
+            }
+
+            .page-header .page-title {
+                /*font-size: 32px;*/
+                padding: 0;
+                margin: 0;
+                /*font-weight: 600;*/
+                /*font-family: Roboto,sans-serif;*/
+                text-align: center;
+            }
+
+        .subheader {
+            padding: 0 0 10px 0;
+            margin-bottom: 10px;
+            background: #fff;
+            border-bottom: 1px solid #bddffe;
+        }
+
+            .subheader .title {
+                font-size: 18px;
+                padding: 0;
+                margin: 0;
+                color: #023b6d;
+                font-weight: 500;
+                font-family: #023b6d;
+            }
+
+        .page-content h3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #009bd9;
+        }
+
+        .license-compare {
+            margin-top: 40px;
+        }
+
+            .license-compare .features-list {
+                margin-top: 137px;
+            }
+
+                .license-compare .features-list ul {
+                    /*background: #f7f9fc;*/
+                    list-style: none;
+                    padding: 0;
                 }
 
-                    .page-header:after {
-                        content: '';
-                        position: absolute;
-                        display: block;
-                        width: 60px;
-                        height: 3px;
-                        background: #009bd9;
-                        left: calc(50% - 30px);
-                        bottom: 0;
-                    }
-
-                    .page-header .page-title {
-                        font-size: 32px;
-                        padding: 0;
-                        margin: 0;
-                        font-weight: 600;
-                        font-family: Roboto,sans-serif;
-                        text-align: center;
-                    }
-
-                .subheader {
-                    padding: 0 0 10px 0;
-                    margin-bottom: 10px;
-                    background: #fff;
-                    border-bottom: 1px solid #bddffe;
+                .license-compare .features-list li {
+                    height: 44px;
+                    padding: 0 10px;
+                    font-size: 15px;
+                    border-top: 1px solid #eef3f9;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                 }
 
-                    .subheader .title {
-                        font-size: 18px;
-                        padding: 0;
-                        margin: 0;
-                        color: #023b6d;
-                        font-weight: 500;
-                        font-family: #023b6d;
+
+
+                    .license-compare .features-list li:nth-child(even) {
+                        background: #fdfefe;
                     }
 
-                .page-content h3 {
-                    font-size: 20px;
-                    font-weight: 500;
+                    .license-compare .features-list li:nth-child(even) {
+                        background: rgba(191, 191, 191, 0.15);
+                    }
+
+
+                .license-compare .features-list .help {
+                    position: absolute;
+                    top: 20%;
+                    transform: translate(-55%,-100%);
+                    left: 100%;
+                    width: 200px;
+                    background: #024681;
+                    color: #fff;
+                    border-radius: 4px;
+                    padding: 10px 15px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .2s;
+                    font-size: 14px;
+                    z-index: 1;
+                }
+
+                .license-compare .features-list [class*="ti-help-"] {
+                    width: 20px;
+                    height: 20px;
+                    color: rgba(2,59,109,.45);
+                    transition: .3s;
+                    cursor: help;
+                }
+
+                .license-compare .features-list .icon:hover {
                     color: #009bd9;
                 }
 
-                .license-compare {
-                    margin-top: 40px;
+                .license-compare .features-list [class*="ti-help-"]:hover + .help {
+                    top: -10%;
+                    visibility: visible;
+                    opacity: 1;
                 }
 
-                    .license-compare .features-list {
-                        margin-top: 137px;
+            .license-compare .licenses .title {
+                padding: 15px;
+                text-align: center;
+                background: #eef3f9;
+                border-radius: 4px 4px 0 0;
+                border-bottom: 4px solid #009bd9;
+                height: 52px;
+                overflow: hidden;
+            }
+
+                .license-compare .licenses .title h2 {
+                    margin: 0 0 5px 0;
+                    padding: 0;
+                    font-size: 16px;
+                    font-weight: 600;
+                    /*color: #01203b*/
+                }
+
+                .license-compare .licenses .title span {
+                    display: block;
+                    /*color: #555;*/
+                    font-size: 14px;
+                    font-style: italic;
+                }
+
+            .license-compare .licenses .price {
+                text-align: center;
+                padding: 15px;
+                background: #f7f9fc;
+                height: 85px;
+                overflow: hidden;
+            }
+
+                .license-compare .licenses .price h3 {
+                    font-size: 30px;
+                    margin: 0;
+                    padding: 0;
+                    /*color: #023b6d;*/
+                    font-weight: 500;
+                }
+
+                    .license-compare .licenses .price h3 sup {
+                        margin-right: -8px;
+                        font-size: 20px;
                     }
 
-                        .license-compare .features-list ul {
-                            /*background: #f7f9fc;*/
-                            list-style: none;
-                            padding: 0;
-                        }
-
-                        .license-compare .features-list li {
-                            height: 44px;
-                            padding: 0 10px;
-                            font-size: 15px;
-                            border-top: 1px solid #eef3f9;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                        }
-
-
-
-                            .license-compare .features-list li:nth-child(even) {
-                                background: #fdfefe;
-                            }
-
-                            .license-compare .features-list li:nth-child(even) {
-                                background: rgba(191, 191, 191, 0.15);
-                            }
-
-
-                        .license-compare .features-list .help {
-                            position: absolute;
-                            top: 20%;
-                            transform: translate(-55%,-100%);
-                            left: 100%;
-                            width: 200px;
-                            background: #024681;
-                            color: #fff;
-                            border-radius: 4px;
-                            padding: 10px 15px;
-                            visibility: hidden;
-                            opacity: 0;
-                            transition: .2s;
-                            font-size: 14px;
-                            z-index: 1;
-                        }
-
-                        .license-compare .features-list [class*="ti-help-"] {
-                            width: 20px;
-                            height: 20px;
-                            color: rgba(2,59,109,.45);
-                            transition: .3s;
-                            cursor: help;
-                        }
-
-                        .license-compare .features-list .icon:hover {
-                            color: #009bd9;
-                        }
-
-                        .license-compare .features-list [class*="ti-help-"]:hover + .help {
-                            top: -10%;
-                            visibility: visible;
-                            opacity: 1;
-                        }
-
-                    .license-compare .licenses .title {
-                        padding: 15px;
-                        text-align: center;
-                        background: #eef3f9;
-                        border-radius: 4px 4px 0 0;
-                        border-bottom: 4px solid #009bd9;
-                        height: 52px;
-                        overflow: hidden;
+                    .license-compare .licenses .price h3.old-price {
+                        color: #999;
+                        position: relative;
+                        font-size: 24px;
+                        margin-right: 5px;
+                        font-weight: 400;
                     }
 
-                        .license-compare .licenses .title h2 {
-                            margin: 0 0 5px 0;
-                            padding: 0;
+                        .license-compare .licenses .price h3.old-price sup {
+                            margin-right: -8px;
                             font-size: 16px;
-                            font-weight: 600;
-                            /*color: #01203b*/
                         }
 
-                        .license-compare .licenses .title span {
+                        .license-compare .licenses .price h3.old-price:after {
+                            content: '';
                             display: block;
-                            /*color: #555;*/
-                            font-size: 14px;
-                            font-style: italic;
+                            width: 100%;
+                            height: 60%;
+                            position: absolute;
+                            top: 0;
+                            left: -2px;
+                            border-bottom: 3px solid rgba(255,40,28,.45);
+                            transform: rotate(-15deg);
                         }
 
-                    .license-compare .licenses .price {
-                        text-align: center;
-                        padding: 15px;
-                        background: #f7f9fc;
-                        height: 85px;
-                        overflow: hidden;
-                    }
+                .license-compare .licenses .price span {
+                    display: block;
+                    color: #888;
+                    font-size: 13px;
+                    font-style: italic;
+                    line-height: 16px;
+                }
 
-                        .license-compare .licenses .price h3 {
-                            font-size: 30px;
-                            margin: 0;
-                            padding: 0;
-                            /*color: #023b6d;*/
-                            font-weight: 500;
-                        }
-
-                            .license-compare .licenses .price h3 sup {
-                                margin-right: -8px;
-                                font-size: 20px;
-                            }
-
-                            .license-compare .licenses .price h3.old-price {
-                                color: #999;
-                                position: relative;
-                                font-size: 24px;
-                                margin-right: 5px;
-                                font-weight: 400;
-                            }
-
-                                .license-compare .licenses .price h3.old-price sup {
-                                    margin-right: -8px;
-                                    font-size: 16px;
-                                }
-
-                                .license-compare .licenses .price h3.old-price:after {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 60%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: -2px;
-                                    border-bottom: 3px solid rgba(255,40,28,.45);
-                                    transform: rotate(-15deg);
-                                }
-
-                        .license-compare .licenses .price span {
-                            display: block;
-                            color: #888;
-                            font-size: 13px;
-                            font-style: italic;
-                            line-height: 16px;
-                        }
-
-                    /*.license-compare .licenses .features {
+            /*.license-compare .licenses .features {
             background: #f7f9fc
         }*/
 
-                    .license-compare .licenses .features ul {
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        text-align: center;
-                    }
+            .license-compare .licenses .features ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
 
-                    .license-compare .licenses .features li {
-                        padding: 10px;
-                        font-size: 15px;
-                        border-top: 1px solid #eef3f9;
-                        font-weight: 600;
-                    }
+            .license-compare .licenses .features li {
+                padding: 10px;
+                font-size: 15px;
+                border-top: 1px solid #eef3f9;
+                font-weight: 600;
+            }
 
 
 
-                @media (min-width: 1200px) {
-                    .license-compare .licenses .features li {
-                        height: 44px;
-                        font-weight: 400;
-                    }
+        @media (min-width: 1200px) {
+            .license-compare .licenses .features li {
+                height: 44px;
+                font-weight: 400;
+            }
 
-                        .license-compare .licenses .features li:nth-child(even) {
-                            background-color: rgba(191, 191, 191, 0.15);
-                        }
+                .license-compare .licenses .features li:nth-child(even) {
+                    background-color: rgba(191, 191, 191, 0.15);
                 }
+        }
 
-                .license-compare .licenses .features li .feature-title {
-                    padding: 5px 0;
-                    font-size: 14px;
-                    font-weight: 400;
-                }
+        .license-compare .licenses .features li .feature-title {
+            padding: 5px 0;
+            font-size: 14px;
+            font-weight: 400;
+        }
 
-                    .license-compare .licenses .features li .feature-title s {
-                        color: #999;
-                    }
+            .license-compare .licenses .features li .feature-title s {
+                color: #999;
+            }
 
-                .license-compare .licenses .features .icon {
+        .license-compare .licenses .features .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .license-compare .licenses .features .icon-check {
+            color: #00c560;
+        }
+
+        .license-compare .licenses .features .icon-close {
+            color: red;
+        }
+
+        .license-compare .licenses .action {
+            padding: 10px;
+            border-radius: 0 0 4px 4px;
+            border-top: 4px solid #009bd9;
+            text-align: center;
+            background: #eef3f9;
+        }
+
+            .license-compare .licenses .action div {
+                font-weight: 700;
+                font-size: 16px;
+                padding-bottom: 8px;
+            }
+
+            .license-compare .licenses .action a {
+                display: flex;
+                padding: 8px 0;
+                font-size: 15px;
+                border-radius: 3px;
+                transition: .3s;
+                color: #fff;
+                margin: 10px;
+                font-weight: 400;
+                justify-content: center;
+                align-items: center;
+                background: #023b6d;
+            }
+
+                .license-compare .licenses .action a .icon {
                     width: 20px;
                     height: 20px;
+                    margin-right: 6px;
                 }
 
-                .license-compare .licenses .features .icon-check {
-                    color: #00c560;
+                .license-compare .licenses .action a:hover {
+                    color: #fff;
+                    background: #035195;
+                    box-shadow: 0 6px 15px 0 rgba(2,59,109,.25);
                 }
 
-                .license-compare .licenses .features .icon-close {
-                    color: red;
+                .license-compare .licenses .action a.buy {
+                    background: #00c560;
                 }
 
-                .license-compare .licenses .action {
-                    padding: 10px;
-                    border-radius: 0 0 4px 4px;
-                    border-top: 4px solid #009bd9;
-                    text-align: center;
-                    background: #eef3f9;
-                }
-
-                    .license-compare .licenses .action div {
-                        font-weight: 700;
-                        font-size: 16px;
-                        padding-bottom: 8px;
+                    .license-compare .licenses .action a.buy:hover {
+                        background: #00d96a;
+                        box-shadow: 0 6px 15px 0 rgba(0,197,96,.25);
                     }
 
-                    .license-compare .licenses .action a {
-                        display: flex;
-                        padding: 8px 0;
-                        font-size: 15px;
-                        border-radius: 3px;
-                        transition: .3s;
-                        color: #fff;
-                        margin: 10px;
-                        font-weight: 400;
-                        justify-content: center;
-                        align-items: center;
-                        background: #023b6d;
-                    }
 
-                        .license-compare .licenses .action a .icon {
-                            width: 20px;
-                            height: 20px;
-                            margin-right: 6px;
-                        }
+        .darkcolor .license-compare .licenses .features li, .darkcolor .license-compare .features-list li {
+            border-top: 1px solid #4d4d4d;
+        }
 
-                        .license-compare .licenses .action a:hover {
-                            color: #fff;
-                            background: #035195;
-                            box-shadow: 0 6px 15px 0 rgba(2,59,109,.25);
-                        }
+        .darkcolor .license-compare .licenses .action {
+            background: none;
+        }
 
-                        .license-compare .licenses .action a.buy {
-                            background: #00c560;
-                        }
+        .darkcolor .license-compare .licenses .price {
+            background-color: rgba(191, 191, 191, 0.2);
+        }
 
-                            .license-compare .licenses .action a.buy:hover {
-                                background: #00d96a;
-                                box-shadow: 0 6px 15px 0 rgba(0,197,96,.25);
-                            }
-
-
-                .darkcolor .license-compare .licenses .features li, .darkcolor .license-compare .features-list li {
-                    border-top: 1px solid #4d4d4d;
-                }
-
-                .darkcolor .license-compare .licenses .action {
-                    background: none;
-                }
-
-                .darkcolor .license-compare .licenses .price {
-                    background-color: rgba(191, 191, 191, 0.2);
-                }
-
-                .darkcolor .license-compare .licenses .title {
-                    background-color: rgba(191, 191, 191, 0.3);
-                    /*border-bottom: 4px solid greenyellow;*/
-                }
+        .darkcolor .license-compare .licenses .title {
+            background-color: rgba(191, 191, 191, 0.3);
+            /*border-bottom: 4px solid greenyellow;*/
+        }
     </style>
     <div class="page-header">
-        <h1 class="page-title">
-            License &amp; Pricing Information
-        </h1>
+        <h3 class="page-title">
+            Bảng Giá Dịch Vụ
+        </h3>
     </div>
-    <div class="page-content"><p>All templates listed at BootstrapMade.com are available for free download. We also offer paid/pro versions with more options and features. You can use the free versions in your personal or commercial projects as long as you comply with our license. It is also a good option to test, check the code and find out which template will work best for you. You can upgrade to the pro version later without losing your customization. Please, find out the detailed comparison of licenses in the below table.</p></div><div class="row gx-1 license-compare">
+    <div class="page-content">
+        <p>Tất cả phân hệ của phần mềm HelloHRM dùng trực tuyến Ngay&Luôn không cần tạo tài khoản và hoàn toàn miễn phí. Chúng tôi khuyến khích phiên bản trả phí với nhiều lựa chọn và tính năng hơn. Bạn có thể dùng phiên bản trực tuyến - miễn phí - Ngay&Luôn cho mục đích trãi nghiệm hoặc chỉ duy nhất 01 cá nhân sử dụng. Vui lòng xem chi tiết bản so sánh giá cả ở bản bên dưới.</p>
+    </div>
+    <div class="row gx-1 license-compare">
         <div class="col-xl-4 d-none d-xl-block features-list">
             <ul>
                 <li> <span>Use in personal &amp; commercial projects</span> <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">Allows you to use the template(s) to create personal or commerical websites for yourself</span> </span></li>
@@ -533,7 +536,7 @@
         </div><div class="col-xl-8 licenses">
             <div class="row gx-1">
                 <div class="col-lg-3 free">
-                    <div class="title"><h2>Free</h2></div><div class="price"><h3> <sup>$</sup> 0</h3> <span>Free<span></span></span></div><div class="features">
+                    <div class="title"><h2>Ngay&amp;Luôn</h2></div><div class="price"><h3> <sup>$</sup> 0</h3> <span>Free<span></span></span></div><div class="features">
                         <ul>
                             <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Use in personal &amp; commercial projects</span></li>
                             <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Customize the template files</span></li>
@@ -546,20 +549,25 @@
                             <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Access to all our <strong>91</strong> pro templates</s></span></li>
                             <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Resell &amp; Redistribute</s></span></li>
                             <li>
-                                <svg class="icon icon-close" fill="currentColor">
-                                    <use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#close"></use>
-                                </svg><span class="d-block d-xl-none feature-title"><s>Create page builder or include in CMS</s></span>
+                                <i class="ti-close text-danger"></i>
+                                <span class="d-block d-xl-none feature-title"><s>Create page builder or include in CMS</s></span>
                             </li>
                         </ul>
-                    </div><div class="action"> <a href="https://bootstrapmade.com/"><svg class="icon icon-download" fill="currentColor"><use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#download"></use></svg><span>Free Download</span></a></div>
+
+                    </div>
+                    <div class="action">
+                        <a class="btn disabled" href="https://bootstrapmade.com/">
+                            <span>Dùng Online</span>
+                        </a>
+                    </div>
+
                 </div><div class="col-lg-3 mt-5 mt-lg-0 pro">
                     <div class="title"><h2>Pro Single</h2></div><div class="price"><div class="d-flex justify-content-center align-items-center"><h3> <sup>$</sup> 19</h3></div> <span>One time payment</span></div><div class="features">
                         <ul>
                             <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Use in personal &amp; commercial projects</span></li>
                             <li>
-                                <svg class="icon icon-check" fill="currentColor">
-                                    <use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#check"></use>
-                                </svg><span class="d-block d-xl-none feature-title">Customize the template files</span>
+                                <i class="ti-check text-success"></i>
+                                <span class="d-block d-xl-none feature-title">Customize the template files</span>
                             </li>
                             <li>1<span class="d-block d-xl-none feature-title">Number of websites/domains</span></li>
                             <li>
@@ -580,16 +588,15 @@
                                 <span class="d-block d-xl-none feature-title"><s>Access to all our <strong>91</strong> pro templates</s></span>
                             </li>
                             <li>
-                                <svg class="icon icon-close" fill="currentColor">
-                                    <use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#close"></use>
-                                </svg><span class="d-block d-xl-none feature-title"><s>Resell &amp; Redistribute</s></span>
+                                <i class="ti-check text-success"></i>
+                                <span class="d-block d-xl-none feature-title"><s>Resell &amp; Redistribute</s></span>
                             </li>
                             <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Create page builder or include in CMS</s></span></li>
                         </ul>
-                    </div><div class="action">
-                        <a href="https://bootstrapmade.com/buy/?license=single" rel="nofollow" class="buy">
-                            <svg class="icon icon-cart" fill="currentColor"><use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#cart"></use></svg>
-                            <span>Buy Now</span>
+                    </div>
+                    <div class="action">
+                        <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Pro Single%20Pricing%20Plan" rel="nofollow" class="buy">
+                            <span>Liên hệ</span>
                         </a>
                     </div>
                 </div><div class="col-lg-3 mt-5 mt-lg-0 pro">
@@ -619,7 +626,13 @@
                             <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Resell &amp; Redistribute</s></span></li>
                             <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Create page builder or include in CMS</s></span></li>
                         </ul>
-                    </div><div class="action"> <a href="https://bootstrapmade.com/buy/?license=unlimited" rel="nofollow" class="buy"><svg class="icon icon-cart" fill="currentColor"><use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#cart"></use></svg><span>Buy Now</span></a></div>
+                    </div>
+                    <div class="action">
+                        <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Pro Unlimited%20Pricing%20Plan" rel="nofollow" class="buy">
+                            <span>Liên hệ</span>
+                        </a>
+                    </div>
+
                 </div><div class="col-lg-3 mt-5 mt-lg-0 membership">
                     <div class="title"><h2>Membership</h2></div><div class="price">
                         <div class="d-flex justify-content-center align-items-center">
@@ -647,7 +660,13 @@
                                 <span class="d-block d-xl-none feature-title"><s>Create page builder or include in CMS</s></span>
                             </li>
                         </ul>
-                    </div><div class="action"> <a href="https://bootstrapmade.com/buy/?template=membership" rel="nofollow" class="buy"><svg class="icon icon-cart" fill="currentColor"><use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#cart"></use></svg><span>Buy Now</span></a></div>
+                    </div>
+                    <div class="action">
+                        <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Membership%20Pricing%20Plan" rel="nofollow" class="buy">
+                            <span>Liên hệ</span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
