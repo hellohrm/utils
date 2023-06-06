@@ -1,937 +1,992 @@
-﻿<style type="text/css">
-    .service-grid {
-        background-color: rgba(191, 191, 191, 0.15);
-    }
-
-    .service-wrap {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .service-title h4 {
-        position: relative;
-        display: inline-block;
-    }
-
-    .service-icon {
-        position: relative;
-    }
-
-    .service-title p {
-        padding: 0 190px;
-        margin-bottom: 10px;
-    }
-
-    .about-info-text h2 {
-        margin-bottom: 23px;
-        text-transform: capitalize;
-        font-weight: 700;
-        line-height: .9;
-    }
-
-    .about-info-text p {
-        padding: 0 100px;
-        font-size: 18px;
-        margin-bottom: 26px;
-        position: relative;
-    }
-
-    .about-content p {
-        margin-bottom: 0;
-    }
-
-    .about-info-text a {
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-    .service-icon i {
-        font-size: 30px;
-        color: #e8bc00;
-        margin-bottom: 20px;
-        display: inline-block;
-    }
-
-    .service-wrap {
-        border: 1px solid #e6e6e6;
-        padding: 40px 20px 20px;
-        position: relative;
-    }
-
-        .service-wrap p {
-            position: relative;
-        }
-
-        .service-wrap:hover {
-            background-image: url(https://i.ibb.co/mykzQks/services1.jpg);
-            background-size: cover;
-            background-position: center center;
-            background-attachment: local;
-            transition: all .5s;
-        }
-
-            .service-wrap:hover:before {
-                background: rgba(0, 0, 0, 0.2901960784313726);
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                left: 0px;
-                content: "";
-                top: 0;
-                opacity: 1;
-            }
-
-            .service-wrap:hover h4, .service-wrap:hover p {
-                color: #fff;
-            }
-
-        .service-wrap h4 {
-            font-weight: 600;
-            /*color: #1e2331;*/
-            margin-bottom: 17px;
-            font-size: 18px;
-            text-transform: capitalize;
-            position: relative;
-        }
-
-        .service-wrap a {
-            font-size: 14px;
-            font-weight: 600;
-            position: relative;
-            margin-top: auto; /*anchor bottom card*/
-        }
-</style>
-<section class="service-grid py-4 my-5">
-    <div class="container keepbs">
-        <div class="row">
-            <div class="col-xl-12 text-center mb-4">
-                <div class="service-title">
-                    <h4>Our Services</h4>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 text-center mb-3 ">
-                <div class="service-wrap">
-                    <div class="service-icon">
-                        <i class="fa fa-html5"></i>
-                    </div>
-                    <h4>Web Application</h4>
-                    <p>Thiết kế, Lập trình triển khai chức năng mới theo yêu cầu đặc thù riêng của từng Khách hàng...</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center mb-3">
-                <div class="service-wrap">
-                    <div class="service-icon">
-                        <i class="fa fa-bar-chart"></i>
-                    </div>
-                    <h4>Highly customizable</h4>
-                    <p>Cài đặt, Import dữ liệu ban đầu và tư vấn hướng dẫn khách hàng sử dụng thành thạo phần mềm ...</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center mb-3">
-                <div class="service-wrap">
-                    <div class="service-icon">
-                        <i class="fa fa-home"></i>
-                    </div>
-                    <h4>Customer's Domain</h4>
-                    <p>Tích hợp phần mềm vào Website hiện có của khách hàng tiện dùng và tăng hiệu quả SEO cho site đó ...</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center mb-3">
-                <div class="service-wrap">
-                    <div class="service-icon">
-                        <i class="fa fa-cogs"></i>
-                    </div>
-                    <h4>service & plugins</h4>
-                    <p>Quản lý máy chấm công (thương hiệu ZK-Teco) Realtime-Online đa chi nhánh...</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center mb-3">
-                <div class="service-wrap">
-                    <div class="service-icon">
-                        <i class="fa fa-plug"></i>
-                    </div>
-                    <h4>Luồng Nộp Duyệt</h4>
-                    <p>Thêm luồng Nộp-duyệt đơn Nghỉ-vắng, Tăng-ca (hoặc khác) vào phần mềm Window của Khách hàng để phân tán Nhập-liệu, Kiểm-duyệt cho toàn bộ nhân viên...</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center mb-3">
-                <div class="service-wrap">
-                    <div class="service-icon">
-                        <i class="fa fa-thumbs-up"></i>
-                    </div>
-                    <h4>Dedicated support</h4>
-                    <p>Tùy chỉnh báo cáo như Bảng công, Phiếu lương (tổng hợp, cá nhân) chính xác theo yêu cầu Khách hàng...</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="container keepbs">
+﻿<div id="tmpl_service_price_s4">
     <style type="text/css">
-        .page-header {
-            padding: 50px 0 20px 0;
-            margin-bottom: 50px;
+        .service-grid {
+            background-color: rgba(191, 191, 191, 0.15);
+        }
+
+        .service-wrap {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-title h4 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .service-icon {
             position: relative;
         }
 
-            .page-header:after {
-                content: '';
-                position: absolute;
-                display: block;
-                width: 60px;
-                height: 3px;
-                background: #009bd9;
-                left: calc(50% - 30px);
-                bottom: 0;
-            }
-
-            .page-header .page-title {
-                /*font-size: 32px;*/
-                padding: 0;
-                margin: 0;
-                /*font-weight: 600;*/
-                /*font-family: Roboto,sans-serif;*/
-                text-align: center;
-            }
-
-        .subheader {
-            padding: 0 0 10px 0;
+        .service-title p {
+            padding: 0 190px;
             margin-bottom: 10px;
-            background: #fff;
-            border-bottom: 1px solid #bddffe;
         }
 
-            .subheader .title {
-                font-size: 18px;
-                padding: 0;
-                margin: 0;
-                color: #023b6d;
-                font-weight: 500;
-                font-family: #023b6d;
+        .about-info-text h2 {
+            margin-bottom: 23px;
+            text-transform: capitalize;
+            font-weight: 700;
+            line-height: .9;
+        }
+
+        .about-info-text p {
+            padding: 0 100px;
+            font-size: 18px;
+            margin-bottom: 26px;
+            position: relative;
+        }
+
+        .about-content p {
+            margin-bottom: 0;
+        }
+
+        .about-info-text a {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .service-icon i {
+            font-size: 30px;
+            color: #e8bc00;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .service-wrap {
+            border: 1px solid #e6e6e6;
+            padding: 40px 20px 20px;
+            position: relative;
+        }
+
+            .service-wrap p {
+                position: relative;
             }
 
-        .page-content h3 {
-            font-size: 20px;
-            font-weight: 500;
-            color: #009bd9;
-        }
-
-        .license-compare {
-            margin-top: 40px;
-        }
-
-            .license-compare .features-list {
-                margin-top: 137px;
+            .service-wrap:hover {
+                background-image: url(https://i.ibb.co/mykzQks/services1.jpg);
+                background-size: cover;
+                background-position: center center;
+                background-attachment: local;
+                transition: all .5s;
             }
 
-                .license-compare .features-list ul {
-                    /*background: #f7f9fc;*/
-                    list-style: none;
-                    padding: 0;
-                }
-
-                .license-compare .features-list li {
-                    height: 44px;
-                    padding: 0 10px;
-                    font-size: 15px;
-                    border-top: 1px solid #eef3f9;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
-
-
-
-                    .license-compare .features-list li:nth-child(even) {
-                        background: #fdfefe;
-                    }
-
-                    .license-compare .features-list li:nth-child(even) {
-                        background: rgba(191, 191, 191, 0.15);
-                    }
-
-
-                .license-compare .features-list .help {
+                .service-wrap:hover:before {
+                    background: rgba(0, 0, 0, 0.2901960784313726);
                     position: absolute;
-                    top: 20%;
-                    transform: translate(-55%,-100%);
-                    left: 100%;
-                    width: 200px;
-                    background: #024681;
-                    color: #fff;
-                    border-radius: 4px;
-                    padding: 10px 15px;
-                    visibility: hidden;
-                    opacity: 0;
-                    transition: .2s;
-                    font-size: 14px;
-                    z-index: 1;
-                }
-
-                .license-compare .features-list [class*="ti-help-"] {
-                    width: 20px;
-                    height: 20px;
-                    color: rgba(2,59,109,.45);
-                    transition: .3s;
-                    cursor: help;
-                }
-
-                .license-compare .features-list .icon:hover {
-                    color: #009bd9;
-                }
-
-                .license-compare .features-list [class*="ti-help-"]:hover + .help {
-                    top: -10%;
-                    visibility: visible;
+                    height: 100%;
+                    width: 100%;
+                    left: 0px;
+                    content: "";
+                    top: 0;
                     opacity: 1;
                 }
 
-            .license-compare .licenses .title {
-                padding: 15px;
+                .service-wrap:hover h4, .service-wrap:hover p {
+                    color: #fff;
+                }
+
+            .service-wrap h4 {
+                font-weight: 600;
+                /*color: #1e2331;*/
+                margin-bottom: 17px;
+                font-size: 18px;
+                text-transform: capitalize;
+                position: relative;
+            }
+
+            .service-wrap a {
+                font-size: 14px;
+                font-weight: 600;
+                position: relative;
+                margin-top: auto; /*anchor bottom card*/
+            }
+    </style>
+    <section class="service-grid py-4 my-5">
+        <div class="container keepbs">
+            <div class="row">
+                <div class="col-xl-12 text-center mb-4">
+                    <div class="service-title">
+                        <h4>Our Services</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center mb-3 ">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fa fa-html5"></i>
+                        </div>
+                        <h4>Web Application</h4>
+                        <p>Thiết kế, Lập trình triển khai chức năng mới theo yêu cầu đặc thù riêng của từng Khách hàng...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <h4>Highly customizable</h4>
+                        <p>Cài đặt, Import dữ liệu ban đầu và tư vấn hướng dẫn khách hàng sử dụng thành thạo phần mềm ...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <h4>Customer's Domain</h4>
+                        <p>Tích hợp phần mềm vào Website hiện có của khách hàng tiện dùng và tăng hiệu quả SEO cho site đó ...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <h4>service & plugins</h4>
+                        <p>Quản lý máy chấm công (thương hiệu ZK-Teco) Realtime-Online đa chi nhánh...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fa fa-plug"></i>
+                        </div>
+                        <h4>Luồng Nộp Duyệt</h4>
+                        <p>Thêm luồng Nộp-duyệt đơn Nghỉ-vắng, Tăng-ca (hoặc khác) vào phần mềm Window của Khách hàng để phân tán Nhập-liệu, Kiểm-duyệt cho toàn bộ nhân viên...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fa fa-thumbs-up"></i>
+                        </div>
+                        <h4>Dedicated support</h4>
+                        <p>Tùy chỉnh báo cáo như Bảng công, Phiếu lương (tổng hợp, cá nhân) chính xác theo yêu cầu Khách hàng...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container keepbs">
+        <style type="text/css">
+            .page-header {
+                padding: 50px 0 20px 0;
+                margin-bottom: 50px;
+                position: relative;
+            }
+
+                .page-header:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 60px;
+                    height: 3px;
+                    background: #009bd9;
+                    left: calc(50% - 30px);
+                    bottom: 0;
+                }
+
+                .page-header .page-title {
+                    /*font-size: 32px;*/
+                    padding: 0;
+                    margin: 0;
+                    /*font-weight: 600;*/
+                    /*font-family: Roboto,sans-serif;*/
+                    text-align: center;
+                }
+
+            .subheader {
+                padding: 0 0 10px 0;
+                margin-bottom: 10px;
+                background: #fff;
+                border-bottom: 1px solid #bddffe;
+            }
+
+                .subheader .title {
+                    font-size: 18px;
+                    padding: 0;
+                    margin: 0;
+                    color: #023b6d;
+                    font-weight: 500;
+                    font-family: #023b6d;
+                }
+
+            .page-content h3 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #009bd9;
+            }
+
+            .license-compare {
+                margin-top: 40px;
+            }
+
+                .license-compare .features-list {
+                    margin-top: 137px;
+                }
+
+                    .license-compare .features-list ul {
+                        /*background: #f7f9fc;*/
+                        list-style: none;
+                        padding: 0;
+                    }
+
+                    .license-compare .features-list li {
+                        height: 44px;
+                        padding: 0 10px;
+                        font-size: 15px;
+                        border-top: 1px solid #eef3f9;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+
+
+                        .license-compare .features-list li:nth-child(even) {
+                            background: #fdfefe;
+                        }
+
+                        .license-compare .features-list li:nth-child(even) {
+                            background: rgba(191, 191, 191, 0.15);
+                        }
+
+
+                    .license-compare .features-list .help {
+                        position: absolute;
+                        top: 20%;
+                        transform: translate(-55%,-100%);
+                        left: 100%;
+                        width: 200px;
+                        background: #024681;
+                        color: #fff;
+                        border-radius: 4px;
+                        padding: 10px 15px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+                        font-size: 14px;
+                        z-index: 1;
+                    }
+
+                    .license-compare .features-list [class*="ti-help-"] {
+                        width: 20px;
+                        height: 20px;
+                        color: rgba(2,59,109,.45);
+                        transition: .3s;
+                        cursor: help;
+                    }
+
+                    .license-compare .features-list .icon:hover {
+                        color: #009bd9;
+                    }
+
+                    .license-compare .features-list [class*="ti-help-"]:hover + .help {
+                        top: -10%;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                .license-compare .licenses .title {
+                    padding: 15px;
+                    text-align: center;
+                    background: #eef3f9;
+                    border-radius: 4px 4px 0 0;
+                    border-bottom: 4px solid #009bd9;
+                    height: 52px;
+                    overflow: hidden;
+                }
+
+                    .license-compare .licenses .title h2 {
+                        margin: 0 0 5px 0;
+                        padding: 0;
+                        font-size: 16px;
+                        font-weight: 600;
+                        /*color: #01203b*/
+                    }
+
+                    .license-compare .licenses .title span {
+                        display: block;
+                        /*color: #555;*/
+                        font-size: 14px;
+                        font-style: italic;
+                    }
+
+                .license-compare .licenses .price {
+                    text-align: center;
+                    padding: 15px;
+                    background: #f7f9fc;
+                    height: 85px;
+                    overflow: hidden;
+                }
+
+                    .license-compare .licenses .price h3 {
+                        font-size: 30px;
+                        margin: 0;
+                        padding: 0;
+                        /*color: #023b6d;*/
+                        font-weight: 500;
+                    }
+
+                        .license-compare .licenses .price h3 sup {
+                            margin-right: -8px;
+                            font-size: 20px;
+                        }
+
+                        .license-compare .licenses .price h3.old-price {
+                            color: #999;
+                            position: relative;
+                            font-size: 24px;
+                            margin-right: 5px;
+                            font-weight: 400;
+                        }
+
+                            .license-compare .licenses .price h3.old-price sup {
+                                margin-right: -8px;
+                                font-size: 16px;
+                            }
+
+                            .license-compare .licenses .price h3.old-price:after {
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 60%;
+                                position: absolute;
+                                top: 0;
+                                left: -2px;
+                                border-bottom: 3px solid rgba(255,40,28,.45);
+                                transform: rotate(-15deg);
+                            }
+
+                    .license-compare .licenses .price span {
+                        display: block;
+                        color: #888;
+                        font-size: 13px;
+                        font-style: italic;
+                        line-height: 16px;
+                    }
+
+                /*.license-compare .licenses .features {
+                background: #f7f9fc
+            }*/
+
+                .license-compare .licenses .features ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .license-compare .licenses .features li {
+                    padding: 10px;
+                    font-size: 15px;
+                    border-top: 1px solid #eef3f9;
+                    font-weight: 600;
+                }
+
+
+
+            @media (min-width: 1200px) {
+                .license-compare .licenses .features li {
+                    height: 44px;
+                    font-weight: 400;
+                }
+
+                    .license-compare .licenses .features li:nth-child(even) {
+                        background-color: rgba(191, 191, 191, 0.15);
+                    }
+            }
+
+            .license-compare .licenses .features li .feature-title {
+                padding: 5px 0;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+                .license-compare .licenses .features li .feature-title s {
+                    color: #999;
+                }
+
+            .license-compare .licenses .features .icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            .license-compare .licenses .features .icon-check {
+                color: #00c560;
+            }
+
+            .license-compare .licenses .features .icon-close {
+                color: red;
+            }
+
+            .license-compare .licenses .action {
+                padding: 10px;
+                border-radius: 0 0 4px 4px;
+                border-top: 4px solid #009bd9;
                 text-align: center;
                 background: #eef3f9;
-                border-radius: 4px 4px 0 0;
-                border-bottom: 4px solid #009bd9;
-                height: 52px;
-                overflow: hidden;
             }
 
-                .license-compare .licenses .title h2 {
-                    margin: 0 0 5px 0;
-                    padding: 0;
+                .license-compare .licenses .action div {
+                    font-weight: 700;
                     font-size: 16px;
-                    font-weight: 600;
-                    /*color: #01203b*/
+                    padding-bottom: 8px;
                 }
 
-                .license-compare .licenses .title span {
-                    display: block;
-                    /*color: #555;*/
-                    font-size: 14px;
-                    font-style: italic;
-                }
-
-            .license-compare .licenses .price {
-                text-align: center;
-                padding: 15px;
-                background: #f7f9fc;
-                height: 85px;
-                overflow: hidden;
-            }
-
-                .license-compare .licenses .price h3 {
-                    font-size: 30px;
-                    margin: 0;
-                    padding: 0;
-                    /*color: #023b6d;*/
-                    font-weight: 500;
-                }
-
-                    .license-compare .licenses .price h3 sup {
-                        margin-right: -8px;
-                        font-size: 20px;
-                    }
-
-                    .license-compare .licenses .price h3.old-price {
-                        color: #999;
-                        position: relative;
-                        font-size: 24px;
-                        margin-right: 5px;
-                        font-weight: 400;
-                    }
-
-                        .license-compare .licenses .price h3.old-price sup {
-                            margin-right: -8px;
-                            font-size: 16px;
-                        }
-
-                        .license-compare .licenses .price h3.old-price:after {
-                            content: '';
-                            display: block;
-                            width: 100%;
-                            height: 60%;
-                            position: absolute;
-                            top: 0;
-                            left: -2px;
-                            border-bottom: 3px solid rgba(255,40,28,.45);
-                            transform: rotate(-15deg);
-                        }
-
-                .license-compare .licenses .price span {
-                    display: block;
-                    color: #888;
-                    font-size: 13px;
-                    font-style: italic;
-                    line-height: 16px;
-                }
-
-            /*.license-compare .licenses .features {
-            background: #f7f9fc
-        }*/
-
-            .license-compare .licenses .features ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                text-align: center;
-            }
-
-            .license-compare .licenses .features li {
-                padding: 10px;
-                font-size: 15px;
-                border-top: 1px solid #eef3f9;
-                font-weight: 600;
-            }
-
-
-
-        @media (min-width: 1200px) {
-            .license-compare .licenses .features li {
-                height: 44px;
-                font-weight: 400;
-            }
-
-                .license-compare .licenses .features li:nth-child(even) {
-                    background-color: rgba(191, 191, 191, 0.15);
-                }
-        }
-
-        .license-compare .licenses .features li .feature-title {
-            padding: 5px 0;
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-            .license-compare .licenses .features li .feature-title s {
-                color: #999;
-            }
-
-        .license-compare .licenses .features .icon {
-            width: 20px;
-            height: 20px;
-        }
-
-        .license-compare .licenses .features .icon-check {
-            color: #00c560;
-        }
-
-        .license-compare .licenses .features .icon-close {
-            color: red;
-        }
-
-        .license-compare .licenses .action {
-            padding: 10px;
-            border-radius: 0 0 4px 4px;
-            border-top: 4px solid #009bd9;
-            text-align: center;
-            background: #eef3f9;
-        }
-
-            .license-compare .licenses .action div {
-                font-weight: 700;
-                font-size: 16px;
-                padding-bottom: 8px;
-            }
-
-            .license-compare .licenses .action a {
-                display: flex;
-                padding: 8px 0;
-                font-size: 15px;
-                border-radius: 3px;
-                transition: .3s;
-                color: #fff;
-                margin: 10px;
-                font-weight: 400;
-                justify-content: center;
-                align-items: center;
-                background: #023b6d;
-            }
-
-                .license-compare .licenses .action a .icon {
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 6px;
-                }
-
-                .license-compare .licenses .action a:hover {
+                .license-compare .licenses .action a {
+                    display: flex;
+                    padding: 8px 0;
+                    font-size: 15px;
+                    border-radius: 3px;
+                    transition: .3s;
                     color: #fff;
-                    background: #035195;
-                    box-shadow: 0 6px 15px 0 rgba(2,59,109,.25);
+                    margin: 10px;
+                    font-weight: 400;
+                    justify-content: center;
+                    align-items: center;
+                    background: #023b6d;
                 }
 
-                .license-compare .licenses .action a.buy {
-                    background: #00c560;
-                }
-
-                    .license-compare .licenses .action a.buy:hover {
-                        background: #00d96a;
-                        box-shadow: 0 6px 15px 0 rgba(0,197,96,.25);
+                    .license-compare .licenses .action a .icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 6px;
                     }
 
+                    .license-compare .licenses .action a:hover {
+                        color: #fff;
+                        background: #035195;
+                        box-shadow: 0 6px 15px 0 rgba(2,59,109,.25);
+                    }
 
-        .darkcolor .license-compare .licenses .features li, .darkcolor .license-compare .features-list li {
-            border-top: 1px solid #4d4d4d;
-        }
+                    .license-compare .licenses .action a.buy {
+                        background: #00c560;
+                    }
 
-        .darkcolor .license-compare .licenses .action {
-            background: none;
-        }
-
-        .darkcolor .license-compare .licenses .price {
-            background-color: rgba(191, 191, 191, 0.2);
-        }
-
-        .darkcolor .license-compare .licenses .title {
-            background-color: rgba(191, 191, 191, 0.3);
-            /*border-bottom: 4px solid greenyellow;*/
-        }
-    </style>
-    <div class="page-header">
-        <h3 class="page-title">
-            Bảng Giá Dịch Vụ
-        </h3>
-    </div>
-    <div class="page-content">
-        <p>Tất cả phân hệ của phần mềm HelloHRM dùng trực tuyến Ngay&Luôn không cần tạo tài khoản và hoàn toàn miễn phí. Chúng tôi khuyến khích phiên bản trả phí với nhiều lựa chọn và tính năng hơn. Bạn có thể dùng phiên bản trực tuyến - miễn phí - Ngay&Luôn cho mục đích trãi nghiệm hoặc chỉ duy nhất 01 cá nhân sử dụng. Vui lòng xem chi tiết bản so sánh giá cả ở bản bên dưới.</p>
-    </div>
-    <div class="row gx-1 license-compare">
-        <div class="col-xl-4 d-none d-xl-block features-list">
-            <ul>
-                <li> <span>Dùng trải nghiệm hoặc 01 cá nhân</span> <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">Allows you to use the template(s) to create personal or commerical websites for yourself</span> </span></li>
-                <li>
-                    <span>Số lượng nhân viên tối đa</span> <span class="position-relative d-block">
-                        <i class="ti-help-alt text-info"></i>
-                        <span class="help">You can modify and customize the template files to fit your needs</span>
-                    </span>
-                </li>
-                <li>
-                    <span>Số lượng người dùng phần mềm</span>
-                    <span class="position-relative d-block">
-                        <i class="ti-help-alt text-info"></i>
-                        <span class="help">On how many domains/websites you can use the template(s)</span>
-                    </span>
-                </li>
-
-                <li> 
-                    <span>Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a>
-                    </span> <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> 
-                    <span class="help">A working PHP/Ajax contact form script that allows you to receive messages submitted from the contact form to your Email inbox</span> </span>
-                </li>
-
-                <li> 
-                    <span>Quản lý máy chấm công trực tuyến</span> <span class="position-relative d-block"> 
-                    <i class="ti-help-alt text-info"></i> <span class="help">Allows you to use the template(s) to create websites for your clients and charge them as much as you want for your work</span> </span></li>
-                <li>
-                    <span>Luồng nộp duyệt Nghỉ vắng - Tăng ca</span><span class="position-relative d-block">
-                        <i class="ti-help-alt text-info"></i> <span class="help">Allows you to remove the footer credit link and any other reference to BootstrapMade</span>
-                    </span>
-                </li>
+                        .license-compare .licenses .action a.buy:hover {
+                            background: #00d96a;
+                            box-shadow: 0 6px 15px 0 rgba(0,197,96,.25);
+                        }
 
 
-                
-                <li> 
-                    <span>Hỗ trợ cao cấp qua Email</span> 
-                    <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">Premium support via Email</span> </span></li>
-                <li>
-                    <span>Lưu trữ đám mây</span> <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">Access the Sass/SCSS source files</span> </span>
-                </li>
+            .darkcolor .license-compare .licenses .features li, .darkcolor .license-compare .features-list li {
+                border-top: 1px solid #4d4d4d;
+            }
 
-                <li> 
-                    <span>Chấm công bằng mã <strong>QR</strong> kèm vị trí</span> 
-                    <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> 
-                    <span class="help">Access to all our currently avilable <strong>91</strong> pro templates + new templates released during your membership</span> </span>
-                </li>
+            .darkcolor .license-compare .licenses .action {
+                background: none;
+            }
 
-                <li> <span>Bán &amp; Phân phối lại</span> <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">You cannot resell, redistribute, license, or sub-license any of the files or code found on BootstrapMade.com without direct permission from BootstrapMade.com</span> </span></li>
-                <li>
-                    <span>Toàn quyền Thương hiệu &amp; Logo</span>
-                    <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">You are not allowed to use our templates in a page builder or in your custom CMS, which you distribute for free or paid</span> </span>
-                </li>
-            </ul>
-        </div><div class="col-xl-8 licenses">
-            <div class="row gx-1">
-                <div class="col-lg-3 free">
-                    <div class="title"><h2>Ngay&amp;Luôn</h2></div><div class="price"><h3> <sup>$</sup> 0</h3> <span>Free<span></span></span></div><div class="features">
-                        <ul>
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Dùng trải nghiệm hoặc 01 cá nhân</span>
-                            </li>
-                            <li>Không giới hạn<span class="d-block d-xl-none feature-title">Số lượng nhân viên tối đa</span></li>
+            .darkcolor .license-compare .licenses .price {
+                background-color: rgba(191, 191, 191, 0.2);
+            }
 
-                            <li>01<span class="d-block d-xl-none feature-title">Số lượng người dùng phần mềm</span></li>
+            .darkcolor .license-compare .licenses .title {
+                background-color: rgba(191, 191, 191, 0.3);
+                /*border-bottom: 4px solid greenyellow;*/
+            }
+        </style>
+        <div class="page-header">
+            <h3 data-lang="page|0" class="page-title">
+                Bảng Giá Dịch Vụ
+            </h3>
+        </div>
+        <div class="page-content">
+            <p data-lang="page|1">Tất cả phân hệ của phần mềm HelloHRM dùng trực tuyến Ngay&Luôn không cần tạo tài khoản và hoàn toàn miễn phí. Chúng tôi khuyến khích phiên bản trả phí với nhiều lựa chọn và tính năng hơn. Bạn có thể dùng phiên bản trực tuyến - miễn phí - Ngay&Luôn cho mục đích trãi nghiệm hoặc chỉ duy nhất 01 cá nhân sử dụng. Vui lòng xem chi tiết bản so sánh giá cả ở bản bên dưới.</p>
+        </div>
+        <div class="row gx-1 license-compare">
+            <div class="col-xl-4 d-none d-xl-block features-list">
+                <ul>
+                    <li>
+                        <span data-lang="ten|1">Dùng trải nghiệm hoặc 01 cá nhân</span> <span class="position-relative d-block">
+                            <i class="ti-help-alt text-info"></i>
+                            <span class="help">Allows you to use the template(s) to create personal or commerical websites for yourself</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span data-lang="ten|2">Số lượng nhân viên tối đa</span> <span class="position-relative d-block">
+                            <i class="ti-help-alt text-info"></i>
+                            <span class="help">You can modify and customize the template files to fit your needs</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span data-lang="ten|3">Số lượng người dùng phần mềm</span>
+                        <span class="position-relative d-block">
+                            <i class="ti-help-alt text-info"></i>
+                            <span class="help">On how many domains/websites you can use the template(s)</span>
+                        </span>
+                    </li>
 
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
-                            </li>
+                    <li>
+                        <span data-lang="ten|4">
+                            Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a>
+                        </span> <span class="position-relative d-block">
+                            <i class="ti-help-alt text-info"></i>
+                            <span class="help">A working PHP/Ajax contact form script that allows you to receive messages submitted from the contact form to your Email inbox</span>
+                        </span>
+                    </li>
 
-                            <li>
-                                <i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Quản lý máy chấm công trực tuyến</s></span>
-                            </li>
-                            <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Luồng nộp duyệt Nghỉ vắng - Tăng ca</s></span></li>
+                    <li>
+                        <span data-lang="ten|5">Quản lý máy chấm công trực tuyến</span> <span class="position-relative d-block">
+                            <i class="ti-help-alt text-info"></i> <span class="help">Allows you to use the template(s) to create websites for your clients and charge them as much as you want for your work</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Luồng nộp duyệt Nghỉ vắng - Tăng ca</span><span class="position-relative d-block">
+                            <i class="ti-help-alt text-info"></i> <span class="help">Allows you to remove the footer credit link and any other reference to BootstrapMade</span>
+                        </span>
+                    </li>
 
 
 
-                            <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Hỗ trợ cao cấp qua Email</s></span></li>
+                    <li>
+                        <span>Hỗ trợ cao cấp qua Email</span>
+                        <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">Premium support via Email</span> </span>
+                    </li>
+                    <li>
+                        <span>Lưu trữ đám mây</span> <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">Access the Sass/SCSS source files</span> </span>
+                    </li>
 
-                            <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Lưu trữ đám mây</s></span></li>
+                    <li>
+                        <span>Chấm công bằng mã <strong>QR</strong> kèm vị trí</span>
+                        <span class="position-relative d-block">
+                            <i class="ti-help-alt text-info"></i>
+                            <span class="help">Access to all our currently avilable <strong>91</strong> pro templates + new templates released during your membership</span>
+                        </span>
+                    </li>
 
-                            <li>
-                                <i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Chấm công bằng mã <strong>QR</strong> kèm vị trí</s></span>
-                            </li>
+                    <li> <span>Bán &amp; Phân phối lại</span> <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">You cannot resell, redistribute, license, or sub-license any of the files or code found on BootstrapMade.com without direct permission from BootstrapMade.com</span> </span></li>
+                    <li>
+                        <span>Toàn quyền Thương hiệu &amp; Logo</span>
+                        <span class="position-relative d-block"> <i class="ti-help-alt text-info"></i> <span class="help">You are not allowed to use our templates in a page builder or in your custom CMS, which you distribute for free or paid</span> </span>
+                    </li>
+                </ul>
+            </div><div class="col-xl-8 licenses">
+                <div class="row gx-1">
+                    <div class="col-lg-3 free">
 
-                            <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span></li>
-                            <li>
-                                <i class="ti-close text-danger"></i>
-                                <span class="d-block d-xl-none feature-title"><s>Toàn quyền Thương hiệu &amp; Logo</s></span>
-                            </li>
-                        </ul>
+                        <div class="title">
+                            <h2 data-lang="page|2">Ngay&amp;Luôn</h2>
+                        </div>
+
+                        <div class="price"><h3> <sup>$</sup> 0</h3> <span>Free<span></span></span></div><div class="features">
+                            <ul>
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title" data-lang="ten|0">Dùng trải nghiệm hoặc 01 cá nhân</span>
+                                </li>
+                                <li><span  data-lang="ten|0">Không giới hạn</span><span class="d-block d-xl-none feature-title" data-lang="ten|1">Số lượng nhân viên tối đa</span></li>
+
+                                <li>01<span class="d-block d-xl-none feature-title" data-lang="ten|3">Số lượng người dùng phần mềm</span></li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title" data-lang="ten|4">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
+                                </li>
+
+                                <li>
+                                    <i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title" data-lang="ten|5"><s>Quản lý máy chấm công trực tuyến</s></span>
+                                </li>
+                                <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Luồng nộp duyệt Nghỉ vắng - Tăng ca</s></span></li>
+
+
+
+                                <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Hỗ trợ cao cấp qua Email</s></span></li>
+
+                                <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Lưu trữ đám mây</s></span></li>
+
+                                <li>
+                                    <i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Chấm công bằng mã <strong>QR</strong> kèm vị trí</s></span>
+                                </li>
+
+                                <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span></li>
+                                <li>
+                                    <i class="ti-close text-danger"></i>
+                                    <span class="d-block d-xl-none feature-title"><s>Toàn quyền Thương hiệu &amp; Logo</s></span>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="action">
+                            <a class="btn disabled" href="https://bootstrapmade.com/">
+                                <span>Dùng Online</span>
+                            </a>
+                        </div>
+
+                    </div><div class="col-lg-3 mt-5 mt-lg-0 pro">
+                        <div class="title"><h2>Pro Single</h2></div><div class="price"><div class="d-flex justify-content-center align-items-center"><h3> <sup>$</sup> 19</h3></div> <span>One time payment</span></div><div class="features">
+                            <ul>
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title" data-lang="ten|0">Dùng trải nghiệm hoặc 01 cá nhân</span>
+                                </li>
+                                <li>
+                                    <span  data-lang="ten|0">Không giới hạn</span><span class="d-block d-xl-none feature-title" data-lang="ten|2">Số lượng nhân viên tối đa</span>
+                                </li>
+                                <li><span  data-lang="ten|0">Không giới hạn</span><span class="d-block d-xl-none feature-title" data-lang="ten|3">Số lượng người dùng phần mềm</span></li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title" data-lang="ten|4">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
+                                </li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title" data-lang="ten|5">Quản lý máy chấm công trực tuyến</span>
+                                </li>
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Luồng nộp duyệt Nghỉ vắng - Tăng ca</span></li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Hỗ trợ cao cấp qua Email</span>
+                                </li>
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Lưu trữ đám mây</span>
+                                </li>
+
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Chấm công bằng mã <strong>QR</strong> kèm vị trí</span></li>
+
+                                <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span></li>
+
+                                <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Toàn quyền Thương hiệu &amp; Logo</s></span></li>
+                            </ul>
+                        </div>
+                        <div class="action">
+                            <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Pro Single%20Pricing%20Plan" rel="nofollow" class="buy">
+                                <span>Liên hệ</span>
+                            </a>
+                        </div>
+                    </div><div class="col-lg-3 mt-5 mt-lg-0 pro">
+                        <div class="title"><h2>Pro Unlimited</h2></div><div class="price"><div class="d-flex justify-content-center align-items-center"><h3> <sup>$</sup> 39</h3></div> <span>One time payment</span></div><div class="features">
+                            <ul>
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title" data-lang="ten|0">Dùng trải nghiệm hoặc 01 cá nhân</span>
+                                </li>
+
+                                <li><span  data-lang="ten|0">Không giới hạn</span><span class="d-block d-xl-none feature-title" data-lang="ten|2">Số lượng nhân viên tối đa</span></li>
+
+                                <li><span  data-lang="ten|0">Không giới hạn</span><span class="d-block d-xl-none feature-title" data-lang="ten|3">Số lượng người dùng phần mềm</span></li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title" data-lang="ten|4">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
+                                </li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title" data-lang="ten|5">Quản lý máy chấm công trực tuyến</span>
+                                </li>
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Luồng nộp duyệt Nghỉ vắng - Tăng ca</span>
+                                </li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title">Hỗ trợ cao cấp qua Email</span>
+                                </li>
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Lưu trữ đám mây</span></li>
+
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Chấm công bằng mã <strong>QR</strong> kèm vị trí</span></li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span>
+                                </li>
+
+                                <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Toàn quyền Thương hiệu &amp; Logo</s></span></li>
+                            </ul>
+                        </div>
+                        <div class="action">
+                            <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Pro Unlimited%20Pricing%20Plan" rel="nofollow" class="buy">
+                                <span>Liên hệ</span>
+                            </a>
+                        </div>
+
+                    </div><div class="col-lg-3 mt-5 mt-lg-0 membership">
+                        <div class="title"><h2>Membership</h2></div><div class="price">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h3>
+                                    <sup>$</sup> 49
+                                </h3>
+                            </div> <span>For 3 months access</span>
+                        </div>
+                        <div class="features">
+                            <ul>
+                                <li>
+                                    <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title" data-lang="ten|0">Dùng trải nghiệm hoặc 01 cá nhân</span>
+                                </li>
+
+                                <li><span  data-lang="ten|0">Không giới hạn</span><span class="d-block d-xl-none feature-title" data-lang="ten|2">Số lượng nhân viên tối đa</span></li>
+
+                                <li><span  data-lang="ten|0">Không giới hạn</span><span class="d-block d-xl-none feature-title" data-lang="ten|3"> Số lượng người dùng phần mềm</span></li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title" data-lang="ten|4">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
+                                </li>
+
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title" data-lang="ten|5">Quản lý máy chấm công trực tuyến</span></li>
+
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Luồng nộp duyệt Nghỉ vắng - Tăng ca</span></li>
+
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Hỗ trợ cao cấp qua Email</span></li>
+
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Lưu trữ đám mây</span></li>
+
+                                <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Chấm công bằng mã <strong>QR</strong> kèm vị trí</span></li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span>
+                                </li>
+
+                                <li>
+                                    <i class="ti-check text-success"></i>
+                                    <span class="d-block d-xl-none feature-title">Toàn quyền Thương hiệu &amp; Logo</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="action">
+                            <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Membership%20Pricing%20Plan" rel="nofollow" class="buy">
+                                <span>Liên hệ</span>
+                            </a>
+                        </div>
 
                     </div>
-                    <div class="action">
-                        <a class="btn disabled" href="https://bootstrapmade.com/">
-                            <span>Dùng Online</span>
-                        </a>
-                    </div>
-
-                </div><div class="col-lg-3 mt-5 mt-lg-0 pro">
-                    <div class="title"><h2>Pro Single</h2></div><div class="price"><div class="d-flex justify-content-center align-items-center"><h3> <sup>$</sup> 19</h3></div> <span>One time payment</span></div><div class="features">
-                        <ul>
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Dùng trải nghiệm hoặc 01 cá nhân</span>
-                            </li>
-                            <li>
-                                Không giới hạn<span class="d-block d-xl-none feature-title">Số lượng nhân viên tối đa</span>
-                            </li>
-                            <li>Không giới hạn<span class="d-block d-xl-none feature-title">Số lượng người dùng phần mềm</span></li>
-
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
-                            </li>
-
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Quản lý máy chấm công trực tuyến</span>
-                            </li>
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Luồng nộp duyệt Nghỉ vắng - Tăng ca</span></li>
-                            
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Hỗ trợ cao cấp qua Email</span>
-                            </li>
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Lưu trữ đám mây</span></li>
-
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Chấm công bằng mã <strong>QR</strong> kèm vị trí</span></li>
-
-                            <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span></li>
-
-                            <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Toàn quyền Thương hiệu &amp; Logo</s></span></li>
-                        </ul>
-                    </div>
-                    <div class="action">
-                        <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Pro Single%20Pricing%20Plan" rel="nofollow" class="buy">
-                            <span>Liên hệ</span>
-                        </a>
-                    </div>
-                </div><div class="col-lg-3 mt-5 mt-lg-0 pro">
-                    <div class="title"><h2>Pro Unlimited</h2></div><div class="price"><div class="d-flex justify-content-center align-items-center"><h3> <sup>$</sup> 39</h3></div> <span>One time payment</span></div><div class="features">
-                        <ul>
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Dùng trải nghiệm hoặc 01 cá nhân</span>
-                            </li>
-
-                            <li>Không giới hạn<span class="d-block d-xl-none feature-title">Số lượng nhân viên tối đa</span></li>
-
-                            <li>Không giới hạn<span class="d-block d-xl-none feature-title">Số lượng người dùng phần mềm</span></li>
-
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
-                            </li>
-
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Quản lý máy chấm công trực tuyến</span>
-                            </li>
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Luồng nộp duyệt Nghỉ vắng - Tăng ca</span>
-                            </li>
-                            
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Hỗ trợ cao cấp qua Email</span>
-                            </li>
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Lưu trữ đám mây</span></li>
-
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Chấm công bằng mã <strong>QR</strong> kèm vị trí</span></li>
-
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span>
-                            </li>
-
-                            <li><i class="ti-close text-danger"></i><span class="d-block d-xl-none feature-title"><s>Toàn quyền Thương hiệu &amp; Logo</s></span></li>
-                        </ul>
-                    </div>
-                    <div class="action">
-                        <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Pro Unlimited%20Pricing%20Plan" rel="nofollow" class="buy">
-                            <span>Liên hệ</span>
-                        </a>
-                    </div>
-
-                </div><div class="col-lg-3 mt-5 mt-lg-0 membership">
-                    <div class="title"><h2>Membership</h2></div><div class="price">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <h3>
-                                <sup>$</sup> 49
-                            </h3>
-                        </div> <span>For 3 months access</span>
-                    </div>
-                    <div class="features">
-                        <ul>
-                            <li>
-                                <i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Dùng trải nghiệm hoặc 01 cá nhân</span>
-                            </li>
-
-                            <li>Không giới hạn<span class="d-block d-xl-none feature-title">Số lượng nhân viên tối đa</span></li>
-
-                            <li>Không giới hạn<span class="d-block d-xl-none feature-title">Số lượng người dùng phần mềm</span></li>
-
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Chạy cùng <a href="https://bootstrapmade.com/php-email-form/"><strong>Tên miền khách hàng</strong></a></span>
-                            </li>
-
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Quản lý máy chấm công trực tuyến</span></li>
-
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Luồng nộp duyệt Nghỉ vắng - Tăng ca</span></li>
-                            
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Hỗ trợ cao cấp qua Email</span></li>
-
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Lưu trữ đám mây</span></li>
-
-                            <li><i class="ti-check text-success"></i><span class="d-block d-xl-none feature-title">Chấm công bằng mã <strong>QR</strong> kèm vị trí</span></li>
-
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Bán &amp; Phân phối lại</span>
-                            </li>
-
-                            <li>
-                                <i class="ti-check text-success"></i>
-                                <span class="d-block d-xl-none feature-title">Toàn quyền Thương hiệu &amp; Logo</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="action">
-                        <a href="mailto:apphrm@hotmail.com?subject=HelloHRM%20Membership%20Pricing%20Plan" rel="nofollow" class="buy">
-                            <span>Liên hệ</span>
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
-<div class="row justify-content-center d-none">
-    <style type="text/css">
-        /* pricing table https://codepen.io/aviforever/pen/LkQkmz*/
-        .pricing-table {
-            padding: 0px;
-            margin: 0px;
-            margin-top: 10px;
-        }
-
-            .pricing-table .btn {
-                padding: 15px;
-                font-size: larger;
-            }
-
-            .pricing-table td {
+    <div class="row justify-content-center d-none">
+        <style type="text/css">
+            /* pricing table https://codepen.io/aviforever/pen/LkQkmz*/
+            .pricing-table {
                 padding: 0px;
+                margin: 0px;
+                margin-top: 10px;
             }
 
-            .pricing-table .pricing-table-list td {
-                padding: 10px 8px;
-                text-align: center;
-                border: 1px solid #4d4d4d;
-            }
+                .pricing-table .btn {
+                    padding: 15px;
+                    font-size: larger;
+                }
 
-            .pricing-table .pricing-table-list .glyphicon-ok {
-                color: #68AF27;
-            }
-
-            .pricing-table .pricing-table-list .glyphicon-remove {
-                color: #C22439;
-            }
-
-            .pricing-table .pricing-table-list td:first-child {
-                text-align: left;
-                text-transform: uppercase;
-            }
-
-            .pricing-table .pricing-table-text {
-                padding: 10px;
-            }
-
-                .pricing-table .pricing-table-text h2 {
-                    font-size: 35px;
-                    font-weight: 300;
-                    line-height: 33px;
-                    margin: 0px;
+                .pricing-table td {
                     padding: 0px;
-                    text-align: center;
-                    color: #009AD7;
                 }
 
-                .pricing-table .pricing-table-text p {
+                .pricing-table .pricing-table-list td {
+                    padding: 10px 8px;
                     text-align: center;
-                    /*color: #666;*/
-                    margin-top: 10px;
+                    border: 1px solid #4d4d4d;
                 }
 
-            .pricing-table .pricing-table-item {
-                color: #FFF;
-            }
-
-                .pricing-table .pricing-table-item .pricing-table-item-head {
-                    padding: 10px 5px;
-                    text-align: center;
-                    background: #009AD7;
+                .pricing-table .pricing-table-list .glyphicon-ok {
+                    color: #68AF27;
                 }
 
-                    .pricing-table .pricing-table-item .pricing-table-item-head p {
-                        font-size: 17px;
-                        line-height: 21px;
-                        text-transform: uppercase;
-                        margin-bottom: 0px;
-                    }
-
-
-
-                .pricing-table .pricing-table-item .pricing-table-item-price {
-                    padding: 15px 10px;
-                    text-align: center;
-                    background: #FFF;
-                    color: #009AD7;
+                .pricing-table .pricing-table-list .glyphicon-remove {
+                    color: #C22439;
                 }
 
-                    .pricing-table .pricing-table-item .pricing-table-item-price p {
-                        font-size: 41px;
-                        font-weight: 400;
-                        line-height: 36px;
-                        margin-bottom: 0px;
-                    }
+                .pricing-table .pricing-table-list td:first-child {
+                    text-align: left;
+                    text-transform: uppercase;
+                }
 
+                .pricing-table .pricing-table-text {
+                    padding: 10px;
+                }
 
-
-                    .pricing-table .pricing-table-item .pricing-table-item-price > span {
+                    .pricing-table .pricing-table-text h2 {
+                        font-size: 35px;
+                        font-weight: 300;
+                        line-height: 33px;
+                        margin: 0px;
+                        padding: 0px;
+                        text-align: center;
                         color: #009AD7;
                     }
 
-                .pricing-table .pricing-table-item .pricing-table-item-purchase {
-                    padding: 10px 20px;
-                    background: #FFF;
+                    .pricing-table .pricing-table-text p {
+                        text-align: center;
+                        /*color: #666;*/
+                        margin-top: 10px;
+                    }
+
+                .pricing-table .pricing-table-item {
+                    color: #FFF;
                 }
 
-                    .pricing-table .pricing-table-item .pricing-table-item-purchase .btn {
-                        text-transform: uppercase;
-                        margin-bottom: 0px;
+                    .pricing-table .pricing-table-item .pricing-table-item-head {
+                        padding: 10px 5px;
+                        text-align: center;
+                        background: #009AD7;
                     }
-        /* eof pricing table */
-    </style>
-    <div class="col-12 col-md-10 col-xl-8">
-        <table class="pricing-table">
-            <tbody>
-                <tr>
-                    <td width="70%" class="pricing-table-text">
-                        <h2>Ket qua tinh cong nay da phu hop voi nhu cau cua quy khach?</h2>
-                        <p>
-                            Neu con nhung van de chua that su phu hop, quy khach muon chung toi giup do thi vui long goi yeu cau can tro giup bang cach nhan vao nut phia duoi. Doi ngu ky thuat cua chung toi se goi lai cho
-                            quy khach 1 duong dan truy cap vao ket qua sau khi dieu chinh cac van de tren
-                        </p>
-                        <p>
-                            <button id="regacc" class="btn btn-danger">TOI CAN TRO GIUP</button>
-                        </p>
-                        <span style="color:#48e495">
-                            Quy khach da that su hai long voi ban ket qua tinh thi nen dang ky tai khoan vi cac loi ich sau day:
-                        </span>
-                    </td>
-                    <td width="30%" style="vertical-align:bottom">
-                        <div class="pricing-table-item">
-                            <div class="pricing-table-item-head">
-                                <p>Free</p>
-                                <span>Great for startups</span>
-                            </div>
-                            <div class="pricing-table-item-price">
-                                <p>
-                                    $0
-                                </p>
-                            </div>
-                            <div class="pricing-table-item-purchase">
-                                <button id="regacc" class="btn btn-success .btn-lg btn-block">Dang Ky Tai Khoan</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
 
-                <tr class="pricing-table-list">
-                    <td>Free Domain</td>
-                    <td>
-                        <span class="glyphicon glyphicon-ok"></span>
-                    </td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>Websites</td>
-                    <td>1</td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>Bandwidth</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>Disk Space</td>
-                    <td>100GB SSD</td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>MySQL Databases</td>
-                    <td>2</td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>Email Addresses</td>
-                    <td>100</td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>Premium DNS</td>
-                    <td>
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>SSL Certificate</td>
-                    <td>
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </td>
-                </tr>
-                <tr class="pricing-table-list">
-                    <td>Support</td>
-                    <td>24/7</td>
-                </tr>
-            </tbody>
-        </table>
+                        .pricing-table .pricing-table-item .pricing-table-item-head p {
+                            font-size: 17px;
+                            line-height: 21px;
+                            text-transform: uppercase;
+                            margin-bottom: 0px;
+                        }
+
+
+
+                    .pricing-table .pricing-table-item .pricing-table-item-price {
+                        padding: 15px 10px;
+                        text-align: center;
+                        background: #FFF;
+                        color: #009AD7;
+                    }
+
+                        .pricing-table .pricing-table-item .pricing-table-item-price p {
+                            font-size: 41px;
+                            font-weight: 400;
+                            line-height: 36px;
+                            margin-bottom: 0px;
+                        }
+
+
+
+                        .pricing-table .pricing-table-item .pricing-table-item-price > span {
+                            color: #009AD7;
+                        }
+
+                    .pricing-table .pricing-table-item .pricing-table-item-purchase {
+                        padding: 10px 20px;
+                        background: #FFF;
+                    }
+
+                        .pricing-table .pricing-table-item .pricing-table-item-purchase .btn {
+                            text-transform: uppercase;
+                            margin-bottom: 0px;
+                        }
+            /* eof pricing table */
+        </style>
+        <div class="col-12 col-md-10 col-xl-8">
+            <table class="pricing-table">
+                <tbody>
+                    <tr>
+                        <td width="70%" class="pricing-table-text">
+                            <h2>Ket qua tinh cong nay da phu hop voi nhu cau cua quy khach?</h2>
+                            <p>
+                                Neu con nhung van de chua that su phu hop, quy khach muon chung toi giup do thi vui long goi yeu cau can tro giup bang cach nhan vao nut phia duoi. Doi ngu ky thuat cua chung toi se goi lai cho
+                                quy khach 1 duong dan truy cap vao ket qua sau khi dieu chinh cac van de tren
+                            </p>
+                            <p>
+                                <button id="regacc" class="btn btn-danger">TOI CAN TRO GIUP</button>
+                            </p>
+                            <span style="color:#48e495">
+                                Quy khach da that su hai long voi ban ket qua tinh thi nen dang ky tai khoan vi cac loi ich sau day:
+                            </span>
+                        </td>
+                        <td width="30%" style="vertical-align:bottom">
+                            <div class="pricing-table-item">
+                                <div class="pricing-table-item-head">
+                                    <p>Free</p>
+                                    <span>Great for startups</span>
+                                </div>
+                                <div class="pricing-table-item-price">
+                                    <p>
+                                        $0
+                                    </p>
+                                </div>
+                                <div class="pricing-table-item-purchase">
+                                    <button id="regacc" class="btn btn-success .btn-lg btn-block">Dang Ky Tai Khoan</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="pricing-table-list">
+                        <td>Free Domain</td>
+                        <td>
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>Websites</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>Bandwidth</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>Disk Space</td>
+                        <td>100GB SSD</td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>MySQL Databases</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>Email Addresses</td>
+                        <td>100</td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>Premium DNS</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>SSL Certificate</td>
+                        <td>
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </td>
+                    </tr>
+                    <tr class="pricing-table-list">
+                        <td>Support</td>
+                        <td>24/7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <script type="text/javascript">
+        (function () {
+
+            debugger;
+            var me = $('#tmpl_service_price_s4 [data-lang]'),
+                lng = {
+                    en: {
+                        page: ["Service Pricing", "All modules of HelloHRM software can be used online Now&Then without creating an account and completely free. We recommend the paid version with more options and features. You can use the online version - free - Now&Then for testing purposes or for personal use only. Please see the detailed price comparison below.",
+                        "Now&amp;Then"],
+                        ten: ["Unlimited",
+                            "Use experience or 01 personal",
+                            "Maximum number of employees",
+                            "Number of software users",
+                            "Working <a href='https://bootstrapmade.com/php-email-form/'><strong>same Customer domain</strong></a>",
+                            "Manage attendant Device online"
+                        ]
+                    },
+                    vi: {
+                    }
+                }[apisvr.a$.selected_language];
+
+            me.each(function (idx, el) {
+
+                debugger;
+
+                var key = el.getAttribute('data-lang');
+                $(el).html(_La$N(key, lng));
+            });
+
+
+
+        })();
+    </script>
 </div>
