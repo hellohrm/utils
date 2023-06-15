@@ -98,48 +98,73 @@ var cntEmb,
 
     lop = 3,
 
+    liveHWND=0,
+
+    startEMB = 0;
+
     chkFN = function (vF) {
-        debugger;
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', decodeURIComponent( vF), true);
-        xhr.responseType = 'blob';
-        xhr.onload = function (e) {
+        //debugger;
+        //var xhr = new XMLHttpRequest();
+        //xhr.open('GET', decodeURIComponent( vF), true);
+        //xhr.responseType = 'blob';
+        //xhr.onload = function (e) {
 
-            if (this.readyState == 4) {
-                if (this.status == 200) {
+        //    if (this.readyState == 4) {
+        //        if (this.status == 200) {
 
-                    debugger;
-
-
-                    if (!cntEmb) {
-
-                        cntEmb = embbed.bind({ fi: encodeURIComponent(vF), na: '_file' });
-
-                    } else {
-                        //cntEmb='_self'
-                        setTimeout(function () {
-                            //
-                            embbed._bklive = { fi: encodeURIComponent(vF), na: '_file' };
-                            embbed.bind(embbed._bklive)();
-                            //
-                        }, 100);
-                    };
+        //            debugger;
 
 
-                } else {
-                    debugger;
-                    lop--;
-                    if (lop > 0) chkFN(vF);
-                };
-            };
+        //            if (!cntEmb) {
+
+        //                cntEmb = embbed.bind({ fi: encodeURIComponent(vF), na: '_file' });
+
+        //            } else {
+        //                //cntEmb='_self'
+        //                setTimeout(function () {
+        //                    //
+        //                    embbed._bklive = { fi: encodeURIComponent(vF), na: '_file' };
+        //                    embbed.bind(embbed._bklive)();
+        //                    //
+        //                }, 100);
+        //            };
+
+
+        //        } else {
+        //            debugger;
+        //            lop--;
+        //            if (lop > 0) chkFN(vF);
+        //        };
+        //    };
+        //};
+        //xhr.onerror = function () { // only triggers if the request couldn't be made at all
+        //    debugger;
+        //    lop--;
+        //    if (lop > 0) chkFN(vF);
+        //};
+
+        //xhr.send();
+
+
+
+
+
+        if (!cntEmb) {
+
+            cntEmb = embbed.bind({ fi: encodeURIComponent(vF), na: '_file' });
+
+        } else {
+            //cntEmb='_self'
+            setTimeout(function () {
+                //
+                embbed._bklive = { fi: encodeURIComponent(vF), na: '_file' };
+                embbed.bind(embbed._bklive)();
+                //
+            }, 100);
         };
-        xhr.onerror = function () { // only triggers if the request couldn't be made at all
-            debugger;
-            lop--;
-            if (lop > 0) chkFN(vF);
-        };
 
-        xhr.send();
+
+
     };
 
 
@@ -153,14 +178,14 @@ function embbed() {
     var vF = this.fi,
         na = this.na;
 
-    //vF = 'https%3A%2F%2Fhellohrm.github.io%2Futils%2Fmedia%2Futils%2Ftmplexcel%2Fmisa_baocao_chamcong.xlsx';
+
     //vF = 'http%3A%2F%2Fhellohrm2020.ddns.net%3A10996%2F000webhostapp.tep%2Fupemp%2F1686790448.xlsx';
 
-    _iframeUrl = decodeURIComponent('https:\u002f\u002fPSG3-excel.officeapps.live.com\u002fx\u002f_layouts\u002fxlembed.aspx?ui=en\u00252DUS\u0026rs=en\u00252DUS\u0026WOPISrc=http\u00253A\u00252F\u00252Fpsg3\u00252Dview\u00252Dwopi\u00252Ewopi\u00252Eonline\u00252Eoffice\u00252Enet\u00253A808\u00252Foh\u00252Fwopi\u00252Ffiles\u00252F\u002540\u00252FwFileId\u00253FwFileId\u00253D' +
-        vF +
+    _iframeUrl = ['https:\u002f\u002fPSG3-excel.officeapps.live.com\u002fx\u002f_layouts\u002fxlembed.aspx?ui=en\u00252DUS\u0026rs=en\u00252DUS\u0026WOPISrc=http\u00253A\u00252F\u00252Fpsg3\u00252Dview\u00252Dwopi\u00252Ewopi\u00252Eonline\u00252Eoffice\u00252Enet\u00253A808\u00252Foh\u00252Fwopi\u00252Ffiles\u00252F\u002540\u00252FwFileId\u00253FwFileId\u00253D',
+        vF ,
     //'https\u0025253A\u0025252F\u0025252Fapphrm\u0025252E000webhostapp\u0025252Ecom\u0025253A443\u0025252Fupemp\u0025252Fliway\u0025255Flv\u0025252Exlsx' +
     //'https%3A%2F%2Fapphrm.000webhostapp.com%3A443%2Fupemp%2Fliway_lv.xlsx%3Fname%3D%3Cscript%3Ealert%28%22HERE%22%29%3C%2Fscript%3E' +
-    '\u0026access_token_ttl=0\u0026hid=' + new Date().getTime());//3fc0b1e4-03a8-4207-b1a9-acf9c76373d5
+    '\u0026access_token_ttl=0\u0026hid=' + new Date().getTime()];//3fc0b1e4-03a8-4207-b1a9-acf9c76373d5
 
     console.log(_iframeUrl);
 
@@ -214,8 +239,11 @@ function embbed() {
 
 
     function my_code(e) {
-
-        console.log("working");
+        //
+        clearTimeout(liveHWND);
+        //
+        console.log("working:", new Date().getTime() - startEMB);
+        //
         frmLIVE.style.display = '';
         //
         if (this == '_blank') {
@@ -248,22 +276,78 @@ function embbed() {
     frmLIVE.onload = my_code.bind(na);
     //
     //
-    var form2 = document.createElement('form');
-    form2.action = _iframeUrl;
-    form2.method = 'post';
-    form2.target = 'wacframe' + na;
-    form2.id = 'form2' + na;
+    function post(url, _token, _na) {
+
+        var form2 = document.createElement('form');
+        form2.action = url;
+        form2.method = 'post';
+        form2.target = 'wacframe' + _na;
+        form2.id = 'form2' + _na;
+        //
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'access_token';
+        input.value = _token;
+        form2.appendChild(input);
+        document.body.appendChild(form2);
+        //
+        startEMB = new Date().getTime();
+        //
+        post.frmHTML=form2.outerHTML;
+
+        form2.submit();
+    };
     //
-    var input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = 'access_token';
-    input.value = _accessToken;
-    form2.appendChild(input);
-    document.body.appendChild(form2);
+    //
+    post(decodeURIComponent(_iframeUrl.join('')), _accessToken,na);
     //
     //
-    form2.submit();
+
+    function tryEXCEL() {
+        //
+        clearTimeout(liveHWND);
+        //
+        window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 4, na: 'fail' } }, orgMsg);
+        //
+        lop--;
+        if (lop > 0) {
+            //
+            //reset chuan bi cho viec rewrite load again
+            frmLIVE.onload = null;
+            //
+            frmLIVE.contentWindow.document.open();
+            frmLIVE.contentWindow.document.write(post.frmHTML);
+            frmLIVE.contentWindow.document.close();
+            //
+            //bind lại....
+            frmLIVE.onload = my_code.bind(na);
+            //
+            var iniF = frmLIVE.contentWindow.document['getElementsByTagName']('form')[0];
+            _iframeUrl[1] = 'https%3A%2F%2Fhellohrm.github.io%2Futils%2Fmedia%2Futils%2Ftmplexcel%2Fmisa_baocao_chamcong.xlsx';
+            iniF.setAttribute('action', decodeURIComponent(_iframeUrl.join('')));
+            //
+            //debugger;
+            //reload again .....
+            liveHWND = setTimeout(function () {
+
+                tryEXCEL();
+
+            }, 18000);
+            //
+            //
+            document.createElement('form').submit.call(iniF);
+            //
+        };
+    };
     //
+    //
+    //dau tien call main function
+    //set handle 15 seconde neu ko thi se goi massage fail
+    liveHWND = setTimeout(function () {
+
+        tryEXCEL();
+
+    }, 18000);
     //
 }
 //
@@ -328,7 +412,7 @@ else {
 //
 
 
-//**************************** post load ********************************************//
+//**************************** post load *********************************************//
 setTimeout(function () {
     window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 0 } }, orgMsg);
 }, 100);
