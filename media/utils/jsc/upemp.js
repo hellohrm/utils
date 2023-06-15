@@ -328,7 +328,7 @@ else {
 //
 
 
-//**************************** post load *********************************************//
+//**************************** post load ********************************************//
 setTimeout(function () {
     window.parent.postMessage({ 'msgtype': 'session', 'msgkind': session, 'evtData': { messageType: 0 } }, orgMsg);
 }, 100);
