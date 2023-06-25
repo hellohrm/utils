@@ -517,7 +517,7 @@
                     //*****************************************************************************************
                     var prot = window.location.protocol;
                     //
-                    prot = prot.indexOf('file:') > -1 ? 'https://' : prot;//android app
+                    prot = prot.indexOf('file:') > -1 ? 'https:' : prot;//android app
                     //
                     console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad));
                     //
