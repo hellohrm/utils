@@ -755,12 +755,14 @@
             //
             if (elUI.socIO) elUI.socIO.off();//stop
             //
-            console.log(tmp.hostname + ((tmp.protocol.indexOf('file:') > -1//android app
-                   || tmp.protocol.indexOf('https') > -1) ? "" : ":11015")
-                   );
-
+            //console.log(tmp.hostname + ((tmp.protocol.indexOf('file:') > -1//android app
+            //       || tmp.protocol.indexOf('https') > -1) ? "" : ":11015")
+            //       );
+            debugger;
             //var wdsm = $(addr).attr('href');
-            elUI.socIO = io(tmp.hostname + ((tmp.protocol.indexOf('file:') > -1//android app
+            const isFILE = tmp.protocol.indexOf('file:') > -1 ? 'wss://' : '';//android app
+            //
+            elUI.socIO = io(isFILE  + tmp.hostname + ((isFILE != ''
                 || tmp.protocol.indexOf('https') > -1) ? "" : ":11015"), socOPT());
 
             //elUI.socIO.emit('joining msg', "abcdef");
