@@ -518,7 +518,7 @@
                     var prot = window.location.protocol;
 
 
-                    console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad));
+                    //console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad));
 
 
                     //
@@ -755,8 +755,11 @@
             //
             if (elUI.socIO) elUI.socIO.off();//stop
             //
+            //
             //var wdsm = $(addr).attr('href');
-            elUI.socIO = io(tmp.hostname + (tmp.protocol.indexOf('https') > -1 ? "" : ":11015"), socOPT());
+            elUI.socIO = io(tmp.hostname + ((tmp.protocol.indexOf('file:') > -1//android app
+                || tmp.protocol.indexOf('https') > -1) ? "" : ":11015"), socOPT());
+
             //elUI.socIO.emit('joining msg', "abcdef");
             //
             //https://viblo.asia/p/mot-so-events-xu-ly-loi-trong-socketio-924lJpEaKPM
