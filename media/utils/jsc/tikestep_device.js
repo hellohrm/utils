@@ -516,7 +516,11 @@
                     //
                     //*****************************************************************************************
                     var prot = window.location.protocol;
-                    console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad);
+
+
+                    console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad));
+
+
                     //
                     elUI.WDM[__k] = new JO(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad)
                             , {//io(addr, {//
