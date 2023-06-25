@@ -516,11 +516,10 @@
                     //
                     //*****************************************************************************************
                     var prot = window.location.protocol;
-
-
-                    //console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad));
-
-
+                    //
+                    prot = prot.indexOf('file:') > -1 ? 'https://' : prot;//android app
+                    //
+                    console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad));
                     //
                     elUI.WDM[__k] = new JO(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad)
                             , {//io(addr, {//
@@ -758,7 +757,7 @@
             //console.log(tmp.hostname + ((tmp.protocol.indexOf('file:') > -1//android app
             //       || tmp.protocol.indexOf('https') > -1) ? "" : ":11015")
             //       );
-            debugger;
+            //debugger;
             //var wdsm = $(addr).attr('href');
             const isFILE = tmp.protocol.indexOf('file:') > -1 ? 'wss://' : '';//android app
             //
@@ -769,10 +768,10 @@
             //
             //https://viblo.asia/p/mot-so-events-xu-ly-loi-trong-socketio-924lJpEaKPM
             elUI.socIO.on('connect', function (s) {
-                debugger;
+                //debugger;
                 config_s1();
             }).on('connect_error', function (err) {
-                debugger;
+                //debugger;
                 var eI = 0, _e = 'eeeeeeee', ms = err.message && err.message.split(_e) || [];
                 if (ms.length == 2 && ms[0] == '') {
                     _e = JSON.parse(ms[1]);
