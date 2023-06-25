@@ -516,6 +516,8 @@
                     //
                     //*****************************************************************************************
                     var prot = window.location.protocol;
+                    console.log(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad);
+                    //
                     elUI.WDM[__k] = new JO(prot + '//' + (prot.indexOf('https') > -1 ? svrad.split(':')[0] : svrad)
                             , {//io(addr, {//
                                 auth: __auth
@@ -1204,7 +1206,7 @@
                     _cb(doD);
                     //
                     //
-                    debugger;
+                    //debugger;
                     frmEL.find('.mcc-statux[tok="' + TOK + '"]').attr('tok', tok)
                     .data(tok, [tok, 1, doD.id, doD.serno]);
                     //
