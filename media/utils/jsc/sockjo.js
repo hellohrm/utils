@@ -959,6 +959,7 @@ function sav_e_i(img, cb, apiUrl,$p) {
     //
     //
     //
+    debugger
     //va bat dau check xem neu co thang hien dien khac toi thi toi se out
     if (!apisvr.review_regis //timegold view 
         && w0w.location.protocol.indexOf('file:') != -1) {//android app
