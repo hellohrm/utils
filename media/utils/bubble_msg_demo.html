@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <title>Hello World</title>
+
+    <!--<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>-->
+    <link rel='stylesheet' href='https://hrm.dnd.vn/media/css/vendors.bundle.bootstrap.css'>
+   
+</head>
+<body translate="no">
+
+    <div class="bubble_chat_msg_body d-none">
+
+
+        <div class="home-page__content messages-page">
+
+            <div class="container-fluid h-100">
+                <div class="row px-0 h-100">
+                    <!-- start message list section  -->
+                    <div class="col-12 col-md-4 col-lg-5 col-xl-3 px-0 messages-page__list-scroll">
+
+                        <div class="messages-page__header mb-0 px-4 pt-3 pb-3">
+                            <span class="messages-page__title">Events</span>
+                            <div class="messages-page__dark-mode-toogler">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--dark-mode" viewBox="0 0 49.7 49.7">
+                                    <path d="M25.4,49.7A25.6,25.6,0,0,1,1.3,32.3,25.6,25.6,0,0,1,17.3.1a2,2,0,0,1,2.1.5,2.2,2.2,0,0,1,.5,2.1,19.9,19.9,0,0,0-1.2,6.8A21,21,0,0,0,25,24.7,21,21,0,0,0,40.2,31h0a20.9,20.9,0,0,0,6.9-1.2,2,2,0,0,1,2.5,2.5,25.8,25.8,0,0,1-16,16.1A28.7,28.7,0,0,1,25.4,49.7ZM15,5.5A21.4,21.4,0,0,0,5.1,31.1,21.5,21.5,0,0,0,15.9,43.4a21.2,21.2,0,0,0,28.3-8.8,17.5,17.5,0,0,1-4,.4h0a24.9,24.9,0,0,1-18-7.5,24.9,24.9,0,0,1-7.5-18A26.9,26.9,0,0,1,15,5.5Z" fill="#f68b3c" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="messages-page__search mb-0 px-3 pb-3">
+                            <div class="custom-form__search-wrapper">
+                                <input type="text" class="form-control custom-form" id="search" placeholder="Rechercher un message, un utilisateur…" autocomplete="off">
+                                <button type="submit" class="custom-form__search-submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--search" viewBox="0 0 46.6 46.6">
+                                        <path d="M46.1,43.2l-9-8.9a20.9,20.9,0,1,0-2.8,2.8l8.9,9a1.9,1.9,0,0,0,1.4.5,2,2,0,0,0,1.5-.5A2.3,2.3,0,0,0,46.1,43.2ZM4,21a17,17,0,1,1,33.9,0A17.1,17.1,0,0,1,33,32.9h-.1A17,17,0,0,1,4,21Z" fill="#f68b3c" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <ul class="messages-page__list pb-5 px-1 px-md-3">
+
+                            <li class="messaging-member messaging-member--new messaging-member--online">
+
+                                <div class="messaging-member__wrapper">
+                                    <div class="messaging-member__avatar">
+                                        <img src="https://randomuser.me/api/portraits/thumb/women/56.jpg"/>
+                                        <div class="hieu-badge partition-red badge_regis_cnt"></div>
+                                    </div>
+
+                                    <span class="messaging-member__name">Bessie Cooper</span>
+                                    <span class="messaging-member__message">Yes, I need your help with the project, it need it done by tomorrow 😫</span>
+                                </div>
+                            </li>
+
+                            <!--<li class="messaging-member messaging-member--online messaging-member--active">
+                                <div class="messaging-member__wrapper">
+                                    <div class="messaging-member__avatar">
+                                        <img src="https://randomuser.me/api/portraits/thumb/women/56.jpg" alt="Jenny Smith" loading="lazy">
+                                        <div class="user-status"></div>
+                                    </div>
+
+                                    <span class="messaging-member__name">Jenny Smith</span>
+                                    <span class="messaging-member__message">Perfect, thanks !</span>
+                                </div>
+                            </li>-->
+
+                        </ul>
+                    </div>
+                    <!-- end message list section  -->
+                    <!-- start content section  -->
+                    <div class="chat_khuvuc col-12 col-md-8 col-lg-7 col-xl-6 px-0 pl-md-1">
+                        <div class="chat__container">
+                            <div class="chat__wrapper pt-2">
+
+                                <div class="d-none chat__messaging messaging-member--online pb-2 pb-md-2 pl-2 pl-md-4 pr-2">
+                                    <div class="chat__previous d-none d-md-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--previous" viewBox="0 0 45.5 30.4">
+                                            <path d="M43.5,13.1H7l9.7-9.6A2.1,2.1,0,1,0,13.8.6L.9,13.5h0L.3,14v.6c0,.1-.1.1-.1.2v.4a2,2,0,0,0,.6,1.5l.3.3L13.8,29.8a2.1,2.1,0,1,0,2.9-2.9L7,17.2H43.5a2,2,0,0,0,2-2A2.1,2.1,0,0,0,43.5,13.1Z" fill="#f68b3c" />
+                                        </svg>
+                                    </div>
+                                    <div class="chat__notification d-none d-md-none chat__notification--new">
+                                        <span>1</span>
+                                    </div>
+                                    <div class="chat__infos pl-2 pl-md-0">
+                                        <div class="chat-member__wrapper" data-online="true">
+                                            <i class="btn ti-reload chat_reload d-none"></i>
+                                            <div class="chat-member__avatar d-none">
+                                                <img/>
+                                                <div class="user-status user-status--large"></div>
+                                            </div>
+                                            <div class="chat-member__details">
+                                                <span class="chat-member__name">Jenny Smith</span>
+                                                <span class="chat-member__status">Online</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__actions mr-2 ">
+                                        <ul class="m-0">
+                                            <li class="chat__details d-flex d-xl-none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 42.2 11.1">
+                                                    <g>
+                                                        <circle cx="5.6" cy="5.6" r="5.6" fill="#d87232" />
+                                                        <circle cx="21.1" cy="5.6" r="5.6" fill="#d87232" />
+                                                        <circle cx="36.6" cy="5.6" r="5.6" fill="#d87232" />
+                                                    </g>
+                                                </svg>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                
+                                <div class="chat__content pt-3 px-lg-3">
+                             
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end content section  -->
+                    <!-- start infos section  -->
+                    <div class="col-12 col-md-5 col-lg-4 col-xl-3 px-4 px-sm-5 px-lg-4 user-profile">
+                        <div class="user-profile__close d-flex d-xl-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 38.8 38.9">
+                                <g>
+                                    <path d="M2,38.9a1.9,1.9,0,0,1-1.4-.5,2.1,2.1,0,0,1,0-2.9L35.4.6a1.9,1.9,0,0,1,2.8,0,1.9,1.9,0,0,1,0,2.8L3.4,38.4A1.9,1.9,0,0,1,2,38.9Z" fill="#d87232" />
+                                    <path d="M36.8,38.9a1.9,1.9,0,0,1-1.4-.5L.6,3.4A1.9,1.9,0,0,1,.6.6,1.9,1.9,0,0,1,3.4.6L38.2,35.5a2.1,2.1,0,0,1,0,2.9A1.9,1.9,0,0,1,36.8,38.9Z" fill="#d87232" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="user-profile__wrapper">
+                            <div class="user-profile__avatar">
+                                <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Jenny Smith" loading="lazy">
+                            </div>
+                            <div class="user-profile__details mt-1">
+                                <span class="user-profile__name">Jenny Smith</span>
+                                <span class="user-profile__phone">(025) 015-234-567</span>
+                                <span class="user-profile__location">New York, United States</span>
+                            </div>
+                            <div class="user-profile__description">
+                                <p>Fly me to the moon 🌙 If you feel like your life is a routine, step back and take a deep breath.</p>
+                            </div>
+                            <div class="user-profile__learning mt-4">
+                                <span class="user-profile__label">Social Medias</span>
+                                <ul class="user-profile__tags user-profile__tags--primary mt-2">
+                                    <li><a href="https://www.instagram.com/tiantsoa_sh/" target="_blank">Instagram</a></li>
+                                    <li><a href="https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/" target="_blank">Linkedin</a></li>
+                                    <li><a href="https://codepen.io/tiantsoa" target="_blank">Codepen</a></li>
+                                </ul>
+                            </div>
+                            <div class="user-profile__hobbies">
+                                <span class="user-profile__label">Activities</span>
+                                <ul class="user-profile__tags user-profile__tags--secondary mt-2">
+                                    <li>Biking</li>
+                                    <li>Cooking</li>
+                                    <li>Traveling</li>
+                                    <li>Grahic design</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end infos section  -->
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script type="text/javascript">
+        function myJavaScriptFunc(act, jString) {
+            console.log(act, new Date().getTime(), jString);
+            //document.getElementById('helloguy').style.backgroundColor = 'blue';
+        }
+    </script>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
+    <script  type="text/javascript">
+
+       var _0xbfab=["\x75\x73\x65\x20\x73\x74\x72\x69\x63\x74","\x2E\x63\x68\x61\x74\x5F\x5F\x63\x6F\x6E\x74\x65\x6E\x74","\x2E\x63\x68\x61\x74\x5F\x5F\x69\x6E\x66\x6F\x73","\x66\x69\x6E\x64","\x70\x72\x65\x76","\x2E\x63\x68\x61\x74\x5F\x6B\x68\x75\x76\x75\x63","\x63\x6C\x6F\x73\x65\x73\x74","\x2E\x62\x75\x62\x62\x6C\x65\x5F\x63\x68\x61\x74\x5F\x6D\x73\x67\x5F\x62\x6F\x64\x79","\x6E\x65\x78\x74","\x28\x6D\x61\x78\x2D\x77\x69\x64\x74\x68\x3A\x20\x37\x36\x37\x70\x78\x29","\x6D\x61\x74\x63\x68\x4D\x65\x64\x69\x61","\x28\x6D\x61\x78\x2D\x77\x69\x64\x74\x68\x3A\x20\x31\x31\x39\x39\x70\x78\x29","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x61\x64\x64\x4C\x69\x73\x74\x65\x6E\x65\x72","\x2E\x6D\x65\x73\x73\x61\x67\x65\x73\x2D\x70\x61\x67\x65\x5F\x5F\x6C\x69\x73\x74","\x6F\x75\x74\x65\x72\x48\x54\x4D\x4C","\x6C\x69\x3A\x66\x69\x72\x73\x74","\x6B\x69","\x32","\x63\x68\x61\x74\x2D\x2D\x73\x68\x6F\x77","\x61\x64\x64\x43\x6C\x61\x73\x73","\x64\x2D\x6E\x6F\x6E\x65","\x2E\x63\x68\x61\x74\x2D\x6D\x65\x6D\x62\x65\x72\x5F\x5F\x61\x76\x61\x74\x61\x72","\x64\x2D\x66\x6C\x65\x78","\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73","\x72\x65\x6D\x6F\x76\x65","\x65\x6D\x70\x74\x79","\x63\x68\x61\x6E\x67\x65","\x6D\x61\x74\x63\x68\x65\x73","\x63\x68\x61\x74\x2D\x2D\x6D\x6F\x62\x69\x6C\x65","\x75\x73\x65\x72\x2D\x70\x72\x6F\x66\x69\x6C\x65\x2D\x2D\x6C\x61\x72\x67\x65","\x74\x65\x78\x74","\x3C\x73\x70\x61\x6E\x3E","\x3C\x2F\x73\x70\x61\x6E\x3E","\x68\x74\x6D\x6C","\x31","\x61\x64\x64","\x43\x6C\x61\x73\x73","\x72\x65\x67\x49\x44\x73","\x64\x61\x74\x61","\x72\x65\x67\x5F\x6E\x6F\x5F","\x64\x69\x76\x5B\x69\x64\x5E\x3D","\x5D","\x73\x70\x6C\x69\x74","\x69\x64","\x69\x6E\x64\x65\x78\x4F\x66","\x69\x6D\x67","\x73\x72\x63","\x61\x74\x74\x72","\x2E\x63\x68\x61\x74\x2D\x6D\x65\x6D\x62\x65\x72\x5F\x5F\x6E\x61\x6D\x65","\x70\x61\x72\x65\x6E\x74","\x2E\x72\x65\x63\x6F\x2D\x6E\x6F","\x65\x61\x63\x68","\x2E\x61\x63\x74\x5F\x63\x6D\x6D\x5F\x74\x6D\x70\x6C","\x73\x6C\x6F\x77","\x67\x75\x79\x69\x6E\x66","\x63\x6F\x6E\x63\x61\x74","\x47\x55\x59\x5F\x46\x4F\x43\x55\x53\x45\x44","\x66\x61\x64\x65\x49\x6E","\x63\x6C\x69\x63\x6B","\x2E\x6D\x65\x73\x73\x61\x67\x69\x6E\x67\x2D\x6D\x65\x6D\x62\x65\x72","\x63\x75\x72\x72\x65\x6E\x74\x54\x61\x72\x67\x65\x74","\x5F\x66\x6F\x63\x75\x73\x47\x55\x59","\x6C\x65\x6E\x67\x74\x68","\x6F\x6E","\x5F\x6D\x73\x67\x32\x4E\x61\x74\x69\x76\x65","\x2D\x31","\x2E\x63\x68\x61\x74\x5F\x72\x65\x6C\x6F\x61\x64","\x2E\x63\x68\x61\x74\x5F\x5F\x70\x72\x65\x76\x69\x6F\x75\x73","\x75\x73\x65\x72\x2D\x70\x72\x6F\x66\x69\x6C\x65\x2D\x2D\x73\x68\x6F\x77","\x2E\x63\x68\x61\x74\x5F\x5F\x64\x65\x74\x61\x69\x6C\x73","\x2E\x75\x73\x65\x72\x2D\x70\x72\x6F\x66\x69\x6C\x65\x5F\x5F\x63\x6C\x6F\x73\x65","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x73\x74\x6F\x70\x50\x72\x6F\x70\x61\x67\x61\x74\x69\x6F\x6E","\x63\x53\x24","\x64\x61\x72\x6B\x2D\x6D\x6F\x64\x65","\x68\x61\x73\x43\x6C\x61\x73\x73","\x2D\x32","\x74\x72\x69\x67\x67\x65\x72","\x69\x6E\x70\x75\x74\x5B\x6E\x61\x6D\x65\x3D\x73\x65\x74\x74\x69\x6E\x67\x2D\x74\x68\x65\x6D\x65\x5D\x5B\x76\x61\x6C\x75\x65\x3D\x74\x68\x65\x6D\x65","\x74\x6F\x67\x67\x6C\x65\x43\x6C\x61\x73\x73","\x2E\x6D\x65\x73\x73\x61\x67\x65\x73\x2D\x70\x61\x67\x65\x5F\x5F\x64\x61\x72\x6B\x2D\x6D\x6F\x64\x65\x2D\x74\x6F\x6F\x67\x6C\x65\x72","\x5F\x63\x6F\x72\x64\x6F\x76\x61\x4E\x61\x74\x69\x76\x65","\x54\x48\x45\x4D\x45","\x63\x30\x6C\x6F\x72","\x64\x61\x72\x6B","\x23\x31\x61\x31\x61\x31\x61","\x23\x66\x66\x66\x66\x66\x66","\x68\x69\x65\x75\x5F\x63\x6F\x6D\x6A\x73","\x5F\x5F","\x63\x6F\x6C\x6F\x72","\x64\x61\x72\x6B\x63\x6F\x6C\x6F\x72\x20\x6C\x69\x67\x68\x74\x63\x6F\x6C\x6F\x72","\x62\x6F\x64\x79","\x74\x68\x65\x6D\x65","\x70\x6F\x73\x74\x69\x6F\x6E\x2D\x61\x62\x73\x6F\x6C\x75\x74\x65\x20\x67\x69\x61\x6F\x74\x69\x65\x70\x65\x76\x74","\x73\x74\x79\x6C\x65","\x72\x65\x6D\x6F\x76\x65\x41\x74\x74\x72","\x65\x6B\x6B\x6F\x2D\x6C\x69\x67\x68\x74\x62\x6F\x78\x2D\x6C\x6F\x61\x64\x65\x72","\x23\x69\x6E\x69\x74\x5F\x63\x68\x61\x74\x68\x6F\x6D\x65\x5F\x62\x67","\x68\x69\x73\x74\x6F\x72\x79","\x70\x75\x73\x68\x53\x74\x61\x74\x65","\x74\x69\x6D\x65\x67\x6F\x6C\x64\x5F\x72\x65\x67\x69\x73\x76\x69\x65\x77","\x26","\x6A\x6F\x69\x6E","\x3D","\x6D\x61\x70","\x74\x69\x74\x6C\x65","\x70\x61\x74\x68\x6E\x61\x6D\x65","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x3F","\x72\x65\x76\x69\x65\x77\x5F\x72\x65\x67\x69\x73","\x61\x70\x70\x6C\x79","\x73\x6C\x69\x63\x65","\x5F\x5F\x5F\x72\x65\x67\x4C\x53\x54","\x43\x4C\x45\x41\x52\x5F\x52\x45\x4C\x4F\x41\x44","\x72\x65\x6C\x6F\x61\x64\x5F\x72\x65\x67\x69\x73\x2E\x5F\x6D\x73\x67\x32\x4E\x61\x74\x69\x76\x65\x3A\x20","\x6C\x6F\x67","\x23\x74\x61\x62\x42\x4F\x44\x59\x5F\x4A\x53\x5F\x72\x65\x67\x6C\x76\x20\x61\x2E\x6E\x61\x76\x2D\x6C\x69\x6E\x6B\x5B\x6D\x6E\x75\x3D\x22\x31\x22\x5D","\x61\x63\x74\x69\x76\x65","\x2E\x6D\x65\x73\x73\x61\x67\x69\x6E\x67\x2D\x6D\x65\x6D\x62\x65\x72\x5F\x5F\x6E\x61\x6D\x65","\x75\x73\x72\x69\x64","\x64\x61\x74\x61\x2D\x6C\x61\x7A\x79","\x45\x6D\x70\x43\x6F\x64\x65","\x66\x66\x5F\x67\x74","\x45\x6D\x70\x4E\x61\x6D\x65","\x73\x70\x6C\x69\x63\x65","\x20\x2F\x20","\x61\x70\x70\x65\x6E\x64","\x72\x65\x67\x69\x64","\x65\x61\x63\x68\x5F\x47\x55\x59\x20\x3D\x20\x66\x75\x6E\x63\x74\x69\x6F\x6E\x20\x28\x67\x55\x79\x2C\x20\x67\x75\x79\x54\x50\x59\x29","","\x5F\x5F\x76\x69\x65\x77\x5F\x52\x45\x47\x49\x53","\x70\x75\x73\x68","\x6C\x69\x73\x74\x65\x6E\x43\x4D\x44","\x65\x6D\x70\x70\x69\x63","\x62\x6F\x73\x49","\x5F\x65\x24\x55\x49","\x66\x72\x6F\x6D\x43\x68\x61\x72\x43\x6F\x64\x65","\x70\x61\x72\x73\x65","\x4E\x41\x4D","\x6C\x69","\x68\x61\x73\x4F\x77\x6E\x50\x72\x6F\x70\x65\x72\x74\x79","\x2E\x61\x63\x74\x5F\x63\x6D\x6D\x5F\x74\x6D\x70\x6C\x20\x23\x72\x65\x67\x5F\x6E\x6F\x5F","\x65\x6D\x70\x49","\x72\x65\x64\x75\x63\x65","\x2D\x6D\x6F\x64\x65","\x68\x69\x64\x64\x65\x6E","\x63\x73\x73","\x62\x75\x62\x62\x6C\x65\x5F\x63\x68\x61\x74\x5F\x6D\x73\x67\x5F\x62\x6F\x64\x79","\x54\x48\x45\x4D\x45\x5F\x61\x6E\x64\x5F\x52\x45\x47\x4C\x49\x53\x54","\x63\x68\x61\x74\x5F\x75\x69","\x72\x65\x67\x44\x41\x54","\x62\x69\x6E\x64","\x6C\x69\x73\x74\x65\x6E\x5F\x4E\x61\x74\x69\x76\x65\x3A\x20","\x67\x65\x74\x54\x69\x6D\x65","\x31\x30\x30\x31\x30\x30\x31\x30\x30","\x31\x30\x31\x31\x30\x30\x31\x30\x30","\x31\x30\x32\x31\x30\x30\x31\x30\x30","\x31\x30\x33\x31\x30\x30\x31\x30\x30","\x65\x78\x74\x65\x6E\x64","\x2E\x6D\x65\x73\x73\x61\x67\x65\x73\x2D\x70\x61\x67\x65\x5F\x5F\x74\x69\x74\x6C\x65"];(function(){_0xbfab[0];const _0xe558x1=$(_0xbfab[1]),_0xe558x2=_0xe558x1[_0xbfab[4]]()[_0xbfab[3]](_0xbfab[2]),_0xe558x3=_0xe558x2[_0xbfab[6]](_0xbfab[5]),_0xe558x4=_0xe558x3[_0xbfab[6]](_0xbfab[7]),_0xe558x5=_0xe558x3[_0xbfab[8]](),_0xe558x6=window[_0xbfab[10]](_0xbfab[9]),_0xe558x7=window[_0xbfab[10]](_0xbfab[11]),_0xe558x8=_0xe558x6[_0xbfab[12]]?_0xbfab[12]:_0xbfab[13],_0xe558x9=_0xe558x3[_0xbfab[4]]()[_0xbfab[3]](_0xbfab[14]),_0xe558xa=[_0xe558x9[_0xbfab[3]](_0xbfab[16])[0][_0xbfab[15]]],_0xe558xb=function(){if(qryU[_0xbfab[17]]== _0xbfab[18]){_0xe558x3[_0xbfab[20]](_0xbfab[19]);_0xe558x2[_0xbfab[3]](_0xbfab[22])[_0xbfab[20]](_0xbfab[21]);_0xe558x2[_0xbfab[4]]()[_0xbfab[24]](_0xbfab[23])[_0xbfab[20]](_0xbfab[21])[_0xbfab[4]]()[_0xbfab[24]](_0xbfab[23])[_0xbfab[20]](_0xbfab[21])}else {_0xe558x3[_0xbfab[25]](_0xbfab[19]);_0xe558x2[_0xbfab[4]]()[_0xbfab[4]]()[_0xbfab[24]](_0xbfab[21])[_0xbfab[20]](_0xbfab[23])}};_0xe558x9[_0xbfab[26]]();_0xe558xb();_0xe558x6[_0xe558x8](_0xbfab[27],_0xe558xc);_0xe558x7[_0xe558x8](_0xbfab[27],_0xe558xe);_0xe558xc(_0xe558x6);_0xe558xe(_0xe558x7);function _0xe558xc(_0xe558xd){if(_0xe558xd[_0xbfab[28]]){_0xe558xf()}else {_0xe558x10()}}function _0xe558xe(_0xe558xd){if(_0xe558xd[_0xbfab[28]]){_0xe558x11()}else {_0xe558x12()}}function _0xe558xf(){_0xe558x3[_0xbfab[20]](_0xbfab[29])}function _0xe558x10(){_0xe558x3[_0xbfab[24]](_0xbfab[29])}function _0xe558x11(){_0xe558x5[_0xbfab[20]](_0xbfab[30])}function _0xe558x12(){_0xe558x5[_0xbfab[24]](_0xbfab[30])}function _0xe558x13(_0xe558x14,_0xe558x15){const _0xe558x16=_0xe558x2[_0xbfab[4]]();if(_0xe558x15> 0){_0xe558x14= parseInt(_0xe558x16[_0xbfab[31]]())+ _0xe558x15+ 1};return _0xe558x16[((_0xe558x14> 2&& qryU[_0xbfab[17]]== _0xbfab[35])?_0xbfab[25]:_0xbfab[36])+ _0xbfab[37]](_0xbfab[21])[_0xbfab[34]](_0xbfab[32]+ (_0xe558x14- 1)+ _0xbfab[33])}function _0xe558x17(_0xe558x18){const _0xe558x19=_0xe558x18[_0xbfab[39]](_0xbfab[38]),_0xe558x1a=_0xbfab[40];var _0xe558x14=1;_0xe558x1[_0xbfab[3]](_0xbfab[53])[_0xbfab[52]](function(_0xe558x1b,_0xe558x1c){const _0xe558x1d=$(_0xe558x1c)[_0xbfab[3]](_0xbfab[41]+ _0xe558x1a+ _0xbfab[42]);if(_0xe558x19[_0xbfab[45]](_0xe558x1d[0][_0xbfab[44]][_0xbfab[43]](_0xe558x1a)[1])>  -1){if(_0xe558x14== 1){var _0xe558x1e=_0xe558x2[_0xbfab[3]](_0xbfab[22])[_0xbfab[24]](_0xbfab[21]),_0xe558x1f=_0xe558x18[_0xbfab[3]](_0xbfab[46]);_0xe558x1e[_0xbfab[3]](_0xbfab[46])[_0xbfab[48]](_0xbfab[47],_0xe558x1f[_0xbfab[48]](_0xbfab[47]));_0xe558x1e= _0xe558x2[_0xbfab[3]](_0xbfab[49]);_0xe558x1f= _0xe558x1f[_0xbfab[50]]()[_0xbfab[8]]();_0xe558x1e[_0xbfab[34]](_0xe558x1f[_0xbfab[31]]());_0xe558x1e= _0xe558x1e[_0xbfab[8]]();_0xe558x1f= _0xe558x1f[_0xbfab[8]]();_0xe558x1e[_0xbfab[34]](_0xe558x1f[_0xbfab[31]]())};_0xe558x1d[_0xbfab[4]]()[_0xbfab[3]](_0xbfab[51])[_0xbfab[34]](_0xe558x14);_0xe558x14++;$(_0xe558x1c)[_0xbfab[24]](_0xbfab[21])}else {$(_0xe558x1c)[_0xbfab[20]](_0xbfab[21])}});_0xe558x3[_0xbfab[58]](_0xbfab[54],function(){_0xe558x27([_0xbfab[57]][_0xbfab[56]](_0xe558x18[_0xbfab[39]](_0xbfab[55])))});_0xe558x3[_0xbfab[20]](_0xbfab[19]);_0xe558x13(_0xe558x14,0)[_0xbfab[4]]()[_0xbfab[24]](_0xbfab[21])}_0xe558x9[_0xbfab[64]](_0xbfab[59],_0xbfab[60],function(_0xe558xd){const _0xe558x18=$(_0xe558xd[_0xbfab[61]]),_0xe558x20=_0xe558x18[_0xbfab[39]](_0xbfab[55]);_0xe558x24[_0xbfab[62]]= _0xe558x20[0];if(_0xe558x20[_0xe558x20[_0xbfab[63]]- 1]== _0xbfab[18]){_0xe558x25()}else {_0xe558x17(_0xe558x18)}});$(_0xbfab[68])[_0xbfab[59]](function(_0xe558xd){debugger;if(_0xe558x25[_0xbfab[65]]){_0xe558x2a(_0xe558x25._msg2Native);delete _0xe558x25[_0xbfab[65]]};_0xe558x3[_0xbfab[24]](_0xbfab[19]);_0xe558x27([_0xbfab[57],_0xbfab[66]]);_0xe558x2[_0xbfab[3]](_0xbfab[67])[_0xbfab[20]](_0xbfab[21])});$(_0xbfab[70])[_0xbfab[59]](function(){_0xe558x5[_0xbfab[58]]();_0xe558x5[_0xbfab[20]](_0xbfab[69])});$(_0xbfab[71])[_0xbfab[59]](function(){_0xe558x5[_0xbfab[24]](_0xbfab[69])});$(_0xbfab[81])[_0xbfab[59]](function(_0xe558xd,_0xe558x21){_0xe558xd[_0xbfab[72]]();_0xe558xd[_0xbfab[73]]();if(window[_0xbfab[74]]){var _0xe558x22=_0xbfab[75];if(_0xe558x4[_0xbfab[76]](_0xe558x22)){_0xe558x22= _0xbfab[66]}else {_0xe558x22= _0xbfab[77]};$(_0xbfab[79]+ _0xe558x22+ _0xbfab[42])[_0xbfab[78]](_0xbfab[27])};_0xe558x4[_0xbfab[80]](_0xbfab[75])});function _0xe558x23(_0xe558xd){if(_0xe558xd){if(w0w[_0xbfab[82]]){w0w[_0xbfab[82]][_0xbfab[89]][_0xbfab[88]](_0xbfab[83],cS$[_0xbfab[84]]== _0xbfab[85]?_0xbfab[86]:_0xbfab[87])}};const _0xe558x22=cS$[_0xbfab[84]]+ _0xbfab[90];_0xe558x1[_0xbfab[24]](_0xbfab[91])[_0xbfab[20]](_0xe558x22);$(document[_0xbfab[92]])[_0xbfab[24]](_0xbfab[91])}_0xe558x23();$(_0xbfab[98])[_0xbfab[24]](_0xbfab[97])[_0xbfab[96]](_0xbfab[95])[_0xbfab[20]](_0xbfab[94])[_0xbfab[64]](_0xbfab[93],_0xe558x23);const _0xe558x24=function(_0xe558x2d,_0xe558x2e){if(window[_0xbfab[99]]!= undefined&& window[_0xbfab[99]][_0xbfab[100]]!= undefined){qryU[_0xbfab[101]]= _0xe558x2d[1];if(_0xe558x2e){qryU[_0xbfab[17]]= _0xe558x2e};var _0xe558x2f=$[_0xbfab[105]](qryU,function(_0xe558x30,_0xe558x31){return _0xe558x31+ _0xbfab[104]+ qryU[_0xe558x31]})[_0xbfab[103]](_0xbfab[102]);window[_0xbfab[99]][_0xbfab[100]]({},document[_0xbfab[106]],window[_0xbfab[108]][_0xbfab[107]]+ _0xbfab[109]+ _0xe558x2f);apisvr[_0xbfab[110]]= decodeURIComponent(_0xe558x2d[1])};_0xe558x24[_0xbfab[62]]= _0xe558x2d[4];const _0xe558x32=[][_0xbfab[112]][_0xbfab[111]](_0xe558x2d,[0]);_0xe558x2c[_0xbfab[113]]= _0xe558x32;if(_0xe558x24[_0xbfab[62]]== _0xbfab[66]){_0xe558x3[_0xbfab[24]](_0xbfab[19])}else {_0xe558x32[0]= _0xbfab[114];_0xe558x25[_0xbfab[65]]= _0xe558x32;console[_0xbfab[116]](_0xbfab[115],_0xe558x32)}},_0xe558x25=function(){var _0xe558x33=$(_0xbfab[117]);_0xe558x33[_0xbfab[24]](_0xbfab[118])[_0xbfab[78]](_0xbfab[59])},_0xe558x26=function(_0xe558x34,_0xe558x35){var _0xe558x18=$(_0xe558xa[0]),_0xe558x36=_0xe558x18[_0xbfab[3]](_0xbfab[119]),_0xe558x37=_0xe558x34[0],_0xe558x38=btoa(_0xe558x37[_0xbfab[120]]),_0xe558x39=_0xe558x36[_0xbfab[4]]()[_0xbfab[3]](_0xbfab[46])[_0xbfab[48]](_0xbfab[121],_0xe558x38),_0xe558x20=[_0xe558x37[_0xbfab[120]].toString(),_0xe558x37[_0xbfab[122]],_0xe558x37[_0xbfab[123]],_0xe558x37[_0xbfab[124]]],_0xe558x3a=_0xe558x20[_0xbfab[125]](-1,1)[0];_0xe558x36[_0xbfab[34]](_0xe558x3a);_0xe558x36[_0xbfab[8]]()[_0xbfab[34]](_0xe558x20[_0xbfab[103]](_0xbfab[126]));_0xe558x9[_0xbfab[127]](_0xe558x18);_0xe558x18[_0xbfab[39]](_0xbfab[38],$[_0xbfab[105]](_0xe558x34,function(_0xe558x30,_0xe558x31){return _0xe558x30[_0xbfab[128]].toString()}));const _0xe558x3b=_0xe558x34[_0xbfab[63]];_0xe558x18[_0xbfab[39]](_0xbfab[55],_0xe558x20[_0xbfab[56]]([_0xe558x3a,_0xe558x3b.toString(),_0xe558x35.toString()]));console[_0xbfab[116]](_0xbfab[129],_0xe558x18[_0xbfab[39]](_0xbfab[55]));_0xe558x39[_0xbfab[8]]()[_0xbfab[31]](_0xe558x3b> 1?_0xe558x3b:_0xbfab[130]);if(_0xe558x24[_0xbfab[62]]== _0xe558x20[0]){_0xe558x25[_0xbfab[131]]= _0xe558x18};return [_0xe558x39[0],_0xe558x38]},_0xe558x27=function(_0xe558x32){if(w0w[_0xbfab[82]]&& w0w[_0xbfab[82]][_0xbfab[89]]){w0w[_0xbfab[82]][_0xbfab[89]][_0xbfab[88]][_0xbfab[111]](null,_0xe558x32)}},_0xe558x28=function(_0xe558x3c,_0xe558x3d){var _0xe558x3e,_0xe558x3f=[],_0xe558x40=_0xe558x3c[_0xbfab[63]],_0xe558x41=_0xe558x3d[_0xbfab[63]],_0xe558x42;if(_0xe558x40> _0xe558x41){_0xe558x42= _0xe558x41}else {if(_0xe558x40< _0xe558x41){_0xe558x42= _0xe558x40}else {_0xe558x42= _0xe558x41}};for(_0xe558x3e= 0;_0xe558x3e< _0xe558x42;_0xe558x3e++){if(_0xe558x3c[_0xe558x3e]!== _0xe558x3d[_0xe558x3e]){_0xe558x3f[_0xbfab[132]]({idx:_0xe558x3e,elem1:_0xe558x3c[_0xe558x3e],elem2:_0xe558x3d[_0xe558x3e]})}};if(_0xe558x40> _0xe558x41){for(_0xe558x3e= _0xe558x41;_0xe558x3e< _0xe558x40;_0xe558x3e++){_0xe558x3f[_0xbfab[132]]({idx:_0xe558x3e,0:_0xe558x3c[_0xe558x3e],1:undefined})}}else {if(_0xe558x40< _0xe558x41){for(_0xe558x3e= _0xe558x40;_0xe558x3e< _0xe558x41;_0xe558x3e++){_0xe558x3f[_0xbfab[132]]({idx:_0xe558x3e,0:undefined,1:_0xe558x3d[_0xe558x3e]})}}};return _0xe558x3f},_0xe558x29=function(_0xe558x2d){debugger;_0xe558x2a(_0xe558x2d);var _0xe558x43=window[_0xbfab[82]][_0xbfab[89]],_0xe558x1e=_0xe558x2[_0xbfab[3]](_0xbfab[22])[_0xbfab[24]](_0xbfab[21]);if(_0xe558x24[_0xbfab[62]]== _0xbfab[66]){}else {_0xe558x1[_0xbfab[78]](_0xbfab[133],[_0xbfab[134],[[_0xe558x1e[_0xbfab[3]](_0xbfab[46])[0],btoa(_0xe558x24._focusGUY),_0xe558x43[_0xbfab[136]][_0xbfab[135]]]]])};_0xe558x2[_0xbfab[4]]()[_0xbfab[4]]()[_0xbfab[24]](_0xbfab[21])[_0xbfab[20]](_0xbfab[23])},_0xe558x2a=function(_0xe558x2d){debugger;_0xe558x24(_0xe558x2d,1);var _0xe558x44={},_0xe558x45=[];const _0xe558x43=window[_0xbfab[82]][_0xbfab[89]],_0xe558x46=_0xe558x2d[_0xe558x2d[_0xbfab[63]]- 1][_0xbfab[43]](String[_0xbfab[137]](30));for(var _0xe558x1b=0;_0xe558x1b< _0xe558x46[_0xbfab[63]];_0xe558x1b++){var _0xe558x34=JSON[_0xbfab[138]](_0xe558x46[_0xe558x1b]),_0xe558x47=_0xe558x34[10],_0xe558x48={regsta:_0xe558x34[0],regid:_0xe558x34[1],usrid:_0xe558x47,EmpCode:_0xe558x34[11],EmpName:_0xe558x34[12],ff_gt:_0xbfab[139]},_0xe558x49=_0xe558x44[_0xe558x48[_0xbfab[120]]]|| (_0xe558x44[_0xe558x48[_0xbfab[120]]]= []);if(_0xe558x45[_0xbfab[45]](_0xe558x47.toString())==  -1){_0xe558x45[_0xbfab[132]](_0xe558x47.toString())};_0xe558x49[_0xbfab[132]](_0xe558x48)};_0xe558x9[_0xbfab[3]](_0xbfab[140])[_0xbfab[52]](function(_0xe558x4a,_0xe558x48){var _0xe558x18=$(_0xe558x48),_0xe558x20=_0xe558x18[_0xbfab[39]](_0xbfab[55]);var _0xe558x4b=_0xe558x45[_0xbfab[45]](_0xe558x20[0]);if(_0xe558x4b>  -1){const _0xe558x4c=$[_0xbfab[105]](_0xe558x44[_0xe558x45[_0xe558x4b]],function(_0xe558x30,_0xe558x31){return _0xe558x30[_0xbfab[128]].toString()}),_0xe558x4d=_0xe558x28(_0xe558x18[_0xbfab[39]](_0xbfab[38]),_0xe558x4c);if(_0xe558x4d[_0xbfab[63]]> 0){var _0xe558x20=_0xe558x18[_0xbfab[39]](_0xbfab[55]);const _0xe558x3b=_0xe558x44[_0xe558x45[_0xe558x4b]][_0xbfab[63]],_0xe558x1f=_0xe558x20[_0xbfab[63]];_0xe558x20[_0xe558x1f- 2]= _0xe558x3b.toString();_0xe558x20[_0xe558x1f- 1]= _0xbfab[18];_0xe558x18[_0xbfab[39]](_0xbfab[55],_0xe558x20);_0xe558x18[_0xbfab[3]](_0xbfab[46])[_0xbfab[8]]()[_0xbfab[31]](_0xe558x3b> 1?_0xe558x3b:_0xbfab[130])};_0xe558x45[_0xbfab[125]](_0xe558x4b,1)}else {_0xe558x18[_0xbfab[25]]()}});for(var _0xe558x3e in _0xe558x44){if(_0xe558x44[_0xbfab[141]](_0xe558x3e)){var _0xe558x47=_0xe558x44[_0xe558x3e][0][_0xbfab[120]].toString(),_0xe558x4e=_0xbfab[18];if(_0xe558x45[_0xbfab[45]](_0xe558x47)>  -1){if(_0xe558x24[_0xbfab[62]]== _0xe558x47&& _0xe558x44[_0xe558x3e][_0xbfab[63]]== 1){const _0xe558x4f=_0xe558x1[_0xbfab[3]](_0xbfab[142]+ _0xe558x44[_0xe558x3e][0][_0xbfab[128]]);if(_0xe558x4f[_0xbfab[63]]> 0){_0xe558x4e= _0xbfab[35]}};var _0xe558x50=_0xe558x26(_0xe558x44[_0xe558x3e],_0xe558x4e);_0xe558x1[_0xbfab[78]](_0xbfab[133],[_0xbfab[134],[_0xe558x50[_0xbfab[56]]([_0xe558x43[_0xbfab[136]][_0xbfab[143]]])]])}}}},_0xe558x2b=function(_0xe558x46){var _0xe558x44={},_0xe558x45=[];console[_0xbfab[116]](_0xe558x46);for(var _0xe558x1b=0;_0xe558x1b< _0xe558x46[_0xbfab[63]];_0xe558x1b++){var _0xe558x34=JSON[_0xbfab[138]](_0xe558x46[_0xe558x1b]),_0xe558x47=_0xe558x34[10],_0xe558x48={regsta:_0xe558x34[0],regid:_0xe558x34[1],usrid:_0xe558x47,EmpCode:_0xe558x34[11],EmpName:_0xe558x34[12],ff_gt:_0xbfab[139]},_0xe558x49=_0xe558x44[_0xe558x48[_0xbfab[120]]]|| (_0xe558x44[_0xe558x48[_0xbfab[120]]]= []);if(_0xe558x45[_0xbfab[45]](_0xe558x47.toString())==  -1){_0xe558x45[_0xbfab[132]](_0xe558x47.toString())};_0xe558x49[_0xbfab[132]](_0xe558x48)};return [_0xe558x44,_0xe558x45]},_0xe558x2c=function(_0xe558x51){var _0xe558x34;if(_0xe558x2c[_0xbfab[113]]){const _0xe558x2d=_0xe558x2c[_0xbfab[113]],_0xe558x46=_0xe558x2d[_0xe558x2d[_0xbfab[63]]- 1][_0xbfab[43]](String[_0xbfab[137]](30));_0xe558x34= _0xe558x2b(_0xe558x46);console[_0xbfab[116]](_0xe558x34);if(qryU[_0xbfab[17]]== _0xbfab[35]){delete _0xe558x2c[_0xbfab[113]]}}else {var _0xe558x45=[],_0xe558x44=_0xe558x51[_0xbfab[144]](function(_0xe558x52,_0xe558x48){var _0xe558x47=_0xe558x48[_0xbfab[120]],_0xe558x49=_0xe558x52[_0xe558x48[_0xbfab[120]]]|| (_0xe558x52[_0xe558x48[_0xbfab[120]]]= []);_0xe558x49[_0xbfab[132]](_0xe558x48);if(_0xe558x45[_0xbfab[45]](_0xe558x47.toString())==  -1){_0xe558x45[_0xbfab[132]](_0xe558x47.toString())};return _0xe558x52},{});_0xe558x34= [_0xe558x44,_0xe558x45]};return _0xe558x34};if(window[_0xbfab[82]]){$[_0xbfab[159]](window[_0xbfab[82]].__,{'\x5F\x65\x24\x55\x49':{},'\x63\x68\x61\x74\x5F\x68\x6F\x6D\x65':function(_0xe558x53,_0xe558x54){const _0xe558x22=cS$[_0xbfab[84]]+ _0xbfab[90],_0xe558x43=window[_0xbfab[82]][_0xbfab[89]];_0xe558x43[_0xbfab[136]][_0xbfab[135]]= _0xe558x53[_0xbfab[135]];_0xe558x43[_0xbfab[136]][_0xbfab[143]]= _0xe558x53[_0xbfab[143]];if(cS$[_0xbfab[84]]== _0xbfab[85]){_0xe558x4[_0xbfab[20]](cS$[_0xbfab[84]]+ _0xbfab[145])};_0xe558x4[_0xbfab[48]](_0xbfab[44],_0xbfab[148])[_0xbfab[24]](_0xbfab[21])[_0xbfab[147]]({"\x76\x69\x73\x69\x62\x69\x6C\x69\x74\x79":_0xbfab[146]});_0xe558x1[_0xbfab[20]](_0xe558x22)[_0xbfab[26]]();$(document[_0xbfab[92]])[_0xbfab[24]](_0xe558x22);_0xe558x2c[_0xbfab[113]]= w0w[_0xbfab[82]][_0xbfab[89]][_0xbfab[88]](_0xbfab[149],cS$[_0xbfab[84]]== _0xbfab[85]?_0xbfab[86]:_0xbfab[87]);if(_0xe558x2c[_0xbfab[113]]){_0xe558x2c[_0xbfab[113]]= _0xe558x2c[_0xbfab[113]][_0xbfab[43]](String[_0xbfab[137]](29));_0xe558x24[_0xbfab[62]]= _0xe558x2c[_0xbfab[113]][4]};_0xe558x43[_0xbfab[150]](_0xe558x53,_0xe558x54);return _0xe558x1},'\x63\x68\x61\x74\x5F\x75\x69':function(_0xe558x53,_0xe558x54){var _0xe558x43=window[_0xbfab[82]][_0xbfab[89]];const _0xe558x55=_0xe558x2c(_0xe558x53[_0xbfab[151]].R),_0xe558x34=_0xe558x55[0],_0xe558x14=_0xe558x55[1][_0xbfab[63]],_0xe558x56=_0xe558x1[_0xbfab[4]]()[(_0xe558x14> 0?_0xbfab[25]:_0xbfab[36])+ _0xbfab[37]](_0xbfab[21]);if(qryU[_0xbfab[17]]== _0xbfab[35]){var _0xe558x45=[],_0xe558x57=function(_0xe558x58,_0xe558x59){if(_0xe558x34[_0xbfab[141]](_0xe558x58)){var _0xe558x50=_0xe558x26(_0xe558x34[_0xe558x58],_0xbfab[35]);_0xe558x54[_0xbfab[152]](_0xe558x50[_0xbfab[56]]([_0xe558x53[_0xbfab[143]]]))();if(_0xe558x59== 1){delete _0xe558x34[_0xe558x58]}}};_0xe558x9[_0xbfab[3]](_0xbfab[140])[_0xbfab[52]](function(_0xe558x4a,_0xe558x48){const _0xe558x20=$(_0xe558x48)[_0xbfab[39]](_0xbfab[55]);_0xe558x45[_0xbfab[132]](_0xe558x20[0])});_0xe558x9[_0xbfab[26]]();if(_0xe558x24[_0xbfab[62]]==  -1||  !_0xe558x34[_0xe558x24[_0xbfab[62]]]|| _0xe558x34[_0xe558x24[_0xbfab[62]]][_0xbfab[63]]== 0){_0xe558x3[_0xbfab[24]](_0xbfab[19]);delete _0xe558x25[_0xbfab[131]]};for(var _0xe558x1b=0;_0xe558x1b< _0xe558x45[_0xbfab[63]];_0xe558x1b++){_0xe558x57(_0xe558x45[_0xe558x1b],1)};for(var _0xe558x3e in _0xe558x34){_0xe558x57(_0xe558x3e)};if(_0xe558x25[_0xbfab[131]]){setTimeout(function(){_0xe558x17(_0xe558x25.__view_REGIS);delete _0xe558x25[_0xbfab[131]]},100)}}else {if(_0xe558x14> 0){for(var _0xe558x3e in _0xe558x34){if(_0xe558x34[_0xbfab[141]](_0xe558x3e)){const _0xe558x37=_0xe558x34[_0xe558x3e][0],_0xe558x20=[_0xe558x37[_0xbfab[120]].toString(),_0xe558x37[_0xbfab[122]],_0xe558x37[_0xbfab[123]],_0xe558x37[_0xbfab[124]]],_0xe558x3a=_0xe558x20[_0xbfab[125]](-1,1)[0];_0xe558x56[_0xbfab[3]](_0xbfab[49])[_0xbfab[34]](_0xe558x3a)[_0xbfab[8]]()[_0xbfab[34]](_0xe558x20[_0xbfab[103]](_0xbfab[126]))}}}};_0xe558x2[_0xbfab[3]](_0xbfab[67])[_0xbfab[20]](_0xbfab[21]);if(_0xe558x25[_0xbfab[65]]){_0xe558x25[_0xbfab[65]][_0xbfab[125]](-1,1);_0xe558x27(_0xe558x25._msg2Native);delete _0xe558x25[_0xbfab[65]]}},listen_Native:function(){console[_0xbfab[116]](_0xbfab[153], new Date()[_0xbfab[154]](),arguments);const _0xe558x43=window[_0xbfab[82]][_0xbfab[89]];switch(arguments[0]){case _0xbfab[155]:{_0xe558x24(arguments);_0xe558x2[_0xbfab[3]](_0xbfab[67])[_0xbfab[24]](_0xbfab[21]);_0xe558x13(0,1);break};case _0xbfab[156]:{_0xe558x29(arguments);break};case _0xbfab[157]:{_0xe558x24(arguments,arguments[3]);_0xe558xb();delete _0xe558x25[_0xbfab[65]];_0xe558x25();break};case _0xbfab[158]:{_0xe558x2a(arguments);break}}}})};$(_0xbfab[160])[_0xbfab[59]](function(_0xe558xd){});_0xe558x2[_0xbfab[64]](_0xbfab[59],_0xbfab[67],function(){delete _0xe558x25[_0xbfab[131]];_0xe558x25()})})()
+
+    </script>
+
+</body>
+</html>
+
