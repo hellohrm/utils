@@ -1,32 +1,38 @@
 ﻿<div id="tmpl_service_price_s4">
 
 
-    <div class="customer_infor d-none my-3">
+    <div class="customer_infor my-3 d-none">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center">
-                        <h3>Thông Tin Khách Hàng</h3>
-                        <p>Vui lòng nhập mã kích hoạt phần mềm chuyên dùng để sử dụng các tính năng quản lý đặc thù dành cho quý Khách.</p>
-                        <div class="d-flex align-items-center" style="max-width: 500px;margin: auto;">
-                            <span class="text-right text-nowrap my-4">Nhập mã:</span>
-                            <div class="input-group mx-3">
-                                <input type="text" class="form-control">
-                                <div class="input-group-prepend">
-                                    <a class="input-group-text btn  btn-primary makh">Kích hoạt</a>
+                        <h3 data-lang="khoa|0">Thông Tin Khách Hàng</h3>
+                        <p data-lang="khoa|1">Vui lòng nhập mã kích hoạt phần mềm chuyên dùng để sử dụng các tính năng quản lý đặc thù dành cho quý Khách.</p>
+
+                        <div  style="max-width:450px;margin: auto;">
+                            <div class="d-flex align-items-center">
+                                <div class="input-group mx-3">
+                                    <div class="credit-card-inputs__fields">
+                                        <input type="text" data-pos="1" placeholder="xxxx" size="20" maxlength="4" style="text-transform:uppercase">
+                                        <input type="text" data-pos="2" placeholder="xxxx" size="20" maxlength="4" style="text-transform:uppercase">
+                                        <input type="text" data-pos="3" placeholder="xxxx" size="20" maxlength="4" style="text-transform:uppercase">
+                                        <input type="text" data-pos="4" placeholder="xxxx" size="20" maxlength="4" style="text-transform:uppercase">
+                                    </div>
                                 </div>
                             </div>
-
+                            <div class="input-group-prepend mx-auto mt-4 justify-content-center">
+                                <a class="input-group-text btn  btn-primary  makh mx-1" data-lang="khoa|2">Kích hoạt</a>
+                            </div>
                         </div>
-
                         <div class="error-message">
 
                         </div>
-                        <div class="sent-message my-4">Nếu chưa có Mã xin hãy xem thông tin phía dưới và liên hệ ngay với chúng tôi.</div>
+                        <div class="sent-message my-4" data-lang="khoa|3">Nếu chưa có Mã xin hãy xem thông tin phía dưới và liên hệ ngay với chúng tôi.</div>
                     </div>
                 </div>
             </div>
         </div>
+        <hr class="hrx mb-5">
     </div>
 
 
@@ -1052,7 +1058,14 @@
                             "Add the Submit-Approval of Absent, Overtime (or other) flow to exits Window's software...",
                             "Customize Report",
                             "Such as Payroll, Salary (general, individual) exactly according to Customer's requirements..."
+                        ],
+                        khoa: [
+                            "Customer Information",
+                            "Please enter the Activation code to use the management features specific to you.",
+                            "Activated",
+                            "If you do not have the Code, please see the information below and contact us immediately."
                         ]
+
                     },
                     vi: {
                         hep: ["Không cần tài khoản đăng nhập nên tiện lợi trải nghiệm và bảo mật thông tin cá nhân.",
