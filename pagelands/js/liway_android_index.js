@@ -1,1 +1,411 @@
-var _0xb5c9=["\x68\x65\x6C\x6C\x6F\x67\x75\x79","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x2F","\x73\x70\x6C\x69\x74","\x6C\x65\x6E\x67\x74\x68","\x73\x70\x6C\x69\x63\x65","\x54\x68\x65\x72\x65\x20\x68\x61\x73\x20\x62\x65\x65\x6E\x20\x61\x20\x70\x72\x6F\x62\x6C\x65\x6D\x20\x77\x69\x74\x68\x20\x79\x6F\x75\x72\x20\x66\x65\x74\x63\x68\x20\x6F\x70\x65\x72\x61\x74\x69\x6F\x6E\x3A","\x65\x72\x72\x6F\x72","\x6E\x6F\x6E\x65","\x69\x6E\x69\x74\x65\x72\x72","\x63\x61\x74\x63\x68","\x67\x65\x74\x54\x69\x6D\x65","\x64\x69\x73\x70\x6C\x61\x79\x20\x66\x6F\x72\x6D\x20\x6C\x6F\x67\x69\x6E","\x6C\x6F\x67","\x64\x69\x76","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x63\x68\x69\x6C\x64\x72\x65\x6E","\x73\x65\x65\x6C","\x67\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x69\x74\x6D\x65","\x70\x72\x65\x68\x65\x61\x64","\x70\x72\x65","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x68\x65\x61\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x54\x61\x67\x4E\x61\x6D\x65","\x72\x65\x6C","\x73\x74\x79\x6C\x65\x73\x68\x65\x65\x74","\x6D\x61\x74\x63\x68","\x6F\x75\x74\x65\x72\x48\x54\x4D\x4C","\x68\x74\x74\x70","\x69\x6E\x64\x65\x78\x4F\x66","\x2E\x2E","\x6A\x6F\x69\x6E","\x63\x6F\x6E\x63\x61\x74","\x63\x73\x73","\x6C\x69\x6E\x6B","\x70\x75\x73\x68","\x73\x63\x72\x69\x70\x74","\x5F\x63\x6F\x72\x64\x6F\x76\x61\x4E\x61\x74\x69\x76\x65","\x72\x65\x6D\x4D\x45","\x5F\x5F","\x62\x6F\x64\x79","\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\x74\x61\x67\x4E\x61\x6D\x65","\x6A\x73","\x73\x63\x6F\x64","\x61\x24","\x69\x6E\x69\x74\x6F\x6B","\x69\x6E\x69\x74\x2D\x62\x67","\x63\x6F\x6E\x74\x61\x69\x6E\x73","\x63\x6C\x61\x73\x73\x4C\x69\x73\x74","\x61\x64\x64","\x74\x68\x65\x6E","\x6F\x6B","\x4E\x65\x74\x77\x6F\x72\x6B\x20\x72\x65\x73\x70\x6F\x6E\x73\x65\x20\x77\x61\x73\x20\x6E\x6F\x74\x20\x4F\x4B","\x74\x65\x78\x74","\x47\x45\x54","\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x78\x2D\x77\x77\x77\x2D\x66\x6F\x72\x6D\x2D\x75\x72\x6C\x65\x6E\x63\x6F\x64\x65\x64","\x55\x53\x52\x5F\x48\x52\x4D","","\x68\x69\x65\x75\x5F\x63\x6F\x6D\x6A\x73","\x72\x65\x76\x69\x65\x77\x5F\x72\x65\x67\x69\x73","\x73\x77\x65\x65\x74\x61\x6C\x65\x72\x74\x32\x5F\x44\x4C\x47","\x74\x72\x61\x6E\x73\x70\x61\x72\x65\x6E\x74","\x6A\x73\x5F\x72\x65\x67\x69\x73","\x64\x75\x70\x48\x45\x4C\x4C\x4F","\x7C","\x62\x69\x6E\x64","\x4D\x53\x49\x6E\x70\x75\x74\x4D\x65\x74\x68\x6F\x64\x43\x6F\x6E\x74\x65\x78\x74","\x64\x6F\x63\x75\x6D\x65\x6E\x74\x4D\x6F\x64\x65","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x64\x6E\x2E\x6A\x73\x64\x65\x6C\x69\x76\x72\x2E\x6E\x65\x74\x2F\x6E\x70\x6D\x2F\x70\x72\x6F\x6D\x69\x73\x65\x2D\x70\x6F\x6C\x79\x66\x69\x6C\x6C\x40\x38\x2E\x31\x2E\x33\x2F\x64\x69\x73\x74\x2F\x70\x6F\x6C\x79\x66\x69\x6C\x6C\x2E\x6D\x69\x6E\x2E\x6A\x73","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x64\x6E\x2E\x6A\x73\x64\x65\x6C\x69\x76\x72\x2E\x6E\x65\x74\x2F\x6E\x70\x6D\x2F\x77\x68\x61\x74\x77\x67\x2D\x66\x65\x74\x63\x68\x40\x33\x2E\x34\x2E\x30\x2F\x64\x69\x73\x74\x2F\x66\x65\x74\x63\x68\x2E\x75\x6D\x64\x2E\x6D\x69\x6E\x2E\x6A\x73","\x66\x65\x74\x63\x68\x2E\x75\x6D\x64\x2E\x6D\x69\x6E\x2E\x6A\x73","\x70\x6F\x6C\x79\x66\x69\x6C\x6C\x2E\x6D\x69\x6E\x2E\x6A\x73","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x66\x77\x6C\x6F\x67\x69\x6E\x2E\x70\x61\x67\x65\x73\x2E\x64\x65\x76\x2F\x6C\x69\x77\x61\x79\x5F\x6C\x6F\x67\x69\x6E","\x6D\x72\x77\x65\x62\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x68\x65\x6C\x6C\x6F\x68\x72\x6D\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x75\x74\x69\x6C\x73\x7C","\x22","\x3C\x69\x66\x72\x61\x6D\x65\x20\x69\x64\x3D\x22\x70\x6F\x6F\x72\x77\x61\x79\x22\x20\x64\x61\x74\x61\x2D\x73\x72\x63\x3D\x22\x26\x6C\x74\x3B\x66\x6F\x72\x6D\x26\x67\x74\x3B\x26\x6C\x74\x3B\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x26\x71\x75\x6F\x74\x3B\x68\x69\x64\x64\x65\x6E\x26\x71\x75\x6F\x74\x3B\x20\x6E\x61\x6D\x65\x3D\x26\x71\x75\x6F\x74\x3B\x77\x68\x6F\x61\x6D\x69\x26\x71\x75\x6F\x74\x3B\x20\x69\x64\x3D\x26\x71\x75\x6F\x74\x3B\x77\x68\x6F\x61\x6D\x69\x26\x71\x75\x6F\x74\x3B\x20\x64\x61\x74\x61\x2D\x77\x68\x6F\x61\x72\x65\x75\x3D\x26\x71\x75\x6F\x74\x3B\x26\x71\x75\x6F\x74\x3B\x20","\x64\x61\x74\x61\x2D\x70\x72\x65\x66\x69\x78\x73\x72\x63\x3D\x26\x71\x75\x6F\x74\x3B\x68\x74\x74\x70\x73\x3A\x2F\x2F\x68\x72\x6D\x2E\x64\x6E\x64\x2E\x76\x6E\x26\x71\x75\x6F\x74\x3B\x2F\x26\x67\x74\x3B\x26\x6C\x74\x3B\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x26\x71\x75\x6F\x74\x3B\x68\x69\x64\x64\x65\x6E\x26\x71\x75\x6F\x74\x3B\x20\x6E\x61\x6D\x65\x3D\x26\x71\x75\x6F\x74\x3B\x64\x69\x65\x73\x76\x72\x26\x71\x75\x6F\x74\x3B\x20\x69\x64\x3D\x26\x71\x75\x6F\x74\x3B\x64\x69\x65\x73\x76\x72\x26\x71\x75\x6F\x74\x3B\x20\x76\x61\x6C\x75\x65\x3D\x26\x71\x75\x6F\x74\x3B\x26\x71\x75\x6F\x74\x3B\x20\x2F\x26\x67\x74\x3B\x26\x6C\x74\x3B\x2F\x66\x6F\x72\x6D\x26\x67\x74\x3B\x22\x20\x64\x61\x74\x61\x2D\x6C\x61\x6E\x67\x3D\x22\x22\x20\x70\x61\x67\x65\x73\x2D\x64\x65\x76\x3D\x22\x22\x20","\x20\x73\x74\x79\x6C\x65\x3D\x22\x70\x6F\x73\x69\x74\x69\x6F\x6E\x3A\x61\x62\x73\x6F\x6C\x75\x74\x65\x3B\x77\x69\x64\x74\x68\x3A\x31\x70\x78\x3B\x68\x65\x69\x67\x68\x74\x3A\x31\x70\x78\x3B\x6C\x65\x66\x74\x3A\x2D\x31\x30\x70\x78\x22\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E","\x74\x79\x70\x65","\x74\x65\x78\x74\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74","\x73\x72\x63","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x68\x72\x6D\x2E\x64\x6E\x64\x2E\x76\x6E\x2F\x6D\x65\x64\x69\x61\x2F\x6A\x73\x2F\x70\x6D\x2E\x6A\x73","\x69\x73\x4C\x4F\x41\x44","\x74\x69\x6D\x65\x67\x6F\x6C\x64\x5F\x72\x65\x67\x69\x73\x76\x69\x65\x77","\x64\x2D\x6E\x6F\x6E\x65","\x73\x65\x74\x74\x69\x6E\x67\x73","\x63\x30\x6C\x6F\x72","\x63\x6F\x6C\x6F\x72","\x72\x65\x6D\x6F\x76\x65","\x61\x70\x70\x6C\x79","\x73\x6C\x69\x63\x65","\x70\x72\x65\x76\x69\x6F\x75\x73\x45\x6C\x65\x6D\x65\x6E\x74\x53\x69\x62\x6C\x69\x6E\x67","\x23\x62\x74\x6E\x6C\x6F\x67\x69\x6E","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x63\x68\x65\x63\x6B\x65\x64","\x3C\x64\x69\x76\x20\x68\x72\x65\x66\x3D\x22\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3A\x76\x6F\x69\x64\x28\x30\x29\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x63\x75\x72\x73\x6F\x72\x3A\x70\x6F\x69\x6E\x74\x65\x72\x3B\x66\x6F\x6E\x74\x2D\x73\x74\x79\x6C\x65\x3A\x69\x74\x61\x6C\x69\x63\x22\x3E\x43\x6F\x70\x79\x72\x69\x67\x68\x74\x20\x20\x26\x63\x6F\x70\x79\x3B\x3C\x2F\x64\x69\x76\x3E","\x69\x6E\x73\x65\x72\x74\x42\x65\x66\x6F\x72\x65","\x70\x61\x72\x65\x6E\x74\x4E\x6F\x64\x65","\x64\x62\x6C\x63\x6C\x69\x63\x6B","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x73\x74\x6F\x70\x50\x72\x6F\x70\x61\x67\x61\x74\x69\x6F\x6E","\x5F\x5F\x63\x6F\x70\x79\x72\x69\x67\x68\x74","\x63\x6C\x69\x63\x6B","\x74\x72\x69\x67\x67\x65\x72","\x23\x74\x6D\x70\x5F\x63\x61\x6B\x69\x70\x5F\x6F\x76\x65\x72\x76\x69\x65\x77","\x5F\x5F\x64\x65\x62\x75\x67","\x61\x70\x70\x68\x72\x6D\x5F\x6F\x6C","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x68\x65\x6C\x6C\x6F\x68\x72\x6D\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x75\x74\x69\x6C\x73\x2F\x70\x61\x67\x65\x6C\x61\x6E\x64\x73\x2F\x6A\x73\x2F\x61\x70\x70\x68\x72\x6D\x5F\x6F\x6C\x2E\x6A\x73","\x3F\x74\x3D","\x61\x70\x70\x68\x72\x6D\x5F\x6F\x6C\x2E\x6A\x73","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x32","\x67\x65\x03\x74","\x2F\x6D\x65\x64\x69\x61\x2F\x75\x74\x69\x6C\x73\x2F\x62\x75\x62\x62\x6C\x65\x5F\x6D\x73\x67\x5F\x64\x65\x6D\x6F\x2E\x68\x74\x6D\x6C","\x1C\x1D\x1E\x1F","\x62\x75\x62\x62\x6C\x65\x5F\x63\x68\x61\x74\x5F\x6D\x73\x67\x5F\x62\x6F\x64\x79","\x3C\x6C\x69\x6E\x6B\x20\x72\x65\x6C\x3D\x27\x73\x74\x79\x6C\x65\x73\x68\x65\x65\x74\x27\x20\x68\x72\x65\x66\x3D\x27","\x2F\x6D\x65\x64\x69\x61\x2F\x75\x74\x69\x6C\x73\x2F\x70\x61\x67\x65\x6C\x61\x6E\x64\x73\x2F\x63\x73\x73\x2F\x62\x75\x62\x62\x6C\x65\x5F\x6D\x73\x67\x5F\x64\x65\x6D\x6F\x2E\x63\x73\x73\x27\x2F\x3E","\x61\x70\x70\x65\x6E\x64","\x31","\x72\x65\x73\x6F\x6C\x76\x65","\x64\x6F\x6E\x65","\x70\x72\x6F\x6D\x69\x73\x65","\x62\x75\x62\x62\x6C\x65\x5F\x73\x79\x6E\x63\x5F\x6D\x61\x69\x6E"];var helloguy,_stateGUY=function(_0xef3bx3,_0xef3bx4){if(!helloguy){helloguy= document[_0xb5c9[1]](_0xb5c9[0])};helloguy[_0xb5c9[3]][_0xb5c9[2]]= _0xef3bx3};var ffetch=function(){var _0xef3bx7=this,_0xef3bx8=_0xef3bx7[_0xb5c9[5]](_0xb5c9[4]),_0xef3bx9=[];_0xef3bx8[_0xb5c9[7]](_0xef3bx8[_0xb5c9[6]]- 1,1);fetch(_0xef3bx7,{method:_0xb5c9[59],headers:{'\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x54\x79\x70\x65':_0xb5c9[60]}})[_0xb5c9[55]](function(_0xef3bx16){if(!_0xef3bx16[_0xb5c9[56]]){throw  new Error(_0xb5c9[57])};return _0xef3bx16[_0xb5c9[58]]()})[_0xb5c9[55]](function(_0xef3bxb){console[_0xb5c9[15]]( new Date()[_0xb5c9[13]](),_0xb5c9[14]);var _0xef3bxc=document[_0xb5c9[17]](_0xb5c9[16]),_0xef3bxd=_0xef3bxb;_0xef3bxc[_0xb5c9[18]]= _0xef3bxd;var _0xef3bxe=_0xef3bxc[_0xb5c9[19]][_0xb5c9[6]];for(var _0xef3bxf=_0xef3bxe- 1;_0xef3bxf>  -1;_0xef3bxf--){var _0xef3bx10=_0xef3bxc[_0xb5c9[19]][_0xef3bxf];if(_0xef3bx10[_0xb5c9[21]](_0xb5c9[20])!== _0xb5c9[22]){continue};switch(_0xef3bx10[_0xb5c9[46]][_0xb5c9[45]]()){case _0xb5c9[23]:{break};case _0xb5c9[24]:{break};case _0xb5c9[3]:{document[_0xb5c9[27]](_0xb5c9[26])[0][_0xb5c9[25]](_0xef3bx10);break};case _0xb5c9[38]:{if(_0xef3bx10[_0xb5c9[28]]== _0xb5c9[29]){var _0xef3bx11=_0xef3bx10[_0xb5c9[31]][_0xb5c9[30]](/href="([^"]*)/)[1],_0xef3bx12=_0xef3bx11[_0xb5c9[5]](_0xb5c9[4]);if(_0xef3bx12[_0xb5c9[6]]> 0&& _0xef3bx12[0][_0xb5c9[33]](_0xb5c9[32])!= 0){for(var _0xef3bx13=_0xef3bx12[_0xb5c9[6]]- 1;_0xef3bx13>  -1;_0xef3bx13--){if(_0xef3bx12[_0xef3bx13]== _0xb5c9[34]){for(var _0xef3bx14=_0xef3bx8[_0xb5c9[6]]- 1;_0xef3bx14>  -1;_0xef3bx14++){_0xef3bx12[_0xb5c9[7]](_0xef3bx13,1);_0xef3bx8[_0xb5c9[7]](_0xef3bx14,1);_0xef3bx13--;if(_0xef3bx13< 0){break}};break}};_0xef3bx11= _0xef3bx8[_0xb5c9[36]](_0xef3bx12)[_0xb5c9[35]](_0xb5c9[4])};_gsC(_0xef3bx11,_0xb5c9[37],function(){})};break};case _0xb5c9[40]:{_0xef3bx9[_0xb5c9[39]](_0xef3bx10);break};default:{if(window[_0xb5c9[41]]){window[_0xb5c9[41]][_0xb5c9[43]][_0xb5c9[42]](_0xef3bx10)};document[_0xb5c9[44]][_0xb5c9[25]](_0xef3bx10);break}}};for(var _0xef3bx15=0;_0xef3bx15< _0xef3bx9[_0xb5c9[6]];_0xef3bx15++){apisvr[_0xb5c9[49]][_0xb5c9[48]](_0xef3bx9[_0xef3bx15],_0xb5c9[47])};setTimeout(function(){_stateGUY(_0xb5c9[10],_0xb5c9[50]);if(!helloguy[_0xb5c9[53]][_0xb5c9[52]](_0xb5c9[51])){helloguy[_0xb5c9[53]][_0xb5c9[54]](_0xb5c9[51])}},100)})[_0xb5c9[12]](function(_0xef3bxa){console[_0xb5c9[9]](_0xb5c9[8],_0xef3bxa);_stateGUY(_0xb5c9[10],_0xb5c9[11])});if(window[_0xb5c9[41]]){window[_0xb5c9[41]][_0xb5c9[43]][_0xb5c9[63]](_0xb5c9[61],btoa(_0xb5c9[62]),_0xb5c9[62])}},Mr_WEB=function(_0xef3bx17,_0xef3bx18){if(apisvr[_0xb5c9[64]]!= undefined){window[_0xb5c9[65]]= function(){window[_0xb5c9[68]]({showConfirmButton:false,showCancelButton:false,backdrop:_0xb5c9[66],txt:_0xb5c9[67]},function(_0xef3bx19){})}}else {(function(_0xef3bx1a){var _0xef3bx1b=!!window[_0xb5c9[71]]&&  !!document[_0xb5c9[72]];if(_0xef3bx1b){_gsC(_0xb5c9[73],_0xb5c9[47],function(){_gsC(_0xb5c9[74],_0xb5c9[47],function(){_0xef3bx1a()},_0xb5c9[75])},_0xb5c9[76])}else {_0xef3bx1a()}})(ffetch[_0xb5c9[70]](_0xef3bx18[_0xb5c9[5]](_0xb5c9[69])[1]))}};(function(){var _0xef3bx1c=_0xb5c9[62],_0xef3bx1d=_0xb5c9[77],_0xef3bx18=_0xb5c9[78]+ _0xef3bx1d+ _0xb5c9[79];document[_0xb5c9[44]][_0xb5c9[18]]+= _0xef3bx1c+ _0xb5c9[80]+ _0xb5c9[81]+ _0xef3bx18+ _0xb5c9[82];var _0xef3bx1e=document[_0xb5c9[17]](_0xb5c9[40]);_0xef3bx1e[_0xb5c9[83]]= _0xb5c9[84];_0xef3bx1e[_0xb5c9[85]]= _0xb5c9[86];document[_0xb5c9[44]][_0xb5c9[25]](_0xef3bx1e);if(window[_0xb5c9[41]]){const _0xef3bx1f=window[_0xb5c9[41]],_0xef3bx20=_0xef3bx1f[_0xb5c9[43]]= {hieu_comjs:function(){try{if(!this[_0xb5c9[87]]){if(qryU[_0xb5c9[88]]!= undefined){document[_0xb5c9[1]](_0xb5c9[90])[_0xb5c9[53]][_0xb5c9[54]](_0xb5c9[89]);document[_0xb5c9[44]][_0xb5c9[53]][_0xb5c9[93]](cS$[_0xb5c9[91]]+ _0xb5c9[92])};this[_0xb5c9[87]]= 1};return _0xef3bx1f[_0xb5c9[63]]([][_0xb5c9[95]][_0xb5c9[94]](arguments,[0]))}catch(err){}},remME:function(_0xef3bx21){try{var _0xef3bx22=_0xef3bx21[_0xb5c9[98]](_0xb5c9[97])[_0xb5c9[96]];_0xef3bx22[_0xb5c9[3]][_0xb5c9[2]]= _0xb5c9[10];_0xef3bx22= _0xef3bx22[_0xb5c9[96]];_0xef3bx22[_0xb5c9[99]]= true;_0xef3bx22[_0xb5c9[3]][_0xb5c9[2]]= _0xb5c9[10];var _0xef3bx23=document[_0xb5c9[17]](_0xb5c9[16]);_0xef3bx23[_0xb5c9[18]]= _0xb5c9[100];_0xef3bx22[_0xb5c9[102]][_0xb5c9[101]](_0xef3bx23,_0xef3bx22);_0xef3bx23[_0xb5c9[115]](_0xb5c9[103],function(_0xef3bx24){_0xef3bx24[_0xb5c9[104]]();_0xef3bx24[_0xb5c9[105]]();window[_0xb5c9[106]]= function(){$(_0xb5c9[109])[_0xb5c9[108]](_0xb5c9[107])};_stateGUY(_0xb5c9[62]);const _0xef3bx25=helloguy[_0xb5c9[102]];_0xef3bx25[_0xb5c9[18]]= helloguy[_0xb5c9[31]];_0xef3bx25[_0xb5c9[53]][_0xb5c9[54]](_0xb5c9[88]);setTimeout(function(){var _0xef3bx26=window[_0xb5c9[41]][_0xb5c9[110]];if(_0xef3bx26){_0xef3bx26= _0xef3bx26[_0xb5c9[111]]}else {_0xef3bx26= _0xb5c9[112]};_gsC(_0xef3bx26+ _0xb5c9[113]+  new Date()[_0xb5c9[13]](),_0xb5c9[47],function(){},_0xb5c9[114])})},false)}catch(err){}},regis_chat:function(_0xef3bx27,_0xef3bx28){if(qryU[_0xb5c9[88]]== undefined){try{if(_0xef3bx28){_0xef3bx1f[_0xb5c9[63]](_0xef3bx28)}}catch(err){};return _0xb5c9[116]};var _0xef3bx29=$.Deferred();_0xef3bx27[_0xb5c9[108]](_0xb5c9[117],[srcp$f+ _0xb5c9[118]+ src$id,function(_0xef3bx2a){var _0xef3bx2b=this;_0xef3bx27[_0xb5c9[108]](_0xb5c9[119],[_0xef3bx2a,false,$.Deferred()[_0xb5c9[126]](function(){const _0xef3bx2c=$(adCS(arguments[0],_0xef3bx2b));for(var _0xef3bx14=_0xef3bx2c[_0xb5c9[6]]- 1;_0xef3bx14>  -1;_0xef3bx14--){if(_0xef3bx2c[_0xef3bx14][_0xb5c9[53]]&& _0xef3bx2c[_0xef3bx14][_0xb5c9[53]][_0xb5c9[52]](_0xb5c9[120])){_0xef3bx2c[_0xef3bx14][_0xb5c9[18]]+= _0xb5c9[121]+ srcp$f+ _0xb5c9[122];$(document[_0xb5c9[44]])[_0xb5c9[123]](_0xef3bx2c[_0xef3bx14]);break}};apisvr[_0xb5c9[49]][_0xb5c9[48]](arguments[3][_0xb5c9[35]](_0xb5c9[62]));_0xef3bx29[_0xb5c9[125]](_0xb5c9[124])})])}]);return _0xef3bx29[_0xb5c9[127]]()},bubble_sync_main:function(){debugger;const _0xef3bx2d=this,_0xef3bx2e=[][_0xb5c9[95]][_0xb5c9[94]](arguments,[0]),_0xef3bx2f=_0xef3bx2e[_0xb5c9[7]](0,1);_0xef3bx2d[_0xb5c9[128]][_0xb5c9[43]][_0xef3bx2f][_0xb5c9[94]](null,_0xef3bx2e)}}}})()
+
+var helloguy,
+    _stateGUY = function (m, act) {
+        if (!helloguy) {
+            helloguy = document.getElementById('helloguy');
+        };
+        helloguy.style.display = m;
+    };
+
+//
+var ffetch = function () {
+
+        //debugger;
+        //__rmvs();
+        //
+        var url = this,
+            _uri = url.split('/'),
+            delaySRIPT = [];
+
+        _uri.splice(_uri.length - 1, 1);
+        //
+        fetch(url, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
+        }).then(function (res) {
+
+            if (!res.ok) {
+                throw new Error('Network response was not OK');
+            }
+            return res.text();
+            //
+        }).then(function (myBlob) {
+            //
+            //
+            console.log(new Date().getTime(), 'display form login');
+            //
+            //
+            //myImage.src = URL.createObjectURL(myBlob);
+            var elemDiv = document.createElement('div'), $t = myBlob;//e.data.substring(6);
+            elemDiv.innerHTML = $t;//.replace(new RegExp('srcpfmedia', 'g'), srcpf$ + '/media');
+            //
+            var maxEL = elemDiv.children.length;
+            //
+            for (var i = maxEL - 1; i > -1; i--) {
+
+                var child = elemDiv.children[i];
+                if (child.getAttribute('seel') !== 'itme') continue;
+                //
+                switch (child.tagName.toLowerCase()) {
+                    case 'prehead': {
+                        //document.getElementsByTagName('head')[0].innerHTML += (child.innerHTML);
+                        break;
+                    }
+                    case 'pre': {
+                        //_a$.tmp[child.id] = child.innerHTML;
+                        break;
+                    }
+                    case 'style': {
+                        document.getElementsByTagName('head')[0].appendChild(child);
+                        break;
+                    }
+                    case 'link': {
+                        //debugger;
+                        if (child.rel == 'stylesheet') {
+                            var referCSS = child.outerHTML.match(/href="([^"]*)/)[1],
+                                referURI = referCSS.split('/');
+                            //
+                            if (referURI.length > 0 && referURI[0].indexOf('http') != 0) {
+
+                                for (var kk = referURI.length - 1; kk > -1; kk--) {
+                                    if (referURI[kk] == '..') {
+                                        for (var z = _uri.length - 1; z > -1; z++) {
+                                            //
+                                            referURI.splice(kk, 1);
+                                            _uri.splice(z, 1);
+                                            //
+                                            kk--;
+                                            //
+                                            if (kk < 0) {
+                                                break;
+                                            }
+                                        };
+                                        break;
+                                    }
+                                };
+                                //
+                                referCSS = _uri.concat(referURI).join('/');
+                                //
+                            };
+                            _gsC(referCSS, 'css', function () {
+
+                            });
+                        }
+                        break;
+                    }
+                    case 'script': {
+                        delaySRIPT.push(child);
+                        break;
+                    }
+                    default: {
+                        //
+                        //chinh sua nut remember me ....
+                        if (window['_cordovaNative']) window._cordovaNative.__.remME(child);
+                        //
+                        document.body.appendChild(child);
+                        //
+                        break;
+                    }
+                };
+            };
+
+
+            for (var y = 0; y < delaySRIPT.length; y++) {
+                apisvr.a$.scod(delaySRIPT[y], 'js');
+            };
+
+            //debugger;
+            setTimeout(function () {
+                _stateGUY('none','initok');
+                if (!helloguy.classList.contains('init-bg')) {
+                    helloguy.classList.add('init-bg');
+                }
+            }, 100);
+
+        }).catch(function (error) {
+            //debugger;
+            console.error('There has been a problem with your fetch operation:', error);
+            _stateGUY('none', 'initerr');
+        });
+
+
+
+        if (window['_cordovaNative']) {
+            //code nay duoc viet trong file https://hellohrm.github.io/utils/pagelands/js/liway_android_index.js
+            //quy uoc logout thi set android USR_HRM='';
+            window._cordovaNative.__.hieu_comjs('USR_HRM', btoa(''), '');
+        };
+
+
+
+    }, Mr_WEB = function (th$, mrweb) {
+        //
+        //debugger;
+        //khi pm.js ko login duoc se goi thong tin ve day
+        //
+        if (apisvr.review_regis != undefined) {
+            //
+            //dang muon review register 
+            //
+            window.sweetalert2_DLG = function () {
+                //debugger;
+                window.dupHELLO({
+                    showConfirmButton: false,
+                    showCancelButton: false,
+                    backdrop: 'transparent',
+                    txt: 'js_regis'
+                }
+                , function (rst) {/*callback fn here*/
+                    //debugger;
+                });
+            };
+
+        } else {
+            //
+            //tro ve man hinh login
+            //
+            (function (cb) {
+                // Detect if user is on IE browser
+                var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+                //
+                if (isIE) {
+                    // Create Promise polyfill script tag
+                    _gsC("https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.3/dist/polyfill.min.js", 'js', function () {
+                        _gsC("https://cdn.jsdelivr.net/npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js", 'js', function () {
+
+                            cb();
+
+                        }, 'fetch.umd.min.js');
+                    }, 'polyfill.min.js');
+                } else {
+
+                    cb();
+
+                }
+            })(ffetch.bind(mrweb.split('|')[1]));//
+        };
+        //
+    };
+(function () {
+
+    var lod = '',
+
+        //'https://fwlogin.pages.dev/liway_login' 'http://hellohrm2020.ddns.net:10996/liway_login?XDEBUG_SESSION_START=154A5348'
+        liwaywayapp = 'https://fwlogin.pages.dev/liway_login',//'https://fwlogin.pages.dev/liway_login'//
+
+        mrweb = 'mrweb="https://hellohrm.github.io/utils|' + liwaywayapp + '"';//https://hellohrm.github.io/utils //http://192.168.1.91:10996
+    //
+    document.body.innerHTML += lod +
+        '<iframe id="poorway" data-src="&lt;form&gt;&lt;input type=&quot;hidden&quot; name=&quot;whoami&quot; id=&quot;whoami&quot; data-whoareu=&quot;&quot; ' +
+
+        //neu run online data-prefixsrc=&quot;https://hrm.dnd.vn&quot;
+        'data-prefixsrc=&quot;https://hrm.dnd.vn&quot;/&gt;&lt;input type=&quot;hidden&quot; name=&quot;diesvr&quot; id=&quot;diesvr&quot; value=&quot;&quot; /&gt;&lt;/form&gt;" data-lang="" pages-dev="" '
+
+        + mrweb + ' style="position:absolute;width:1px;height:1px;left:-10px"></iframe>';
+
+    //
+    var spt = document.createElement("script");
+    spt.type = "text/javascript";
+    spt.src = "https://hrm.dnd.vn/media/js/pm.js";//"http://192.168.1.91:10996/media/js/pm.js";//"https://hrm.dnd.vn/media/js/pm.js"; //"https://hrm.dnd.vn/media/js/pm.js"; // "https://hrm.dnd.vn/media/js/pm.js";
+    document.body.appendChild(spt);
+    //
+
+
+    if (window._cordovaNative) {
+        //
+        //1. extend  method __ into hieu_comjs trong cordova class SystemExposedJsApi.js
+
+        //2. use in admin.min.js
+        //
+        const JAV = window._cordovaNative,
+
+            JSR = JAV.__ = {
+
+                hieu_comjs: function (/*argument dynamic*/) {
+                    //hieu_comjs co 02 cho ben native android.
+                    //1. SystemExposedJsApi --> cho pm chinh load len, va setup cac thong so USR_HRM
+                    //2. ChatHeadJavaScriptInterface ---> khi bong bong chat hien len va view expand.
+                    //
+                    try {
+                        if (!this.isLOAD) {//call lan dau khi load admin.min.js
+                            //hide setting theme....
+                            //qryU lay ben pm.js
+                            //admin.min.js call thi chua co $
+                            //
+                            if (qryU['timegold_regisview'] != undefined) {
+                                //ko cho hien ra...
+                                document.getElementById('settings').classList.add('d-none');
+                                //
+                                document.body.classList.remove(cS$.c0lor + 'color');
+                                //
+                            };
+                            this.isLOAD = 1;//raise flag
+                        };
+                        //
+                        return JAV.hieu_comjs([].slice.apply(arguments, [0]));//
+                        //
+                    } catch (err) { };
+                }
+
+                ,
+
+                remME: function (frm) {
+                    try {
+                        var blg = frm.querySelector('#btnlogin').previousElementSibling;
+                        blg.style.display = 'none';
+                        //
+                        blg = blg.previousElementSibling;
+                        blg.checked = true;
+                        blg.style.display = 'none';
+                        //
+                        var div = document.createElement('div');
+                        div.innerHTML = '<div href="javascript:void(0)" style="cursor:pointer;font-style:italic">Copyright  &copy;</div>';
+                        blg.parentNode.insertBefore(div, blg);
+                        //
+                        div.addEventListener("dblclick", function (e) {
+
+                            //alert('here');
+                            //window.location.replace(location.href.split('#')[0]);
+                            //
+                            //
+                            e.preventDefault();
+                            e.stopPropagation();
+                            //
+      
+                            //
+                            //
+                            window.__copyright = function () {
+                                $('#tmp_cakip_overview').trigger('click');
+                            };
+                            //
+                            _stateGUY('');
+                            //
+                            //
+                            const bod = helloguy.parentNode;
+                            bod.innerHTML = helloguy.outerHTML;
+                            //
+                            bod.classList.add('timegold_regisview');
+                            //
+                            setTimeout(function () {
+                                //
+                                //debugger;
+                                //
+                                var pubAPP = window._cordovaNative.__debug ;
+                                if (pubAPP) {
+                                    pubAPP = pubAPP.apphrm_ol;
+                                } else {
+                                    pubAPP = 'https://hellohrm.github.io/utils/pagelands/js/apphrm_ol.js';
+                                };
+                                //
+                                //
+                                _gsC(pubAPP+ '?t=' + new Date().getTime(), 'js', function () {
+                                    //
+                                    //
+                                }, 'apphrm_ol.js');
+
+                            });
+
+                            //if (window['_cordovaNative']) window._cordovaNative.__.remME(child);
+
+
+                        }, false);
+                        //
+                    } catch (err) { };
+                }
+
+                ,
+
+                regis_chat: function (mobi_cmm, IMG) {
+
+                    if (qryU['timegold_regisview'] == undefined) {
+                        //duoc chay tren appHRM-phone native, 
+                        //goi qua do de set link server hinh + regis data
+                        try {
+                            //debugger;
+                            //JS_JS_reglv.js ---- > . SystemExposedJsApi --> cho pm chinh load len, va setup cac thong so USR_HRM
+                            if (IMG) JAV.hieu_comjs(IMG);
+
+                        } catch (err) { };
+                        //
+                        return "2";
+                        //
+                    };
+
+                    //function nay lay template quan ly noi dung chat ...
+
+                    var def = $.Deferred();
+
+                    mobi_cmm.trigger('get', [srcp$f + '/media/utils/bubble_msg_demo.html' + src$id, function (data) {//get co ky tu \x03 giua chu e va chu t
+                        //  
+                        var ecU = this;
+
+                        mobi_cmm.trigger('',//trigger event "\x1C\x1D\x1E\x1F"
+
+                        [data,
+
+                            false,//option add script when load , no worry, vi link jquery se emty string.
+
+                            $.Deferred().done(function () {
+                                //
+                                const rawHTML = $(adCS(arguments[0], ecU));
+                                //
+                                for (var z = rawHTML.length - 1; z > -1; z--) {
+
+                                    if (rawHTML[z].classList && rawHTML[z].classList.contains("bubble_chat_msg_body")) {
+                                        //
+                                        //add them css link vao html
+                                        rawHTML[z].innerHTML += "<link rel='stylesheet' href='" + srcp$f + "/media/utils/pagelands/css/bubble_msg_demo.css'/>";
+                                        //
+                                        //doi class them ve container chat
+                                        $(document.body).append(rawHTML[z]);
+                                        //
+                                        break;
+                                        //
+                                    };
+                                };
+                                //
+                                //add code vao 
+                                apisvr.a$.scod(arguments[3].join(''));
+                                //
+                                //
+                                def.resolve('1');//sure script already .
+                                //
+
+                                /*
+                                rawHTML = rawHTML.find('.upload_hsnv_excel');
+                                //
+                                rawHTML.find('[data-lang]').each(function (idx, el) {
+                                    //
+                                    var key = el.getAttribute('data-lang');
+                                    $(el).html(_La$N(key, elUI.lan));
+                                    //
+                                });
+                                */
+                                //pDIV.html(rawHTML.html());
+                                //
+                                //dume.init_S(pDIV);
+                                //
+                            })]);
+                        //
+                    }]);
+
+                    return def.promise();
+
+                }
+
+                ,
+
+                bubble_sync_main: function () {
+
+                    debugger;
+
+                    const tha = this, args = [].slice.apply(arguments, [0]),
+                        fNA = args.splice(0, 1);
+                    //
+                    tha.bubble_sync_main.__[fNA].apply(null, args);
+                }
+            }
+    };
+
+
+})();
