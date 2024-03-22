@@ -121,7 +121,7 @@
             //        l3: '{"f":["i","n","t","b","b","b"],"l":592,"e":13,"s":"tab","tf":"YYYY-MM-DD HH:mm:ss","minL":"2020-12-31T23:12:20.000Z","maxL":"2021-01-31T07:33:20.000Z"}'
             //    }
             //};
-            if (__doHandshake && typeof __doHandshake === "function") __doHandshake();
+            if (window['__doHandshake'] && typeof __doHandshake === "function") __doHandshake();
 
         </script>
     </div>
