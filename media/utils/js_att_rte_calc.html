@@ -1,0 +1,92 @@
+﻿<script  type="text/javascript">
+
+    (function () { // vua tao worker, vua release function !
+
+        onmessage = function (e) {
+            //
+            const cmd = e.data.cmd.toString();
+            //
+            console.log(new Date().getTime(), cmd)
+            //
+            switch (e.data.cmd.toLowerCase()) {
+
+                case 'closed': {
+                    self.close();
+                    break;
+                }
+                case 'keeplive': {
+                    clearTimeout(SELF_CLOSE);//sau 10 seconde ko co lenh nay thi se self.close
+                    //debugger;
+                    break;
+                }
+                case 'attlog_oneday': {
+                    clearTimeout(SELF_CLOSE);//sau 10 seconde ko co lenh nay thi se self.close
+                    //debugger;
+                    break;
+                }
+                case 'rtevt': {
+                    //debugger;
+                    break;
+                }
+            };
+        };
+
+        const SELF_CLOSE = setTimeout(function () {
+            self.close();
+        }, 10000);
+
+
+        var privateSharedVar = 'foo';
+
+        function privateSharedFunction() {
+            // has access to privateSharedVar
+            // may also access publicSharedVar via explicit MyObj.prototype
+            // can't be called via this
+        }
+        function MyObj(opts) { // constructor
+
+
+
+            debugger;
+            privateSharedVar = opts;
+            var privateInstanceVar = 'bar';
+            this.publicInstanceVar = 'baz';
+            function privateInstanceFunction() {
+                // has access to all vars
+                // can't be called via this
+            };
+            this.publicInstanceMethod = function () {
+                // has access to all vars
+                // also known as a privileged method
+            };
+
+            const queue= (function () {
+                var pending = [];
+
+                function next() {
+                    var fn = pending.shift();
+                    if (fn) {
+                        fn(next);
+                    }
+                }
+
+                return function (fn) {
+                    pending.push(fn);
+                    if (pending.length == 1) next();
+                };
+            })()
+
+        }
+        MyObj.prototype.publicSharedVar = 'quux';
+        MyObj.prototype.publicSharedMethod = function (param) {
+            // has access to shared and public vars
+            // canonical way for method creation:
+            // try to use this as much as possible
+        };
+
+        self.postMessage({ 'cmd': 'loaded' });
+
+        return MyObj;
+    })();
+
+</script>

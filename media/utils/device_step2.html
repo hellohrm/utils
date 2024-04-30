@@ -1,0 +1,3176 @@
+﻿<div class="device-page__content messages-page">
+
+    <div class="container-fluid h-100">
+        <div class="row px-0 h-100">
+            <!-- start message list section  -->
+            <!--https://www.bootdey.com/snippets/view/Gradients-dashboard-cards-->
+            <div class="col-12 px-0  pt-3 messages-page__list-scroll">
+
+                <style type="text/css">
+                    .material-icons {
+                        font-family: 'Material Icons';
+                        font-weight: normal;
+                        font-style: normal;
+                        font-size: 15px; /* Preferred icon size */
+                        display: inline-block;
+                        line-height: 1;
+                        text-transform: none;
+                        letter-spacing: normal;
+                        word-wrap: normal;
+                        white-space: nowrap;
+                        direction: ltr;
+                        /* Support for all WebKit browsers. */
+                        -webkit-font-smoothing: antialiased;
+                        /* Support for Safari and Chrome. */
+                        text-rendering: optimizeLegibility;
+                        /* Support for Firefox. */
+                        -moz-osx-font-smoothing: grayscale;
+                        /* Support for IE. */
+                        font-feature-settings: 'liga';
+                    }
+
+
+                    internetConection {
+                        position: fixed;
+                        z-index: 100;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #666;
+                        font-weight: 100;
+                        background: rgba(255,255,255,0.75);
+                        padding: 15px;
+                        text-align: left;
+                        font-size: 35px;
+                        backdrop-filter: blur(15px);
+                    }
+
+                        internetConection off {
+                            color: red;
+                            display: none;
+                        }
+
+                        internetConection on {
+                            color: green;
+                            display: none;
+                        }
+
+                        internetConection span {
+                            font-size: 75px !important;
+                        }
+
+                    .js_js_att internetconection {
+                        position: absolute !important;
+                    }
+
+
+                    .global {
+                        max-width: 900px;
+                        display: block;
+                        margin: auto;
+                        position: relative;
+                        text-align: center;
+                        padding: 10px;
+                        width: 100%;
+                    }
+
+                        .global o_pos, .global *::after, .global *::before {
+                            box-sizing: initial !important;
+                        }
+
+                    .headerx-lg {
+                        position: absolute !important;
+                        top: -20px !important;
+                    }
+
+                    headerx {
+                        position: fixed;
+                        top: 58px;
+                        left: 10px;
+                        right: 10px;
+                        padding: 10px 0;
+                        z-index: 50;
+                        border-radius: 0 0 10px 10px;
+                        /*background: rgba(255,255,255,0.5);*/
+                        /*backdrop-filter: blur(15px);*/
+                        transition: all 0.3s ease;
+                    }
+
+                    .stickyx {
+                        box-shadow: 0px 5px 20px rgba(0,0,0,0.25);
+                        padding: 10px 0 5px 0;
+                    }
+
+                        .stickyx counter .box {
+                            padding: 5px;
+                            width: 25%;
+                            text-align: right;
+                        }
+
+                            .stickyx counter .box b {
+                                display: none;
+                            }
+
+                            .stickyx counter .box span {
+                                display: none;
+                            }
+
+                            .stickyx counter .box value {
+                                font-size: 25px;
+                                position: relative;
+                                padding: 0px;
+                            }
+
+                                .stickyx counter .box value::before {
+                                    content: "Schedule";
+                                    position: absolute;
+                                    top: -10px;
+                                    left: 0;
+                                    background: #ccc;
+                                    font-size: 8px;
+                                    padding: 2px 8px;
+                                    width: 50%;
+                                    border-radius: 5px;
+                                    text-transform: uppercase;
+                                }
+
+                        .stickyx counter .ok value::before {
+                            content: "Confirmed";
+                        }
+
+                        .stickyx counter .canceled value::before {
+                            content: "Canceled";
+                        }
+
+                        .stickyx performance {
+                            display: inline-block;
+                            width: 60%;
+                            font-size: 12px;
+                            height: 20px;
+                            line-height: 20px;
+                            margin-bottom: 0;
+                            position: relative;
+                        }
+
+                            .stickyx performance Bar, .stickyx performance status {
+                                height: 20px;
+                                line-height: 20px;
+                            }
+
+                        .stickyx actionLine {
+                            display: inline-block;
+                            width: auto;
+                            padding: 0;
+                            line-height: 20px;
+                            margin-bottom: 0;
+                            position: relative;
+                            top: -7px;
+                        }
+
+                            .stickyx actionLine button {
+                                font-size: 10px;
+                            }
+
+                    counter {
+                        margin-bottom: 10px;
+                        /*display: block;*/
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+
+                    .box {
+                        padding: 10px 0;
+                        /*display: inline-block;*/
+                        text-align: center;
+                        background: rgba(191, 191, 191, 0.15);
+                        width: 30%;
+                        font-weight: 300;
+                        border-radius: 10px;
+                        font-size: 15px;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                        .box b {
+                            display: block;
+                            transition: all 0.3s ease;
+                        }
+
+                        .box value {
+                            font-size: 50px;
+                            display: block;
+                            padding: 5px;
+                            font-weight: 400;
+                            transition: all 0.3s ease;
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .box > span {
+                            height: 30px;
+                            line-height: 1.1;
+                        }
+
+                    .ok value {
+                        color: green;
+                    }
+
+                    .canceled value {
+                        color: red;
+                    }
+
+                    performance {
+                        border: 1px solid #ccc;
+                        padding: 0px;
+                        display: block;
+                        border-radius: 30px;
+                        text-align: left;
+                        overflow: hidden;
+                        position: relative;
+                        height: 30px;
+                        margin-bottom: 10px;
+                        transition: all 0.3s ease;
+                    }
+
+                        performance Bar {
+                            height: 30px;
+                            padding: 0 10px 0 0;
+                            position: absolute;
+                            border-radius: 15px;
+                            text-align: right;
+                            line-height: 30px;
+                        }
+
+                        performance .ok {
+                            background: rgba(0,255,50,0.85);
+                            z-index: 1;
+                            color: green;
+                        }
+
+                        performance .canceled {
+                            background: rgba(255,0,0,0.50);
+                            z-index: 2;
+                            color: rgba(255,50,0,0.90);
+                        }
+
+                        performance status {
+                            display: block;
+                            position: relative;
+                            text-align: right;
+                            line-height: 30px;
+                            padding: 0 15px;
+                            z-index: 3;
+                            text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+                        }
+
+                    actionLine {
+                        display: block;
+                        text-align: right;
+                        margin-bottom: 10px;
+                    }
+
+                        actionLine button, filter button {
+                            border: none;
+                            border-radius: 5px;
+                            background: #ccc;
+                            padding: 5px 10px;
+                        }
+
+                    filter {
+                        display: none;
+                        background: #ececec;
+                        padding: 5px 0;
+                        width: 90%;
+                        margin: 0 auto 10px auto;
+                        border-radius: 10px;
+                    }
+
+                        filter #lineFilter {
+                            width: 80%;
+                            border: 0;
+                            border-bottom: 1px solid #666;
+                            background: none;
+                            line-height: 15px;
+                            font-size: 12px;
+                        }
+
+
+
+                    .clientPanel {
+                        display: block;
+                        margin: 300px 0px 30px 0px;
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 10px;
+                    }
+
+                    .darkcolor .clientPanel {
+                        border-color: #4d4d4d !important;
+                    }
+
+                    .clientPanel h2 {
+                        background: #fff;
+                        display: flex;
+                        min-height: 70px;
+                        justify-content: center;
+                        align-items: center;
+                        margin: -45px auto 0 auto;
+                        width: 180px;
+                        box-shadow: rgba(207, 203,203,0.48) 6px 2px 16px 0px, rgba(218,218,218, 0.8) -6px -2px 16px 0px;
+                        border-radius: 10px;
+                    }
+
+                    .darkcolor .clientPanel h2 {
+                        background: black !important;
+                    }
+
+                    .clientPanel obj_att {
+                        text-align: left;
+                        display: block;
+                        /*overflow: hidden;*/
+                        padding: 10px 10px;
+                        border-radius: 5px;
+                    }
+
+                        .clientPanel obj_att:nth-child(even) {
+                            background: rgba(191, 191, 191, 0.3);
+                        }
+
+                            .clientPanel obj_att:nth-child(even) .progress {
+                                background: #fff;
+                            }
+
+
+                    .clientPanel .card-footer {
+                        border-top: none !important;
+                        background: none !important;
+                    }
+
+                    .rtevt_the {
+                        transform: rotate(-15deg);
+                    }
+
+
+                    .arw_in {
+                        border-top: 1px dashed gray;
+                        padding-top: 10px;
+                    }
+
+                        .arw_in:before {
+                            content: "\f04b";
+                            position: absolute;
+                            font: normal normal normal 11px/1 FontAwesome;
+                            top: -5px;
+                            left: 1px;
+                            transform: rotate(60deg);
+                            color: gray;
+                        }
+
+                        .arw_in:after {
+                            content: "\f04b";
+                            position: absolute;
+                            font: normal normal normal 11px/1 FontAwesome;
+                            top: -5px;
+                            right: 1px;
+                            transform: rotate(120deg);
+                            color: gray;
+                        }
+
+                    .line_gio:before {
+                        content: "";
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 1px;
+                        height: 60px;
+                        border-left: 1px dashed gray;
+                    }
+
+
+                    .orgi_tg {
+                        position: absolute;
+                        left: -10px;
+                        font-size: 9px;
+                        top: -12px;
+                    }
+
+                    .orgi_tg1 {
+                        font-size: 8px;
+                        display: block;
+                        background: #ccc;
+                        border-radius: 2px;
+                        position: absolute;
+                        padding: 2px;
+                        top: -14px;
+                    }
+
+                    .orgi_ou {
+                        left: initial;
+                        right: -10px;
+                    }
+
+                    .inputs__dates {
+                        font-size: 15px !important;
+                    }
+
+                        .inputs__dates input {
+                            border-radius: 0 !important;
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                            box-sizing: border-box;
+                            border-top: 1px solid #ccc;
+                            line-height: normal !important;
+                            text-align: center;
+                            color: #a19f9f;
+                            transition: all 0.3s;
+                            padding-top: 5px;
+                            margin-right: 5px !important;
+                        }
+
+                    .darkcolor .inputs__dates input::-webkit-calendar-picker-indicator {
+                        filter: invert(1);
+                    }
+                </style>
+
+                <internetconection>
+                    <off>
+                        Please, verify your
+                        <br /> internet connection
+                        <span class="material-icons">
+                            signal_wifi_bad
+                        </span>
+                    </off>
+                    <on>
+                        Your internet
+                        <br /> connection is ready
+                        <span class="fa fa-wifi"></span>
+                    </on>
+
+                    <style type="text/css">
+                        /*https://www.youtube.com/watch?v=EuE13Y5qjzY&t=637s*/
+                        .cardx {
+                            position: absolute;
+                            width: 100px;
+                            height: 200px;
+                            margin-top: -75px;
+                            left: 100px;
+                            z-index: 1;
+                        }
+
+                            .cardx .rating {
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                                .cardx .rating .block {
+                                    position: absolute;
+                                    width: 2px;
+                                    height: 15px;
+                                    background: #333;
+                                    left: 50%;
+                                    transform-origin: 50% 100px;
+                                    opacity: 0;
+                                    animation: animate 0.1s linear forwards;
+                                    z-index: 2;
+                                    /*box-shadow:0 0 15px #383c38, 0 0 30px #a8aba8;*/
+                                }
+
+                                    .cardx .rating .block.val {
+                                        background: #0f0;
+                                        /*box-shadow:0 0 15px #0f0,0 0 30px #0f0;*/
+                                        /*animation-delay:0.05s;*/
+                                    }
+
+                                        .cardx .rating .block.val.err {
+                                            background: #f00 !important;
+                                            /*box-shadow:0 0 15px #0f0,0 0 30px #0f0;*/
+                                            /*animation-delay:0.05s;*/
+                                        }
+
+
+
+                        @keyframes animate {
+                            to {
+                                opacity: 1;
+                            }
+                        }
+
+                        .cardx .rating h2 {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            color: hotpink;
+                        }
+
+                            .cardx .rating h2.slash {
+                                -webkit-animation: fade-in-out 2.5s infinite;
+                                -moz-animation: fade-in-out 2.5s infinite;
+                                -o-animation: fade-in-out 2.5s infinite;
+                                animation: fade-in-out 2.5s infinite;
+                            }
+                    </style>
+
+
+                    <div class="text-success">
+                        <div class="box_conn">
+                            <div class="text_conn text-uppercase" style="">
+                                LOADING ...
+                            </div>
+
+                            <div class="comp"></div><div class="loader_conn"></div>
+                            <div class="con"></div><div class="byte"></div>
+
+                            <div class="server"></div>
+
+                            <div class="cardx d-none">
+                                <div class="rating">
+                                    <h2 class="slash"><span class="phantram" data-target="0">0</span><sup>%</sup></h2>
+                                    <div class="block"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="dog_canvas"> </div>
+                    </div>
+
+
+                </internetconection>
+
+                <div class="global invisible">
+                    <!--https://bootsnipp.com/snippets/aMVZE-->
+                    <headerx class="headerx-lg">
+                        <!--https://codepen.io/tunglam/pen/xxZqrbr-->
+                        <!--https://dev.to/jankapunkt/make-text-fit-it-s-parent-size-using-javascript-m40-->
+                        <counter>
+                            <div class="box schedule">
+                                <span data-lang="js_009_31|0">Quantity Devices</span>
+                                <value>
+                                    <span>-</span>
+                                </value>
+                            </div>
+                            <div class="box ok">
+                                <span data-lang="js_009_31|1">Total Employees</span>
+                                <value>
+                                    <span>-</span>
+                                </value>
+                            </div>
+                            <div class="box canceled">
+                                <span data-lang="js_009_31|2">Number of logs</span>
+                                <value>
+                                    <span>-</span>
+                                </value>
+                            </div>
+                        </counter>
+
+                        <div class="row no-gutters mx-auto" style="max-width: 380px;">
+                            <div class="inputs__dates col-6">
+                                <div data-lang="js_009_31|3">From date</div>
+                                <input type="date" />
+                            </div>
+                            <div class="inputs__dates  col-6">
+                                <div data-lang="js_009_31|4">To date</div>
+                                <input type="date" />
+                            </div>
+                        </div>
+
+                        <actionline class="mt-3 text-center">
+                            <div class="btn btn-warning ">
+                                <i class="ti-reload"></i>
+                                <span data-lang="js_009_31|5">Reload</span>
+                            </div>
+                            <div class="btn btn-primary  viewlogs" data-lang="js_009_31|6">View</div>
+                            <div class="btn btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-download mr-2">
+                                </i><span data-lang="js_009_31|7">Export</span>
+                                <div class="dropdown-menu dropdown-light dropdown-menu-left dropdown-alignleft" style="max-width: 120px;min-width: 120px;">
+                                    <a class="dropdown-item" href="#">.xlsx</a>
+                                    <a class="dropdown-item" href="#">.csv</a>
+                                    <a class="dropdown-item" href="#">.txt</a>
+                                </div>
+                            </div>
+                        </actionline>
+
+                        <filter>
+                            <input type="text" name="lineFilter" id="lineFilter" placeholder="Type 3 letters or more" />
+                            <button class="close">x</button>
+                        </filter>
+
+                    </headerx>
+
+
+                    <clientpanel class="clientPanel">
+
+                        <h2 class="px-2 mb-4">
+                            <i class="ti-pie-chart"></i>
+                            <span style="font-size:1.5rem">Thong ke chi tiet</span>
+                        </h2>
+
+                        <obj_att class="my-3 position-relative">
+                            <div>
+                                <div role="button" data-toggle="collapse" href=".collapse0">
+                                    <div class="card-body pb-0 pt-1">
+                                        <div class="row">
+                                            <div class="col-12 ">
+                                                <h4 class="card-title "><b>4000TID-C</b></h4>
+
+                                            </div>
+                                            <div class="col">
+                                                <h6 class="card-subtitle mb-2">
+                                                    <span class="text-success"><i class="fa fa-circle"></i>&nbsp;<span>online</span></span>
+                                                    <p class="card-text text-muted small d-inline-block">
+                                                        <span class="vl mr-2 ml-0"></span>
+                                                        <span>
+                                                            <i class="ti-time"></i>
+                                                            <span class="timeago">-</span>
+                                                        </span>
+                                                    </p>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <span class="d-flex">
+                                            <span class="progress my-2 mr-3" style="height: 3px;flex:1">
+                                                <span class="btn ti-angle-down" style="position: absolute;right: 0px;top:15px"></span>
+                                                <span class="progress-bar bg-primary" role="progressbar" style="width: 80%"></span>
+                                            </span>
+                                            <span>80%</span>
+                                        </span>
+                                    </div>
+
+                                    <div class="card-footer px-0 pb-0">
+                                        <div class="row">
+
+                                            <div class="col-md-auto">
+
+                                                <a class="btn">
+                                                    <span class="fa fa-id-card-o"></span>
+                                                    <span class="mcc_inf">-</span>
+                                                </a>
+
+                                                <i class="mdi mdi-settings-outline"></i>
+
+
+                                                <a class="btn">
+                                                    <span class="ti-user" style="font-size:16px"></span>
+                                                    <span class="mcc_inf">-</span>
+                                                </a>
+                                                <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="ti-more-alt" style="font-size:18px;vertical-align:middle"></span>
+                                                    <small>MORE</small>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="pt-3 panel-collapse collapse collapse0">
+                                <div class="row no-gutters text-center pt-2">
+                                    <span class="col-3 text-success">
+                                        <span class="orgi_tg">06:00</span>
+                                        In
+                                    </span>
+                                    <span class="col-3 line_gio text-danger">
+                                        <span class="orgi_tg">08:05</span>
+                                        Late
+                                        <span class="orgi_tg1" style="right:2px">10:00</span>
+                                    </span>
+
+                                    <span class="col-3 line_gio text-danger">
+                                        <span class="orgi_tg1" style="left:2px">14:00</span>
+                                        Early
+                                    </span>
+
+                                    <span class="col-3 line_gio  text-success">
+                                        <span class="orgi_tg">16:00</span>
+                                        Out
+                                        <span class="orgi_tg orgi_ou">18:00</span>
+                                    </span>
+
+                                </div>
+
+
+
+                                <div class="row no-gutters text-center">
+                                    <div class="col-3 arw_in text-success">
+                                        <!--<span class="fa fa-id-card-o rtevt_the"></span>-->
+                                        <span class="ml-1">-</span>
+                                    </div>
+                                    <div class="col-3 arw_in text-danger">
+                                        <!--<span class="fa fa-id-card-o rtevt_the"></span>-->
+                                        <span class="ml-1">-</span>
+                                    </div>
+                                    <div class="col-3 arw_in text-danger">
+                                        <!--<span class="fa fa-id-card-o rtevt_the"></span>-->
+                                        <span class="ml-1">-</span>
+                                    </div>
+                                    <div class="col-3 arw_in  text-success">
+                                        <!--<span class="fa fa-id-card-o rtevt_the"></span>-->
+                                        <span class="ml-1">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </obj_att>
+
+                        <style type="text/css">
+                            #star {
+                                margin-left: -5px !important;
+                                vertical-align: bottom !important;
+                                opacity: 0.5;
+                            }
+
+
+                            .more {
+                                opacity: 0.5 !important;
+                            }
+
+                            .btn:hover {
+                                color: black !important;
+                            }
+
+                            .vl {
+                                margin: 8px !important;
+                                width: 2px;
+                                border-right: 1px solid #aaaaaa;
+                                height: 25px;
+                            }
+
+
+                            #plus {
+                                opacity: 0.8;
+                            }
+
+
+                            .card {
+                                border-radius: 10px !important;
+                            }
+
+                            a:hover {
+                                background-color: #ccc !important;
+                            }
+
+
+
+                            /*.btn-outlined:active {
+                                color: #FFF;
+                                border-color: #fff !important;
+                            }*/
+
+
+                            /*img {
+                                cursor: pointer;
+                                overflow: visible;
+                            }*/
+
+                            /*.btn:focus,
+                            .btn:active {
+                                outline: none !important;
+                                box-shadow: none !important;
+                            }*/
+                        </style>
+
+                    </clientpanel>
+
+
+
+                    <style type="text/css">
+                        .timesheet {
+                            width: 100%;
+                            height: 292px;
+                            margin: 0 auto;
+                        }
+
+                        .timesheet {
+                            border-top: 1px solid rgba(250,250,250,0.5);
+                            background-color: #333;
+                            position: relative;
+                        }
+
+                            .timesheet.color-scheme-default .bubble-default {
+                                background-color: RGBA(252, 70, 74, 1);
+                            }
+
+                            .timesheet.color-scheme-default .bubble-lorem {
+                                background-color: RGBA(154, 202, 39, 1);
+                            }
+
+                            .timesheet.color-scheme-default .bubble-ipsum {
+                                background-color: RGBA(60, 182, 227, 1);
+                            }
+
+                            .timesheet.color-scheme-default .bubble-dolor {
+                                background-color: RGBA(244, 207, 48, 1);
+                            }
+
+                            .timesheet.color-scheme-default .bubble-sit {
+                                background-color: RGBA(169, 105, 202, 1);
+                            }
+
+                            .timesheet.color-scheme-alternative .bubble-default {
+                                background-color: #f3552e;
+                            }
+
+                            .timesheet.color-scheme-alternative .bubble-lorem {
+                                background-color: #88c33a;
+                            }
+
+                            .timesheet.color-scheme-alternative .bubble-ipsum {
+                                background-color: #436ae0;
+                            }
+
+                            .timesheet.color-scheme-alternative .bubble-dolor {
+                                background-color: #f4d234;
+                            }
+
+                            .timesheet.color-scheme-alternative .bubble-sit {
+                                background-color: #707d86;
+                            }
+
+                            .timesheet .scale {
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                white-space: nowrap;
+                            }
+
+                                .timesheet .scale section {
+                                    display: inline-block; /*float: left;*/
+                                    width: 59px;
+                                    max-width: 59px;
+                                    min-width: 59px;
+                                    text-align: center;
+                                    color: rgba(250,250,250,0.8);
+                                    font-family: "Signika Negative";
+                                    font-size: 13px;
+                                    line-height: 24px;
+                                    font-weight: lighter;
+                                    border-left: 1px dashed rgba(250,250,250,0.2);
+                                    height: 100%;
+                                }
+
+                        .chen_shift_map .hed section {
+                            text-align: left !important;
+                        }
+
+                        .timesheet .data {
+                            margin: 28px 0 0 0;
+                            padding: 0;
+                            text-align: left;
+                            list-style-type: none;
+                            color: rgba(250,250,250,0.8);
+                            font-family: "Signika Negative";
+                            font-size: 13px;
+                            /*overflow: hidden;*/
+                        }
+
+                            .timesheet .data li {
+                                margin: 0 0 3px 0;
+                                line-height: 22px;
+                                height: 21px;
+                                display: block;
+                                clear: both;
+                                position: relative;
+                                white-space: nowrap;
+                            }
+
+                                .timesheet .data li:hover .bubble {
+                                    opacity: 1;
+                                }
+
+                                .timesheet .data li .date {
+                                    color: #b5b5b5;
+                                    font-size: 14px;
+                                }
+
+                                .timesheet .data li .label {
+                                    font-weight: lighter;
+                                    font-size: 14px;
+                                    padding-left: 5px;
+                                    line-height: 21px;
+                                    color: #979796;
+                                    white-space: nowrap;
+                                }
+
+                                .timesheet .data li .bubble {
+                                    width: 24px;
+                                    height: 7px;
+                                    display: block;
+                                    float: left;
+                                    position: relative;
+                                    top: 7px;
+                                    border-radius: 4px;
+                                    margin: 0 10px 0 0;
+                                    opacity: 0.7;
+                                }
+
+                        #timesheet-alternative {
+                            background-color: RGBA(247, 247, 247, 1);
+                            border-radius: 5px;
+                        }
+
+                            #timesheet-alternative section {
+                                color: RGBA(63, 68, 72, 1);
+                                border-left: 1px dashed RGBA(63, 68, 72, 0.2);
+                            }
+
+                                #timesheet-alternative section:first-child {
+                                    border-left: 1px dashed transparent;
+                                }
+
+                            #timesheet-alternative .date {
+                                display: none;
+                            }
+
+                            #timesheet-alternative .bubble {
+                                margin-right: 7px;
+                            }
+
+                            #timesheet-alternative .label {
+                                padding-left: 0px;
+                                color: RGBA(48, 48, 48, 1);
+                            }
+                    </style>
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- end message list section  -->
+        <!-- start content section  -->
+        <div class="d-none chat col-12 px-0">
+            <div class="chat__container">
+                <div class="chat__wrapper py-2 pt-mb-2 pb-md-3">
+                    <div class="chat__messaging messaging-member--online pb-2 pb-md-2 pl-2 pl-md-4 pr-2">
+                        <div class="chat__previous d-flex">
+                            <i class="ti-arrow-left mr-2"></i>
+                        </div>
+                        <div class="chat__notification d-flex d-md-none chat__notification--new">
+                            <span>1</span>
+                        </div>
+                        <div class="chat__infos pl-2 pl-md-0">
+                            <div class="chat-member__wrapper" data-online="true">
+                                <div class="chat-member__avatar">
+                                    <!--<img src="https://randomuser.me/api/portraits/thumb/women/56.jpg" alt="Jenny Smith" loading="lazy">-->
+                                    <div class="user-status user-status--large"></div>
+                                </div>
+                                <div class="chat-member__details">
+                                    <span class="chat-member__name">Jenny Smith</span>
+                                    <span class="chat-member__status">Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat__actions mr-2 ">
+                            <ul class="m-0">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 48 48">
+                                        <path d="M38.4,48c-2.1,0-5.1-.8-9.5-3.2a62.9,62.9,0,0,1-14.6-11A61.7,61.7,0,0,1,3.2,19C-.9,11.8-.3,8.5.7,6.4A9.7,9.7,0,0,1,4.8,2,21.1,21.1,0,0,1,7.8.4h.3c1.8-.7,3-.3,4.9,1.5h.1a40.1,40.1,0,0,1,5.4,8.2c1.3,2.6,1.6,4.3-.2,6.9l-.5.6c-.8,1-.8,1.2-.8,1.6s1.9,3.4,5.2,6.7S28,30.8,28.8,31s.6,0,1.6-.8l.7-.4c2.5-1.9,4.2-1.6,6.8-.3A40.6,40.6,0,0,1,46.1,35h.1c1.8,1.9,2.2,3.1,1.5,4.9v.2h0a21.1,21.1,0,0,1-1.6,3,10,10,0,0,1-4.3,4.1A7.7,7.7,0,0,1,38.4,48ZM9.5,4.1H9.2L6.9,5.4H6.8A6.3,6.3,0,0,0,4.3,8.1c-.3.7-1.2,2.6,2.4,9A58.9,58.9,0,0,0,17.1,30.9,58.2,58.2,0,0,0,30.9,41.3c6.4,3.6,8.4,2.7,9.1,2.4a6.7,6.7,0,0,0,2.5-2.5.1.1,0,0,0,.1-.1c.5-.8.9-1.6,1.3-2.4v-.2l-.5-.6a35.4,35.4,0,0,0-7.3-4.8c-1.7-.8-1.8-.8-2.7-.1l-.6.4A5.3,5.3,0,0,1,28,34.9c-2.9-.6-7.4-4.9-8.7-6.2s-5.6-5.8-6.2-8.7.6-3.6,1.5-4.8l.4-.6c.7-.9.8-1-.1-2.7a35.4,35.4,0,0,0-4.8-7.3Z" fill="#f68b3c" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 46.8 47.4">
+                                        <path d="M35.8,47.4H11a11,11,0,0,1-11-11V11.6A11,11,0,0,1,11,.6h8.8a2,2,0,1,1,0,4H11a7,7,0,0,0-7,7V36.4a7,7,0,0,0,7,7H35.8a7,7,0,0,0,7-7v-9a2,2,0,1,1,4,0v9A11,11,0,0,1,35.8,47.4Z" fill="#f68b3c" />
+                                        <path d="M36.6,20.4A10.2,10.2,0,1,1,46.8,10.2,10.2,10.2,0,0,1,36.6,20.4ZM36.6,4a6.2,6.2,0,1,0,6.2,6.2A6.2,6.2,0,0,0,36.6,4Z" fill="#f68b3c" />
+                                    </svg>
+                                </li>
+                                <li class="chat__details d-flex d-xl-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 42.2 11.1">
+                                        <g>
+                                            <circle cx="5.6" cy="5.6" r="5.6" fill="#d87232" />
+                                            <circle cx="21.1" cy="5.6" r="5.6" fill="#d87232" />
+                                            <circle cx="36.6" cy="5.6" r="5.6" fill="#d87232" />
+                                        </g>
+                                    </svg>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="chat__content pt-3 px-3">
+
+                        <textarea class="form-control h-100 logathe" style="margin-top:-3px">
+                            5	2008-09-20 05:04:23	1	0	1	0
+                            5	2008-09-20 09:04:58	1	0	1	0
+                            5	2008-09-20 10:06:47	1	0	1	0
+                            5	2008-09-20 14:07:28	1	0	1	0
+                        </textarea>
+
+                    </div>
+                    <div class="chat__send-container px-2 px-md-3 pt-1 pt-md-3">
+                        <div class="custom-form__send-wrapper">
+                            <input type="text" class="form-control custom-form" id="message" placeholder="Ecrivez un message …" autocomplete="off">
+                            <div class="custom-form__send-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--send-img" viewBox="0 0 45.7 45.7">
+                                    <path d="M6.6,45.7A6.7,6.7,0,0,1,0,39.1V6.6A6.7,6.7,0,0,1,6.6,0H39.1a6.7,6.7,0,0,1,6.6,6.6V39.1h0a6.7,6.7,0,0,1-6.6,6.6ZM39,4H6.6A2.6,2.6,0,0,0,4,6.6V39.1a2.6,2.6,0,0,0,2.6,2.6H39.1a2.6,2.6,0,0,0,2.6-2.6V6.6A2.7,2.7,0,0,0,39,4Zm4.7,35.1Zm-4.6-.4H6.6a2.1,2.1,0,0,1-1.8-1.1,2,2,0,0,1,.3-2.1l8.1-10.4a1.8,1.8,0,0,1,1.5-.8,2.4,2.4,0,0,1,1.6.7l4.2,5.1,6.6-8.5a1.8,1.8,0,0,1,1.6-.8,1.8,1.8,0,0,1,1.5.8L40.7,35.5a2,2,0,0,1,.1,2.1A1.8,1.8,0,0,1,39.1,38.7Zm-17.2-4H35.1l-6.5-8.6-6.5,8.4C22,34.6,22,34.7,21.9,34.7Zm-11.2,0H19l-4.2-5.1Z" fill="#f68b3c" />
+                                </svg>
+                            </div>
+                            <div class="custom-form__send-emoji">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--send-emoji" viewBox="0 0 46.2 46.2">
+                                    <path d="M23.1,0A23.1,23.1,0,1,0,46.2,23.1,23.1,23.1,0,0,0,23.1,0Zm0,41.6A18.5,18.5,0,1,1,41.6,23.1,18.5,18.5,0,0,1,23.1,41.6Zm8.1-20.8a3.5,3.5,0,0,0,3.5-3.5,3.5,3.5,0,0,0-7,0,3.5,3.5,0,0,0,3.5,3.5ZM15,20.8a3.5,3.5,0,0,0,3.5-3.5A3.5,3.5,0,0,0,15,13.9a3.4,3.4,0,0,0-3.4,3.4A3.5,3.5,0,0,0,15,20.8Zm8.1,15a12.6,12.6,0,0,0,10.5-5.5,1.7,1.7,0,0,0-1.3-2.6H14a1.7,1.7,0,0,0-1.4,2.6A12.9,12.9,0,0,0,23.1,35.8Z" fill="#f68b3c" />
+                                </svg>
+                            </div>
+                            <button type="submit" class="custom-form__send-submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--send" viewBox="0 0 45.6 45.6">
+                                    <g>
+                                        <path d="M20.7,26.7a1.4,1.4,0,0,1-1.2-.6,1.6,1.6,0,0,1,0-2.4L42.6.5a1.8,1.8,0,0,1,2.5,0,1.8,1.8,0,0,1,0,2.5L21.9,26.1A1.6,1.6,0,0,1,20.7,26.7Z" fill="#d87232" />
+                                        <path d="M29.1,45.6a1.8,1.8,0,0,1-1.6-1L19.4,26.2,1,18.1a1.9,1.9,0,0,1-1-1.7,1.8,1.8,0,0,1,1.2-1.6L43.3.1a1.7,1.7,0,0,1,1.8.4,1.7,1.7,0,0,1,.4,1.8L30.8,44.4a1.8,1.8,0,0,1-1.6,1.2ZM6.5,16.7l14.9,6.6a2,2,0,0,1,.9.9l6.6,14.9L41,4.6Z" fill="#d87232" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end content section  -->
+        <!-- start infos section  -->
+        <div class="d-none col-12 col-md-5 col-lg-4 col-xl-3 px-4 px-sm-5 px-lg-4 user-profile">
+            <div class="user-profile__close d-flex">
+                <i class="ti-arrow-left mr-2"></i>
+            </div>
+            <div class="user-profile__wrapper">
+                <div class="user-profile__avatar">
+                    <!--<img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Jenny Smith" loading="lazy">-->
+                </div>
+                <div class="user-profile__details mt-1">
+                    <span class="user-profile__name">Jenny Smith</span>
+                    <span class="user-profile__phone">(025) 015-234-567</span>
+                    <span class="user-profile__location">New York, United States</span>
+                </div>
+                <div class="user-profile__description">
+                    <p>Fly me to the moon 🌙 If you feel like your life is a routine, step back and take a deep breath.</p>
+                </div>
+                <div class="user-profile__learning mt-4">
+                    <span class="user-profile__label">Social Medias</span>
+                    <ul class="user-profile__tags user-profile__tags--primary mt-2">
+                        <li><a href="https://www.instagram.com/tiantsoa_sh/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/" target="_blank">Linkedin</a></li>
+                        <li><a href="https://codepen.io/tiantsoa" target="_blank">Codepen</a></li>
+                    </ul>
+                </div>
+                <div class="user-profile__hobbies">
+                    <span class="user-profile__label">Activities</span>
+                    <ul class="user-profile__tags user-profile__tags--secondary mt-2">
+                        <li>Biking</li>
+                        <li>Cooking</li>
+                        <li>Traveling</li>
+                        <li>Grahic design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end infos section  -->
+    </div>
+
+
+</div>
+
+<script type="text/javascript">
+
+    /* ===================================
+                Screen resize handler
+            ====================================== */
+    if (!Main.hasOwnProperty('device_step2')) Main.device_step2 = (function () { // scoping
+
+        "use strict";
+
+        //obfucation step 1: minify -> obfucation uncheck move strings into Array option.
+        const workerCODE = function (dat, tenNA, hed, M, attlog__rte) {
+
+            //debugger;
+
+            const CB = this;
+
+            const modDB = {
+                W: function (db) {
+
+                    //debugger;
+
+                    if (db.kq == 0) {//create new
+                        //
+                        const D$b = db.e.target.result;//var Db = e.target.result;
+
+                        //uncomment if we want to start clean
+                        for (var z = 0; z < hed.length; z++) {
+                            if (D$b.objectStoreNames.contains(hed[z])) D$b.deleteObjectStore(hed[z]);
+                            D$b.createObjectStore(hed[z], { autoIncrement: true });
+                        };
+
+                        //const tc = D$b.createObjectStore(hed, { autoIncrement: true });
+                        //tc.createIndex("LogIndex", "logid");
+                        //
+                    } else if (db.kq == 1) { //ok
+                        //
+
+                        //se modify cho nay a?
+                        if (workerCODE.hasOwnProperty(tenNA)) {
+                            //debugger;
+                            var c = modDB['SU'];
+                        };
+
+
+                        var saveRST = 0,
+                            //, hisTime = new Date()
+                            //, hisID = hisTime.getTime(),
+
+                            ts = db.rst.transaction([/*lin,*/ hed[attlog__rte]], "readwrite"),
+                            //hisStore = ts.objectStore(lin),
+                                        tcStore = ts.objectStore(hed[attlog__rte]),
+                                        countHIS = 0,
+                                        log_1 = {},
+                                        req;
+                        //debugger;
+                        req = tcStore.put(dat, 1);
+
+                        //
+                        //
+                        req.onsuccess = function (e) {
+                            //
+                            //debugger;
+                            //saveRST = 1;
+                            //dat['aid'] = e.target.result;//auto ID vua tao ra
+                            //
+                        };
+                        //
+                        //
+                        ts.oncomplete = function () {
+                            //
+                            //debugger;
+                            db.rst.close();
+                            //
+                            if (CB) CB();
+                            //
+                        };
+                    } else {//err
+                        if (CB) CB();
+                    }
+                }
+                ,
+                R: function (db) {
+                    //
+                    //debugger;
+
+                    if (db.kq == 0) {//create new
+                        //
+                        db.cb('cancel');
+                        //khong tao moi
+                        //
+                        //di lay cai dau tien ....
+                        //new opts.zkblob(-505, m[2], m[1] + 1, "0|300|$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;|1|2");
+                        //
+                        if (CB) CB([0]);//do request..
+                        //
+                    } else if (db.kq == 1) { //ok
+                        // dbTBname: ['loghis', 'tc3'],
+                        try {
+                            var req
+                            , rst = []
+                            , ts = db.rst.transaction([hed[attlog__rte]], "readonly")
+                            , tc3Store = ts.objectStore(hed[attlog__rte]);
+                            //
+                            ts.oncomplete = function () {
+                                db.rst.close();
+                                //
+                                if (CB) CB([1, rst]);//tra ve ket qua????
+                                //
+                                //debugger;
+                                //
+                                workerCODE[tenNA] = rst;
+                                //
+                                //for (var z in workerCODE) {
+                                //    if (workerCODE.hasOwnProperty(z)) {
+                                //        console.log(new Date().getTime(), z, workerCODE[z]);
+                                //    };
+                                //};
+                                //
+                                //
+                            };
+                            //
+                            tc3Store.openCursor().onsuccess = function (e) {
+                                var cursor = e.target.result;
+                                if (cursor) {
+                                    //if (logIDs.indexOf(cursor.value.logid) > -1) {
+                                    rst.push(cursor.value);
+                                    //};
+                                    cursor.continue();
+                                } else {
+                                    //End
+                                }
+                            };
+                        } catch (err) {
+                            //console.log('ios', 'indexedDB');
+                            if (CB) CB([1, rst]);//tra ve ket qua????
+                            workerCODE[tenNA] = rst;
+                        }
+                    };
+                    //
+                }
+
+                ,
+
+                SU: function () {
+
+                    //debugger;
+
+                    //reset variable rst
+                    var attLOG = this,
+
+                        rst = "", RET = [0, [], null, null, 0];
+                    //
+                    if (attLOG[0] != "-1") {//download error
+
+                        //debugger;
+                        //store it to indexDB ......
+
+                        for (var z = attLOG.length - 1; z > -1; z -= 3) {
+                            //debugger;
+                            rst += attLOG[z - 1];
+
+                            const mp = attLOG[z];
+
+                            RET[4] += mp[1];//so luong log the
+                            //
+                            //
+                            if (parseInt(mp[0]) > RET[0]) RET[0] = parseInt(mp[0]);//max ID in table ATT_LOG
+                            //
+                            //
+                            //
+                            for (var h = 0; h < mp[4].length; h += 2) {
+                                const atI = RET[1].indexOf(mp[4][h]);
+                                if (atI > -1) {
+                                    //don so luong log the cua nhan vien nay len
+                                    RET[1][atI + 1] += mp[4][h + 1];
+                                } else {
+                                    RET[1].push(mp[4][h]);
+                                    RET[1].push(mp[4][h + 1]);
+                                }
+                            };
+
+                            //
+                            //tu ngay
+                            if (!RET[2]) {
+                                RET[2] = mp[2];
+                            } else {
+                                if (new Date(mp[2]) < new Date(RET[2])) {
+                                    RET[2] = mp[2];//lay lai ngay lon hon
+                                }
+                            }
+                            //den ngay
+                            if (!RET[3]) {
+                                RET[3] = mp[3];
+                            } else {
+                                if (new Date(mp[3]) > new Date(RET[3])) {
+                                    RET[3] = mp[3];//lay lai ngay lon hon
+                                }
+                            }
+                        };
+                    };
+
+                    return [[RET[0], RET[4], RET[2], RET[3], RET[1], RET[4]], rst];
+                }
+
+                ,
+
+                logRTE: function (l0g) {
+                    //
+                    debugger;
+                    //
+                    try {
+                        //
+                        if (/*ARGs*/dat[3] === true) return;//download 1 ngay
+
+                        var rte_lg_map = dat[4];
+                        //if (!rte_lg_map) {//rte-log head ko co
+                        //    rte_lg_map = self.localStorage.getItem(tenDB + dat[2]/*.VER*/ + '__rte');
+                        //};
+
+                        const whe_rte = new Date(new Date().toISOString().split('T')[0]),
+                            rstRTE = [];
+
+                        const ax = l0g[0].split(/\r?\n/);
+                        if (ax[ax.length - 1].trim() == "") ax.splice(-1);
+                        //
+                        for (var z = ax.length - 1; z > -1; z--) {
+                            //
+                            if (new Date(ax[z].split('\|')[2]/*.replace(/-/g, '\/')*/) > whe_rte) {
+                                rstRTE.unshift(ax[z]);//thu tu lon xon, ko khong che duoc.
+                            };
+                            //
+                            //dt  = L[1]/*'01-01-1970 00:03:44'*/.split(/\-|\s/),
+                            //dat = new Date(dt.slice(0, 3)/*.reverse()*/.join('/') + ' ' + dt[3]);
+                        };
+                        //
+
+                        debugger;
+
+                        //cau truc :l0g[1]: [0]: ID log in ATT_LOG, [1]:so luong log the
+                        //
+                        //
+                        //fake end line of rstRTE by add ID + SL log
+                        if (rstRTE.length > 0) {
+                            //
+                            const zz = rstRTE.length - 1, endLN = rstRTE[zz];
+                            //
+                            //cau truc last log : [0]: so luong log the [1]:ID log in ATT_LOG
+                            rstRTE[zz] = (zz+1) + '|' + l0g[1][0] + '|' + endLN;
+                            //
+                            //*** same in worker -> RST()
+                            const l0g_NEW = workerCODE(rstRTE, null, null, 'l0g_SUM')([], [], [0, 50, 0]);
+                                //usr = l0g_NEW[0],
+                                //dMap = l0g_NEW[1],
+                                //req = l0g_NEW[2];
+                            //
+                            //phuc hoi lai end line
+                            rstRTE[zz] = endLN;
+                            //
+                            //
+                            //attLOG = attLOG.concat([m[1][3][2], rst, dMap]);
+                            //
+                            //
+                            //*** same in worker -> RST_END()
+                            return workerCODE(null, null, null, 'SU').bind(['nouse', rstRTE.join('\n'), l0g_NEW[1]/*dMap*/])();
+                            //
+                            //
+                            //
+                        };
+                        //
+                    } catch (err) {
+                        //
+                    };
+                }
+
+                ,
+
+                l0g_SUM: function (usr, dMap, req) {
+                    //
+                    var lne = dat,
+                        oriRST,
+                        z = lne.length - 1;
+                    //
+                    //thuong end line la ky tu xuong dong.
+                    for (z; z > -1; z--) {
+                        if (lne[z].trim() != '') {
+                            //
+                            //console.log(lne[z]);
+                            //
+                            const maxID = lne[z].split('|');
+
+                            //bo idex dau tien vi day la total record
+                            req[2] = maxID.splice(0, 1)[0];//next block keep total here
+                            //
+                            //update start next block
+                            req[0] = maxID[0];
+                            //
+                            //
+                            usr = usr.concat(['|' + maxID[1].trim(), 1]);//User_PIN cua line cuoi cung
+                            //
+                            dMap[0] = maxID[0];//ID log
+                            dMap[1] = z + 1;//so luong log
+
+                            dMap[3] = maxID[3];//max attlog time
+                            //
+                            const _usr = lne[0].split('|');
+                            //debugger;
+                            dMap[2] = _usr[z == 0 ?
+
+                                4//(usr[1] = 2, 3)//so 3 la index cua _usr[]
+
+                                :
+
+                                (
+                                usr = usr.concat(['|' + _usr[0].trim(), 1]) //User_PIN cua line 0
+                                ,
+
+                                2//index lay max log cua _usr[]
+
+                                )
+
+                            ];//max attlog
+                            //
+                            //
+                            //remove maxID in origin result
+                            //rst = rst.replace(req[2] + "|" + req[0] + "|", "");
+                            oriRST = [lne[z], lne[z].replace(req[2] + "|" + req[0] + "|", "")];//line se replace ...
+                            //
+                            break;
+                        }
+                    };
+
+                    //debugger;
+
+                    //lay min, max log, count user
+
+                    for (var k = 1; k < z ; k++) {//bo line dau tien, va line cuoi cung
+
+                        const maxID = lne[k].split('|'),
+                            idx = usr.indexOf('|' + maxID[0].trim());
+                        //
+                        if (idx < 0) {//chua co.
+
+                            usr = usr.concat(['|' + maxID[0].trim(), 1]);//User_PIN cua line cuoi cung
+
+                        } else {//cong len 1 log
+                            usr[idx + 1] += 1;
+                        }
+                    };
+                    //
+                    //
+                    //
+                    //luu giu lai index=4
+                    dMap.push(usr);
+                    //index=5
+                    dMap.push(req[2]);//total log the cua may cham cong
+                    //
+                    //
+                    return [usr, dMap, req, oriRST];
+                    //
+                }
+                //
+            };
+            //
+            //debugger;
+            if (tenNA) {
+                lo$DB(modDB[M], tenNA);
+            } else {
+                return modDB[M];
+            };
+            //
+        };
+
+        //obfucation step:2 :  minify variable block -> add to obfucator tool
+        const MyObj = function (opts) { // constructor
+
+            //debugger;
+
+            const PAA = opts.el,
+
+                js_js_att = PAA.closest('.modal-dialog').hasClass('js_js_att'),
+                attlog_oneday = PAA.hasClass('attlog_oneday'),
+
+                $chat = PAA.find(".chat"),
+
+                $profile = PAA.find(".user-profile"),
+
+                smallDevice = window.matchMedia("(max-width: 767px)"),
+
+                largeScreen = window.matchMedia("(max-width: 5199px)"),
+
+                evt = smallDevice.addEventListener ? 'addEventListener' : 'addListener';
+
+
+
+            if (PAA.hasClass('JS_JS_payrollonline')) {
+                //debugger;
+                PAA.find(".global").removeClass('invisible').
+                prev().addClass('d-none');
+                //
+                //khi form realtime trigger se show ra element chat
+                $chat.empty();
+                $profile.empty();
+
+            };
+
+
+
+            smallDevice[evt]("change", handleDeviceChange);
+            largeScreen[evt]("change", handleLargeScreenChange);
+
+            handleDeviceChange(smallDevice);
+            handleLargeScreenChange(largeScreen);
+
+            function handleDeviceChange(e) {
+                if (e.matches) chatMobile();
+                else chatDesktop();
+            }
+
+            function handleLargeScreenChange(e) {
+                if (e.matches) profileToogleOnLarge();
+                else profileExtraLarge();
+            }
+
+            function chatMobile() {
+                $chat.addClass("chat--mobile");
+            }
+
+            function chatDesktop() {
+                $chat.addClass("chat--mobile");//
+            }
+
+            function profileToogleOnLarge() {
+                $profile.addClass("user-profile--large");
+            }
+
+            function profileExtraLarge() {
+                $profile.addClass("user-profile--large");//
+            }
+
+
+
+
+            const online_signal = function () { // scoping
+
+                function _draw(canvas) {//https://codepen.io/collin-garvey/pen/BdWMMb
+                    //debugger;
+                    //var canvas = document.getElementById('binary-canvas');
+                    if (!canvas) return;
+                    var ctx = canvas.getContext('2d'), raf;
+
+                    //ctx.canvas.width = canvas.innerWidth;
+                    //ctx.canvas.height = canvas.innerHeight;
+
+                    ctx.font = '20px Arial';
+                    ctx.fillStyle = '#444444';
+
+                    var fontSize = 20;
+                    var columns = Math.floor(canvas.width / fontSize);
+                    var rows = Math.floor(canvas.height / fontSize);
+
+                    var binChars = ['0', '1'];
+                    var bits = [];
+                    var bitHeight = fontSize;
+                    var bitWidth = fontSize;
+
+                    // Populate array of 'bits'
+                    for (var r = 0; r < rows; r++) {
+                        for (var c = 0; c < columns; c++) {
+                            bits.push({
+                                x: c * bitWidth,
+                                y: r * bitHeight,
+                                value: binChars[Math.floor(Math.random() * binChars.length)],
+                                hasDrawn: false
+                            });
+                        }
+                    }
+
+                    // Vars for manually calculating frame rate
+                    var fps = 10;
+                    var interval = 1000 / fps;
+                    var now;
+                    var then = Date.now();
+                    var delta;
+
+                    // Draw all bits once before starting animation
+                    bits.forEach(function (bit) {
+                        ctx.clearRect(bit.x, bit.y, bitWidth, bitHeight);
+                        ctx.fillText(bit.value, bit.x, bit.y + bitHeight);
+                        bit.hasDrawn = true;
+                    });
+
+                    var dogDR = function () {
+                        raf = window.requestAnimationFrame(dogDR);
+                        now = Date.now();
+                        delta = now - then;
+
+                        if (delta > interval) {
+                            bits.forEach(function (bit) {
+                                if (bit.hasDrawn === true && (Math.random() * 100) > 95) { // If passes the randomness check
+                                    var newVal = (bit.value === binChars[1]) ? binChars[0] : binChars[1];
+
+                                    ctx.clearRect(bit.x, bit.y, bitWidth, bitHeight);
+                                    ctx.fillText(newVal, bit.x, bit.y + bitHeight);
+                                    bit.value = newVal;
+                                }
+                            });
+                            then = now - (delta % interval);
+                        }
+                    }
+                    dogDR();
+                };
+
+                return {
+                    draw: _draw
+                };
+            }()
+            ,
+            dog_canvas = PAA.find('.dog_canvas')
+            ,
+
+            fixWID = function (E, O) {
+
+                var miSZ = 10 || O && O.miSZ
+                    , maSZ = 51 || O && O.maSZ
+                    , ste = 1 || O && O.ste
+                    , unt = 'px';
+
+                (O && O.E || [E]).forEach(function (el) {
+
+                    var pW = el.parentNode.clientWidth - 10,
+                        ovF = true,
+                        i = maSZ;
+
+                    while (ovF && i > miSZ) {
+                        //
+                        el.style.fontSize = i + unt;
+                        //
+                        ovF = el.clientWidth > pW;
+                        //
+                        if (ovF) i -= ste;
+                        //
+                    };
+                    //
+                });
+            }
+            ,
+            txtW = function (dumeVAL) {
+
+                var hwnFixW;
+                function logdisplay(e) {
+                    clearTimeout(hwnFixW);
+                    hwnFixW = setTimeout(function () {
+                        fixWID(null, { E: [].slice.apply(dumeVAL) });
+                    }, 200);
+                }
+                //
+                // Call once to set.
+                logdisplay();
+                //
+                // Bind events
+                $(window).on('orientationchange resize', logdisplay);
+                //
+                // unBind events when popup close
+                opts.elUI.unFixW = function () {
+                    $(window).off('orientationchange resize', logdisplay);
+                    delete opts.elUI.unFixW;
+                };
+                //
+            }
+            ,
+
+            timeAgo = function (input) {
+                //https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site
+
+                var fnLAN = function (v, ix) {
+                    if (aLAN.js_011_3_4) {
+                        return aLAN.js_011_3_4 + " " + v + " " + aLAN.js_011_34[ix];
+                    }
+                }
+                    ,
+                    date = (input instanceof Date) ? input : new Date(input),
+                    ranges = {
+                        year: 3600 * 24 * 365,
+                        month: 3600 * 24 * 30,
+                        week: 3600 * 24 * 7,
+                        day: 3600 * 24,
+                        hour: 3600,
+                        minute: 60,
+                        second: 1
+                    }
+                    ,
+                    secondsElapsed = Math.abs(date.getTime() - Date.now()) / 1000,
+                    ix = 1;
+
+                for (var key in ranges) {
+                    if (ranges[key] < secondsElapsed) {
+                        var delta = Math.round(secondsElapsed / ranges[key]);
+                        return fnLAN(delta, ix) || delta + " " + key + (parseInt(delta) > 1 ? 's' : '') + " Ago";
+                    }
+                    ix++;
+                };
+
+                return aLAN.js_011_34 && aLAN.js_011_34[0] || 'Just now';
+            }
+            ,
+
+            filas = []
+            ,
+
+            CARDX = function (dumeRING) {
+                //
+                const ringX = PAA.find('.cardx'),
+                    rating = ringX.find('.rating'),
+                    couter = rating.find('.phantram');
+                //
+                //signal before request ajax ftp....
+                ringX.removeClass('d-none').prevAll().html('');
+                //
+                filas.iDOG = 0;
+                filas.per = 0;
+                //
+                var
+
+                    GREEN = 0,//tai thanh cong
+                    RED = 100, //tai that bai
+                    TONG = 0,
+                    PHANTRAM = 0,
+
+                    lst_MCC = []
+                    ,
+
+                    CALC_S1 = {
+
+                        "localconn": function (m) {//android result
+                            //debugger;
+                            return CALC_S1['0'](m, 2);
+                        }
+                        ,
+                        "0": function (m, fSL) {//node js result
+                            //debugger;
+                            var sl = 0, pt = 0;
+                            if (m[0] == "OK") {//thanh cong
+
+                                sl = parseInt(fSL == 1 ? m[1][4][2] : m[1][0].split(';')[0]);
+                                TONG += sl;
+
+                            } else {
+                                //that bai thi sl=0 default
+                                sl = -1;//bi loi
+                                //
+                            };
+                            //
+                            for (var z = 0; z < dumeRING.length; z++) {
+                                if (dumeRING[z][0] == m[2].id) {
+                                    //
+                                    pt = dumeRING[z][2];
+                                    dumeRING[z][1] = sl;//cap nhat lai so luong cua origin
+                                    //
+                                    if (sl > -1) PHANTRAM += pt;//chi cong phan tram cua nhung devcie OK
+                                    //
+                                    if (sl == 0) filas.per += pt;//0 new log
+                                    //
+                                    break;
+                                }
+                            };
+                            //
+                            //console.log('sl NaN', sl);
+                            return [m[2].id, sl, pt, 0];
+                        }
+                        ,
+                        "calc": function () {
+                            //tinh toan lai ti le % cua thiet bi
+                            for (var c = 0; c < lst_MCC.length; c++) {
+
+                                if (lst_MCC[c][1] == -1) {//so luong
+                                    RED -= lst_MCC[c][2];
+                                }
+
+                            }
+
+                        }
+                    }
+                    ,
+
+                    bl = 0,
+                    block = rating.find('.block'),
+                    bg = function () {
+                        const i = block.length;
+                        if (i < 100) {
+                            rating.append('<div class="block" style="transform:rotate(' + 3.6 * i + 'deg);"></div>');
+                            //update lai
+                            block = rating.find('.block');
+                        } else {
+                            clearInterval(bgHWN);
+                        };
+
+                    }
+                    ,
+                    bgHWN = setInterval(bg, 30)//free
+                    ,
+                    tmpVAL
+                    ,
+                    isENDJOB = 0
+                    ,
+                    RE = {
+
+                        BZ2_From_MCC: function (m) {
+                            //
+                            //debugger;
+                            //chu y chi bind lan dau tien thoi.
+                            if (m[4].indexOf('0|') == 0) {
+                                //
+                                lst_MCC.push(CALC_S1[m[1][3][0]](m, 1));
+                                //
+                                if (lst_MCC.length == dumeRING.length) {//chuyen sang step 2
+                                    clearInterval(bgHWN);
+                                    setInterval(bg, 5);
+                                    //
+                                    CALC_S1.calc();
+                                    //
+                                    if (lst_MCC.tmp) {
+                                        for (var z = 0; z < lst_MCC.tmp.length; z++) {
+                                            //debugger;
+                                            RE.WOKER_2_BZ2.bind(lst_MCC.tmp[z])();
+                                        }
+                                        delete lst_MCC.tmp;
+                                    }
+                                    //
+                                };
+                                //
+                            } else {
+                                //da co log roi.
+                                //debugger;
+                            };
+                            //
+                            clearInterval(tmpVAL);
+                            //
+                            if (filas.per < 100) {
+                                tmpVAL = setInterval(FAKE_PERCENT, 1000);
+                            };
+                            //
+                        }
+                        ,
+                        WOKER_2_BZ2: function () {
+                            //
+                            //
+                            if (lst_MCC.length < dumeRING.length) {
+                                //local se chay le hon
+                                if (lst_MCC.tmp) {
+                                    lst_MCC.tmp.push(this);
+                                } else {
+                                    lst_MCC.tmp = [this];
+                                }
+                                return;
+                            };
+                            //
+                            //
+                            clearInterval(tmpVAL);
+                            clearInterval(RE.hwn);
+                            //
+                            //debugger;
+                            //console.log(this);
+                            //
+                            var id = this[0],
+                                    msg = this[1],
+                                    blo = msg[1],
+                                    tog = 0;
+
+
+
+                            for (var c = 0; c < lst_MCC.length; c++) {
+                                if (lst_MCC[c][1] > -1) {//so luong
+                                    if (lst_MCC[c][0] == id) {
+                                        blo += lst_MCC[c][3];
+                                        lst_MCC[c][3] = blo;//so luong OK
+                                    };
+                                    tog += lst_MCC[c][3];
+                                }
+                            }
+
+                            var totalP = parseInt(100 * tog / TONG) + (100 - RED);
+                            if (totalP > 100) totalP = 100;
+                            //
+                            if (totalP > filas.per) {
+                                console.log(new Date().getTime(), id, (totalP - filas.per));
+                                //RE.hwn = setInterval(RE.fn, totalP < 100 ? 100 : 10);
+                                RE.hwn = setInterval(RE.fn, 100 * 20 / (totalP - filas.per));
+                                filas.per = totalP;
+                            } else {
+                                tmpVAL = setInterval(FAKE_PERCENT, 1000);
+                            };
+                            //
+                        }
+                        ,
+                        DABUG: function () {
+                            clearInterval(tmpVAL);
+                            clearInterval(RE.hwn);
+                        }
+                        ,
+                        ERR: function () {
+                            //
+                            //debugger;
+                            RED = filas.per;
+                            //
+                            isENDJOB = 1;
+                        }
+                        ,
+                        fn: function () {
+                            ////
+                            ////console.log(new Date().getTime());
+                            ////
+                            //debugger;
+
+                            var cls = 'remove';
+                            //
+                            if (filas.iDOG < filas.per && filas.iDOG < block.length) {
+                                //
+                                block.eq(filas.iDOG).addClass('val' + (filas.iDOG > RED ? ' err' : ''));
+                                //
+                                filas.iDOG += 1;
+                                //
+                                couter.text(filas.iDOG);
+                                //
+                            } else {
+                                //
+                                clearInterval(RE.hwn);
+                                clearInterval(tmpVAL);
+                                //
+                                cls = 'add';
+                                if (filas.per == 100 && isENDJOB == 1) {
+                                    //
+                                    //console.log('if (filas.per == 100 && isENDJOB==1) {');
+                                    //
+                                    //
+                                    if (js_js_att === true || PAA.hasClass('JS_JS_payrollonline')) {
+                                        PAA.slideUp('fast', function () {//.find("internetConection")
+                                            //raise event to JS_JS_att.js
+                                            PAA.trigger('DOWN_ATTLOG_END');
+                                        });
+                                    } else {
+                                        PAA.find("internetConection").slideUp('slow', function () {
+
+                                            $(this).remove();
+                                            PAA.trigger('DOWN_ATTLOG_END');
+
+                                        }).next().removeClass("invisible");//.global
+                                    };
+                                    //
+
+                                    //setTimeout(function () {
+                                    //    //
+                                    DEVI__Q.isBSY = '1'//reset susy status
+                                    //    //
+                                    //    //console.log(new Date().getTime(), "RELEASE ...", DEVI__Q.isBSY);
+                                    //    //
+                                    //}, 10000);
+
+
+                                    //
+                                } else {
+                                    //ko fake no se dung yen
+                                    tmpVAL = setInterval(FAKE_PERCENT, 1000);
+                                }
+                                //
+                            };
+                            //
+                            couter.parent()[cls + 'Class']('slash');
+                            ////
+                        }
+                        ,
+                        hwn: 0
+                    }
+
+                    ,
+
+                    FAKE_PERCENT = function () {
+
+                        //debugger;
+                        //console.log(new Date().getTime(), filas.per);
+                        //
+                        filas.per += 1;
+                        //
+                        var totalP = filas.per + (100 - RED);
+                        if (totalP > 100) totalP = 100;
+                        //
+                        if (totalP == 100) {
+                            //debugger;
+                            clearInterval(RE.hwn);
+                            clearInterval(tmpVAL);
+                            filas.per = totalP;
+                            RE.hwn = setInterval(RE.fn, totalP < 100 ? 100 : 10);
+                            return;
+                        };
+                        //
+                        if (filas.per > 100) filas.per = 100;
+                        //
+                        RE.fn();
+                    };
+
+                ;
+                return RE;
+            }
+
+            ,
+
+            CARDX_CALC = function (msg) {
+                //
+                //
+                //clearInterval(CARDX_CALC.X.hwn);
+                ////
+                ////heavyBLOCK
+                ////
+                //var blo = msg[1],
+                //    tog = parseInt( msg[5]),
+
+                //    id = this,
+                //    tmpTOTAL = 0,
+                //    cntGET = 0;
+
+            }
+            ,
+
+            l0gMAP = function (re, v) {
+                //debugger;
+                //const v = it[0];
+                //
+                if (v && v[2]) {
+
+                    //v[2] null nghia la error
+                    //
+                    re[0] += v[0];//so luong log the
+                    //re[1] += v[1];//so luong nhan vien
+                    //
+                    for (var h = 0; h < v[4].length; h += 2) {
+                        const atI = re[1].indexOf(v[4][h]);
+                        if (atI > -1) {
+                            //don so luong log the cua nhan vien nay len
+                            re[1][atI + 1] += v[4][h + 1];
+                        } else {
+                            re[1].push(v[4][h]);
+                            re[1].push(v[4][h + 1]);
+                        }
+                    };
+                    //
+                    //
+                    //tu ngay
+                    if (!re[2]) {
+                        re[2] = v[2];
+                    } else {
+                        if (new Date(v[2]) < new Date(re[2])) {
+                            re[2] = v[2];//lay lai ngay lon hon
+                        }
+                    };
+                    //
+                    //den ngay
+                    if (!re[3]) {
+                        re[3] = v[3];
+                    } else {
+                        if (new Date(v[3]) > new Date(re[3])) {
+                            re[3] = v[3];//lay lai ngay lon hon
+                        }
+                    };
+                    //
+                };
+            }
+            ,
+            frmUI = function () {
+
+                /* ===================================
+                Events
+                ====================================== */
+
+                PAA.find(".messaging-member").click(function () {
+                    $chat.fadeIn();
+                    $chat.addClass("chat--show");
+                });
+
+                PAA.find(".chat__previous").click(function () {
+                    $chat.removeClass("chat--show");
+                    //
+                    //du me khi show log detail, no hide button rat kho chiu
+                    //const doA = PAA.find('actionline').addClass('d-none');
+                    //setTimeout(function () {
+                    //    doA.removeClass('d-none');
+                    //}, 500);
+                });
+
+                PAA.find(".chat__details").click(function () {
+                    $profile.fadeIn();
+                    $profile.addClass("user-profile--show");
+                });
+
+                PAA.find(".user-profile__close").click(function () {
+                    $profile.removeClass("user-profile--show");
+                });
+
+                PAA.find(".messages-page__dark-mode-toogler").click(function () {
+                    $("body").toggleClass("dark-mode");
+                });
+
+
+
+
+                const GLO = PAA.find('actionline').on("click", '.btn', function (e) {
+                    const mnu = $(e.currentTarget);
+                    if (mnu.hasClass('viewlogs')) {
+                        $chat.fadeIn();
+                        $chat.addClass("chat--show");
+                    };
+                }).closest('.global')
+
+                , tuden_ng = GLO.find('.inputs__dates input')
+
+                , titH2 = GLO.find('.clientPanel >h2')
+
+                , mcc0 = titH2.next('obj_att')
+
+                , tmpl0 = mcc0[0].outerHTML,
+
+                disVAL = GLO.find('counter .box value span'),
+
+                mcc_inf = function (mcc, it) {
+                    //
+                    const v = it[0],
+                        dis = mcc.find(".mcc_inf"),
+                        tota = fmtNB(v && v[5] || 0),
+                        slnv = fmtNB(v && (v[4].length / 2) || 0);
+                    //
+                    dis[0].innerHTML = tota;//tong so log the String.fromCharCode(29);//
+                    dis[1].innerHTML = slnv;//so luong nhan vien
+                    //
+                    //debugger;
+                    //
+                    mcc.find('.card-title b').text(it[1]['ten']);
+                    //
+                    mcc.find('.timeago').text(timeAgo(new Date()));
+                    //
+                    //save map information dowloading log
+                    //
+                    //console.log(new Date().getTime(), 'mcc_inf');
+                    //debugger;
+                    //
+                    //var isSAVE = 1;
+                    //if (v[2]) {//ko bi error
+
+                    //    it[1].dlog = [tota, slnv, v[2], v[3], new Date().getTime()];
+                    //    isSAVE = 2;
+
+                    //} else if (it[1].dlog) {
+
+                    //    delete it[1].dlog;
+                    //    isSAVE = 2;
+
+                    //};
+
+
+                    debugger;
+
+                    //console.log(new Date().getTime(), 'mcc_inf', v[2]);
+                    //if (isSAVE == 2) mcc.trigger('buoc2_c$b', [it[1]]);
+                    var isSAVE = [], storeNA = it[2][0];
+
+                    if (v[2]) {//ko bi error
+                        //
+                        //debugger;
+
+                        isSAVE = [tota, slnv, v[2], v[3], new Date().getTime()];
+                        it[1].dlog = isSAVE;
+                        //
+                        mcc.trigger('buoc2_c$b', { 'a': isSAVE, 'b': storeNA + DEVI__Q.VER[0] + (attlog_oneday === true ? '__rte' : '') });
+                        //
+                        //
+                        //
+                        if (attlog_oneday === true) {
+                            //
+                            //append log rte vao save de stor lai....
+                            isSAVE.push(DEVI__Q.RTE_Log[storeNA][0]);
+                            //cache download result lai ....
+                            DEVI__Q.RTE_Log[storeNA] = isSAVE;
+                            //
+                        };
+                        //
+                        //
+                        //thoi gian download hoan tat su dung trong JS_JS_att.js
+                        DEVI__Q[(attlog_oneday === true ? 'RTE' : 'ATT') + '_Log']['at'] = new Date().getTime();
+                        //
+                        //
+                        //} else {
+                        //    delete it[1].dlog;
+                        //    if (attlog_oneday === true) {
+                        //        delete DEVI__Q.RTE_Log[storeNA];
+                        //    };
+                    };
+                    //
+                };
+                //
+                //
+                var re = [0, [], null, null], t = 0;
+
+
+                for (var y = 0; y < frmUI.INFO.length; y++) {
+                    //
+                    debugger;
+                    const it = frmUI.INFO[y];
+                    //
+                    l0gMAP(re, it[0]);
+                    //
+                    if (t == 0) {
+                        mcc_inf(mcc0, it);
+                    } else {
+                        mcc_inf($(tmpl0.replace(/collapse0/g, 'collapse' + t)).appendTo(titH2.parent()), it);
+                    };
+                    t++;
+                }
+                //const VAL = frmUI.INFO.reduce(function (re, it, t) {
+
+                //    //
+                //    return re;
+                //    //
+                // }, [0,[],null,null]);
+                //
+                //
+                //debugger;
+                const VAL = re;
+                disVAL[0].innerHTML = frmUI.INFO.length;//so luong may cham cong
+                disVAL[2].innerHTML = fmtNB(VAL[0]);//'1.000.000';//so luong log the
+                //
+                disVAL[1].innerHTML = fmtNB(VAL[1].length / 2);//so luong nhan vien
+                //
+                //
+                //
+                txtW(disVAL);
+                //
+                //copy ra nhieu may cham cong
+                //for (var o = 1; o < 3; o++) {
+                //    titH2.parent().append(tmpl0.replace(/collapse0/g, 'collapse' + o));
+                //}
+
+                //debugger;
+                tuden_ng[0].valueAsDate = new Date(VAL[2]);
+                tuden_ng[1].valueAsDate = new Date(VAL[3]);
+
+
+
+                ////debugger;
+                ////logathe.val(logathe.val() + dat.msg);
+                //const logathe = PAA.find('.logathe').val(frmUI.VAL);
+
+
+                //
+                if (navigator.onLine) {
+                    //PAA.find("internetConection off").css('display', 'none');
+                    //PAA.find("internetConection on").css('display', 'flex');
+                    //PAA.find("internetConection").slideUp('slow');
+                } else {
+                    //PAA.find("internetConection off").css('display', 'flex');
+                    //PAA.find("internetConection on").css('display', 'none');
+                    //PAA.find("internetConection").slideDown('slow');
+                }
+
+            }
+            ,
+
+            HEAVY_JOB_HWND = {}
+            ,
+
+            extractRTE_LOG = function (dbI, JOI) {
+                //
+                //
+                debugger;
+                //
+                if (!JOI) return;
+                //
+                const storeNA = dbI[0],
+
+                    re = [0, [], null, null],
+
+                    v = JOI[0],
+
+                    tota = fmtNB(v && v[5] || 0),
+
+                    slnv = fmtNB(v && (v[4].length / 2) || 0),
+
+                    isSAVE = [tota, slnv, v[2], v[3], -1 /*chua luu local-storage, -> khi offline se luu*/];
+                //
+                //
+                //$chat.trigger('buoc2_c$b', { 'a': isSAVE, 'b': storeNA + DEVI__Q.VER[0] + '__rte' });
+                //
+                //index [5]: log
+                isSAVE.push(JOI[1]);
+                //
+                //extract rte_log from att_log se ko luu tru local-storage, -> ma chi cap nhat cache  DEVI__Q.RTE_Log
+                DEVI__Q.RTE_Log[storeNA] = isSAVE;
+                //
+            }
+            ,
+
+            endJOB = function (wo) {
+                //
+                //return;
+                //debugger;
+                //
+                if (HEAVY_JOB_HWND[wo].seson) {
+                    //iframe
+                    const dg = HEAVY_JOB_HWND[wo];
+                    delete apisvr.a$.sessions[dg.seson];
+                    dg.evtWK.parentNode.removeChild(dg.evtWK);
+                };
+                //
+                delete HEAVY_JOB_HWND[wo];
+                //
+                var count = 0;
+                for (var property in HEAVY_JOB_HWND) count++;
+                //
+                if (count == 0) {
+                    frmUI();
+                    //vet cuoi...
+                    CARDX_CALC.X.ERR();
+                };
+                //
+            };
+            //
+            frmUI.VAL = '';
+            frmUI.INFO = [];
+            //
+            dog_canvas.html('<canvas></canvas>');
+            online_signal.draw(dog_canvas.find('canvas')[0]);
+            //
+            //PAA.find("internetConection").slideUp('slow');
+            //
+
+
+
+
+
+
+            return {
+
+                bz2: function (m) {
+                    //
+                    //
+                    //debugger;
+                    CARDX_CALC.X.BZ2_From_MCC(m);
+                    //
+                    //
+                    if (m[1][3][1] == 'ZKBUSY') {//limit FTP host
+                        //debugger;
+                        return;
+                    };
+                    //
+                    //debugger;
+                    //chu y chi bind lan dau tien thoi.
+                    if (m[4].indexOf('0|') == 0) {
+
+                        //debugger;
+
+                        (function (factory) {
+                            "use strict";
+                            //debugger;
+
+                            HEAVY_JOB_HWND[m[2].id].onmessage = factory.bind(m);//XXX
+
+                        })(function () {
+
+
+                            const m1 = this, dat = arguments[0].data;
+
+                            //debugger;
+
+                            if (dat.cmd == 'ajz') {
+                                //
+                                //debugger;
+                                //khoi tao uoc tinh log se mang ve
+                                //CARDX_CALC.X.ini(m1[2].id, dat.msg);
+                                //
+                                return;
+                            };
+                            //
+                            //CARDX_CALC.bind(m1[2].id)(dat.msg[1]);
+
+                            //debugger;
+
+                            CARDX_CALC.X.WOKER_2_BZ2.bind([m1[2].id, dat.msg[1]])();
+                            //
+                            //
+                            if (dat.cmd == 'nxt') {
+
+                                new opts.zkblob(
+
+                                    m1[1][3][1]//current commandid
+                                    ,
+                                    m1[2]//dat
+                                    ,
+                                    m1[3]//index dat
+                                    ,
+
+                                    dat.msg[0]
+
+                                    ,
+
+                                    HEAVY_JOB_HWND[m1[2].id].hevyENGINE
+
+                                    );
+
+                                return;
+
+                            };
+                            //
+                            if (dat.cmd == 'end') {
+                                if (workerCODE.indexedDB == 2) {
+
+                                    debugger;
+
+                                    var isSAVE = 2;
+                                    const oDAT = workerCODE[dat.msg[2][0]];
+                                    //
+                                    if (oDAT) {//old db
+                                        //
+                                        var makeO = [];
+                                        if (["-1", "-2"].indexOf(dat.msg[1][0]) > -1) {//dMap Error
+                                            isSAVE = 1;//down flag
+                                            if (oDAT.length == 1) {//khoi build chi cho met
+                                                isSAVE = 3;//ignore
+                                                dat.msg[0] = oDAT[0];
+                                            }
+                                        } else {
+                                            makeO = dat.msg[0];
+                                            makeO.unshift("new");//chi cho vui
+                                        };
+                                        //
+                                        if (isSAVE != 3) {//ignore
+                                            for (var z = 0; z < oDAT.length; z++) {
+                                                makeO.unshift(oDAT[z][1]);
+                                                makeO.unshift(oDAT[z][0]);
+                                                makeO.unshift(z);//chi cho vui
+                                            }
+                                            makeO = workerCODE(null, null, null, 'SU').bind(makeO)();
+                                            dat.msg[0] = [makeO[1], makeO[0]];//dao nguoc lai
+                                        }
+                                    };
+
+                                    //save append vao db co san...
+                                    if (isSAVE == 2) {
+                                        workerCODE.apply(function () {
+                                            //debugger;
+                                        }, [dat.msg[0], dat.msg[2][0], dat.msg[2][1], "W", attlog_oneday === true ? 1 : 0]);
+                                    };
+                                    //
+                                    if (attlog_oneday === false) {//download mode att-log
+                                        //debugger;
+                                        extractRTE_LOG(dat.msg[2], workerCODE(/*ARGs*/dat.msg[2], null, null, 'logRTE')(/*[rst,RET]*/  dat.msg[0]));
+                                    };
+                                } else {
+                                    //
+                                    if (attlog_oneday === false) {//download mode att-log
+                                        //debugger;
+                                        extractRTE_LOG(dat.msg[2], dat.msg[3]);
+                                    };
+                                    //
+                                };
+                            };
+                            //
+                            //
+                            debugger;
+                            //frmUI.VAL += dat.msg;
+                            frmUI.INFO.push([dat.msg[0][1], m[2], dat.msg[2]]);
+                            //
+                            if (dat.msg[0][1][2]) {//download ok
+                                // DEVI__Q.RTE_Log khai bao o main.js
+                                DEVI__Q[(attlog_oneday === true ? 'RTE' : 'ATT') + '_Log'][dat.msg[2][0]] = [dat.msg[0][0]];
+                            };
+                            //
+                            endJOB(m1[2].id);
+                            //
+                        });
+
+                    };
+                    //
+                    //
+                    HEAVY_JOB_HWND[m[2].id].postMessage({ cmd: m[0]/* == "OK" ? 'close' : 0*/, dat: m });
+                    //
+                }
+                ,
+
+                initWOK: function (devs) {
+
+                    const th$a = this;
+
+                    if (PAA.hasClass('JS_JS_payrollonline')) {
+                        //debugger;
+                        //goi tu form tinh cong
+                        PAA.trigger('LOAD_XONG_JS_JS_payrollonline', [[th$a, devs]]);
+                        return;
+                    };
+
+
+                    setTimeout(function () {
+                        //
+                        th$a.___devs = devs;
+                        //
+                        th$a.initWOK_JOB(devs);
+
+                    }, 100);
+
+                }
+                ,
+
+                initWOK_JOB: function (devs) {
+                    //
+                    clearInterval(DEVI__Q.isBSY_TO);
+                    //
+                    if (DEVI__Q.isBSY == '2') {//
+                        //
+                        if (!DEVI__Q.___initWOK_JOB) DEVI__Q.___initWOK_JOB = this;
+                        //
+                        PAA.find('.text_conn').addClass('text-danger').text("BUSY ...");
+                        //
+                        DEVI__Q.isBSY_TO = setTimeout(DEVI__Q.___initWOK_JOB.initWOK_JOB, 1000);
+                        //
+                        return;
+                    };
+                    //
+                    //
+                    //debugger;
+                    //
+                    DEVI__Q.isBSY = '2';//bat flag buzy
+                    //
+                    //
+                    //
+                    if (!devs) devs = (DEVI__Q.___initWOK_JOB || this).___devs || [];
+                    //
+                    delete DEVI__Q.___initWOK_JOB;//clear
+                    //
+                    //
+                    //const rawFN = opts.wokJS+ '(' + workerCODE.toString().replace('_$_ATTLOG_$_', '_$_ATTLOG_$_'.hexEncode()) + ')()';
+
+                    const rawFN = opts.wokJS[1] +
+
+                        ';(function(initWOK){const lo$DB=' + lo$DB.toString() +
+
+                        ',workerCODE=' + workerCODE.toString() +
+
+                        ';' + opts.wokJS[2].replace('_$_ATTLOG_$_', opts.wokJS[0]) +
+
+                    '})'
+                    ,
+
+                    upHOLE = [
+                        //[2]: 1: not cross domain, 2: CORS                           ,
+                        ["0"/*1*/,
+
+                            'zkdev.dnd.vn',
+
+                            2]
+                        ,
+
+                        ["0"/*2*/,
+                            'zkheavy.vercel.app'
+                            , 2
+                        ]
+
+                        , ['0'/*3*/, "http://wdms.dnd.vn:16868", 2]
+
+                        ,
+                        ["0"/*4*/,
+
+                            'firebase.dnd.vn',
+
+                            2]
+                        ,
+                        ["5"/*5*/,
+
+                        'botay-thaihoa.koyeb.app',
+
+                        2]
+                    ]
+                    ,
+                    rndIt = function (arr, d) {
+                        //
+                        //debugger;
+
+                        let lop = [];
+                        //
+                        while (lop.length < arr.length) {
+                            //
+                            let ix = Math.floor((Math.random() * arr.length)),
+                                it = arr[ix];
+
+                            //kiem tra xem con song k????
+                            if (it[0] !== "0") {
+
+                                if (!it.isUSE || d.heavyMOD === "1") {
+                                    it.isUSE = 1;
+                                } else {
+                                    //tim cai chua dung
+                                    for (var ss = 0; ss < arr.length; ss++) {
+                                        if (arr[ss][0] !== '0' && !arr[ss].isUSE) {
+                                            arr[ss].isUSE = 1;
+                                            it = arr[ss];
+                                            break;
+                                        }
+                                    }
+                                }
+                                //
+                                return JSON.parse(JSON.stringify(it));
+                                //
+                            };
+                            //
+                            //luu giu lai index da duoc random
+                            if (lop.indexOf(ix) == -1) {
+                                lop.push(ix);
+                            };
+                            //
+                        };
+                        //
+                    }
+                    ,
+                    RND_CORS = function (d) {
+                        return rndIt(
+                            upHOLE.filter(function (it) {
+                                return it[2] > (d.heavyMOD === "1" ? 1 : 0);
+                            }), d
+                        );
+                    };
+                    //
+                    //co tong cong bao nhieu mcc?
+                    const dumeRING = [];
+                    //
+                    //
+                    for (var z = 0; z < devs.length ; z++) {
+                        //
+                        HEAVY_JOB_HWND[devs[z].id] = function (sFN, m, z, hevyENGINE) {
+                            //
+                            //debugger;
+                            //
+                            const tenDB = ('dev_' + m.serno).hexEncode(),
+
+                                //tbNA = (attlog_oneday === true ? 'alog__rte' : 'alog').hexEncode(),//ten tablename log tinh cong # log_rte dung cho realtime ....
+
+                                jobJS = sFN + "('" + btoa(JSON.stringify([tenDB,
+
+                                    ['alog'.hexEncode(), 'alog__rte'.hexEncode()], DEVI__Q.VER[0], attlog_oneday,
+
+                                    //index:4 is rte-log download lastest log condition.
+                                    (attlog_oneday === false && DEVI__Q['RTE_Log'][tenDB] ? DEVI__Q['RTE_Log'][tenDB][3] : null)//[].slice.apply(DEVI__Q['RTE_Log'][tenDB], [0,5])/*bo item [5] rte-log*/ 
+
+                                ]
+
+                                    )) + "')"
+
+                                ,
+                                doREQ = function () {
+                                    //
+                                    debugger;
+                                    //delete m.dlog;
+                                    //
+                                    const wher = [];
+                                    //
+                                    var m_dlog = attlog_oneday === true ? DEVI__Q[(attlog_oneday === true ? 'RTE' : 'ATT') + '_Log'][tenDB] : null;
+                                    //
+                                    if (!m_dlog/*m.dlog*/) {
+                                        //
+                                        m_dlog = st('getItem', tenDB + DEVI__Q.VER[0] + (attlog_oneday === true ? '__rte' : ''));
+                                        //
+                                        if (m_dlog) {//da download 1 lan roi.
+                                            m_dlog = JSON.parse(window[st0('2')](atob(m_dlog)));
+                                        };
+                                    };
+                                    //
+                                    if (m_dlog) {//da download 1 lan roi.
+                                        wher.push("Verify_Time>'" + m_dlog[3] + "'");
+                                    } else {
+                                        //
+                                        if (attlog_oneday === true && wher.length == 0) {
+                                            wher.push("Verify_Time>'" + new Date().toISOString().split('T')[0] + "'");
+                                        };
+                                    };
+                                    //
+                                    //
+                                    //se tinh toan
+                                    const _page = "0|" + (attlog_oneday === true ? "1000" : "50") + "|0|$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;|0|" + (wher.length > 0 ? ' Where ' + wher.join(' and ') : '');
+                                    //***NOTE _page[3] se ko xai trong truong hop ftp host
+                                    //
+                                    //debugger;
+                                    new opts.zkblob(-505, m, z + 1, _page, wo.hevyENGINE);
+                                    //
+                                }
+                                ,
+                                onmessage = function () {
+                                    //
+                                    //debugger;
+                                    const dat = arguments[0].data;
+                                    //
+                                    //danh dau browser support indexedDB
+                                    workerCODE.indexedDB = dat.cmd == '!indexedDB' ? 2 : 1;
+                                    //
+                                    if (dat.cmd == '!indexedDB') {//ko support worker db
+
+                                        workerCODE.apply(doREQ, [null, dat.msg[0], dat.msg[1], "R", attlog_oneday === true ? 1 : 0]);//R:read database
+
+                                    } else if (dat.cmd == 'DB') {//co support nhung chua luu tru
+                                        //ben worker goi ve ko co database ...
+                                        doREQ();
+                                    };
+                                    //
+                                    dumeRING.push([m.id, 0/*tong so luong*/, 100 / devs.length/*%*/, 0/*so luong ok*/]);
+                                    //
+                                    //debugger;
+                                    if (dumeRING.length == devs.length) {
+                                        //khoi tao cho xoay vong vong mau den....
+                                        CARDX_CALC.X = CARDX(dumeRING);
+                                    };
+                                    //
+                                };
+
+                            //
+                            var wo;
+                            //
+                            //debugger;
+                            //
+                            if (hevyENGINE[2] > 1 || m.heavyMOD === "1" || m.kind == 101) {//ban quyen hoac local
+                                //
+                                //premium job worker
+                                wo = new Worker(w0w.URL.createObjectURL(new Blob([jobJS])));
+                                wo.onmessage = onmessage;
+                                //
+                                //return wo;
+                                //
+                            } else {
+                                ////test iframe mode
+                                const evtWK = document.createElement('iframe'),
+                                    seson = Math.random().toString(36).substring(7) + new Date().getTime();
+
+                                wo = {
+                                    evtWK: evtWK,
+                                    seson: seson,
+                                    onmessage: onmessage,
+                                    postMessage: function (dat) {
+                                        //debugger;
+                                        if (dat.cmd !== 'close') evtWK.contentWindow.postMessage(dat, "*");
+                                    }
+                                }
+
+                                //
+                                apisvr.a$.sessions[seson] = {
+                                    id: seson,
+                                    fn: function (rst, msg) {
+                                        //debugger;
+                                        if (msg.evtData.cmd == 0) {
+                                            evtWK.contentWindow.postMessage({ cmd: 'iniscript', msg: jobJS }, "*");
+                                        } else {
+                                            wo.onmessage({ data: msg.evtData });
+                                        };
+                                    }
+                                };
+
+                                evtWK.setAttribute("style", "position:absolute;left:-100px;height:1px;width:1px;border:none;opacity:0");
+                                evtWK.setAttribute('src', 'https://' + hevyENGINE[1] + '/zk/uphole.html?seson=' + btoa([seson].join('|')));//
+                                //
+                                //
+                                dog_canvas[0].appendChild(evtWK);//append vao step 3 main div
+                                //
+                                //return wo;
+                                //
+                            };
+                            //
+                            //
+                            wo.hevyENGINE = encodeURIComponent(JSON.stringify(hevyENGINE));
+                            wo.hevyBLOCK = [];//quy uoc index 0 la total
+                            //
+                            return wo;
+                            //
+                        }(rawFN, devs[z], z, RND_CORS(devs[z]));
+                        //
+                    };
+                    //
+                    //
+                    srclocked(false);
+                }
+            }
+
+        };
+        //step 3: add end to obfucator tool.
+        return MyObj;
+
+
+    })();
+
+
+
+</script>
+
+<script type="text/javascript">
+    /**
+
+    https://github.com/kirilloid/bzip2-js/blob/master/bzip2.js
+
+     *	this is a port of pyflate
+     *	@url http://www.paul.sladen.org/projects/pyflate/
+     *	@author kirilloid
+     * @license CC-SA 3.0
+     * @usage ArchUtils.bz2.decode(str)
+     * @example ArchUtils.bz2.decode(
+     * 		"BZh91AY&SYN\xEC\xE86\0\0\2Q\x80\0\x10@\0\6D\x90\x80 " +
+     * 		"\x001\6LA\1\xA7\xA9\xA5\x80\xBB\x941\xF8\xBB\x92)\xC2\x84\x82wgA\xB0"
+     * ) == "hello world\n";
+     */
+
+var ArchUtils=function(){"use strict";
+/**
+         * bwt_reverse code from wikipedia (slightly modified)
+         * @url http://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform
+         * @license: CC-SA 3.0
+         */function t(t, i) { var r = t.length; if (i >= r) throw RangeError("Out of bound"); if (i < 0) throw RangeError("Out of bound"); var s = t; t = t.join(""), s.sort(); for (var e = {}, o = r - 1; o >= 0; o--) e[s[o]] = o; var a = []; for (o = 0; o < r; o++) a.push(e[t[o]]++); for (var n = s[o = i], h = [], f = 1; f < r; f++) h.push(s[o = a[o]]); return n + h.reverse().join("") } function i(t, i, r) { for (var s = t[i], e = i; e > 0; t[e] = t[--e]); r.push(t[0] = s) } var r = function (t, i) { this.code = t, this.bits = i, this.symbol = void 0 }, s = function () { this.process = function (t) { for (var i = t.length, s = [], e = 0; e < i; e++) s.push([e, t[e]]); s.push([i, -1]); for (var o = [], a = s[0], n = a[0], h = a[1], f = 1; f < s.length; f++) { var b = s[f][0], u = s[f][1]; if (h) for (var d = n; d < b; d++) o.push(new r(d, h)); if (n = b, h = u, -1 == u) break } o.sort(function (t, i) { return t.bits - i.bits || t.code - i.code }), this.table = o; var c = 0, v = -1; this.faht = []; var l = null; for (e = 0; e < this.table.length; e++) { var p = this.table[e]; v += 1, p.bits != c && (v <<= p.bits - c, l = this.faht[c = p.bits] = {}), l[p.symbol = v] = p } this.min_bits = 16, this.max_bits = -1, this.table.forEach(function (t) { t.bits < this.min_bits && (this.min_bits = t.bits), t.bits > this.max_bits && (this.max_bits = t.bits) }, this) } };
+         return { bz2: { decode: function (r) {  var e = new function () { this.init = function (t) { this.masks = []; for (var i = 0; i < 31; i++) this.masks[i] = (1 << i) - 1; this.masks[31] = -2147483648, this.f = t, this.bits = 0, this.bitfield = 0, this.count = 0 }, this.readbits2 = function (t) { var i = t >> 1; return this.readbits(i) * (1 << i) + this.readbits(t - i) }, this.readbits = function (t) { for (; this.bits < t;) this.bitfield = (this.bitfield << 8) + this.f.charCodeAt(this.count++), this.bits += 8; var i = this.masks[t], r = this.bitfield >> this.bits - t & i; return this.bits -= t, this.bitfield &= ~(i << this.bits), r } }; if (e.init(r), e.readbits(16), 104 != e.readbits(8)) throw "Unknown (not type 'h'uffman Bzip2) compression method"; var o = e.readbits(8); if (!(49 <= o && o <= 57)) throw "Unknown (not size '1'-'9') Bzip2 blocksize"; function a(t) { for (var i = [], r = t.readbits(16), s = 32768; s > 0; s >>= 1) if (r & s) for (var e = t.readbits(16), o = 32768; o > 0; o >>= 1) i.push(Boolean(e & o)); else for (var a = 0; a < 16; a++) i.push(!1); return i } o -= 48; var n = []; return function () { for (; ;) { var r = e.readbits2(48); if (e.readbits2(32), 54156738319193 != r) { if (25779555029136 == r) { e.readbits(7 & e.bits); break } throw "Illegal Bzip2 blocktype = 0x" + r.toString(16) } if (e.readbits(1)) throw "Bzip2 randomised support not implemented"; var o = e.readbits(24), h = a(e), f = e.readbits(3); if (2 > f || f > 6) throw RangeError("Bzip2: Number of Huffman groups not in range 2..6"); for (var b = [0, 1, 2, 3, 4, 5, 6].slice(0, f), u = [], d = 0, c = e.readbits(15) ; d < c; d++) { for (var v = 0; e.readbits(1) ;) if (v++ >= f) throw RangeError("More than max (" + f + ") groups"); i(b, v, u) } for (var l = [], p = h.reduce(function (t, i) { return t + i }, 0) + 2, m = 0; m < f; m++) { var g = e.readbits(5), w = []; for (d = 0; d < p; d++) { if (g < 0 || g > 20) throw RangeError("Bzip2 Huffman length code outside range 0..20"); for (; e.readbits(1) ;) g -= 2 * e.readbits(1) - 1; w.push(g) } l.push(w) } for (var k = [], z = 0; z < l.length; z++) { var A = new s; A.process(l[z]), k.push(A) } var C = []; for (v = h.length - 1; v >= 0; v--) h[v] && C.push(String.fromCharCode(v)); C.reverse(); for (var B, E, _ = 0, x = 0, R = 0, j = 0, y = []; ;) { for (var U in --x <= 0 && (x = 50, _ <= u.length && (B = k[u[_++]])), B.faht) if (e.bits < U && (e.bitfield = (e.bitfield << 8) + e.f.charCodeAt(e.count++), e.bits += 8), E = B.faht[U][e.bitfield >> e.bits - U]) { e.bitfield &= e.masks[e.bits -= U], E = E.code; break } if (0 <= E && E <= 1) 0 == R && (j = 1), R += j << E, j <<= 1; else { for (var H = C[0]; R > 0; R--) y.push(H); if (E == p - 1) break; i(C, E - 1, y) } } for (var O = t(y, o), S = [], I = (d = 0, O.length) ; d < I;) if (v = O.charCodeAt(d), d < I - 4 && O.charCodeAt(d + 1) == v && O.charCodeAt(d + 2) == v && O.charCodeAt(d + 3) == v) { v = O.charAt(d); for (var M = O.charCodeAt(d + 4) + 4; M > 0; M--) S.push(v); d += 5 } else S.push(O[d++]); n.push(S.join("")) } }(), n.join("") } } }
+}();
+
+</script>
+
+<script type="text/javascript">
+
+    //modify iframe
+    onmessage = function (e) {
+        //
+        //handleMessage(event);
+        //debugger;
+        //
+        if (e.data.cmd.toString().toLowerCase() === 'err') {
+            //
+            RST(e.data.dat, "", 0);//se error va chay xuong end
+            //muc dich la send old data ve hien thi tren browser
+            //
+            return;
+        }
+        //
+        try {
+            //
+            //debugger;
+            ajz(e.data.dat);
+            //
+        } catch (err) {
+            //
+            postMessage({ cmd: 'err'});
+            //
+        };
+        //
+    };
+
+
+    var attLOG = []
+    ,
+
+    idxDB
+
+    ,
+
+    ver = 1
+
+    ,
+
+    RST = function (m, bz2,typ) {
+
+        var rst,dMap = [],
+            req = m[4].split('|')//m[1][3][2].split('|'),
+            solg = req[1];
+
+        try {
+            //
+            rst = ArchUtils.bz2.decode(atob(bz2));
+            //
+            if (!rst || rst.trim() == '') {
+                bz2 = "ZERO_VAL";
+                throw bz2;
+            };
+            //
+            //lay request header
+            var lne = rst.split(/\r|\r\n|\n/),
+            usr = [],
+            z =lne.length>5?5:lne.length-1;
+
+            console.log('RST = function (m, bz2,typ): ' + z);
+            //
+            //debugger;
+            //console.log(m[1][3][2]);
+            //console.log(m[2].wdms);
+            //
+            //may gita head openDatabase ...
+            for (var i = z; i > -1; i--) {
+                if (lne[i].indexOf(',') > -1) {
+                    usr = lne.splice(i, 1);
+                    if (i>0) {
+                        //debugger;
+                        //du me cut luon trong rst...
+                        rst = rst.split(usr[0] + '\n')[1];
+                    };
+                };
+            };
+            //
+            //cap nhat lai z
+            usr = [];
+            z = 0;
+            //
+            //debugger;
+            //
+            const l0g_NEW = workerCODE(lne, null, null, 'l0g_SUM')(usr, dMap, req),
+                oriRST = l0g_NEW[3];
+            //
+            usr = l0g_NEW[0];
+            dMap = l0g_NEW[1];
+            req = l0g_NEW[2];
+            //
+            //
+            //remove maxID in origin result
+            if (oriRST) {
+                rst = rst.replace(oriRST[0], oriRST[1]);
+            };
+            //
+            //
+            attLOG = attLOG.concat([m[1][3][2], rst, dMap]);
+            //
+            //
+            //
+            //debugger;
+            //tong so luong log da duoc downloaded.
+            req[4] = dMap[1] + parseInt(req[4]);
+            //
+            //so luong tra ve == line + voi lan truoc do parseInt(req[4])
+            if (req[4] < parseInt(req[2])) {
+                //
+                //debugger;
+                req[1] = parseInt(req[2]) - parseInt(req[4]);
+                if (typ == 101) {
+                    if (req[1] > 20000) req[1] = 20000;
+                } else {
+                    //if (req[1] > 10000) req[1] = 30000;
+                    if (req[1] > 500) req[1] = 800;
+                };
+                //
+                //debugger;
+                if (m[1][3][0] != 'localconn') req[3] = m[1][4][3];//ftp host id **** index nay dung de get base64 block android app
+                //
+                //continue get nex block.
+                postMessage({ cmd: 'nxt', msg: [req.join('|'), dMap] });//, inf: dMap
+                //
+                return;
+
+            };
+            //
+            //
+            //
+        } catch (err) {
+
+            //(***)     loi nodejs pipe ftp, upload ko kip / khac phuc bang cach thay dau '|' '&&'='\x26\x26'
+            //debugger;
+            //attLOG[m[2].id] = "-1"
+            //postMessage({ cmd: 'err', msg: [bz2.length] });
+            //return;
+        };
+        //
+        //
+        //debugger;
+        //
+        RST_END.bkRST = [dMap, req, bz2 == 'ZERO_VAL' ? '-2' : '-1'];
+        RST_END();
+    }
+
+    ,
+
+    RST_END = function () {
+        //
+        RST_END._deffer--;
+
+        if (RST_END._deffer > 0) return;
+
+
+        //chua co db hoac loi
+        const oDAT=workerCODE[ARGs[0]];
+        if (oDAT) {//old db
+            for (var z = 0; z < oDAT.length; z++) {
+                attLOG.unshift(oDAT[z][1]);
+                attLOG.unshift(oDAT[z][0]);
+                attLOG.unshift(z);//chi cho vui
+            }
+        };
+
+
+        //debugger;
+        const bk_idxDB = idxDB,
+
+            JOI = workerCODE(null, null, null, 'SU').bind(attLOG)(),
+
+            RET = JOI[0],
+            rst = JOI[1];
+        //
+        //
+        var dMap = RST_END.bkRST[0],
+            req = RST_END.bkRST[1];
+        //
+        //
+        //
+        //neu block error >dMap.length==0
+        if (dMap.length == 0) {
+            //
+            //debugger;
+            if (oDAT) {
+                dMap = JSON.parse(JSON.stringify(RET));
+                dMap[4] = parseInt(dMap[4].length / 2);
+            } else {
+                dMap = [
+                    /*0: -1 erro*/RST_END.bkRST[2],//-2:ZERO_VAL
+                    /*1: count total error*/ parseInt(req[2]) - RET[0],
+                    /*2: tu ngay */RET[2],
+                    /*3: den ngay */RET[3],
+                    /*4: so luong emps */RET[1],
+                    /*5: total all log*/req[2]
+                ];
+            }
+            //
+            //debugger;
+            //cap nhat lai total result
+            //RET[0] = parseInt(req[2]);
+            //
+            idxDB = null;//flag terminate worker !!! ***
+            //
+        } else {
+
+            //debugger;
+
+            if (idxDB) {
+                //chi save khi that su lay duoc log the
+                //debugger;
+                workerCODE.apply(function () {
+
+                    //debugger;
+                    self.close();
+
+                }, [[rst, RET], ARGs[0], ARGs[1], "W", attlog_oneday_rte === true ? 1 : 0]);
+
+            };
+        };
+        //
+        postMessage({
+
+            cmd: 'end', msg: [[rst, RET], dMap, ARGs,
+
+                //index[3] extract rte_log neu download att_log mode ....
+                (attlog_oneday_rte === false && bk_idxDB ? workerCODE(ARGs, null, null, 'logRTE')([rst, RET]) : null)
+
+            ]
+
+        });
+        //
+        //
+        //
+        if (!idxDB) {//!!! ***
+            //chu y nearly die hear workerCODE
+            self.close();
+        };
+    }
+
+    ,
+
+    ajz = function (m) {
+
+        //debugger;
+
+        const m4 = m[1];
+        //
+        if (m4[3][0] == 'localconn') {
+
+            //debugger;
+            //
+            //debugger;
+            //
+            const S = m4[0].split(';');
+            postMessage({ cmd: 'ajz', msg: [S[0], 101] });
+            //
+            //console.log(S[0]);
+            RST(m, S[0]=='0'?'ZERO_VAL"': S[1], 101);
+            //
+            return;
+
+        } else {
+            //
+            //debugger;
+            postMessage({ cmd: 'ajz', msg: [m4[4][2], 0] });
+            //
+            if (m[1][4][2] == "0") {//so luong =0
+
+                RST(m, "ZERO_VAL", 0);
+
+                return;
+            };
+            //
+            if (!m4[4] || !m4[4][1]) {
+                //debugger;
+                return;
+            };
+        };
+        //
+        //debugger;
+        const adr = m4[3][2].split(String.fromCharCode(29)), xhr = new XMLHttpRequest();
+
+
+        //debugger;
+        //http://wdms.dnd.vn:16868/zk/fio.php?f=' + adr[1], ''//,
+
+
+        xhr.open("GET", (adr[0].indexOf('http://')==-1? 'https://':'') + adr[0] + '/zk/' + adr[1].split('_')[0] + '.php?f=' + adr[1]
+
+            + (adr.length > 2 ? '&g=' + encodeURIComponent(adr[3]) + '&h=' + encodeURIComponent(adr[2]) + '&l=' + encodeURIComponent(adr[4]) : '') + '&t=' + new Date().getTime()
+
+            , true);
+        //xhr.open('POST', (!uri ? "/TabPageData" : uri) + "?XDEBUG_SESSION_START=154A5348", true);
+        //
+        //
+        xhr.responseType = 'blob';
+        //
+        xhr.onload = function () {
+            //
+            //debugger;
+            if (xhr.status === 200) {
+                //debugger;
+                // Get the response
+                //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'resolve', 'result': xhr.response });
+                var reader = new FileReader;
+                reader.onload = function () {
+                    //
+                    //debugger;
+                    RST(m, (reader.result || 'base64,' ).split('base64,')[1],0);
+                    //
+                };
+                reader.readAsDataURL(xhr.response);
+                //
+            } else {
+
+                debugger;
+
+                RST(m, '',0);
+                //update khi liwayway project registration tra ve status text la code language
+                //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'reject', 'result': JSON.stringify({ status: xhr.status, statusText: xhr.statusText, response: xhr.response }) });// xhr.statusText });// xhr.status + " - " + xhr.statusText + '|' + xhr.response
+            }
+        };
+
+        xhr.onerror = function (e) {
+            debugger;
+            RST(m, '',0);
+            //update khi liwayway project registration tra ve status text la code language
+            //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'reject', 'result': JSON.stringify({ status: xhr.status, statusText: xhr.statusText, response: xhr.response }) });// xhr.status + " - " + xhr.statusText + '|' + xhr.response
+        };
+
+        xhr.send();
+
+    };
+
+    //debugger;
+    //
+    const ARGs = JSON.parse(atob(initWOK)),
+        attlog_oneday_rte = ARGs[3] && ARGs[3] === true ;/*attlog_oneday*/
+
+    ver = ARGs[2];//version database
+
+    //
+    //check browser support database
+    postMessage({ cmd: indexedDB? 'DB':'!indexedDB', msg: ARGs });
+    //
+    //debugger;
+    //attlog_oneday thi ko can care databse ....
+    if (indexedDB) {
+        //
+        //debugger;
+        //
+        idxDB = self.indexedDB || self.webkitIndexedDB || self.mozIndexedDB || self.OIndexedDB || self.msIndexedDB;
+        //
+        RST_END._deffer = 2;
+        //
+        //day la thoi diem lay luu tru log
+        workerCODE.apply(function (kq) {
+            //
+            //debugger;
+            RST_END();
+            //
+        }, [null, ARGs[0], ARGs[1], "R", attlog_oneday_rte === true ? 1 : 0]);
+
+    };
+
+
+</script>
+
