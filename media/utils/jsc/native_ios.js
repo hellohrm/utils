@@ -1,0 +1,1 @@
+﻿console.log('native_ios.js', aLAN);
