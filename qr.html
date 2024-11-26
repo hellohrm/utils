@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello-HRM</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="Hello-HRM" name="description" />
+    <meta content="HelloHRM" name="author" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hrm.dnd.vn/media/images/hello.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+
+</head>
+<body>
+    <script type="text/javascript">
+        function khoitao(rawHTML) {
+
+            debugger;
+
+            const _tmpl = decodeURIComponent(atob(rawHTML));
+            //alert(_tmpl);
+            //
+            const elemDiv = document.createElement('div');
+            elemDiv.innerHTML = _tmpl.trim();
+            //
+            for (var i = elemDiv.children.length - 1; i > -1 ; i--) {
+                const child = elemDiv.children[i];
+                switch (child.tagName.toLowerCase()) {
+                    case 'prehead': {
+                        document.getElementsByTagName('head')[0].innerHTML += (child.innerHTML);
+                        break;
+                    }
+                    case 'style': {
+                        document.getElementsByTagName('head')[0].appendChild(child);
+                        break;
+                    }
+                    case 'script': {
+                        (function (child) {
+                            var script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.id = 'remove-' + i;
+                            script.onload = script.onreadystatechange = function () {
+                                if (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') {
+                                    document.body.removeChild(script);
+                                }
+                            };
+                            script.innerHTML = child.innerHTML;
+                            document.body.appendChild(script);
+                        })(child);
+                        break;
+                    }
+                    default: {
+                        document.body.appendChild(child);
+                        break;
+                    }
+                };
+            };
+        }
+    </script>
+</body>
+</html>
