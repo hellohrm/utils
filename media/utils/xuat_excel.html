@@ -1,0 +1,32 @@
+﻿<div>
+    <style type="text/css">
+        .progress_exp_excel:before {
+            content: "";
+            background-position: center;
+            background-size: cover;
+            height: 100px;
+            width: 250px;
+            position: absolute;
+            background: rgba(191, 191, 191, 1);
+            /* top: 0; */
+            z-index: -1;
+            opacity: 0.5;
+            transform: translate(-50%, -65%);
+            left: 50%;
+            border-radius: 10px;
+        }
+    </style>
+
+    <section fuck_tmpl style="display:none">
+        <div exp_excel class="progress " style="width: 200px;transform: translateX(-50%);left: 50%;position: absolute;height: 6px;">
+            <div class="progress-bar" style="width:0%"></div>
+        </div>
+    </section>
+
+
+</div>
+
+<script type="text/javascript">
+    Main.exelEngine=function(){const e={excel_tmp:function(e){const t=$.Deferred();var s=new XMLHttpRequest;return $.ajax({cache:!1,url:e,xhr:function(){return s.responseType="blob",s},error:function(e,s,n){t.reject(e.responseText)},success:function(e){t.resolve(e)}}),t.promise()},excel_lib:function(){const t=$.Deferred();return Main.spread&&t.resolve("excel_lib"),_gsC(srcpf$+"/media/vendor/jsexcel/gc.spread.sheets.all.16.0.3.min.js","js",(function(){_gsC(srcpf$+"/media/vendor/jsexcel/gc.license.js","js",(function(){Main.spread||(Main.spread=_geC(null,{calcOnDemand:!0})),e.ctrl[0].attr("taiing","Lib core ..."),setTimeout((function(){t.resolve("excel_lib")}),300)}),"gc.license.js"),_gsC(srcp$f+"/media/utils/jsc/gc.spread.sheets.shapes.min.js","js",(function(){e.ctrl[0].attr("taiing","Lib shapes ...")}),"gc.spread.sheets.shapes.min.js")}),"gc.spread.sheets.all.16.0.3.min.js"),t.promise()},excel_io:function(t){const s=$.Deferred();return _gsC(srcpf$+"/media/vendor/jsexcel/gc.FileSaver.js","js",(function(){e.ctrl[0].attr("taiing","Lib FileSaver ..."),Main.excelIo&&s.resolve("excel_io"),_gsC(srcp$f+"/media/utils/jsc/gc.spread.excelio.min.js","js",(function(){e.ctrl[0].attr("taiing","Lib IO ..."),Main.excelIo||(Main.excelIo=new GC.Spread.Excel.IO),setTimeout((function(){s.resolve("excel_io")}),300)}),"gc.spread.excelio.min.js")}),"gc.FileSaver.js"),s.promise()},expr_device_usr:function(t,s,n,r){const a=$.Deferred();sheet=Main.spread.getActiveSheet(),sheet.deleteRows(0,2),sheet.deleteColumns(9,2),sheet.deleteColumns(4,4),sheet.addColumns(4,3);const i=sheet.getUsedRange(GC.Spread.Sheets.UsedRangeType.all),o=i.colCount;sheet.copyTo(0,1,0,4,i.rowCount,3,GC.Spread.Sheets.CopyToOptions.all),i.rowCount>3&&sheet.deleteRows(3,i.rowCount-3),sheet.setColumnWidth(4,100),sheet.setColumnWidth(5,100),sheet.setColumnWidth(6,100);for(var l=0;l<s.length;l++)sheet.setValue(0,l,(l>0?s.eq(l).find("[data-lang]"):s.eq(l)).text());sheet.clear(1,0,2,o,GC.Spread.Sheets.SheetArea.viewport,GC.Spread.Sheets.StorageType.data),sheet.addRows(3,t.length);var c=0;const d=t.length>100?Math.ceil(t.length/100):1,p=function(){const s=c*d,i=s+d,l=i<t.length?i:t.length;if(r.css("width",100*l/t.length+"%"),s>t.length)return sheet.deleteRows(1,2),a.resolve();for(var u=s;u<l;u++)e.ctrl[0].attr("taiing",u+1+" / "+t.length),sheet.copyTo(2,0,3+u,0,1,o,GC.Spread.Sheets.CopyToOptions.all),sheet.setValue(3+u,0,parseInt(t[u][2])),sheet.setValue(3+u,1,n[t[u][0]][1]),sheet.setValue(3+u,2,t[u][4]),sheet.setValue(3+u,3,parseInt(t[u][9])),sheet.setValue(3+u,4,parseInt(t[u][10])),sheet.setValue(3+u,5,t[u][5]),sheet.setValue(3+u,6,t[u][7]),sheet.setValue(3+u,7,"14"==t[u][3]?"Admin":"");c+=1,window.requestAnimationFrame(p)};return p(),a.promise()}};function t(t){0;this.publicInstanceVar="baz",this.publicInstanceMethod=function(){},e.ctrl=[helloguy.find(".dx-loadindicator-wrapper").addClass("taii").attr("taiing","Loading ...")],$.when(e.excel_lib(),e.excel_tmp(t.tmpl)).done((function(s,n,r){e.excel_io().done((function(){const s=e.ctrl[0].next().addClass("progress_exp_excel").html($(Main.expr_exel_tmpl).find("section[fuck_tmpl]").html()).find(".progress-bar");t.args.push(s);Main.excelIo.open(n,(function(r){const a=r;e.ctrl[0].attr("taiing","Calculating ..."),Main.spread.fromJSON(a),GC.Spread.Common.CultureManager.culture(apisvr.a$.selected_language),e[t.job].apply(n,t.args).done((function(){e.ctrl[0].attr("taiing","Finish"),Main.excelIo.save(Main.spread.toJSON(),(function(n){if(e.ctrl[0].removeClass("taii").removeAttr("taiing"),s.parent().parent().removeClass("progress_exp_excel"),s.parent().remove(),w0w._cordovaNative){const e=new FileReader;e.onloadend=function(){t.cb(0,e.result,n.type)},e.readAsDataURL(n)}else saveAs(n,t.fileName),t.cb(1)}),(function(e){t.cb(2,e.errorMessage)}),{password:""})}))}),(function(e){t.cb(3,e.errorMessage)}),{password:""})}))})).fail((function(e,t){srclocked(!1)}))}return t.prototype.publicSharedVar="quux",t.prototype.publicSharedMethod=function(e){},t}();
+
+</script>
