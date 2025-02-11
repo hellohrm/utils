@@ -1182,7 +1182,2692 @@
 
 <script type="text/javascript">
 
-Main.hasOwnProperty("device_step2")||(Main.device_step2=function(){"use strict";const e=function(n,t,o,i,s,a){const r=this,l={W:function(i){if(0==i.kq){const e=i.e.target.result;for(var a=0;a<o.length;a++)e.objectStoreNames.contains(o[a])&&e.deleteObjectStore(o[a]),e.createObjectStore(o[a],{autoIncrement:!0})}else if(1==i.kq){if(e.hasOwnProperty(t))l.SU;var c=i.rst.transaction([o[s]],"readwrite");c.objectStore(o[s]).put(n,1).onsuccess=function(e){},c.oncomplete=function(){i.rst.close(),r&&r()}}else r&&r()},R:function(n){if(0==n.kq)n.cb("cancel"),r&&r([0]);else if(1==n.kq)try{var i=[],a=n.rst.transaction([o[s]],"readonly"),l=a.objectStore(o[s]);a.oncomplete=function(){n.rst.close(),r&&r([1,i]),e[t]=i},l.openCursor().onsuccess=function(e){var n=e.target.result;n&&(i.push(n.value),n.continue())}}catch(n){r&&r([1,i]),e[t]=i}},SU:function(){var e=this,n="",t=[0,[],null,null,0];if("-1"!=e[0])for(var o=e.length-1;o>-1;o-=3){n+=e[o-1];const s=e[o];t[4]+=s[1],parseInt(s[0])>t[0]&&(t[0]=parseInt(s[0]));for(var i=0;i<s[4].length;i+=2){const e=t[1].indexOf(s[4][i]);e>-1?t[1][e+1]+=s[4][i+1]:(t[1].push(s[4][i]),t[1].push(s[4][i+1]))}t[2]?s[2]&&new Date(s[2])<new Date(t[2])&&(t[2]=s[2]):t[2]=s[2],t[3]?new Date(s[3])>new Date(t[3])&&(t[3]=s[3]):t[3]=s[3]}return[[t[0],t[4],t[2],t[3],t[1],t[4]],n]},logRTE:function(t){try{if(!0===n[3])return;n[4];const i=new Date((new Date).toISOString().split("T")[0]),s=[],a=t[0].split(/\r?\n/);""==a[a.length-1].trim()&&a.splice(-1);for(var o=a.length-1;o>-1;o--)new Date(a[o].split("|")[1])>i&&s.unshift(a[o]);if(s.length>0){const n=s.length-1,o=s[n];s[n]=n+1+"|"+t[1][0]+"|"+o;const i=e(s,null,null,"l0g_SUM")([],[],[0,50,0]);return s[n]=o,e(null,null,null,"SU").bind(["nouse",s.join("\n"),i[1]])()}return[[t[1][0],0,t[1][3],t[1][3],[],0],""]}catch(e){}},l0g_SUM:function(e,t,o){for(var i,s=n,a=s.length-1;a>-1;a--)if(""!=s[a].trim()){const n=s[a].split("|");o[2]=n.splice(0,1)[0],o[0]=n[0],e=e.concat(["|"+n[1].trim(),1]),t[0]=n[0],t[1]=a+1,t[3]=n[2];const r=s[0].split("|");t[2]=r[0==a?4:(e=e.concat(["|"+r[0].trim(),1]),1)],i=[s[a],s[a].replace(o[2]+"|"+o[0]+"|","")];break}for(var r=1;r<a;r++){const n=s[r].split("|"),t=e.indexOf("|"+n[0].trim());t<0?e=e.concat(["|"+n[0].trim(),1]):e[t+1]+=1}return t.push(e),t.push(o[2]),[e,t,o,i]}};if(!t)return l[i];lo$DB(l[i],t,a)};return function(n){_gsC(srcpf$+"/media/css/bubble_msg_demo.css","css",(function(){}),"bubble_msg_demo.css");const t=n.el,o=t.closest(".modal-dialog"),i=o.hasClass("js_js_att"),s=o.hasClass("mngusrs"),a=o.hasClass("down_fp"),r=t.hasClass("attlog_oneday"),l=t.find(".chat"),c=t.find(".user-profile"),_=window.matchMedia("(max-width: 767px)"),d=window.matchMedia("(max-width: 5199px)"),f=_.addEventListener?"addEventListener":"addListener";function u(e){e.matches?l.addClass("chat--mobile").trigger("chatui_changed",["chatMobile"]):l.addClass("chat--mobile").trigger("chatui_changed",["chatDesktop"])}function p(e){e.matches?c.addClass("user-profile--large").trigger("chatui_changed",["profileToogleOnLarge"]):c.addClass("user-profile--large").trigger("chatui_changed",["profileExtraLarge"])}t.hasClass("JS_JS_payrollonline")&&(t.find(".global").removeClass("invisible").prev().addClass("d-none"),l.empty(),c.empty()),_[f]("change",u),d[f]("change",p),u(_),p(d);const h=function(){var e=!0;const n={};return n.draw=function(t){if(!t)return;const o=t.getContext("2d");o.font="20px Arial",o.fillStyle="#444444";for(var i=Math.floor(t.width/20),s=Math.floor(t.height/20),a=["0","1"],r=[],l=0;l<s;l++)for(var c=0;c<i;c++)r.push({x:20*c,y:20*l,value:a[Math.floor(Math.random()*a.length)],hasDrawn:!1});var _,d,f=Date.now();r.forEach((function(e){o.clearRect(e.x,e.y,20,20),o.fillText(e.value,e.x,e.y+20),e.hasDrawn=!0}));const u=n.dogDR=function(){!1!==e&&(window.requestAnimationFrame(u),_=Date.now(),(d=_-f)>100&&(r.forEach((function(e){if(!0===e.hasDrawn&&100*Math.random()>95){var n=e.value===a[1]?a[0]:a[1];o.clearRect(e.x,e.y,20,20),o.fillText(n,e.x,e.y+20),e.value=n}})),f=_-d%100))};!0===e&&u()},n.stop=function(){e=!1},n.start=function(){e=!0,n.dogDR()},n}(),g=t.find(".dog_canvas"),m=[],v=function(e){const o=t.find(".cardx"),r=o.find(".rating"),l=r.find(".phantram").html("0");r.find(".block:gt(0)").remove(),n.ignoreCLEAN||o.removeClass("d-none").prevAll().html(""),a&&o.next().empty().addClass("vantay"),m.iDOG=0,m.per=0;var c,_=100,d=[],f=0,u=r.find(".block");const p=[],g={localconn:function(e){return g[0](e,e[1][4]?1:2)},0:function(n,t){var o=0,i=0,s=-1;"OK"==n[0]?(o=parseInt(1==t?n[1][4][2]:n[1][0].split(";")[0]),(s=d.indexOf(n[2].id))%2==1&&(s=-1),-1==s?(d.push(n[2].id),d.push(o)):d[s+1]=o):o=-1;for(var a=0;a<e.length;a++)if(e[a][0]==n[2].id){i=e[a][2],e[a][1]=o,o>-1&&i,0==o&&(m.per+=i);break}return[n[2].id,o,i,0]},calc:function(){for(var e=0;e<p.length;e++)-1==p[e][1]&&(_-=p[e][2])}},v=function(){const e=u.length;e<100?(r.append('<div class="block" style="transform:rotate('+3.6*e+'deg);"></div>'),u=r.find(".block")):(clearInterval(E),m.per>99&&(clearInterval(c),clearInterval(O.hwn),c=setInterval(w,1)))},O={BZ2_From_MCC:function(n){if(0==n[4].indexOf("0|")){const o=g[n[1][3][0]](n,1);if(o&&p.push(o),p.length==e.length&&(clearInterval(E),E=setInterval(v,1),g.calc(),p.tmp)){for(var t=0;t<p.tmp.length;t++)O.WOKER_2_BZ2.bind(p.tmp[t])();delete p.tmp}}clearInterval(c),m.per<100&&(c=setInterval(w,1e3))},WOKER_2_BZ2:function(){if(p.length<e.length)return void(p.tmp?p.tmp.push(this):p.tmp=[this]);clearInterval(c),clearInterval(O.hwn);for(var n=this[0],t=this[1],o=t[1],i=0,s=0;s<p.length;s++)if(p[s][1]>-1){if(p[s][0]==n&&(console.log("blo += lst_MCC[c][3]",p[s][3]),o+=p[s][3],p[s][3]=o,console.log((new Date).getTime(),p[s]),"end"==this[2]&&I.hasOwnProperty(n))){const e=I[n].__bk_res;if(e.sem&&null!==e.sem[0]&&void 0!==e.sem[0]){const e=d.indexOf(n);e>-1&&(d[e+1]=parseInt(t[2]))}}i+=p[s][3]}if(100==m.per)return void(c=setInterval(w,1));const a=function(){for(var e=0,n=0;n<d.length;n+=2)e+=d[n+1];return e}();var r=(i==a?100:parseInt(100*i/a))+(100-_);if(r>100&&(r=100),r>m.per){const e=r>99?0:2e3/(r-m.per);O.hwn=setInterval(O.fn,e),m.per=r}else(m.per<5||m.per<r+parseInt(o)/(m.per<95?1:2)/a)&&(c=setInterval(w,1e3))},DABUG:function(){clearInterval(c),clearInterval(O.hwn)},ERR:function(){h.stop(),_=m.per,f=1},fn:function(){var e="remove";if(m.iDOG<m.per&&m.iDOG<u.length)u.eq(m.iDOG).addClass("val"+(m.iDOG>_?" err":"")),m.iDOG+=1,l.text(m.iDOG);else if(clearInterval(O.hwn),clearInterval(c),e="add",100==m.per&&1==f){try{!0===s?t.parent().hasClass("fuk_desktop")?t.slideUp("fast",(function(){t.find("internetConection").remove(),t.trigger("DOWN_ATTLOG_END")})):t.trigger("DOWN_ATTLOG_END",[D.INFO.map((function(e){const n=[e[1].id,e[1].ten,e[1].serno,e[1].isatt,e[1].wdmo,e[3],e[4]&&e[4][4],e[1].kind];return""==e[0][e[0].length-1]?e[0][e[0].length-1]=n:e[0].push(n),e[0]}))]):!0===i||t.hasClass("JS_JS_payrollonline")?t.slideUp("fast",(function(){t.find("internetConection").remove(),t.trigger("DOWN_ATTLOG_END")})):t.find("internetConection").slideUp("slow",(function(){$(this).remove(),t.trigger("DOWN_ATTLOG_END")})).next().removeClass("invisible")}catch(e){devDlg(0,e.toString()+"<br/>"+_La$N("js_003_err",aLAN)||"Errors have occurred, please try again !","device_sep2.html / end").show()}DEVI__Q.isBSY="1"}else c=setInterval(w,1e3);l.parent()[e+"Class"]("slash")},hwn:0},w=function(){m.per+=1;var e=m.per+(100-_);if(e>100&&(e=100),100==e)return clearInterval(O.hwn),clearInterval(c),m.per=e,void(O.hwn=setInterval(O.fn,e<100?100:10));m.per>100&&(m.per=100),O.fn()};var E=setInterval(v,30);return O},O=function(e){},w=function(e,n){if(n&&n[2]){e[0]+=n[5];for(var t=0;t<n[4].length;t+=2){const o=e[1].indexOf(n[4][t]);o>-1?e[1][o+1]+=n[4][t+1]:(e[1].push(n[4][t]),e[1].push(n[4][t+1]))}e[2]?new Date(n[2])<new Date(e[2])&&(e[2]=n[2]):e[2]=n[2],e[3]?new Date(n[3])>new Date(e[3])&&(e[3]=n[3]):e[3]=n[3]}},D=function(){if(!0===s)return;t.find(".messaging-member").click((function(){l.fadeIn(),l.addClass("chat--show")})),t.find(".chat__previous").click((function(){l.removeClass("chat--show")})),t.find(".chat__details").click((function(){c.fadeIn(),c.addClass("user-profile--show")})),t.find(".user-profile__close").click((function(){c.removeClass("user-profile--show")})),t.find(".messages-page__dark-mode-toogler").click((function(){$("body").toggleClass("dark-mode")}));const e=t.find("actionline").closest(".global"),o=e.find(".inputs__dates input"),i=e.find(".clientPanel >h2"),a=i.next("obj_att"),_=a[0].outerHTML,d=e.find("counter .box value span"),f=function(e,n){const t=n[0],o=e.find(".mcc_inf"),i=t&&t[5]||0,s=t&&t[4].length/2||0;o[0].innerHTML=fmtNB(i),o[1].innerHTML=fmtNB(s),e.find(".card-title b").text(n[1].ten),e.find(".timeago").text(function(e){var n=function(e,n){if(aLAN.js_011_3_4)return aLAN.js_011_3_4+" "+e+" "+aLAN.js_011_34[n]},t=e instanceof Date?e:new Date(e),o={year:31536e3,month:2592e3,week:604800,day:86400,hour:3600,minute:60,second:1},i=Math.abs(t.getTime()-Date.now())/1e3,s=1;for(var a in o){if(o[a]<i){var r=Math.round(i/o[a]);return n(r,s)||r+" "+a+(parseInt(r)>1?"s":"")+" Ago"}s++}return aLAN.js_011_34&&aLAN.js_011_34[0]||"Just now"}(new Date));var a=[],l=n[2][0];if(t[2]){if("HIT_CACHE"==n[3])return;a=[i,s,t[2],t[3],(new Date).getTime()],n[1].dlog=a,e.trigger("buoc2_c$b",{a:a,b:l+DEVI__Q.VER[0]+(!0===r?"__rte":"")}),a.push(n[2]),a.push(n[3]);const o=(!0===r?"RTE":"ATT")+"_Log";a.push(DEVI__Q[o][l][0]),a[8]=n[0],DEVI__Q[o][l]=a,DEVI__Q[o].at=(new Date).getTime()}else if(!0===r&&"OK"==n[3]){const e=new Date((new Date).setHours(0,0,0,0)).toISOString().split(".")[0];E(n[2],[[0,0,e,e,[],0],""],n[3])}};for(var u=[0,[],null,null],p=0,h=0;h<D.INFO.length;h++){const e=D.INFO[h];w(u,e[0]),f(0==p?a:$(_.replace(/collapse0/g,"collapse"+p)).appendTo(i.parent()),e),p++}const g=u;d[0].innerHTML=D.INFO.length,d[2].innerHTML=fmtNB(g[0]),d[1].innerHTML=fmtNB(g[1].length/2),function(e){var t;function o(n){clearTimeout(t),t=setTimeout((function(){var n,t;n=null,((t={E:[].slice.apply(e)})&&t.E||[n]).forEach((function(e){for(var n=e.parentNode.clientWidth-10,t=!0,o=51;t&&o>10;)e.style.fontSize=o+"px",(t=e.clientWidth>n)&&(o-=1)}))}),200)}o(),$(window).on("orientationchange resize",o),n.elUI.unFixW=function(){$(window).off("orientationchange resize",o),delete n.elUI.unFixW}}(d),o[0].valueAsDate=new Date(g[2]),o[1].valueAsDate=new Date(g[3]),navigator.onLine},I={},E=function(e,n,t){if(!n)return;const o=e[0],i=n[0],s=[fmtNB(i&&i[5]||0),fmtNB(i&&i[4].length/2||0),i[2],i[3],-1];s[5]=e,s[6]=t,s.push(n[1]),DEVI__Q.RTE_Log[o]=s,console.log((new Date).getTime(),s)},N=function(e){if(console.log((new Date).getTime(),"endJOB = function (wo) {"),I[e].seson){const n=I[e];delete apisvr.a$.sessions[n.seson],n.evtWK.parentNode.removeChild(n.evtWK)}delete I[e];var n=0;for(var t in I)n++;0==n&&(D(),O.X.ERR())};D.VAL="",D.INFO=[],g.html("<canvas></canvas>"),setTimeout((function(){h.draw(g.find("canvas")[0])}),300);var b=t.children().first().attr(apisvr.a$.selected_language);function y(e,n){return e&&e.hasOwnProperty("sem")?n&&e.sem[1][n]?pad$(e.sem[1][n][1],2):pad$(e.sem[1][0][1],2):""}function T(e){const n=JSON.parse(e)[2].split("-"),t=[n[6],n[7],n[13],n[8],n[1],n[0],n[12],n[2],"1350","100","0","40","15","0","0","0","2048","J99Z578vyJD7LT/XvUWYSg==","-1"];if(w0w._cordovaNative){const e=w0w._cordovaNative.thongtin_app.__v$r.split("|");y.___appIos=e[2].toLowerCase()}return"ios"===y.___appIos&&(t[18]="8888"),JSON.stringify(t)}b&&""!=b&&(b=JSON.parse(decodeURIComponent(atob(b))),t.find("[data-lang]").each((function(e,n){var t=n.getAttribute("data-lang");$(n).html(_La$N(t,b))})));const S={},k=function(){const e=this[1],n=this[0],t=JSON.parse(S.tmpl_cloud_inf[0==e.kind?0:1]),o=t[1].split("_");return o[0]="t"+n,t[1]=o.join("_"),t.push(T(e.wdmo)),t.join(String.fromCharCode(4))},B=function(e,n,t,o){if("return_heavy_tmpl_local"==t[1]){if("err"==t[0])return void N(t[5]);if(I.hasOwnProperty(t[5])){const n=I[t[5]];n.M&&(e[2]=n.M)}return void x.bind(e)("RST",n)}const i=S.hasOwnProperty("hedBlock")?"INI":"RST";for(var s in S.hedBlock=n,I)if(I.hasOwnProperty(s)){const o=I[s];if("err"==t[0]){N(s);continue}if(o.M&&(e[2]=o.M),o.delayZKBLOB){const t=S[s];t[0]+=1,t[1]="BUZY",o.delayZKBLOB.resolve([s,n[1],k.bind([t[0],e[2]])()]),delete o.delayZKBLOB}else x.bind(e)(i)}},C=function(){const e=this;for(var n in I)if(I.hasOwnProperty(n)){const t=I[n];if(t.toilaMAIN){const n=e[0][2],o=JSON.parse(n.__uuidphone);e[0]=[n.wdms,o[0],n.serno,n.id],t.postMessage({cmd:"up_heavy_tmpl_local",dat:e});break}}},x=function(e,t){const o=this,i=o[4].split("|"),s=o[2].id,a=t||S.hedBlock,r=S[s],l=["1",1,null,null,10,a[1]],c={cmd:"OK",msg:[o[4],l]},_=I[s];if("RST"==e&&(r[1]="","-1"!=i[0]&&O.X.WOKER_2_BZ2.bind([s,c.msg[1],c.cmd])()),r[0]<a[0]||r[0]==a[1]-1){if("BUZY"!=r[1]){if(r[1]="BUZY",r[0]>-1&&r[0]<a[1]-1&&"localconn"==o[1][3][0]&&!t)return void C.bind([o,r,[r[0]+1,a[1]]])();r[0]+=1,i[0]=r[0],i[1]=a[1]-r[0],i[2]=a[1],i[4]=r[0],c.msg[0]=i.slice(0,6).join("|")+"|"+k.bind([r[0],o[2]])(),new n.zkblob(o[1][3][1],o[2],o[3],c.msg[0],_.hevyENGINE,_.__bk_res.tok)}}else if(r[0]==a[1]){const e="localconn"!=o[1][3][0]?o[1][4]||c["m[1][4]"]:JSON.parse(o[1][0].split(";")[1]);D.INFO.push([[e,""],o[2],c.msg[2],o[0],e]),setTimeout((function(){N(s)}),100)}};return{bz2:function(t){O.X.BZ2_From_MCC(t);const o=I[t[2].id];o&&"ZKBUSY"!=t[1][3][1]&&(o.__bk_res.hasOwnProperty("__fn")?o.one_put_tmpl_2_cloud?("OK"==t[0]?(S.tmpl_cloud_inf=["localconn"!=t[1][3][0]?JSON.stringify(t[1][4]):"",'["ko_can_req_dev_localconn","loc_'+(new Date).getTime().toString().slice(-7)+'",2,"1"]'],o.one_put_tmpl_2_cloud(o,t,B)):(console.log((new Date).getTime(),"error: "+t[0]),N(t[2].id)),delete o.one_put_tmpl_2_cloud):x.bind(t)("RST"):(0==t[4].indexOf("0|")&&(I[t[2].id].onmessage=function(){const o=this,i=arguments[0].data;if("ajz"!=i.cmd){if("err"!==i.cmd){if(O.X.WOKER_2_BZ2.bind([o[2].id,i.msg[1],i.cmd])(),i.msg[2]&&"package_tmpl"==i.msg[2][0]&&(I[o[2].id].package_tmpl?I[o[2].id].package_tmpl.push(i.msg[2][1]):I[o[2].id].package_tmpl=[i.msg[2][1]]),"nxt"==i.cmd)return void new n.zkblob(o[1][3][1],o[2],o[3],i.msg[0],I[o[2].id].hevyENGINE,I[o[2].id].__bk_res.tok);if(parseInt(t[3])>0){if("end"==i.cmd)if(2==e.indexedDB){var s=2;const n=i.msg[2][0]+DEVI__Q.VER[0],o=e[n];if(o){var a=[];if(["-1","-2"].indexOf(i.msg[1][0])>-1?(s=1,1==o.length&&(s=3,i.msg[0]=o[0])):(a=i.msg[0]).unshift("new"),3!=s){for(var l=0;l<o.length;l++)a.unshift(o[l][1]),a.unshift(o[l][0]),a.unshift(l);a=e(null,null,null,"SU").bind(a)(),i.msg[0]=[a[1],a[0]]}}2==s&&e.apply((function(){}),[i.msg[0],n,i.msg[2][1],"W",!0===r?1:0,{noV:1}]),!1===r&&E(i.msg[2],e(i.msg[2],null,null,"logRTE")(i.msg[0]),t[0])}else!1===r&&E(i.msg[2],i.msg[3],t[0]);i.msg[0][1][2]&&(DEVI__Q[(!0===r?"RTE":"ATT")+"_Log"][i.msg[2][0]]=[i.msg[0][0]])}else t[0]=i.cmd;D.INFO.push([I[o[2].id].package_tmpl?(I[o[2].id].package_tmpl.push(i.msg[0][1]),I[o[2].id].package_tmpl):i.msg[0][1],t[2],i.msg[2],t[0],t[1][4]||i["m[1][4]"]])}N(o[2].id)}}.bind(t)),o.postMessage({cmd:t[0],dat:t})))},initWOK:function(n){const o=this;if(t.hasClass("JS_JS_payrollonline")){var i=n.length,s=0,a=function(){const t=n[s],o=c0s$l_na(t.serno,1),i=arguments[0],a=[o,["alog".hexEncode(),"alog__rte".hexEncode()],DEVI__Q.VER[0]];if(1==i[0]){const n=i[1][0];DEVI__Q.ATT_Log[o]=n,D.INFO.push([n[1],t,[o],"LOD"]),E(a,e(a,null,null,"logRTE")(n),"LOD")}else 1001==i[0]&&D.INFO.push([i[1][8],t,a,"HIT_CACHE"]);s+=1,r()},r=function(){if(s<i){const t=n[s],o=c0s$l_na(t.serno,1);DEVI__Q.ATT_Log.hasOwnProperty(o)?a([1001,DEVI__Q.ATT_Log[o]]):e.apply(a,[null,o+DEVI__Q.VER[0],["alog".hexEncode(),"alog__rte".hexEncode()],"R",0,{noV:1}])}else D()};return r(),void t.trigger("LOAD_XONG_JS_JS_payrollonline",[[o,n]])}setTimeout((function(){o.___devs=n,o.initWOK_JOB(n)}),100)},initWOK_JOB:function(o){if(clearInterval(DEVI__Q.isBSY_TO),"2"==DEVI__Q.isBSY)return DEVI__Q.___initWOK_JOB||(DEVI__Q.___initWOK_JOB=this),t.find(".text_conn").addClass("text-danger").text("BUSY ..."),void(DEVI__Q.isBSY_TO=setTimeout(DEVI__Q.___initWOK_JOB.initWOK_JOB,1e3));DEVI__Q.isBSY="2",D.VAL="",D.INFO=[],o||(o=(DEVI__Q.___initWOK_JOB||this).___devs||[]),delete DEVI__Q.___initWOK_JOB;const i=[],a=n.el.data("__bk_res")||{};var l="";a.hasOwnProperty("__fn")&&(a.__fn?l=a.__fn(null,"upload_tmpl_dynjs"):delete a.__fn);const c=n.wokJS[1]+";(function(initWOK){const lo$DB="+lo$DB.toString()+",workerCODE="+e.toString()+l+";"+n.wokJS[2].replace("_$_ATTLOG_$_",n.wokJS[0])+"})",_=[["0","zkdev.dnd.vn",2],["0","zkheavy.vercel.app",2],["0","http://wdms.dnd.vn:16868",2],["0","firebase.dnd.vn",2],["0","botay-thaihoa.koyeb.app",2],["0","hellohrm.somee.com",2],["7","hoa138-001-site1.anytempurl.com",2]],d=function(e){return function(e,n){let t=[];for(;t.length<e.length;){let i=Math.floor(Math.random()*e.length),s=e[i];if("0"!==s[0]){if(s.isUSE&&"1"!==n.heavyMOD){for(var o=0;o<e.length;o++)if("0"!==e[o][0]&&!e[o].isUSE){e[o].isUSE=1,s=e[o];break}}else s.isUSE=1;return JSON.parse(JSON.stringify(s))}-1==t.indexOf(i)&&t.push(i)}}(_.filter((function(n){return n[2]>("1"===e.heavyMOD?1:0)})),e)};for(var f=0;f<o.length;f++)I[o[f].id]=function(l,c,_,d){const f=["","","","",T(c.wdmo)].join(String.fromCharCode(4)),u=c0s$l_na(c.serno,1),p=l+"('"+btoa(JSON.stringify([u,["alog".hexEncode(),"alog__rte".hexEncode()],DEVI__Q.VER[0],r,!1===r&&DEVI__Q.RTE_Log[u]?DEVI__Q.RTE_Log[u][3]:null,a.sem,f]))+"')",h=!1===s?function(){const e=[];var t=!0===r?DEVI__Q[(!0===r?"RTE":"ATT")+"_Log"][u]:null;t||(t=st("getItem",u+DEVI__Q.VER[0]+(!0===r?"__rte":"")))&&(t=JSON.parse(window[st0("2")](atob(t))));const o="0|"+(!0===r?"1000":"50")+"|0|$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;|0|"+(e.length>0?" Where "+e.join(" and "):"")+"|"+f;new n.zkblob(-505,c,_+1,o,w.hevyENGINE)}:function(){$.when(w.delayZKBLOB).done((function(e){var o="0",i="0",s="";e?(w.postMessage({cmd:"fuk_up_heavy_tmpl_close"}),i=e[1],s="|"+e[2]):w.one_put_tmpl_2_cloud?(w.one_put_tmpl_2_cloud(w,"1st_up_heavy_tmpl_init"),o="-1"):s="|"+f;const r=o+"|100000|"+i+"|$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;|0|"+y(a,_)+s,l=t.closest(".modal-dialog").hasClass("only_usr_inf")?0:-1e6;new n.zkblob(-505,c,-1*(_+1)+l,r,w.hevyENGINE,w.__bk_res.tok)}))},m=function(){const n=arguments[0].data;e.indexedDB="!indexedDB"==n.cmd?2:1,"!indexedDB"==n.cmd?e.apply(h,[null,n.msg[0]+DEVI__Q.VER[0],n.msg[1],"R",!0===r?1:0,{noV:1}]):"DB"==n.cmd&&h(),i.push([c.id,0,100/o.length,0]),i.length==o.length&&(O.X=v(i))};var w;if(d[2]>1||"1"===c.heavyMOD||101==c.kind)(w=new Worker(w0w.URL.createObjectURL(new Blob([p])))).onmessage=m;else{const e=document.createElement("iframe"),n=Math.random().toString(36).substring(7)+(new Date).getTime();w={evtWK:e,seson:n,onmessage:m,postMessage:function(n){"close"!==n.cmd&&e.contentWindow.postMessage(n,"*")}},apisvr.a$.sessions[n]={id:n,fn:function(n,t){0==t.evtData.cmd?e.contentWindow.postMessage({cmd:"iniscript",msg:p},"*"):w.onmessage({data:t.evtData})}},e.setAttribute("style","position:absolute;left:-100px;height:1px;width:1px;border:none;opacity:0"),e.setAttribute("src","https://"+d[1]+"/zk/uphole.html?seson="+btoa([n].join("|"))),g[0].appendChild(e)}return w.hevyENGINE=encodeURIComponent(JSON.stringify(d)),w.hevyBLOCK=[],w.__bk_res=a,a.hasOwnProperty("__fn")&&(w.M=c,S[c.id]=[-1,""],_>0?w.delayZKBLOB=$.Deferred():(w.one_put_tmpl_2_cloud=a.__fn,w.toilaMAIN=[0,1,2,3,4,5,6,7,8,9])),w}(c,o[f],f,d(o[f]));srclocked(!1)},getOPT:function(e){return"online_signal"==e?h:e?n[e]:n}}}}());
+    /* ===================================
+                Screen resize handler
+            ====================================== */
+    if (!Main.hasOwnProperty('device_step2')) Main.device_step2 = (function () { // scoping
+
+        "use strict";
+
+
+
+        //obfucation step 1: minify -> obfucation uncheck move strings into Array option.
+        const workerCODE = function (dat, tenNA, hed, M, attlog__rte, dbO) {
+
+            //debugger;
+
+            const CB = this;
+
+            const modDB = {
+                W: function (db) {
+
+                    //debugger;
+
+                    if (db.kq == 0) {//create new
+                        //
+                        const D$b = db.e.target.result;//var Db = e.target.result;
+
+                        //uncomment if we want to start clean
+                        for (var z = 0; z < hed.length; z++) {
+                            if (D$b.objectStoreNames.contains(hed[z])) D$b.deleteObjectStore(hed[z]);
+                            D$b.createObjectStore(hed[z], { autoIncrement: true });
+                        };
+
+                        //const tc = D$b.createObjectStore(hed, { autoIncrement: true });
+                        //tc.createIndex("LogIndex", "logid");
+                        //
+                    } else if (db.kq == 1) { //ok
+                        //
+
+                        //se modify cho nay a?
+                        if (workerCODE.hasOwnProperty(tenNA)) {
+                            //debugger;
+                            var c = modDB['SU'];
+                        };
+
+
+                        var saveRST = 0,
+                            //, hisTime = new Date()
+                            //, hisID = hisTime.getTime(),
+
+                            ts = db.rst.transaction([/*lin,*/ hed[attlog__rte]], "readwrite"),
+                            //hisStore = ts.objectStore(lin),
+                                        tcStore = ts.objectStore(hed[attlog__rte]),
+                                        countHIS = 0,
+                                        log_1 = {},
+                                        req;
+                        //debugger;
+                        req = tcStore.put(dat, 1);
+
+                        //
+                        //
+                        req.onsuccess = function (e) {
+                            //
+                            //debugger;
+                            //saveRST = 1;
+                            //dat['aid'] = e.target.result;//auto ID vua tao ra
+                            //
+                        };
+                        //
+                        //
+                        ts.oncomplete = function () {
+                            //
+                            //debugger;
+                            db.rst.close();
+                            //
+                            if (CB) CB();
+                            //
+                        };
+                    } else {//err
+                        if (CB) CB();
+                    }
+                }
+                ,
+                R: function (db) {
+                    //
+                    //debugger;
+
+                    if (db.kq == 0) {//create new
+                        //
+                        db.cb('cancel');
+                        //khong tao moi
+                        //
+                        //di lay cai dau tien ....
+                        //new opts.zkblob(-505, m[2], m[1] + 1, "0|300|$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;|1|2");
+                        //
+                        if (CB) CB([0]);//do request..
+                        //
+                    } else if (db.kq == 1) { //ok
+                        // dbTBname: ['loghis', 'tc3'],
+                        try {
+                            var req
+                            , rst = []
+                            , ts = db.rst.transaction([hed[attlog__rte]], "readonly")
+                            , tc3Store = ts.objectStore(hed[attlog__rte]);
+                            //
+                            ts.oncomplete = function () {
+                                db.rst.close();
+                                //
+                                if (CB) CB([1, rst]);//tra ve ket qua????
+                                //
+                                //debugger;
+                                //
+                                workerCODE[tenNA] = rst;
+                                //
+                                //for (var z in workerCODE) {
+                                //    if (workerCODE.hasOwnProperty(z)) {
+                                //        console.log(new Date().getTime(), z, workerCODE[z]);
+                                //    };
+                                //};
+                                //
+                                //
+                            };
+                            //
+                            tc3Store.openCursor().onsuccess = function (e) {
+                                var cursor = e.target.result;
+                                if (cursor) {
+                                    //if (logIDs.indexOf(cursor.value.logid) > -1) {
+                                    rst.push(cursor.value);
+                                    //};
+                                    cursor.continue();
+                                } else {
+                                    //End
+                                }
+                            };
+                        } catch (err) {
+                            //console.log('ios', 'indexedDB');
+                            if (CB) CB([1, rst]);//tra ve ket qua????
+                            workerCODE[tenNA] = rst;
+                        }
+                    };
+                    //
+                }
+
+                ,
+
+                SU: function () {
+
+                    //debugger;
+
+                    //reset variable rst
+                    var attLOG = this,
+
+                        rst = "", RET = [0, [], null, null, 0];
+                    //
+                    if (attLOG[0] != "-1") {//download error
+
+                        //debugger;
+                        //store it to indexDB ......
+
+                        for (var z = attLOG.length - 1; z > -1; z -= 3) {
+                            //debugger;
+                            rst += attLOG[z - 1];
+
+                            const mp = attLOG[z];
+
+                            RET[4] += mp[1];//so luong log the
+                            //
+                            //
+                            if (parseInt(mp[0]) > RET[0]) RET[0] = parseInt(mp[0]);//max ID in table ATT_LOG
+                            //
+                            //
+                            //
+                            for (var h = 0; h < mp[4].length; h += 2) {
+                                const atI = RET[1].indexOf(mp[4][h]);
+                                if (atI > -1) {
+                                    //don so luong log the cua nhan vien nay len
+                                    RET[1][atI + 1] += mp[4][h + 1];
+                                } else {
+                                    RET[1].push(mp[4][h]);
+                                    RET[1].push(mp[4][h + 1]);
+                                }
+                            };
+
+                            //
+                            //tu ngay
+                            if (!RET[2]) {
+                                RET[2] = mp[2];
+                            } else {
+                                if (mp[2] && new Date(mp[2]) < new Date(RET[2])) {
+                                    RET[2] = mp[2];//lay lai ngay lon hon
+                                }
+                            }
+                            //den ngay
+                            if (!RET[3]) {
+                                RET[3] = mp[3];
+                            } else {
+                                if (new Date(mp[3]) > new Date(RET[3])) {
+                                    RET[3] = mp[3];//lay lai ngay lon hon
+                                }
+                            }
+                        };
+                    };
+
+                    return [[RET[0], RET[4], RET[2], RET[3], RET[1], RET[4]], rst];
+                }
+
+                ,
+
+                logRTE: function (l0g) {
+                    //
+                    //debugger;
+                    //
+                    try {
+                        //
+                        if (/*ARGs*/dat[3] === true) return;//download 1 ngay
+
+                        var rte_lg_map = dat[4];
+                        //if (!rte_lg_map) {//rte-log head ko co
+                        //    rte_lg_map = self.localStorage.getItem(tenDB + dat[2]/*.VER*/ + '__rte');
+                        //};
+
+                        const whe_rte = new Date(new Date().toISOString().split('T')[0]),
+                            rstRTE = [];
+
+                        const ax = l0g[0].split(/\r?\n/);
+                        if (ax[ax.length - 1].trim() == "") ax.splice(-1);
+                        //
+                        for (var z = ax.length - 1; z > -1; z--) {
+                            //
+                            if (new Date(ax[z].split('\|')[1]/*.replace(/-/g, '\/')*/) > whe_rte) {
+                                rstRTE.unshift(ax[z]);//thu tu lon xon, ko khong che duoc.
+                            };
+                            //
+                            //dt  = L[1]/*'01-01-1970 00:03:44'*/.split(/\-|\s/),
+                            //dat = new Date(dt.slice(0, 3)/*.reverse()*/.join('/') + ' ' + dt[3]);
+                        };
+                        //
+
+                        //debugger;
+
+                        //cau truc :l0g[1]: [0]: ID log in ATT_LOG, [1]:so luong log the
+                        //
+                        //
+                        //fake end line of rstRTE by add ID + SL log
+                        if (rstRTE.length > 0) {
+                            //
+                            const zz = rstRTE.length - 1, endLN = rstRTE[zz];
+                            //
+                            //cau truc last log : [0]: so luong log the [1]:ID log in ATT_LOG
+                            rstRTE[zz] = (zz + 1) + '|' + l0g[1][0] + '|' + endLN;
+                            //
+                            //*** same in worker -> RST()
+                            const l0g_NEW = workerCODE(rstRTE, null, null, 'l0g_SUM')([], [], [0, 50, 0]);
+                            //usr = l0g_NEW[0],
+                            //dMap = l0g_NEW[1],
+                            //req = l0g_NEW[2];
+                            //
+                            //phuc hoi lai end line
+                            rstRTE[zz] = endLN;
+                            //
+                            //
+                            //attLOG = attLOG.concat([m[1][3][2], rst, dMap]);
+                            //
+                            //
+                            //*** same in worker -> RST_END()
+                            return workerCODE(null, null, null, 'SU').bind(['nouse', rstRTE.join('\n'), l0g_NEW[1]/*dMap*/])();
+                            //
+                            //
+                            //
+                        } else {
+                            return [
+
+                                [l0g[1][0]/*max ID*/, 0, l0g[1][3], l0g[1][3], [], 0]
+                                ,
+
+                                ""
+                            ]
+                        };
+                        //
+                    } catch (err) {
+                        //
+                    };
+                }
+
+                ,
+
+                l0g_SUM: function (usr, dMap, req) {
+                    //
+                    //debugger;
+                    //
+                    var lne = dat,
+                        oriRST,
+                        z = lne.length - 1;
+                    //
+                    //console.log(' l0g_SUM: function (usr, dMap, req): ' + z);
+                    //
+                    //thuong end line la ky tu xuong dong.
+                    for (z; z > -1; z--) {
+                        if (lne[z].trim() != '') {
+                            //
+                            //console.log(lne[z]);
+                            //
+                            const maxID = lne[z].split('|');
+
+                            //bo idex dau tien vi day la total record
+                            req[2] = maxID.splice(0, 1)[0];//next block keep total here
+                            //
+                            //update start next block
+                            req[0] = maxID[0];
+                            //
+                            //
+                            usr = usr.concat(['|' + maxID[1].trim(), 1]);//User_PIN cua line cuoi cung
+                            //
+                            dMap[0] = maxID[0];//ID log
+                            dMap[1] = z + 1;//so luong log
+
+                            dMap[3] = maxID[2];//max attlog time
+                            //
+                            const _usr = lne[0].split('|');
+                            //debugger;
+                            dMap[2] = _usr[z == 0 ?
+
+                                4//(usr[1] = 2, 3)//so 3 la index cua _usr[]
+
+                                :
+
+                                (
+                                usr = usr.concat(['|' + _usr[0].trim(), 1]) //User_PIN cua line 0
+                                ,
+
+                                1//index lay max log cua _usr[]
+
+                                )
+
+                            ];//max attlog
+                            //
+                            //
+                            //remove maxID in origin result
+                            //rst = rst.replace(req[2] + "|" + req[0] + "|", "");
+                            oriRST = [lne[z], lne[z].replace(req[2] + "|" + req[0] + "|", "")];//line se replace ...
+                            //
+                            break;
+                        }
+                    };
+
+                    //debugger;
+
+                    //lay min, max log, count user
+
+                    for (var k = 1; k < z ; k++) {//bo line dau tien, va line cuoi cung
+
+                        const maxID = lne[k].split('|'),
+                            idx = usr.indexOf('|' + maxID[0].trim());
+                        //
+                        if (idx < 0) {//chua co.
+
+                            usr = usr.concat(['|' + maxID[0].trim(), 1]);//User_PIN cua line cuoi cung
+
+                        } else {//cong len 1 log
+                            usr[idx + 1] += 1;
+                        }
+                    };
+                    //
+                    //
+                    //
+                    //luu giu lai index=4
+                    dMap.push(usr);
+                    //index=5
+                    dMap.push(req[2]);//total log the cua may cham cong
+                    //
+                    //
+                    return [usr, dMap, req, oriRST];
+                    //
+                }
+                //
+            };
+            //
+            //debugger;
+            if (tenNA) {
+                lo$DB(modDB[M], tenNA, dbO);
+            } else {
+                return modDB[M];
+            };
+            //
+        };
+
+        //obfucation step:2 :  minify variable block -> add to obfucator tool
+        const MyObj = function (opts) { // constructor
+            //
+            //debugger;
+            //
+            //console.log(srcpf$ + '/media/css/bubble_msg_demo.css')
+            _gsC(srcpf$ + '/media/css/bubble_msg_demo.css', 'css', function () {
+                //rawHTML[z].innerHTML += "<link rel='stylesheet' href='" + srcpf$ + "/media/css/bubble_msg_demo.css'/>";
+            }, 'bubble_msg_demo.css');
+            //
+            //
+            //
+            const PAA = opts.el,
+
+                mdlDIG=PAA.closest('.modal-dialog'),
+
+                js_js_att = mdlDIG.hasClass('js_js_att'),
+
+                mngusrs = mdlDIG.hasClass('mngusrs'),
+
+                downFP = mdlDIG.hasClass('down_fp'),
+
+                attlog_oneday = PAA.hasClass('attlog_oneday'),
+
+                $chat = PAA.find(".chat"),
+
+                $profile = PAA.find(".user-profile"),
+
+                smallDevice = window.matchMedia("(max-width: 767px)"),
+
+                largeScreen = window.matchMedia("(max-width: 5199px)"),
+
+                evt = smallDevice.addEventListener ? 'addEventListener' : 'addListener';
+
+
+
+            if (PAA.hasClass('JS_JS_payrollonline')) {
+                //debugger;
+                PAA.find(".global").removeClass('invisible').
+                prev().addClass('d-none');
+                //
+                //khi form realtime trigger se show ra element chat
+                $chat.empty();
+                $profile.empty();
+
+            };
+
+
+
+            smallDevice[evt]("change", handleDeviceChange);
+            largeScreen[evt]("change", handleLargeScreenChange);
+
+            handleDeviceChange(smallDevice);
+            handleLargeScreenChange(largeScreen);
+
+            function handleDeviceChange(e) {
+                //debugger;
+                if (e.matches) chatMobile();
+                else chatDesktop();
+            }
+
+            function handleLargeScreenChange(e) {
+                //debugger;
+                if (e.matches) profileToogleOnLarge();
+                else profileExtraLarge();
+            }
+
+            function chatMobile() {
+                $chat.addClass("chat--mobile").trigger('chatui_changed', ["chatMobile"]);
+            }
+
+            function chatDesktop() {
+                $chat.addClass("chat--mobile").trigger('chatui_changed', ["chatDesktop"]);
+            }
+
+            function profileToogleOnLarge() {
+                $profile.addClass("user-profile--large").trigger('chatui_changed', ["profileToogleOnLarge"]);
+            }
+
+            function profileExtraLarge() {
+                $profile.addClass("user-profile--large").trigger('chatui_changed', ["profileExtraLarge"]);
+            }
+
+
+
+            //debugger;
+            const online_signal = function () { // scoping
+
+                var isDRAW = true;
+
+                const re = {};
+
+                function _draw(canvas) {//https://codepen.io/collin-garvey/pen/BdWMMb
+                    //debugger;
+                    //var canvas = document.getElementById('binary-canvas');
+                    if (!canvas) return;
+                    //
+                    const ctx = canvas.getContext('2d');
+
+                    //ctx.canvas.width = canvas.innerWidth;
+                    //ctx.canvas.height = canvas.innerHeight;
+
+                    ctx.font = '20px Arial';
+                    ctx.fillStyle = '#444444';
+
+                    var fontSize = 20, raf;
+                    var columns = Math.floor(canvas.width / fontSize);
+                    var rows = Math.floor(canvas.height / fontSize);
+
+                    var binChars = ['0', '1'];
+                    var bits = [];
+                    var bitHeight = fontSize;
+                    var bitWidth = fontSize;
+
+                    // Populate array of 'bits'
+                    for (var r = 0; r < rows; r++) {
+                        for (var c = 0; c < columns; c++) {
+                            bits.push({
+                                x: c * bitWidth,
+                                y: r * bitHeight,
+                                value: binChars[Math.floor(Math.random() * binChars.length)],
+                                hasDrawn: false
+                            });
+                        }
+                    }
+
+                    // Vars for manually calculating frame rate
+                    var fps = 10;
+                    var interval = 1000 / fps;
+                    var now;
+                    var then = Date.now();
+                    var delta;
+
+                    // Draw all bits once before starting animation
+                    bits.forEach(function (bit) {
+                        ctx.clearRect(bit.x, bit.y, bitWidth, bitHeight);
+                        ctx.fillText(bit.value, bit.x, bit.y + bitHeight);
+                        bit.hasDrawn = true;
+                    });
+
+                    const dogDR = re.dogDR = function () {
+                        //
+                        if (isDRAW === false) return;
+                        //console.log('online_signal', new Date().getTime());
+                        //
+                        raf = window.requestAnimationFrame(dogDR);
+                        now = Date.now();
+                        delta = now - then;
+
+                        if (delta > interval) {
+                            bits.forEach(function (bit) {
+                                if (bit.hasDrawn === true && (Math.random() * 100) > 95) { // If passes the randomness check
+                                    var newVal = (bit.value === binChars[1]) ? binChars[0] : binChars[1];
+
+                                    ctx.clearRect(bit.x, bit.y, bitWidth, bitHeight);
+                                    ctx.fillText(newVal, bit.x, bit.y + bitHeight);
+                                    bit.value = newVal;
+                                }
+                            });
+                            then = now - (delta % interval);
+                        }
+                    }
+                    if (isDRAW===true) dogDR();
+                };
+
+                re.draw = _draw;
+                re.stop=function(){
+                    isDRAW=false;
+                };
+                re.start = function () {
+                    isDRAW = true;
+                    //debugger;
+                    re.dogDR();
+                };
+
+                return re;
+
+            }()
+            ,
+            dog_canvas = PAA.find('.dog_canvas')
+            ,
+
+            fixWID = function (E, O) {
+
+                var miSZ = 10 || O && O.miSZ
+                    , maSZ = 51 || O && O.maSZ
+                    , ste = 1 || O && O.ste
+                    , unt = 'px';
+
+                (O && O.E || [E]).forEach(function (el) {
+
+                    var pW = el.parentNode.clientWidth - 10,
+                        ovF = true,
+                        i = maSZ;
+
+                    while (ovF && i > miSZ) {
+                        //
+                        el.style.fontSize = i + unt;
+                        //
+                        ovF = el.clientWidth > pW;
+                        //
+                        if (ovF) i -= ste;
+                        //
+                    };
+                    //
+                });
+            }
+            ,
+            txtW = function (dumeVAL) {
+
+                var hwnFixW;
+                function logdisplay(e) {
+                    clearTimeout(hwnFixW);
+                    hwnFixW = setTimeout(function () {
+                        fixWID(null, { E: [].slice.apply(dumeVAL) });
+                    }, 200);
+                }
+                //
+                // Call once to set.
+                logdisplay();
+                //
+                // Bind events
+                $(window).on('orientationchange resize', logdisplay);
+                //
+                // unBind events when popup close
+                opts.elUI.unFixW = function () {
+                    $(window).off('orientationchange resize', logdisplay);
+                    delete opts.elUI.unFixW;
+                };
+                //
+            }
+            ,
+
+            timeAgo = function (input) {
+                //https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site
+
+                var fnLAN = function (v, ix) {
+                    if (aLAN.js_011_3_4) {
+                        return aLAN.js_011_3_4 + " " + v + " " + aLAN.js_011_34[ix];
+                    }
+                }
+                    ,
+                    date = (input instanceof Date) ? input : new Date(input),
+                    ranges = {
+                        year: 3600 * 24 * 365,
+                        month: 3600 * 24 * 30,
+                        week: 3600 * 24 * 7,
+                        day: 3600 * 24,
+                        hour: 3600,
+                        minute: 60,
+                        second: 1
+                    }
+                    ,
+                    secondsElapsed = Math.abs(date.getTime() - Date.now()) / 1000,
+                    ix = 1;
+
+                for (var key in ranges) {
+                    if (ranges[key] < secondsElapsed) {
+                        var delta = Math.round(secondsElapsed / ranges[key]);
+                        return fnLAN(delta, ix) || delta + " " + key + (parseInt(delta) > 1 ? 's' : '') + " Ago";
+                    }
+                    ix++;
+                };
+
+                return aLAN.js_011_34 && aLAN.js_011_34[0] || 'Just now';
+            }
+            ,
+
+            filas = []
+            ,
+
+            CARDX = function (dumeRING) {
+                //
+                //debugger;
+                //
+                const ringX = PAA.find('.cardx'),
+                    rating = ringX.find('.rating'),
+                    couter = rating.find('.phantram').html("0");
+                //
+                rating.find('.block:gt(0)').remove();
+
+                //signal before request ajax ftp....
+                if (!opts.ignoreCLEAN) ringX.removeClass('d-none').prevAll().html('');
+                //
+                if (downFP) {
+                    if (ringX.next().empty().addClass('vantay'));
+                };
+                //
+                filas.iDOG = 0;
+                filas.per = 0;
+                //
+                var GREEN = 0,//tai thanh cong
+                    RED = 100, //tai that bai
+
+                    _TOTAL = [],
+
+                    TONG = function () {
+                        var su = 0;
+                        for (var z = 0; z < _TOTAL.length; z += 2) {
+                            su += _TOTAL[z + 1];
+                        };
+                        return su;
+                    }
+                    ,
+                    PHANTRAM = 0,
+                    tmpVAL
+                    ,
+                    isENDJOB = 0
+                    ,
+                    bl = 0
+                    ,
+                    block = rating.find('.block');
+
+                    const lst_MCC = []
+                    ,
+
+                    CALC_S1 = {
+
+                        "localconn": function (m) {//android result
+                            //debugger;
+                            //du me khi upload template, add them  m[1][4]
+                            return CALC_S1['0'](m, m[1][4] ? 1 : 2);
+                            //
+                        }
+                        ,
+                        "0": function (m, fSL) {//node js result
+                            //debugger;
+                            var sl = 0, pt = 0,
+                                 tongIDX = -1;
+
+                            if (m[0] == "OK") {//thanh cong
+
+                                //debugger;
+
+                                sl = parseInt(fSL == 1 ? m[1][4][2] :
+
+                                    m[1][0].split(';')[0]//local connection se attach so luong phia truoc ,
+
+                                    );
+                                //TONG += sl;
+                                tongIDX = _TOTAL.indexOf(m[2].id);
+                                //
+                                //console.log(new Date().getTime(), 'tongIDX: ', tongIDX, 'if (m[0] == "OK") {//thanh cong', sl);
+                                //value co the =1
+                                if (tongIDX % 2 == 1) tongIDX = -1;//chia het cho 2
+                                //
+                                if (tongIDX == -1) {
+                                    _TOTAL.push(m[2].id);
+                                    _TOTAL.push(sl);
+                                } else {//up0date
+                                    _TOTAL[tongIDX+1]=sl;
+                                };
+                                //
+                            } else {
+                                //that bai thi sl=0 default
+                                sl = -1;//bi loi
+                                //
+                            };
+                            //
+                            for (var z = 0; z < dumeRING.length; z++) {
+                                if (dumeRING[z][0] == m[2].id) {
+                                    //
+                                    pt = dumeRING[z][2];
+                                    dumeRING[z][1] = sl;//cap nhat lai so luong cua origin
+                                    //
+                                    if (sl > -1) PHANTRAM += pt;//chi cong phan tram cua nhung devcie OK
+                                    //
+                                    if (sl == 0) filas.per += pt;//0 new log
+                                    //
+                                    break;
+                                }
+                            };
+                            //
+                            //console.log('sl NaN', sl);
+                            return [m[2].id, sl, pt, 0];
+                            //
+                        }
+                        ,
+                        "calc": function () {
+                            //tinh toan lai ti le % cua thiet bi
+                            for (var c = 0; c < lst_MCC.length; c++) {
+
+                                if (lst_MCC[c][1] == -1) {//so luong
+                                    RED -= lst_MCC[c][2];
+                                }
+
+                            }
+
+                        }
+                    }
+                    ,
+                    bg = function () {
+                        const i = block.length;
+                        if (i < 100) {
+                            rating.append('<div class="block" style="transform:rotate(' + 3.6 * i + 'deg);"></div>');
+                            //update lai
+                            block = rating.find('.block');
+                        } else {
+                            //debugger;
+                            clearInterval(bgHWN);
+                            if (filas.per > 99) {
+                                clearInterval(tmpVAL);
+                                clearInterval(RE.hwn);
+                                //debugger;
+                                tmpVAL = setInterval(FAKE_PERCENT, 1);
+                            };
+                        };
+
+                    }
+                    ,
+
+                    RE = {
+
+                        BZ2_From_MCC: function (m) {
+                            //
+                            //debugger;
+                            //chu y chi bind lan dau tien thoi.
+                            if (m[4].indexOf('0|') == 0) {
+                                //
+                                const new0 = CALC_S1[m[1][3][0]](m, 1);
+                                if (new0) lst_MCC.push(new0);
+                                //
+                                if (lst_MCC.length == dumeRING.length) {//chuyen sang step 2
+                                    //
+                                    //debugger;
+                                    //
+                                    clearInterval(bgHWN);//xoa bg process mau den slow
+                                    bgHWN=setInterval(bg, 1); //new bg fast to complete!
+                                    //
+                                    //debugger;
+                                    CALC_S1.calc();
+                                    //
+                                    if (lst_MCC.tmp) {
+                                        for (var z = 0; z < lst_MCC.tmp.length; z++) {
+                                            //debugger;
+                                            RE.WOKER_2_BZ2.bind(lst_MCC.tmp[z])();
+                                        }
+                                        delete lst_MCC.tmp;
+                                    }
+                                    //
+                                };
+                                //
+                            } else {
+                                //da co log roi.
+                                //debugger;
+                            };
+                            //
+                            clearInterval(tmpVAL);
+                            //
+                            if (filas.per < 100) {
+                                tmpVAL = setInterval(FAKE_PERCENT, 1000);
+                            };
+                            //
+                        }
+                        ,
+                        WOKER_2_BZ2: function () {
+                            //
+                            //debugger;
+                            //
+                            if (lst_MCC.length < dumeRING.length) {
+                                //local se chay le hon
+                                if (lst_MCC.tmp) {
+                                    lst_MCC.tmp.push(this);
+                                } else {
+                                    lst_MCC.tmp = [this];
+                                }
+                                return;
+                            };
+                            //
+                            //
+                            clearInterval(tmpVAL);
+                            clearInterval(RE.hwn);
+                            //
+                            //debugger;
+                            //console.log(this);
+                            //
+                            var id = this[0],
+                                    msg = this[1],
+                                    blo = msg[1],
+                                    tog = 0;
+
+                            
+                            for (var c = 0; c < lst_MCC.length; c++) {
+
+                                //debugger;
+
+                                if (lst_MCC[c][1] > -1) {//so luong
+
+                                    if (lst_MCC[c][0] == id) {
+
+                                        console.log("blo += lst_MCC[c][3]", lst_MCC[c][3]);
+
+                                        blo += lst_MCC[c][3];
+
+                                        lst_MCC[c][3] = blo;//so luong OK
+
+                                        console.log(new Date().getTime(), lst_MCC[c]);
+                                        //
+                                        //
+                                        if (this[2] == 'end' && HEAVY_JOB_HWND.hasOwnProperty(id)) {
+                                            //debugger;
+                                            //cause by download FP template custom select emp lam lech so luong tong !!!
+                                            const __bk_res = HEAVY_JOB_HWND[id].__bk_res;
+                                            if (__bk_res.sem && (__bk_res.sem[0] !== null && __bk_res.sem[0]!==undefined)) {
+                                                const tongIDX = _TOTAL.indexOf(id);
+                                                if (tongIDX > -1) {
+                                                    //modify tong
+                                                    _TOTAL[tongIDX + 1] = parseInt(msg[2]);
+                                                };
+                                            };
+                                        };
+                                        //
+                                        //
+                                    };
+
+                                    tog += lst_MCC[c][3];
+                                }
+                            };
+
+                            if (filas.per == 100) {
+                                //debugger;
+                                tmpVAL = setInterval(FAKE_PERCENT, 1);
+                                return;
+                            };
+                            //
+
+
+                            const t$tal =TONG() ;
+              
+                            var totalP = (tog == t$tal ? 100 : parseInt(100 * tog / t$tal)) + (100 - RED);
+                            if (totalP > 100) totalP = 100;
+                            //
+                            //console.log("t$tal", t$tal, " , tog ", tog);
+                            //
+                            //console.log(new Date().getTime(), totalP,"totalP / filas.per" , filas.per);
+                            //
+                            if (totalP > filas.per) {
+                                //
+                                //RE.hwn = setInterval(RE.fn, totalP < 100 ? 100 : 10);
+                                //
+                                const tio = totalP > 99 ? 0 : 100 * 20 / (totalP - filas.per);
+                                //
+                                RE.hwn = setInterval(RE.fn, tio);
+                                //
+                                //console.log(new Date().getTime(), id, (totalP - filas.per), "Timeout: ", tio);
+                                //
+                                filas.per = totalP;
+
+                            } else {
+                                //khi download template nhieu package , 100% approach, but download still continue.
+                                if (filas.per < 5 || filas.per < totalP + (parseInt(blo) / (filas.per < 95 ? 1 : 2) / t$tal)) {
+                                    tmpVAL = setInterval(FAKE_PERCENT, 1000);
+                                };
+                            };
+                            //
+                        }
+                        ,
+                        DABUG: function () {
+                            clearInterval(tmpVAL);
+                            clearInterval(RE.hwn);
+                        }
+                        ,
+                        ERR: function () {
+                            //
+                            //debugger;
+                            online_signal.stop();
+                            //
+                            RED = filas.per;
+                            //
+                            isENDJOB = 1;
+                        }
+                        ,
+                        fn: function () {
+                            ////
+                            //console.log(new Date().getTime(), 'fn: function () { RED: ', RED, "filas.iDOG: ", filas.iDOG);
+                            ////
+
+                            //debugger;
+
+                            var cls = 'remove';
+                            //
+                            if (filas.iDOG < filas.per && filas.iDOG < block.length) {
+                                //
+                                block.eq(filas.iDOG).addClass('val' + (filas.iDOG > RED ? ' err' : ''));
+                                //
+                                filas.iDOG += 1;
+                                //
+                                couter.text(filas.iDOG);
+                                //
+                            } else {
+                                //
+                                clearInterval(RE.hwn);
+                                clearInterval(tmpVAL);
+                                //
+                                cls = 'add';
+                                if (filas.per == 100 && isENDJOB == 1) {
+                                    //
+                                    //debugger;
+                                    //
+                                    try {
+                                        //
+                                        if (mngusrs === true) {
+
+                                            //debugger;
+
+                                            if (PAA.parent().hasClass('fuk_desktop')) {
+                                                PAA.slideUp('fast', function () {
+                                                    //$(this).remove();
+                                                    PAA.find("internetConection").remove();//tui nay nang lam !!!
+                                                    PAA.trigger('DOWN_ATTLOG_END');
+                                                });
+                                            } else {
+
+                                                //debugger;
+
+                                                PAA.trigger('DOWN_ATTLOG_END', [
+
+                                                    frmUI.INFO.map(function (da) {
+                                                        //
+                                                        //debugger;
+                                                        //
+                                                        //0:id ,1:ten ,2:sn, 3:isatt, 4: wdmo, 5:ERR , 6:template table 9 Or 10 , 7: kind local or internet
+                                                        const devI = [da[1].id, da[1].ten, da[1].serno, da[1].isatt, da[1].wdmo, da[3], da[4] && da[4][4],da[1].kind];
+                                                        //them thong tin vao line cuoi cung ...
+                                                        if (da[0][da[0].length - 1] == "") {
+                                                            da[0][da[0].length - 1] = devI;
+                                                        } else {
+                                                            da[0].push(devI);
+                                                        };
+                                                        //
+                                                        return da[0];
+                                                    })
+                                                ]);
+                                            };
+                                            //PAA.trigger('DOWN_ATTLOG_END');
+                                        } else if (js_js_att === true || PAA.hasClass('JS_JS_payrollonline')) {
+                                            PAA.slideUp('fast', function () {//.find("internetConection")
+                                                //raise event to JS_JS_att.js
+                                                PAA.find("internetConection").remove();//tui nay nang lam !!!
+                                                PAA.trigger('DOWN_ATTLOG_END');
+                                            });
+                                        } else {
+                                            PAA.find("internetConection").slideUp('slow', function () {
+
+                                                $(this).remove();
+                                                PAA.trigger('DOWN_ATTLOG_END');
+
+                                            }).next().removeClass("invisible");//.global
+                                        };
+                                    } catch (rr) {
+                                        //debugger;
+                                        devDlg(0, rr.toString() + "<br/>" + _La$N('js_003_err', aLAN) || "Errors have occurred, please try again !", 'device_sep2.html / end').show();
+                                    };
+
+                                    //
+                                    //setTimeout(function () {
+                                    //    //
+                                    DEVI__Q.isBSY = '1'//reset susy status
+                                    //    //
+                                    //    //console.log(new Date().getTime(), "RELEASE ...", DEVI__Q.isBSY);
+                                    //    //
+                                    //}, 10000);
+                                    //
+                                } else {
+                                    //ko fake no se dung yen
+                                    tmpVAL = setInterval(FAKE_PERCENT, 1000);
+                                }
+                                //
+                            };
+                            //
+                            couter.parent()[cls + 'Class']('slash');
+                            ////
+                        }
+                        ,
+                        hwn: 0
+                    }
+
+                    ,
+
+                    FAKE_PERCENT = function () {
+                        //debugger;
+                        //console.log(new Date().getTime(),'FAKE_PERCENT: ' ,filas.per);
+                        //
+                        filas.per += 1;
+                        //
+                        var totalP = filas.per + (100 - RED);
+                        if (totalP > 100) totalP = 100;
+                        //
+                        if (totalP == 100) {
+                            //debugger;
+                            clearInterval(RE.hwn);
+                            clearInterval(tmpVAL);
+                            filas.per = totalP;
+                            RE.hwn = setInterval(RE.fn, totalP < 100 ? 100 : 10);
+                            return;
+                        };
+                        //
+                        if (filas.per > 100) filas.per = 100;
+                        //
+                        RE.fn();
+                    };
+
+                    var bgHWN = setInterval(bg, 30);//free
+
+                return RE;
+            }
+
+            ,
+
+            CARDX_CALC = function (msg) {
+                //
+                //
+                //clearInterval(CARDX_CALC.X.hwn);
+                ////
+                ////heavyBLOCK
+                ////
+                //var blo = msg[1],
+                //    tog = parseInt( msg[5]),
+
+                //    id = this,
+                //    tmpTOTAL = 0,
+                //    cntGET = 0;
+
+            }
+            ,
+
+            l0gMAP = function (re, v) {
+                //debugger;
+                //const v = it[0];
+                //
+                if (v && v[2]) {
+
+                    //v[2] null nghia la error
+                    //
+                    re[0] += v[5];// v[0];//so luong log the
+                    //re[1] += v[1];//so luong nhan vien
+                    //
+                    for (var h = 0; h < v[4].length; h += 2) {
+                        const atI = re[1].indexOf(v[4][h]);
+                        if (atI > -1) {
+                            //don so luong log the cua nhan vien nay len
+                            re[1][atI + 1] += v[4][h + 1];
+                        } else {
+                            re[1].push(v[4][h]);
+                            re[1].push(v[4][h + 1]);
+                        }
+                    };
+                    //
+                    //
+                    //tu ngay
+                    if (!re[2]) {
+                        re[2] = v[2];
+                    } else {
+                        if (new Date(v[2]) < new Date(re[2])) {
+                            re[2] = v[2];//lay lai ngay lon hon
+                        }
+                    };
+                    //
+                    //den ngay
+                    if (!re[3]) {
+                        re[3] = v[3];
+                    } else {
+                        if (new Date(v[3]) > new Date(re[3])) {
+                            re[3] = v[3];//lay lai ngay lon hon
+                        }
+                    };
+                    //
+                };
+            }
+            ,
+            frmUI = function () {
+
+                if (mngusrs === true ) return;
+
+                /* ===================================
+                Events
+                ====================================== */
+
+                PAA.find(".messaging-member").click(function () {
+                    $chat.fadeIn();
+                    $chat.addClass("chat--show");
+                });
+
+                PAA.find(".chat__previous").click(function () {
+                    $chat.removeClass("chat--show");
+                    //
+                    //du me khi show log detail, no hide button rat kho chiu
+                    //const doA = PAA.find('actionline').addClass('d-none');
+                    //setTimeout(function () {
+                    //    doA.removeClass('d-none');
+                    //}, 500);
+                });
+
+                PAA.find(".chat__details").click(function () {
+                    $profile.fadeIn();
+                    $profile.addClass("user-profile--show");
+                });
+
+                PAA.find(".user-profile__close").click(function () {
+                    $profile.removeClass("user-profile--show");
+                });
+
+                PAA.find(".messages-page__dark-mode-toogler").click(function () {
+                    $("body").toggleClass("dark-mode");
+                });
+
+
+
+
+                const GLO = PAA.find('actionline')
+
+                    //.on("click", '.btn', function (e) {
+                    //const mnu = $(e.currentTarget);
+                    //if (mnu.hasClass('viewlogs')) {
+                    //    $chat.fadeIn();
+                    //    $chat.addClass("chat--show");
+                    //};
+                    //})
+
+                    .closest('.global')
+
+                , tuden_ng = GLO.find('.inputs__dates input')
+
+                , titH2 = GLO.find('.clientPanel >h2')
+
+                , mcc0 = titH2.next('obj_att')
+
+                , tmpl0 = mcc0[0].outerHTML,
+
+                disVAL = GLO.find('counter .box value span'),
+
+                mcc_inf = function (mcc, it) {
+                    //
+                    const v = it[0]
+                        , dis = mcc.find(".mcc_inf")
+                        ,tota = v && v[5] || 0
+                        ,slnv = v && (v[4].length / 2) || 0;
+                    //
+                    dis[0].innerHTML = fmtNB(tota);//tong so log the String.fromCharCode(29);//
+                    dis[1].innerHTML = fmtNB(slnv);//so luong nhan vien
+                    //
+                    //debugger;
+                    //
+                    mcc.find('.card-title b').text(it[1]['ten']);
+                    mcc.find('.timeago').text(timeAgo(new Date()));
+                    //
+                    //
+                    //
+                    //
+                    //console.log(new Date().getTime(), 'mcc_inf', v[2]);
+                    //if (isSAVE == 2) mcc.trigger('buoc2_c$b', [it[1]]);
+                    var isSAVE = [], storeNA = it[2][0];
+
+                    if (v[2]) {//ko bi error
+                        //
+                        //debugger;
+
+                        //tabTinhCong open neu hitcache se ko save lai.
+                        if (it[3] == 'HIT_CACHE') return;
+                        //
+                        //
+                        isSAVE = [tota, slnv, v[2], v[3], new Date().getTime()];
+                        it[1].dlog = isSAVE;
+                        //
+                        mcc.trigger('buoc2_c$b', { 'a': isSAVE, 'b': storeNA + DEVI__Q.VER[0] + (attlog_oneday === true ? '__rte' : '') });
+                        //
+                        //
+                        isSAVE.push(it[2]);//[5] db info
+                        isSAVE.push(it[3]);//[6] download status
+                        //
+                        //
+                        const logNA=(attlog_oneday === true ? 'RTE' : 'ATT') + '_Log';
+                        //
+                        //if (attlog_oneday === true) {
+                            //
+                            //append log rte vao save de stor lai....
+                        isSAVE.push(DEVI__Q[logNA][storeNA][0]);
+                        //
+                        //
+                        //map dung de restore tabTinhCong ........... HIT_CACHE
+                        isSAVE[8] = it[0];
+                        //
+                        //
+                            //cache download result lai ....
+                        DEVI__Q[logNA][storeNA] = isSAVE;
+                            //
+                        //};
+                        //
+                        //
+                        //thoi gian download hoan tat su dung trong JS_JS_att.js
+                            DEVI__Q[logNA]['at'] = new Date().getTime();
+                        //
+                        //
+                        //} else {
+                        //    delete it[1].dlog;
+                        //    if (attlog_oneday === true) {
+                        //        delete DEVI__Q.RTE_Log[storeNA];
+                        //    };
+                    } else if (attlog_oneday === true && it[3] == 'OK') {
+                        //
+                        //chu y: //triet tieu tai (XXX***)
+                        //
+                        //danh dau la da download ok - > online device
+                        const tg = new Date(new Date().setHours(0, 0, 0, 0)).toISOString().split('.')[0];
+                        extractRTE_LOG(it[2], [[0, 0, tg, tg, [], 0], ""], it[3]);
+                        //
+                    };
+                    //
+                };
+                //
+                //
+                var re = [0, [], null, null], t = 0;
+
+
+                for (var y = 0; y < frmUI.INFO.length; y++) {
+                    //
+                    //debugger;
+                    //
+                    const it = frmUI.INFO[y];
+                    //
+                    l0gMAP(re, it[0]);
+                    //
+
+                    if (t == 0) {
+                        mcc_inf(mcc0, it);
+                    } else {
+                        mcc_inf($(tmpl0.replace(/collapse0/g, 'collapse' + t)).appendTo(titH2.parent()), it);
+                    };
+  
+                    t++;
+                }
+                //const VAL = frmUI.INFO.reduce(function (re, it, t) {
+
+                //    //
+                //    return re;
+                //    //
+                // }, [0,[],null,null]);
+                //
+                //
+                //debugger;
+                const VAL = re;
+                disVAL[0].innerHTML = frmUI.INFO.length;//so luong may cham cong
+                disVAL[2].innerHTML = fmtNB(VAL[0]);//'1.000.000';//so luong log the
+                //
+                disVAL[1].innerHTML = fmtNB(VAL[1].length / 2);//so luong nhan vien
+                //
+                //
+                //
+                txtW(disVAL);
+                //
+                //copy ra nhieu may cham cong
+                //for (var o = 1; o < 3; o++) {
+                //    titH2.parent().append(tmpl0.replace(/collapse0/g, 'collapse' + o));
+                //}
+
+                //debugger;
+                tuden_ng[0].valueAsDate = new Date(VAL[2]);
+                tuden_ng[1].valueAsDate = new Date(VAL[3]);
+
+
+
+                ////debugger;
+                ////logathe.val(logathe.val() + dat.msg);
+                //const logathe = PAA.find('.logathe').val(frmUI.VAL);
+
+
+                //
+                if (navigator.onLine) {
+                    //PAA.find("internetConection off").css('display', 'none');
+                    //PAA.find("internetConection on").css('display', 'flex');
+                    //PAA.find("internetConection").slideUp('slow');
+                } else {
+                    //PAA.find("internetConection off").css('display', 'flex');
+                    //PAA.find("internetConection on").css('display', 'none');
+                    //PAA.find("internetConection").slideDown('slow');
+                }
+
+            }
+            ,
+
+            HEAVY_JOB_HWND = {}
+            ,
+
+            extractRTE_LOG = function (dbI, JOI,STA) {
+                //
+                //download att_log se extract rte_log -> prevent paidload !
+                //
+                //debugger;
+                //
+                if (!JOI) return;
+                //
+                const storeNA = dbI[0],
+
+                    re = [0, [], null, null],
+
+                    v = JOI[0],
+
+                    tota = fmtNB(v && v[5] || 0),
+
+                    slnv = fmtNB(v && (v[4].length / 2) || 0),
+
+                    isSAVE = [tota, slnv, v[2], v[3], -1 /*chua luu local-storage, -> khi offline se luu*/];
+                //
+                isSAVE[5] = dbI;//index = 5
+                isSAVE[6] = STA;//index = 6
+                //
+                //$chat.trigger('buoc2_c$b', { 'a': isSAVE, 'b': storeNA + DEVI__Q.VER[0] + '__rte' });
+                //
+                //index [5]: log
+                isSAVE.push(JOI[1]);
+                //
+                //extract rte_log from att_log se ko luu tru local-storage, -> ma chi cap nhat cache  DEVI__Q.RTE_Log
+                DEVI__Q.RTE_Log[storeNA] = isSAVE;
+                //
+                console.log(new Date().getTime(), isSAVE);
+                //
+            }
+            ,
+
+            endJOB = function (wo) {
+                //
+                console.log(new Date().getTime(),'endJOB = function (wo) {');
+                //return;
+                //debugger;
+                //
+                if (HEAVY_JOB_HWND[wo].seson) {
+                    //iframe
+                    const dg = HEAVY_JOB_HWND[wo];
+                    delete apisvr.a$.sessions[dg.seson];
+                    dg.evtWK.parentNode.removeChild(dg.evtWK);
+                };
+                //
+                delete HEAVY_JOB_HWND[wo];
+                //
+                var count = 0;
+                for (var property in HEAVY_JOB_HWND) count++;
+                //
+                if (count == 0) {
+                    //debugger;
+                    frmUI();
+                    //vet cuoi...
+                    CARDX_CALC.X.ERR();
+                };
+                //
+            };
+            //
+            frmUI.VAL = '';
+            frmUI.INFO = [];
+            //
+            //
+            dog_canvas.html('<canvas></canvas>');
+            setTimeout(function () {
+                online_signal.draw(dog_canvas.find('canvas')[0]);
+            }, 300);
+            //
+            //PAA.find("internetConection").slideUp('slow');
+            //
+
+
+
+            //debugger;
+
+            
+            var uitroi = PAA.children().first().attr(apisvr.a$.selected_language);
+            if (uitroi && uitroi != '') {
+                //js_009_31 js_009_32
+                uitroi=JSON.parse(decodeURIComponent(atob(uitroi)));
+                PAA.find('[data-lang]').each(function (idx, el) {
+                    var key = el.getAttribute('data-lang');
+                    $(el).html(_La$N(key, uitroi));
+                });
+            };
+            //
+            function _fpver(a,devIDX) {
+                //debugger;
+                if (a && a.hasOwnProperty('sem')) {
+                    //cho nay con phai tinh toan rat nhieu ...
+                    if (devIDX && a.sem[1][devIDX]) {
+                        //debugger;
+                        return pad$(a.sem[1][devIDX][1], 2);
+                    } else {
+                        return pad$(a.sem[1][0][1], 2);
+                    }
+                };
+                return "";
+            };
+            //
+            //
+            function dCAPA(wdmo) {
+                //
+                const devcap = JSON.parse(wdmo)[2].split('-'),
+                    p = [
+                        devcap[6],//6 'fp_capacity': 56,
+                        devcap[7],//7 'user_capacity': 60,
+                        devcap[13]///13 'face_capacity': 88
+                        ,
+                        devcap[8], //log_capacity
+
+                        devcap[1], // fp_used
+                        devcap[0], // usr_used
+                        devcap[12], // face_used
+
+                        devcap[2], // log_used
+
+                       
+                        "1350", //8: each fp tempalate
+                        "100", //9: each line usr byte
+
+                        "0", //10: each line face ???
+                        "40", //11: each line log byte
+                        "15", //12: line head fp
+
+                        "0",//13 bak
+                        "0",//14.bak
+                        "0", //15 bak
+                        "2048", //16 : min byte size pipeCMD 
+
+                        "J99Z578vyJD7LT/XvUWYSg==", //17 SHARED.ENCRYPT('F62C92')
+
+                        "-1" //18 web, android, ios 
+                        
+
+                    ];
+                //
+                //
+                if (w0w['_cordovaNative']) {
+                    //
+                    const thongtin_app = w0w._cordovaNative.thongtin_app,
+                         nativ = thongtin_app.__v$r.split('|');
+                    //
+                    _fpver.___appIos = nativ[2].toLowerCase();
+                    //
+                };
+                //
+                //
+                if (_fpver.___appIos === 'ios') {
+                    debugger;
+                    //tinh toan size pagge 
+                    p[18]="8888";//index 16 cuoi cung
+                };
+                //
+                return JSON.stringify(p);
+                //
+            };
+
+            //
+            const stack_put_tmpl = {}
+                ,
+
+                _tmpl_cloud_inf = function () {
+                    //
+                    //debugger;
+                    //
+                    //console.log('_tmpl_cloud_inf', new Date().getTime(), c.kind);
+                    const c = this[1];
+                    //
+                    //
+                    const
+
+                        //devcap = JSON.parse(c.wdmo)[2].split('-'),
+                        //p = [
+                        //    devcap[6],//6 'fp_capacity': 56,
+                        //    devcap[7],//7 'user_capacity': 60,
+                        //    devcap[13]///13 'face_capacity': 88
+                        //    ,
+                        //    devcap[8], //log_capacity
+
+                        //    devcap[1], // fp_used
+                        //    devcap[0], // usr_used
+                        //    devcap[12], // face_used
+
+                        //    devcap[2] // log_used
+
+                        //],
+                        atB = this[0],
+                        clnI = JSON.parse(stack_put_tmpl['tmpl_cloud_inf'][c.kind == 0 ? 0 : 1]),
+                        dume = clnI[1].split('_');
+                    //
+
+                    //
+                    dume[0] = 't' + atB;
+                    //
+                    clnI[1] = dume.join('_');
+                    //
+                    //
+                    //device capacity limit upload.
+                    clnI.push(dCAPA(c.wdmo)); //JSON.stringify(p));
+                    //
+                    return clnI.join(String.fromCharCode(4));
+                    //
+                }
+
+                ,
+
+                _put_tmpl_2_cloud = function (m, hedBlock, tmplDAT, newTOK) {
+                    //
+                    //debugger;
+                    if (tmplDAT[1] == 'return_heavy_tmpl_local') {
+                        //
+                        //debugger;
+                        //
+                        if (tmplDAT[0] == 'err') {
+                            //error chua xu ly !!!
+                            debugger;
+                            endJOB(tmplDAT[5]);
+                            return;
+                        };
+                        //
+                        //const __dev = gloEVTs.giaidoan2.fnXX.___devs,
+                        //        copyM = JSON.parse(JSON.stringify(m));
+                        ////
+                        ////
+                        //for (var w = 0; w < __dev.length; w++) {
+                        //    if (__dev[w].id == tmplDAT[5]) {
+                        //        copyM[2] = JSON.parse(JSON.stringify(__dev[w]));
+                        //        break;
+                        //    };
+                        //};
+                        if (HEAVY_JOB_HWND.hasOwnProperty(tmplDAT[5])) {
+                            //
+                            //debugger;
+                            const wo = HEAVY_JOB_HWND[tmplDAT[5]];
+                            //
+                            if (wo.M) m[2] = wo.M;//khong phai Main thi se attach theo device record data
+                            //
+                        };
+                        //
+                        //
+                        _commit_tmplBlock_2_DEV.bind(m)("RST", hedBlock);
+                        //
+                        return;
+                    };
+                    //
+                    //
+                    //
+                    const realINI = stack_put_tmpl.hasOwnProperty('hedBlock') ? 'INI' : 'RST';//RST CUA DEVICE 0 TO GET CLOUD
+                    //
+                    //
+                    //
+                    stack_put_tmpl['hedBlock'] = hedBlock;
+                    //
+                    //
+                    //
+                    //
+                    //sau khi first device get cloud information from node js thi trigger lai cac device pedding
+                    for (var id in HEAVY_JOB_HWND) {
+                        //
+                        if (HEAVY_JOB_HWND.hasOwnProperty(id)) {
+                            //
+                            //
+                            //debugger;
+                            const wo = HEAVY_JOB_HWND[id];
+                            //
+                            //
+                            if (tmplDAT[0] == 'err') {
+                                //error chua xu ly !!!
+                                debugger;
+                                endJOB(id);
+                                continue;
+                            };
+                            //
+                            //
+                            //wo.__bk_res.tok = newTOK;
+                            if (wo.M) m[2] = wo.M;//khong phai main thi se attach theo device record data
+                            //
+                            if (wo.delayZKBLOB) {
+                                //
+                                //debugger;
+
+                                const myBLOCK = stack_put_tmpl[id]
+                                myBLOCK[0] += 1; //increse block 1
+                                myBLOCK[1] = 'BUZY';//wil reset when return result
+                                //
+                                wo.delayZKBLOB.resolve([id, hedBlock[1]/*total*/,
+
+                                    _tmpl_cloud_inf.bind([myBLOCK[0], m[2]])()
+
+                                ]);
+                                delete wo.delayZKBLOB; //xoa luon de lan sau la post message.
+                                //
+                            } else {
+                                //debugger;
+                                _commit_tmplBlock_2_DEV.bind(m)(realINI);
+                                //
+                            };
+                            //
+                        };
+                        //
+                    };
+                    //
+                }
+
+                ,
+
+                localconn_UP_TMPL = function () {
+
+                    //debugger;
+
+                    const localZK = this;
+
+                    for (var id in HEAVY_JOB_HWND) {
+                        //
+                        if (HEAVY_JOB_HWND.hasOwnProperty(id)) {
+                            //
+                            const wo = HEAVY_JOB_HWND[id];
+                            //
+                            if (wo.toilaMAIN) {//main se co them thong tin nay de post
+                                //debugger;
+                                const mmm = localZK[0][2],
+                                    __uuidphone = JSON.parse(mmm.__uuidphone);
+                                localZK[0] = [mmm.wdms/*IP "192.168.1.210"*/, __uuidphone[0], mmm.serno, mmm.id];
+                                //
+                                wo.postMessage({ cmd: 'up_heavy_tmpl_local', dat: localZK });
+                                //
+                                break;
+                            };
+                        };
+                    };
+                }
+
+                ,
+
+                _commit_tmplBlock_2_DEV = function (act,local_HED_BLO) {
+                    //
+                    //debugger;
+                    //
+                    const m1 = this,
+
+                        req = m1[4].split('|'),
+
+                        id = m1[2].id,
+
+                        hedBlock =local_HED_BLO || stack_put_tmpl['hedBlock'],
+
+                        myBLOCK = stack_put_tmpl[id],//.push(newTOK);//template file ready on cloud.
+
+                        dMap = ["1", 1, null, null, 10, hedBlock[1]],
+
+                        dat = { cmd: 'OK', msg: [m1[4], dMap] },
+
+                       wo = HEAVY_JOB_HWND[id];
+                    //
+                    //
+                    //
+                    //
+                    //debugger;
+                    //
+                    if (act == 'RST') {
+                        //
+                        //debugger;
+                        //
+                        //upload result
+                        myBLOCK[1] = '';//reset
+                        //
+                        //console.log(new Date().getTime(), '_commit_tmplBlock_2_DEV: ', m1[1][4]);
+                        //debugger;
+                        //
+                        if (false && !m1[1][4]) {
+                            //debugger;
+                            //error . phat hien local execute cmd error
+                            endJOB(id);
+                            return;
+                            //
+                        } else {
+                            if (req[0] != "-1") {
+                                //debugger;
+                                //first call get cloud host info.
+                                CARDX_CALC.X.WOKER_2_BZ2.bind([id, dat.msg[1], dat.cmd])();
+                                //
+                            };
+                        };
+                        //
+                    };
+                    //
+                    //
+                    //myBLOCK[0] start at -1 ,so it compare with    hedBlock[1] - 1
+                    if (myBLOCK[0] < hedBlock[0] || myBLOCK[0] == hedBlock[1]-1) {//hedBlock[1]:total template block upload 2 device 
+                        //
+                        //
+                        //*************** BLOCK CUOI CUNG LA DUNG DE run ./biometric service 9900-C .******************************
+                        //
+                        if (myBLOCK[1] != 'BUZY') {
+                            //
+                            myBLOCK[1] = 'BUZY';//wil reset when return result
+                            //
+                            //
+                            //debugger;
+                            //
+                            if (myBLOCK[0] > -1 && myBLOCK[0] < hedBlock[1] - 1) {//*** CAI CUOI CUNG LA CLEAN.
+                                if (m1[1][3][0] == 'localconn') {//loai connection local
+                                    //
+                                    //console.log('hedBlock', hedBlock);
+                                    //debugger;
+                                    if (!local_HED_BLO) {
+                                        //local conn delay UP finger print template tra ve.
+                                        localconn_UP_TMPL.bind([m1, myBLOCK, [ myBLOCK[0]+1, hedBlock[1]]])();
+                                        return;//cho upload xong template se chay tiep
+                                    };
+                                };
+                            };
+                            //
+                            //
+                            //
+                            //
+                            myBLOCK[0] += 1; //increse block 1
+                            //
+                            //
+                            //
+                            //debugger;
+                            //
+                            //
+                            req[0] = myBLOCK[0]; //prevent dup zero:0
+                            //
+                            //
+                            //req[1]=0 ; MEANING END UPLOAD  - SE THU DON folder /tmp cua may cham cong.
+                            req[1] = hedBlock[1] - myBLOCK[0]; // so luong pkg send to fingertemplateXX
+                            //
+                            //
+                            req[2] = hedBlock[1];//total record
+                            req[4] = myBLOCK[0];
+                            //
+                            dat.msg[0] = req.slice(0, 6) //lay 6 phan tu dau tien
+                                .join('|') +
+                                //them vao cloud kind free or paid
+                                '|' + _tmpl_cloud_inf.bind([myBLOCK[0], m1[2]])();//update lai request next block
+                            //
+                            //debugger;
+                            //
+                            //next template block
+                            new opts.zkblob(
+
+                                 m1[1][3][1]//current commandid
+                                 ,
+                                 m1[2]//dat
+                                 ,
+                                 m1[3]//index dat
+                                 ,
+
+                                 dat.msg[0]
+
+                                 ,
+
+                                 wo.hevyENGINE
+
+                                 ,
+
+                                 wo.__bk_res.tok
+
+                                 );
+                        };
+                        //
+                        //
+
+                        //
+                    } else if (myBLOCK[0] == hedBlock[1]) {
+                        //
+                        //debugger;
+                        const re = m1[1][3][0] != 'localconn' ? (m1[1][4] || dat['m[1][4]']) : JSON.parse(m1[1][0].split(';')[1]);
+                        //
+                        frmUI.INFO.push([[re, ""/*empty for add result*/], m1[2], dat.msg[2], m1[0], re]);
+                        //
+                        setTimeout(function () {
+                            //hoan tat
+                            endJOB(id);
+                            //
+                        },100);
+                        //
+                    };
+                };
+
+            //
+            //mdlDIG.fadeIn('slow');
+            //
+            return {
+
+                bz2: function (m) {
+                    //
+                    //
+                    //debugger;
+                    //
+                    CARDX_CALC.X.BZ2_From_MCC(m);
+                    //
+                    //debugger;
+                    const woME = HEAVY_JOB_HWND[m[2].id];//** note ko duoc xai trong worker event.
+                    //
+                    if (!woME || m[1][3][1] == 'ZKBUSY') {//limit FTP host
+                        //debugger;
+                        return;
+                    };
+                    //
+                    //
+                    //***************** use for upload device user + template ****************************************
+                    if (woME.__bk_res.hasOwnProperty('__fn')) {
+                        //
+                        //debugger;
+                        //
+                        if (woME.one_put_tmpl_2_cloud) {
+                            //debugger;
+                            if (m[0] == "OK") {
+                                //
+                                //debugger;
+                                //debugger;
+                                //cloud chua template se keep only one shared all device.
+                                stack_put_tmpl['tmpl_cloud_inf'] = [
+
+                                    m[1][3][0] != 'localconn' ? JSON.stringify(m[1][4]) : "",
+
+                                    '["ko_can_req_dev_localconn","loc_' + (new Date().getTime().toString().slice(-7)) + '",2,"1"]'//1: tao , quy uuoc index cuoi cung 0: ko tao copy debug template local /tmp/fp.tmX
+                                ];
+                                //
+                                //chi co device 1st upload template to cloud.
+                                woME.one_put_tmpl_2_cloud(woME, m, _put_tmpl_2_cloud);
+                                //
+                            } else {
+
+                                console.log(new Date().getTime(),'error: ' + m[0]);
+                                endJOB(m[2].id);
+
+                            };
+                            //
+                            //chi 1 lan dau nhu ten goi!
+                            delete woME.one_put_tmpl_2_cloud;
+                            //
+                        } else {
+                            //
+                            //debugger;
+                            _commit_tmplBlock_2_DEV.bind(m)('RST');
+                            //
+                        };
+                        //
+                        //REDIRECT TO NEW HANDLER  device_user.html - > UP_TMPL ....
+                        return;
+                    };
+                    //************************************************************************************************
+                    //
+                    //
+                    //debugger;
+                    //chu y chi bind lan dau tien thoi.
+                    if (m[4].indexOf('0|') == 0) {
+                        //
+                        //
+                        (function (factory) {
+                            "use strict";
+                            //
+                            //debugger;
+                            HEAVY_JOB_HWND[m[2].id].onmessage = factory.bind(m);//XXX
+                            //
+                        })(function () {
+
+                            //debugger;
+
+                            const m1 = this, dat = arguments[0].data;
+
+                            //debugger;
+
+                            if (dat.cmd == 'ajz') {
+                                //
+                                //debugger;
+                                //khoi tao uoc tinh log se mang ve
+                                //CARDX_CALC.X.ini(m1[2].id, dat.msg);
+                                //
+                                return;
+                            } else if (dat.cmd !== 'err') {
+                                //
+                                //CARDX_CALC.bind(m1[2].id)(dat.msg[1]);
+                                //
+                                //debugger;
+                                //
+                                CARDX_CALC.X.WOKER_2_BZ2.bind([m1[2].id, dat.msg[1], dat.cmd])();
+                                //
+                                //
+                                //
+                                //******************************* use for download select custom user + template ********************************************
+                                //debugger;
+                                if (dat.msg[2] && dat.msg[2][0] == 'package_tmpl') {
+                                    //
+                                    //debugger;
+                                    //
+                                    //download FP template 5 finger =10kb, => worker will error handle end package !!!
+                                    if (!HEAVY_JOB_HWND[m1[2].id].package_tmpl) {
+
+                                        HEAVY_JOB_HWND[m1[2].id].package_tmpl = [dat.msg[2][1]];
+
+                                    } else {
+
+                                        HEAVY_JOB_HWND[m1[2].id].package_tmpl.push(dat.msg[2][1]);
+
+                                        //if (HEAVY_JOB_HWND[m1[2].id].package_tmpl.length > 3) {
+                                        //    dat.cmd = "end";
+                                        //};
+
+                                    };
+                                    //
+                                };
+                                //**************************************************************************************************************************
+                                //
+                                //
+                                if (dat.cmd == 'nxt') {
+
+                                    //debugger;
+
+                                    new opts.zkblob(
+
+                                        m1[1][3][1]//current commandid
+                                        ,
+                                        m1[2]//dat
+                                        ,
+                                        m1[3]//index dat
+                                        ,
+
+                                        dat.msg[0]
+
+                                        ,
+
+                                        HEAVY_JOB_HWND[m1[2].id].hevyENGINE
+
+                                        ,
+
+                                        HEAVY_JOB_HWND[m1[2].id].__bk_res.tok
+
+                                        );
+
+                                    return;
+
+                                };
+                                //
+                                //debugger;
+                                //
+                                if (parseInt(m[3]) > 0) {//dowload attlog
+
+                                    if (dat.cmd == 'end') {
+                                        if (workerCODE.indexedDB == 2) {
+
+                                            var isSAVE = 2;
+                                            const tenDB = dat.msg[2][0] + DEVI__Q.VER[0],
+                                                oDAT = workerCODE[tenDB];
+                                            //
+                                            if (oDAT) {//old db
+                                                //
+                                                var makeO = [];
+                                                if (["-1", "-2"].indexOf(dat.msg[1][0]) > -1) {//dMap Error
+                                                    isSAVE = 1;//down flag
+                                                    if (oDAT.length == 1) {//khoi build chi cho met
+                                                        isSAVE = 3;//ignore
+                                                        dat.msg[0] = oDAT[0];
+                                                    }
+                                                } else {
+                                                    makeO = dat.msg[0];
+                                                    makeO.unshift("new");//chi cho vui
+                                                };
+                                                //
+                                                if (isSAVE != 3) {//ignore
+                                                    for (var z = 0; z < oDAT.length; z++) {
+                                                        makeO.unshift(oDAT[z][1]);
+                                                        makeO.unshift(oDAT[z][0]);
+                                                        makeO.unshift(z);//chi cho vui
+                                                    }
+                                                    makeO = workerCODE(null, null, null, 'SU').bind(makeO)();
+                                                    dat.msg[0] = [makeO[1], makeO[0]];//dao nguoc lai
+                                                }
+                                            };
+
+                                            //save append vao db co san...
+                                            if (isSAVE == 2) {
+                                                workerCODE.apply(function () {
+                                                    //debugger;
+                                                }, [dat.msg[0], tenDB, dat.msg[2][1], "W", attlog_oneday === true ? 1 : 0,
+
+                                                      { noV: 1 }//triet tieu version db trong main.js  -> lo$DB
+
+                                                ]);
+                                            };
+                                            //
+                                            //debugger;
+                                            //
+                                            if (attlog_oneday === false) {//download mode att-log //triet tieu tai (XXX***)
+                                                //debugger;
+                                                extractRTE_LOG(dat.msg[2], workerCODE(/*ARGs*/dat.msg[2], null, null, 'logRTE')(/*[rst,RET]*/  dat.msg[0]), m[0]);
+                                            };
+                                        } else {
+                                            //
+                                            if (attlog_oneday === false) {//download mode att-log  //triet tieu tai (XXX***)
+                                                //debugger;
+                                                extractRTE_LOG(dat.msg[2], dat.msg[3], m[0]);
+                                            };
+                                            //
+                                        };
+                                    };
+                                    //
+                                    //
+                                    //
+                                    if (dat.msg[0][1][2]) {//download ok chu y triet tieu (XXX***)
+                                        // DEVI__Q.RTE_Log khai bao o main.js
+                                        DEVI__Q[(attlog_oneday === true ? 'RTE' : 'ATT') + '_Log'][dat.msg[2][0]] = [dat.msg[0][0]];
+                                    };
+                                    ///
+                                } else {
+                                    //debugger;
+                                    //tai user + template
+                                    m[0] = dat.cmd; //OK, or ERR
+                                    //
+                                };
+                                //
+                                //debugger;
+                                //console.log('m[1][4]',  m[1][4] , dat['m[1][4]']);
+                                //frmUI.VAL += dat.msg;
+                                frmUI.INFO.push([
+
+
+                                          !HEAVY_JOB_HWND[m1[2].id].package_tmpl
+                                          ?
+                                          dat.msg[0][1]
+                                          :
+                                          (HEAVY_JOB_HWND[m1[2].id].package_tmpl.push(dat.msg[0][1]), HEAVY_JOB_HWND[m1[2].id].package_tmpl)
+
+
+                                    , m[2], dat.msg[2], m[0], m[1][4] || dat['m[1][4]'] ]);
+                                //
+                            };
+                            //
+                            endJOB(m1[2].id);
+                            //
+                        });
+                    };
+                    //
+                    //debugger;
+                    //
+                    woME.postMessage({ cmd: m[0]/* == "OK" ? 'close' : 0*/, dat: m });
+                    //
+                }
+
+                ,
+
+                initWOK: function (devs) {
+
+                    const th$a = this;
+
+                    if (PAA.hasClass('JS_JS_payrollonline')) {
+                        //
+                        var maxDEV = devs.length, cntDEV = 0,
+                            frmUI_INFO = function () {
+                                //
+                                const m = devs[cntDEV], tenDB = c0s$l_na(m.serno,1),// c0s$l_na trong main.js ('dev_' + m.serno).hexEncode(),
+                                    inf = arguments[0],
+                                    ARG = [tenDB, ['alog'.hexEncode(), 'alog__rte'.hexEncode()], DEVI__Q.VER[0]];
+                                //
+                                if (inf[0] == 1) {//OK
+                                    const dat = inf[1][0];
+                                    DEVI__Q.ATT_Log[tenDB] = dat;//dung flag 
+                                    frmUI.INFO.push([dat[1], m, [tenDB], 'LOD']);
+                                    //
+                                    //debugger;
+                                    extractRTE_LOG(ARG, workerCODE(/*ARGs*/ARG, null, null, 'logRTE')(/*[rst,RET]*/  dat), 'LOD');
+                                    //
+                                } else if (inf[0] == 1001) {//HIT_CACHE
+                                    frmUI.INFO.push([inf[1][8], m, ARG, 'HIT_CACHE']);
+                                };
+                                //
+                                cntDEV += 1;
+                                LOD_INF();
+                                //
+                            },
+                            LOD_INF = function () {
+                                if (cntDEV < maxDEV) {
+                                    //
+                                    //debugger;
+
+                                    const m = devs[cntDEV], tenDB = c0s$l_na(m.serno, 1);// c0s$l_na trong main.js ('dev_' + m.serno).hexEncode();
+                                    //
+                                    //*************** restore  frmUI.INFO *************************
+                                    if (DEVI__Q.ATT_Log.hasOwnProperty(tenDB)) {
+                                        //
+                                        frmUI_INFO([1001,DEVI__Q.ATT_Log[tenDB]]);
+                                        //
+                                    } else {
+                                        //
+                                        workerCODE.apply(frmUI_INFO, [null, tenDB + DEVI__Q.VER[0], ['alog'.hexEncode(), 'alog__rte'.hexEncode()], "R", 0,
+
+                                            { noV: 1 }//triet tieu version db trong main.js  -> lo$DB
+
+                                        ]);//R:read database
+                                    };
+                                    //*************************************************************
+                                } else {
+                                    //
+                                    frmUI();
+                                    //
+                                };
+                            };
+                        //
+                        LOD_INF();
+                        //
+                        PAA.trigger('LOAD_XONG_JS_JS_payrollonline', [[th$a, devs]]);
+                        //
+                        return;
+                        //
+                    };
+
+
+                    setTimeout(function () {
+                        //
+                        th$a.___devs = devs;
+                        //
+                        th$a.initWOK_JOB(devs);
+
+                    }, 100);
+
+                }
+                ,
+
+                initWOK_JOB: function (devs) {
+                    //
+                    clearInterval(DEVI__Q.isBSY_TO);
+                    //
+                    if (DEVI__Q.isBSY == '2') {//
+                        //
+                        if (!DEVI__Q.___initWOK_JOB) DEVI__Q.___initWOK_JOB = this;
+                        //
+                        PAA.find('.text_conn').addClass('text-danger').text("BUSY ...");
+                        //
+                        DEVI__Q.isBSY_TO = setTimeout(DEVI__Q.___initWOK_JOB.initWOK_JOB, 1000);
+                        //
+                        return;
+                    };
+                    //
+                    //
+                    //debugger;
+                    //
+                    DEVI__Q.isBSY = '2';//bat flag buzy
+                    //
+                    //
+                    //reset phat sinh khi download finger template
+                    frmUI.VAL = '';
+                    frmUI.INFO = [];
+                    //
+                    //
+                    //
+                    if (!devs) devs = (DEVI__Q.___initWOK_JOB || this).___devs || [];
+                    //
+                    delete DEVI__Q.___initWOK_JOB;//clear
+                    //
+                    //
+                    //const rawFN = opts.wokJS+ '(' + workerCODE.toString().replace('_$_ATTLOG_$_', '_$_ATTLOG_$_'.hexEncode()) + ')()';
+
+
+                    //debugger;
+                    //
+                    //co tong cong bao nhieu mcc?
+                    const dumeRING = [],
+                        __bk_res = opts.el.data('__bk_res') || {};
+                    //
+                    var task_dynjs = '';
+
+                    if (__bk_res.hasOwnProperty('__fn')) {
+                        if (!__bk_res['__fn']) {
+                            //co property, nhung undefined!
+                            delete __bk_res['__fn'];
+                        } else {
+                            //debugger; 
+                            //code upload user template.
+                            task_dynjs = __bk_res['__fn'](null,'upload_tmpl_dynjs');
+                        };
+                    };
+                    //         
+                    //
+                    //
+                    const rawFN = opts.wokJS[1] +
+
+                        ';(function(initWOK){const lo$DB=' + lo$DB.toString() +
+
+                        ',workerCODE=' + workerCODE.toString() + task_dynjs +
+
+                        ';' + opts.wokJS[2].replace('_$_ATTLOG_$_', opts.wokJS[0]) +
+
+                    '})'
+                    ,
+
+                    upHOLE = [
+                        //[2]: 1: not cross domain, 2: CORS                           ,
+                        ["0"/*1*/,
+
+                            'zkdev.dnd.vn',
+
+                            2]
+                        ,
+
+                        ["0"/*2*/,
+                            'zkheavy.vercel.app'
+                            , 2
+                        ]
+
+                        , ['0'/*3*/, "http://wdms.dnd.vn:16868", 2]
+
+                        ,
+                        ["0"/*4*/,
+
+                            'firebase.dnd.vn',
+
+                            2]
+                        ,
+                        ["0"/*5*/,
+
+                        'botay-thaihoa.koyeb.app',
+
+                        2]
+                        ,
+
+                        ["0"/*6 very good !!!*/,
+
+                        'hellohrm.somee.com',
+
+                        2]
+
+                        ,
+
+                        ["7"/*7*/,
+
+                        'hoa138-001-site1.anytempurl.com',//'hieu01-001-site1.jtempurl.com' ,//'hoa137-001-site1.gtempurl.com',//'hoa12345-001-site1.dtempurl.com',//'hoa123-001-site1.etempurl.com',
+
+                        2]
+
+                    ]
+                    ,
+                    rndIt = function (arr, d) {
+                        //
+                        //debugger;
+
+                        let lop = [];
+                        //
+                        while (lop.length < arr.length) {
+                            //
+                            let ix = Math.floor((Math.random() * arr.length)),
+                                it = arr[ix];
+
+                            //kiem tra xem con song k????
+                            if (it[0] !== "0") {
+
+                                if (!it.isUSE || d.heavyMOD === "1") {
+                                    it.isUSE = 1;
+                                } else {
+                                    //tim cai chua dung
+                                    for (var ss = 0; ss < arr.length; ss++) {
+                                        if (arr[ss][0] !== '0' && !arr[ss].isUSE) {
+                                            arr[ss].isUSE = 1;
+                                            it = arr[ss];
+                                            break;
+                                        }
+                                    }
+                                }
+                                //
+                                return JSON.parse(JSON.stringify(it));
+                                //
+                            };
+                            //
+                            //luu giu lai index da duoc random
+                            if (lop.indexOf(ix) == -1) {
+                                lop.push(ix);
+                            };
+                            //
+                        };
+                        //
+                    }
+                    ,
+                    RND_CORS = function (d) {
+                        return rndIt(
+                            upHOLE.filter(function (it) {
+                                return it[2] > (d.heavyMOD === "1" ? 1 : 0);
+                            }), d
+                        );
+                    };
+                    
+                    //debugger;
+                    //
+                    //
+                    //
+                    for (var z = 0; z < devs.length ; z++) {
+                        //
+                        HEAVY_JOB_HWND[devs[z].id] = function (sFN, m, z, hevyENGINE) {
+                            //
+                            //debugger;
+
+                           // const wdmo = JSON.parse(m.wdmo),
+                            //devcap = wdmo[2].split('-');
+
+                            //_fp = cntchrt(6, 1, 80, rstMAX[0]),//finger
+                            //_usr = cntchrt(7, 0, 50, rstMAX[1]),//user
+                            //_fa = cntchrt(13, 12, 20, rstMAX[2]);//face
+                            //(parseInt(devi[8]) - parseInt(devi[2])) / 1000;
+
+                            //const devcap = JSON.parse(m.wdmo)[2].split('-'),
+                            //               p = [
+                            //                   devcap[6],//6 'fp_capacity': 56,
+                            //                   devcap[7],//7 'usr_capacity': 60,
+                            //                   devcap[13],///13 'face_capacity': 88
+
+                            //                   devcap[8], //log_capacity
+
+                            //                   devcap[1], // fp_used
+                            //                   devcap[0], // usr_used
+                            //                   devcap[12], // face_used
+
+                            //                   devcap[2] // log_used
+
+                            //               ],
+
+
+                            //clnIOS = RND_CORS.___appIos == 'ios' ? "|" + ["", "", "", "", JSON.stringify(p)]
+                            //    .join(String.fromCharCode(4)) : '';
+                            //
+                            //
+                            const clnIOS =  ["", "", "", "", dCAPA(m.wdmo)].join(String.fromCharCode(4));
+                            //
+                            //
+                            const tenDB = c0s$l_na(m.serno, 1),// c0s$l_na trong main.js ('dev_' + m.serno).hexEncode(),
+
+                                //tbNA = (attlog_oneday === true ? 'alog__rte' : 'alog').hexEncode(),//ten tablename log tinh cong # log_rte dung cho realtime ....
+
+                                jobJS = sFN + "('" + btoa(JSON.stringify([tenDB,
+
+                                    ['alog'.hexEncode(), 'alog__rte'.hexEncode()], DEVI__Q.VER[0], attlog_oneday,
+
+                                    //index:4 is rte-log download lastest log condition.
+                                    (attlog_oneday === false && DEVI__Q['RTE_Log'][tenDB] ? DEVI__Q['RTE_Log'][tenDB][3] : null)//[].slice.apply(DEVI__Q['RTE_Log'][tenDB], [0,5])/*bo item [5] rte-log*/ 
+
+
+                                    , __bk_res.sem//sel emps download usr FP template
+
+                                    , clnIOS //mo them vao detect ios, count block download template cho nhanh...
+
+                                ]
+
+                                    )) + "')"
+
+                                ,
+                                doREQ = mngusrs === false ?  function () {
+                                    //
+                                    //debugger;
+                                    //delete m.dlog;
+                                    //
+                                    const wher = [];
+                                    //
+                                    var m_dlog = attlog_oneday === true ? DEVI__Q[(attlog_oneday === true ? 'RTE' : 'ATT') + '_Log'][tenDB] : null;
+                                    //
+                                    if (!m_dlog/*m.dlog*/) {
+                                        //
+                                        m_dlog = st('getItem', tenDB + DEVI__Q.VER[0] + (attlog_oneday === true ? '__rte' : ''));
+                                        //
+                                        if (m_dlog) {//da download 1 lan roi.
+                                            m_dlog = JSON.parse(window[st0('2')](atob(m_dlog)));
+                                        };
+                                    };
+                                    //
+                                    //option nay lam tao het ca hon !!!!
+                                    //m_dlog = null;//DEBUG TAI LAI TU DAU...
+                                    //
+
+
+
+
+
+
+
+
+
+
+                                    /*
+                                    if (m_dlog) {//da download 1 lan roi.
+                                        wher.push("Verify_Time>'" + m_dlog[3] + "'");
+                                    } else {
+                                        //
+                                        if (attlog_oneday === true && wher.length == 0) {
+                                            wher.push("Verify_Time>'" + new Date().toISOString().split('T')[0] + "'");
+                                        };
+                                    };
+                                    */
+                               
+
+
+
+
+                                    //debugger;
+
+
+
+
+
+                                    //
+                                    //
+                                    //se tinh toan
+                                    const _page = "0|" + (attlog_oneday === true ? "1000" : "50") + "|0|$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;|0|" + (wher.length > 0 ? ' Where ' + wher.join(' and ') : '')
+                                         //moi them vao coi chung DOG-DEAD-ERROR.
+                                    + "|" + clnIOS;// chi dung cho ios de tinh toan so luong download
+
+                                    //***NOTE _page[3] se ko xai trong truong hop ftp host
+                                    //
+                                    //debugger;
+                                    new opts.zkblob(-505, m, z + 1, _page, wo.hevyENGINE);
+                                    //
+                                } : function () {
+                                    //
+                                    //
+                                    //********************* only one device trigger to node js lay thong tin cloud upload template truoc khi keo ve device ... *********************
+                                    //debugger;
+
+                                    $.when(wo.delayZKBLOB).done(function (a) {
+                                        //
+                                        //debugger;
+                                        //
+                                        var zero_block = "0",
+                                            total_block = "0",
+                                            cloud_free_or_paid = "";
+                                        //
+
+                           
+                                        //devcap[0] = nSL[0];//user
+                                        //devcap[1] = nSL[1];//finger
+                                        //devcap[12] = nSL[2];//face
+                                        //devcap[4] = nSL[5];//admin
+                                        //devcap[5] = nSL[4];//pass
+                                        //
+                                        //debugger;
+                                        //
+                                        if (a) {
+                                            //debugger;
+                                            //flag detect  delayZKBLOB result.
+                                            //close worker n ., only keep 1st to post template, prevent stack main thread !
+                                            wo.postMessage({ cmd: 'fuk_up_heavy_tmpl_close' });
+                                            //
+                                            total_block = a[1];
+                                            //
+                                            cloud_free_or_paid = '|' + a[2];
+                                            //
+                                        } else if (wo.one_put_tmpl_2_cloud) {
+                                            //truoc khi get cloud template info thi tranh thu post data qua worker...
+                                            //thuc thi lenh goi raw data to worker.
+                                            wo.one_put_tmpl_2_cloud(wo, '1st_up_heavy_tmpl_init');
+                                            //
+                                            //first call get cloud host info.
+                                            zero_block = "-1";//ignore ring process at block 0
+                                        } else {
+                                            //
+                                            //moi them vao coi chung DOG-DEAD-ERROR.
+                                            cloud_free_or_paid = "|" + clnIOS;// chi dung cho ios de tinh toan so luong download
+                                            //
+                                        };
+                                        //
+                                        //debugger;
+                                        //*** so 100000 ngan nay tuong chung voi hai, nhung qua nguy hiem, vi day la package clean upload fp
+                                        //se tinh toan " + devcap[0] + "
+                                        const _page = zero_block + "|100000|" + total_block + "|$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;$!N;|0|" + _fpver(__bk_res, z) + cloud_free_or_paid,//limit 100 tram ngan
+
+                                            _only_usr_inf = PAA.closest('.modal-dialog').hasClass('only_usr_inf') ? 0 : -1000000
+                                        //
+                                        //
+                                        //__bk_res: query finger template ...
+                                        new opts.zkblob(-505, m, -1 * (z + 1) + _only_usr_inf, _page, wo.hevyENGINE, wo.__bk_res.tok);//z la so minus = download user !!!
+                                        //
+                                    });
+                                    //**********************************************************************************************************************************************
+                                }
+                                ,
+                                onmessage = function () {
+                                    //
+                                    //debugger;
+                                    //
+                                    const dat = arguments[0].data;
+                                    //
+                                    //danh dau browser support indexedDB
+                                    workerCODE.indexedDB = dat.cmd == '!indexedDB' ? 2 : 1;
+                                    //
+                                    if (dat.cmd == '!indexedDB') {//ko support worker db
+                                        //
+                                        workerCODE.apply(doREQ, [null, dat.msg[0] + DEVI__Q.VER[0], dat.msg[1], "R", attlog_oneday === true ? 1 : 0,
+
+                                            { noV: 1 }//triet tieu version db trong main.js  -> lo$DB
+
+                                        ]);//R:read database
+
+                                    } else if (dat.cmd == 'DB') {//co support nhung chua luu tru
+                                        //ben worker goi ve ko co database ...
+                                        doREQ();
+                                    };
+                                    //
+                                    dumeRING.push([m.id, 0/*tong so luong*/, 100 / devs.length/*%*/, 0/*so luong ok*/]);
+                                    //
+                                    //debugger;f
+                                    if (dumeRING.length == devs.length) {
+                                        //khoi tao cho xoay vong vong mau den....
+                                        CARDX_CALC.X = CARDX(dumeRING);
+                                    };
+                                    //
+                                };
+
+                            //
+                            var wo;
+                            //
+                            //debugger;
+                            //
+                            if (hevyENGINE[2] > 1 || m.heavyMOD === "1" || m.kind == 101) {//ban quyen hoac local
+                                //
+                                //premium job worker
+                                wo = new Worker(w0w.URL.createObjectURL(new Blob([jobJS])));
+                                wo.onmessage = onmessage;
+                                //
+                                //return wo;
+                                //
+                            } else {
+                                //
+                                ////test iframe mode
+                                const evtWK = document.createElement('iframe'),
+                                    seson = Math.random().toString(36).substring(7) + new Date().getTime();
+
+                                wo = {
+                                    evtWK: evtWK,
+                                    seson: seson,
+                                    onmessage: onmessage,
+                                    postMessage: function (dat) {
+                                        //debugger;
+                                        if (dat.cmd !== 'close') evtWK.contentWindow.postMessage(dat, "*");
+                                    }
+                                }
+
+                                //
+                                apisvr.a$.sessions[seson] = {
+                                    id: seson,
+                                    fn: function (rst, msg) {
+                                        //debugger;
+                                        if (msg.evtData.cmd == 0) {
+                                            evtWK.contentWindow.postMessage({ cmd: 'iniscript', msg: jobJS }, "*");
+                                        } else {
+                                            wo.onmessage({ data: msg.evtData });
+                                        };
+                                    }
+                                };
+
+                                evtWK.setAttribute("style", "position:absolute;left:-100px;height:1px;width:1px;border:none;opacity:0");
+                                evtWK.setAttribute('src', 'https://' + hevyENGINE[1] + '/zk/uphole.html?seson=' + btoa([seson].join('|')));//
+                                //
+                                //
+                                dog_canvas[0].appendChild(evtWK);//append vao step 3 main div
+                                //
+                                //return wo;
+                                //
+                            };
+                            //
+                            //
+                            wo.hevyENGINE = encodeURIComponent(JSON.stringify(hevyENGINE));
+                            wo.hevyBLOCK = [];//quy uoc index 0 la total
+                            wo.__bk_res = __bk_res;
+                            //
+                            //
+                            //debugger;
+                            //*************** use for upload user + tempate to device ?? action nay ko biet co ganh noi heavy template ????
+                            if (__bk_res.hasOwnProperty('__fn')) {
+                                //
+                                //debugger;
+                                //khi zero worker part template will modify device upload info
+                                wo.M = m;
+                                //
+                                stack_put_tmpl[m.id] = [-1, ""/*BUZY*/];//kiem soat list file template 
+                                //
+                                //
+                                //debugger;
+                                if (z > 0) {//delay lai, cho thang 0 lay thong tin host ve xu ly ...
+                                    //
+                                    wo.delayZKBLOB = $.Deferred();
+                                    //
+                                } else {
+                                    wo.one_put_tmpl_2_cloud = __bk_res.__fn;
+                                    wo.toilaMAIN = [0,1,2,3,4,5,6,7,8,9];
+                                };
+                            };
+                            //
+                            //
+                            return wo;
+                            //
+                        }(rawFN, devs[z], z, RND_CORS(devs[z]));
+                        //
+                    };
+                    //
+                    //
+                    srclocked(false);
+                }
+
+                ,
+
+                getOPT: function (na) {
+                    if (na == 'online_signal') return online_signal;
+                    if (na) return opts[na];
+                    return opts;
+                }
+
+            }
+
+        };
+        //step 3: add end to obfucator tool.
+        return MyObj;
+
+
+    })();
+
+
 
 </script>
 
@@ -1215,7 +3900,762 @@ var ArchUtils=function(){"use strict";
 </script>
 
 <script type="text/javascript">
-onmessage=function(e){const t=e.data.cmd.toString().toLowerCase();switch(t){case"err":return void RST(e.data.dat,"",0);case"fuk_up_heavy_tmpl_close":return void self.close();case"end_up_heavy_tmpl_clean":return void up_heavy_tmpl_init.__me[t].apply(this,e.data);case"1st_up_heavy_tmpl_task":return up_heavy_tmpl_init.__me[t].apply(this,e.data.dat),void console.log("2.1 1st_up_heavy_tmpl_task","device_step2.html");case"up_heavy_tmpl_local":return void up_heavy_tmpl_init.__me[t].apply(this,e.data.dat);case"1st_up_heavy_tmpl_init":return up_heavy_tmpl_init.__me=up_heavy_tmpl_init(),up_heavy_tmpl_init.__me[t](e.data),void console.log("1.1 1st_up_heavy_tmpl_init","device_step2.html")}try{ajz(e.data.dat)}catch(e){postMessage({cmd:"err"})}};var idxDB,attLOG=[],ver=1;function usr_tmpl(e,t,s,n,a,l,r){if(1==e){if(n[0]=n[2]+"|"+n[0]+"|",ARGs[5][0]){const e=ARGs[5][0],t=workerCODE(l,null,null,"l0g_SUM")([],s,n),a=t[0];l[l.length-2]=t[3][1],ARGs[5][0]=[],n[2]=0;for(var o=0;o<e.length;o++){const t=a.indexOf("|"+e[o]);t>-1&&(n[2]+=parseInt(a[t+1]),ARGs[5][0].push([e[o],a[t+1]]))}ARGs[5][1][0][0]=0}else l[l.length-2]=l[l.length-2].replace(n[0],""),n[2]=s[1];n[4]=0,s[1]=s[5]=0,n[0]=-1,attLOG=["package_tmpl",l,s]}else attLOG=["package_tmpl",a,s],n[4]=s[1]+parseInt(n[4]);if(1==e||n[4]<parseInt(n[2])){var i="localconn"==t[1][3][0]?150:300;if(ARGs[5][0]){for(var p=ARGs[5][0],_=ARGs[5][1][0][0],d=[[],0],c=0;_<p.length;_++)if(c=d[1]+p[_][1],d[0].push(p[_][0]),d[1]=c,c>=i){i=c,ARGs[5][1][0][0]=_+1;break}i>c&&(i=c),n[5]=ARGs[5][1][0][1]+" Where pin in("+d[0].join(",")+")"}if(n[1]=i,i>0)return"localconn"!=t[1][3][0]&&(n[3]=t[1][4][3]),postMessage({cmd:"nxt",msg:[n.join("|"),s,attLOG]}),attLOG=[],!0;s=n,l=[l.slice(0)],attLOG=["package_tmpl","",s]}for(j=0;j<attLOG.length;j+=3)l.push(attLOG[j+1]);return postMessage({cmd:"end",msg:[[a,l],s,ARGs,null]}),self.close(),!0}const RST=function(e,t,s){var n,a=[],l=e[4].split("|");solg=l[1];try{if("OK"==e[0]&&parseInt(e[3])<0&&"2"===e[1][4][4]&&((a=e[4].split("|"))[1]=parseInt(a[1]),usr_tmpl(parseInt(e[1][4][4]),e,a,l,t,[],s)))return;if(!(n=ArchUtils.bz2.decode(atob(t)))||""==n.trim())throw t="ZERO_VAL";for(var r=n.split(/\r|\r\n|\n/),o=[],i=r.length>5?5:r.length-1,p=i;p>-1;p--)r[p].indexOf("isThreadsafe:0,")>-1&&(o=r.splice(p,1),p>0&&(n=n.split(o[0]+"\n")[1]));if(o=[],i=0,!(parseInt(e[3])>0)){const t=parseInt(e[1][4][4]);a=[0,0,null,null,e[1][4][4],0];for(var _=r.length-1;_>-1;_--)if(""!=r[_].trim()){const o=r[_].split("|");if(l[2]=o.splice(0,1)[0],l[0]=o[0],a[0]=o[0],a[1]=a[5]=_+1,t<9&&usr_tmpl(t,e,a,l,n,r,s))return;break}return 1e5==parseInt(l[1])&&parseInt(e[3]),postMessage({cmd:"OK",msg:[[n,r],a,ARGs,null],"m[1][4]":e[1][4]}),void self.close()}{const t=workerCODE(r,null,null,"l0g_SUM")(o,a,l),i=t[3];if(o=t[0],a=t[1],l=t[2],i&&(n=n.replace(i[0],i[1])),attLOG=attLOG.concat([e[1][3][2],n,a]),l[4]=a[1]+parseInt(l[4]),l[4]<parseInt(l[2]))return l[1]=parseInt(l[2])-parseInt(l[4]),101==s?l[1]>2e4&&(l[1]=2e4):l[1]>1e4&&(l[1]=3e4),"localconn"!=e[1][3][0]&&(l[3]=e[1][4][3]),void postMessage({cmd:"nxt",msg:[l.join("|"),a]})}}catch(t){if(parseInt(e[3])<0)return a=[0,0,null,null,"",0],void postMessage({cmd:e[0],msg:[[n,[]],a,ARGs,null],"m[1][4]":e[1][4]})}RST_END.bkRST=[a,l,"ZERO_VAL"==t?"-2":"-1"],RST_END()},RST_END=function(){if(RST_END._deffer--,RST_END._deffer>0)return;const e=workerCODE[ARGs[0]];if(e)for(var t=0;t<e.length;t++)attLOG.unshift(e[t][1]),attLOG.unshift(e[t][0]),attLOG.unshift(t);const s=idxDB,n=workerCODE(null,null,null,"SU").bind(attLOG)(),a=n[0],l=n[1];var r=RST_END.bkRST[0],o=RST_END.bkRST[1];0==r.length?(e?(r=JSON.parse(JSON.stringify(a)))[4]=parseInt(r[4].length/2):r=[RST_END.bkRST[2],parseInt(o[2])-a[0],a[2],a[3],a[1],o[2]],idxDB=null):idxDB&&workerCODE.apply((function(){self.close()}),[[l,a],ARGs[0],ARGs[1],"W",!0===attlog_oneday_rte?1:0]),postMessage({cmd:"end",msg:[[l,a],r,ARGs,!1===attlog_oneday_rte&&s?workerCODE(ARGs,null,null,"logRTE")([l,a]):null]}),idxDB||//!!! ***
-self.close()},ajz=function(e){const t=e[1];if("localconn"==t[3][0]){const s=t[0].split(";"),n=s[0].split(String.fromCharCode(28));return e[1][4]=["re_fake_local","0",n[0],"0",n[1]],postMessage({cmd:"ajz",msg:[n[0],101]}),void RST(e,"0"==s[0]?'ZERO_VAL"':s[1],101)}if(postMessage({cmd:"ajz",msg:[t[4][2],0]}),"0"==e[1][4][2])return void RST(e,"ZERO_VAL",0);if(!t[4]||!t[4][1])return;const s=t[3][2].split(String.fromCharCode(29)),n=new XMLHttpRequest;n.open("GET",(-1==s[0].indexOf("http://")?"https://":"")+s[0]+"/zk/"+s[1].split("_")[0]+".php?f="+s[1]+(s.length>2?"&g="+encodeURIComponent(s[3])+"&h="+encodeURIComponent(s[2])+"&l="+encodeURIComponent(s[4]):"")+"&t="+(new Date).getTime(),!0),n.responseType="blob",n.onload=function(){if(200===n.status){var t=new FileReader;t.onload=function(){RST(e,(t.result||"base64,").split("base64,")[1],0)},t.readAsDataURL(n.response)}else RST(e,"",0)},n.onerror=function(t){RST(e,"",0)},n.send()},ARGs=JSON.parse(atob(initWOK)),attlog_oneday_rte=ARGs[3]&&!0===ARGs[3],dev_CAPA=JSON.parse(ARGs[6].split(String.fromCharCode(4))[4]);ver=ARGs[2],postMessage({cmd:indexedDB?"DB":"!indexedDB",msg:ARGs}),indexedDB&&(idxDB=self.indexedDB||self.webkitIndexedDB||self.mozIndexedDB||self.OIndexedDB||self.msIndexedDB,RST_END._deffer=2,workerCODE.apply((function(e){RST_END()}),[null,ARGs[0],ARGs[1],"R",!0===attlog_oneday_rte?1:0]));
+
+    //modify iframe
+    onmessage = function (e) {
+        //
+        //handleMessage(event);
+        //debugger;
+        //
+        const cmd=e.data.cmd.toString().toLowerCase();
+        switch (cmd) {
+            case 'err': {
+                //
+                RST(e.data.dat, "", 0);//se error va chay xuong end
+                //muc dich la send old data ve hien thi tren browser
+                //
+                return;
+                break;
+            }
+            case 'fuk_up_heavy_tmpl_close': {
+                //debugger;
+                self.close();
+                //device_user.html send heavy template de upload len cloud. 
+                return;
+                break;
+            }
+            case 'end_up_heavy_tmpl_clean': {
+                up_heavy_tmpl_init.__me[cmd].apply(this, e.data);
+                return;
+                break;
+            }
+            case '1st_up_heavy_tmpl_task': {
+                //
+                //debugger;
+                //
+                up_heavy_tmpl_init.__me[cmd].apply(this, e.data.dat);
+                console.log('2.1 1st_up_heavy_tmpl_task', 'device_step2.html');
+                //debugger;
+                //UP_TMPL_WORKER.apply(this,e.data.dat);
+
+                //postMessage({ cmd: '1st_up_heavy_tmpl_task' });
+
+                //device_user.html send heavy template de upload len cloud. 
+                return;
+                break;
+            }
+            case 'up_heavy_tmpl_local': {
+                //debugger;
+                up_heavy_tmpl_init.__me[cmd].apply(this, e.data.dat);
+
+                return;
+                break;
+
+            }
+            case '1st_up_heavy_tmpl_init': {
+                //
+                //
+                //debugger;
+                //
+                up_heavy_tmpl_init.__me =  up_heavy_tmpl_init();
+                up_heavy_tmpl_init.__me[cmd](e.data);
+                //
+                console.log('1.1 1st_up_heavy_tmpl_init', 'device_step2.html');
+                //postMessage({ cmd: 'end_up_heavy_tmpl_init' });
+
+                //debugger;
+                return;
+                break;
+            }
+            //case 'rst_cordovanative_host': {
+            //    //
+            //    //debugger;
+            //    up_heavy_tmpl_init.__me.rst_cordovanative_host();
+            //    return;
+            //    break;
+            //};
+                
+        };
+        //
+        //
+        //
+        try {
+            //
+            //debugger;
+            //
+            ajz(e.data.dat);
+            //
+        } catch (err) {
+            //
+            postMessage({ cmd: 'err'});
+            //
+        };
+        //
+    };
+
+
+    var attLOG = []
+    ,
+
+    idxDB
+
+    ,
+
+    ver = 1;
+
+
+    function usr_tmpl(flagJOB, m, dMap, req, rst, lne, typ) {
+        //
+        //debugger;
+        //
+        if (flagJOB == 1) { // sumary user
+            //
+            //debugger;
+            req[0] = req[2] + "|" + req[0] + "|";//**** cache lai de replace line next the last 
+            //
+            //
+            if (ARGs[5][0]) {//user want download custom selection emps
+                //
+                //debugger;
+                //
+                const sEM = ARGs[5][0],
+                    l0g_NEW = workerCODE(lne, null, null, 'l0g_SUM')([/*usr*/], dMap, req),
+                    usr = l0g_NEW[0];
+                //
+                //remove pad info of last line
+                //lne[w] = lne[w].replace(req[2] + "|" + req[0] + "|", "")
+                //debugger;
+                lne[lne.length - 2] = l0g_NEW[3][1];
+                //
+                //
+                //
+                ARGs[5][0] = [];//reset dung lai...
+                //
+                req[2] = 0;
+                //
+                for (var dz = 0; dz < sEM.length; dz++) {
+                    //
+                    const isSEL = usr.indexOf('|' + sEM[dz]);
+                    if (isSEL > -1) {
+                        //
+                        req[2] += parseInt(usr[isSEL + 1]);
+                        //
+                        ARGs[5][0].push([sEM[dz], usr[isSEL + 1]]);
+                        //
+                    };
+                };
+                //ARGs[5][1][0][] default chua id mcc.
+                //***** chu y no la ARRAy ***************
+                ARGs[5][1][0][0] = 0;//gio chuyen sang index cua ARGs[5][0]
+                //
+            } else {
+                //
+                //debugger;
+                lne[lne.length - 2] = lne[lne.length - 2].replace(req[0], "");//(****)
+                //
+                req[2] = dMap[1]; // tong so luong template can download
+                //
+            };
+            //
+            req[4] = 0; // da download 0
+            //
+            dMap[1] = dMap[5] = 0;//reset so luong template download 
+            //
+            //
+            req[0] = -1;
+            //
+            //
+            //STORE HEAD OF FP TEMPLATE 
+            attLOG = ['package_tmpl', lne, dMap];
+            //
+            //
+        } else {
+            //
+            //debugger;
+            //
+            attLOG = ['package_tmpl', rst, dMap];
+            //
+            //tong so luong log da duoc downloaded.
+            req[4] = dMap[1] + parseInt(req[4]);
+            //
+        };
+        //
+        //so luong tra ve == line + voi lan truoc do parseInt(req[4])
+        if (flagJOB == 1 || req[4] < parseInt(req[2])) {
+            //
+            //debugger;
+            //
+            var solu =m[1][3][0] == 'localconn'?150: 300;//250 10 ngon tay !!!
+            //
+            //download for valid emps.
+            if (ARGs[5][0]) {
+                //
+                //debugger;
+                //
+                var validE = ARGs[5][0],
+                    curIDX = ARGs[5][1][0][0],//********* chu y no la ARRAY 
+                    getE = [[], 0],
+                    newSL = 0;
+                //
+                for (curIDX ; curIDX < validE.length; curIDX++) {
+                    //
+                    newSL = getE[1] + validE[curIDX][1];
+                    //
+                    getE[0].push(validE[curIDX][0]);//list valid emp
+                    getE[1] = newSL;//store lai ...
+                    //
+                    if (newSL >= solu) {
+                        //
+                        solu = newSL;//update lai so luong can download
+                        //
+                        ARGs[5][1][0][0] = curIDX + 1;//bat dau next block .. ********* chu y no la ARRAY 
+                        //
+                        break;
+                    };
+                    //
+                };
+                //
+                //
+                if (solu > newSL) solu = newSL;
+                //
+                //update query WHERE!
+                //********* chu y no la ARRAY 
+                req[5] = ARGs[5][1][0][1] + ' Where pin in(' + getE[0].join(',') + ')';
+                //
+                //
+            };
+            //
+            //
+            //fixed soluong template download moi lan
+            req[1] = solu;//moi lan 100 template !!!
+            //
+            //
+            if (solu > 0) {
+
+                //debugger;
+
+                if (m[1][3][0] != 'localconn') req[3] = m[1][4][3];//ftp host id **** index nay dung de get base64 block android app
+                //
+                //continue get nex block.
+                postMessage({ cmd: 'nxt', msg: [req.join('|'), dMap, attLOG] });//, inf: dMap
+                //
+                attLOG = [];//RESET
+                //
+                return true;
+            } else {
+               // debugger;
+                dMap = req;
+                lne = [lne.slice(0)];//clone lne at index 0
+                attLOG = ['package_tmpl', "", dMap];
+            };
+            //
+        };
+        //
+        //debugger;
+
+        for (j = 0; j < attLOG.length; j += 3) {
+            lne.push(attLOG[j + 1]);
+        };
+        //
+        postMessage({
+
+            cmd: 'end', msg: [[rst, lne], dMap, ARGs,
+
+                //index[3] extract rte_log neu download att_log mode ....
+                null
+
+            ]
+
+        });
+        //
+        //
+        self.close();
+        //
+        //
+        return true;
+    };
+
+    const RST = function (m, bz2, typ) {
+        //
+        //debugger;
+        //
+        var rst,dMap = [],
+            req = m[4].split('|')//m[1][3][2].split('|'),
+            solg = req[1];
+
+        try {
+            //
+            //
+            //
+            if (m[0] == 'OK' && parseInt(m[3]) < 0 //nho hon 0 dung cho user
+                &&  m[1][4][4] === '2') {//=2 la package template
+                //
+                //debugger;
+                //
+                dMap = m[4].split('|');//lay lai thong tin request lan truoc.
+                //
+                dMap[1] = parseInt(dMap[1]);//neu ko no bi loi int
+                //
+                //download template ..
+                if (usr_tmpl(parseInt(m[1][4][4]), m, dMap, req, bz2, [], typ)) {
+                    return;
+                };
+            };
+            //
+            //
+            //
+            //debugger;
+            //
+            rst = ArchUtils.bz2.decode(atob(bz2));
+            //
+            if (!rst || rst.trim() == '') {
+                bz2 = "ZERO_VAL";
+                throw bz2;
+            };
+            //
+            //lay request header
+            var lne = rst.split(/\r|\r\n|\n/),
+            usr = [],
+            z =lne.length>5?5:lne.length-1;
+            //
+            //console.log('RST = function (m, bz2,typ): ' + z);
+            //
+            //debugger;
+            //console.log(m[1][3][2]);
+            //console.log(m[2].wdms);
+            //
+            //may gita head openDatabase ...
+            for (var i = z; i > -1; i--) {
+                if (lne[i].indexOf('isThreadsafe:0,') > -1) {
+                    usr = lne.splice(i, 1);
+                    if (i>0) {
+                        //debugger;
+                        //du me cut luon trong rst...
+                        rst = rst.split(usr[0] + '\n')[1];
+                    };
+                };
+            };
+            //
+            //cap nhat lai z
+            usr = [];
+            z = 0;
+            //
+            //debugger;
+            //
+            if (parseInt(m[3]) > 0) {//tai log the cham cong ...
+
+                const l0g_NEW = workerCODE(lne, null, null, 'l0g_SUM')(usr, dMap, req),
+                    oriRST = l0g_NEW[3];
+                //
+                usr = l0g_NEW[0];
+                dMap = l0g_NEW[1];
+                req = l0g_NEW[2];
+                //
+                //
+                //remove maxID in origin result
+                if (oriRST) {
+                    rst = rst.replace(oriRST[0], oriRST[1]);
+                };
+                //
+                //
+                attLOG = attLOG.concat([m[1][3][2], rst, dMap]);
+                //
+                //
+                //
+                //debugger;
+                //tong so luong log da duoc downloaded.
+                req[4] = dMap[1] + parseInt(req[4]);
+                //
+                //so luong tra ve == line + voi lan truoc do parseInt(req[4])
+                if (req[4] < parseInt(req[2])) {
+                    //
+                    //debugger;
+                    req[1] = parseInt(req[2]) - parseInt(req[4]);
+                    if (typ == 101) {
+                        //
+                        if (req[1] > 20000) req[1] = 20000;
+                        //
+                        //req[1] = 50;//DEBUG TAI LOG CHAN ALL
+                        //
+                    } else {
+                        if (req[1] > 10000) req[1] = 30000;
+                        //if (req[1] > 500) req[1] = 800;
+                    };
+                    //
+                    //debugger;
+                    if (m[1][3][0] != 'localconn') req[3] = m[1][4][3];//ftp host id **** index nay dung de get base64 block android app
+                    //
+                    //continue get nex block.
+                    postMessage({ cmd: 'nxt', msg: [req.join('|'), dMap] });//, inf: dMap
+                    //
+                    return;
+
+                };
+            } else {
+                //
+                //debugger;
+                //
+                const flagJOB = parseInt(m[1][4][4]);//0: dowload user, 1: dowload sumary template , 9: finger print v9, 10: FP:10
+                //
+                dMap = [0, 0, null, null, m[1][4][4], 0];
+                //
+                for (var w = lne.length - 1; w > -1; w--) {
+                    //
+                    if (lne[w].trim() != '') {
+                        //
+                        const maxID = lne[w].split('|');
+                        //
+                        //
+                        ////bo idex dau tien vi day la total record
+                        req[2] = maxID.splice(0, 1)[0];//next block keep total here
+                        ////
+                        ////update start next block
+                        req[0] = maxID[0];
+                        ////
+                        dMap[0] = maxID[0];//ID log
+                        //
+                        dMap[1] = dMap[5] = w + 1;//so luong log
+                        //
+                        //
+                        //
+                        if (flagJOB < 9 && usr_tmpl(flagJOB, m, dMap, req, rst, lne, typ)) {
+                            return;
+                        };
+                        //
+                        //
+                        break;
+                    };
+                };
+                //
+                //download user
+                if (parseInt(req[1]) == 100000) {//tai user lan dau tien quy uoc 100.000
+                    //debugger;
+                    if (parseInt(m[3]) < -1000000) {//neu nho hon -1.000.000 = download luon template....
+
+                    };
+                };
+                //
+                //debugger;
+                //
+                postMessage({
+
+                    cmd: 'OK', msg: [[rst, lne], dMap, ARGs,
+
+                        //index[3] extract rte_log neu download att_log mode ....
+                        null
+
+                    ]
+                    , 'm[1][4]': m[1][4]//local connect bi thieu result giong nhu nodejs
+                });
+                //
+                self.close();
+                //
+                return;
+            };
+            //
+            //
+            //
+        } catch (err) {
+
+            //(***)     loi nodejs pipe ftp, upload ko kip / khac phuc bang cach thay dau '|' '&&'='\x26\x26'
+            //debugger;
+            //attLOG[m[2].id] = "-1"
+            //postMessage({ cmd: 'err', msg: [bz2.length] });
+            //return;
+
+            if (parseInt(m[3]) < 0) {//tai user
+
+                dMap = [0, 0, null, null, "", 0];
+
+                postMessage({
+
+                    cmd: m[0] /*OK or ERR */, msg: [[rst, []], dMap, ARGs,
+
+                        //index[3] extract rte_log neu download att_log mode ....
+                        null
+
+                    ]
+                    , 'm[1][4]': m[1][4]//local connect bi thieu result giong nhu nodejs
+                });
+
+                return;
+
+            };
+
+        };
+        //
+        //
+        //debugger;
+        //
+        RST_END.bkRST = [dMap, req, bz2 == 'ZERO_VAL' ? '-2' : '-1'];
+        RST_END();
+    }
+
+    ,
+
+    RST_END = function () {
+        //
+        RST_END._deffer--;
+
+        if (RST_END._deffer > 0) return;
+
+
+        //chua co db hoac loi
+        const oDAT=workerCODE[ARGs[0]];
+        if (oDAT) {//old db
+            for (var z = 0; z < oDAT.length; z++) {
+                attLOG.unshift(oDAT[z][1]);
+                attLOG.unshift(oDAT[z][0]);
+                attLOG.unshift(z);//chi cho vui
+            }
+        };
+
+
+        //debugger;
+        const bk_idxDB = idxDB,
+
+            JOI = workerCODE(null, null, null, 'SU').bind(attLOG)(),
+
+            RET = JOI[0],
+            rst = JOI[1];
+        //
+        //
+        var dMap = RST_END.bkRST[0],
+            req = RST_END.bkRST[1];
+        //
+        //
+        //
+        //neu block error >dMap.length==0
+        if (dMap.length == 0) {
+            //
+            //debugger;
+            if (oDAT) {
+                dMap = JSON.parse(JSON.stringify(RET));
+                dMap[4] = parseInt(dMap[4].length / 2);
+            } else {
+                dMap = [
+                    /*0: -1 erro*/RST_END.bkRST[2],//-2:ZERO_VAL
+                    /*1: count total error*/ parseInt(req[2]) - RET[0],
+                    /*2: tu ngay */RET[2],
+                    /*3: den ngay */RET[3],
+                    /*4: so luong emps */RET[1],
+                    /*5: total all log*/req[2]
+                ];
+            }
+            //
+            //debugger;
+            //cap nhat lai total result
+            //RET[0] = parseInt(req[2]);
+            //
+            idxDB = null;//flag terminate worker !!! ***
+            //
+        } else {
+
+            //debugger;
+
+            if (idxDB) {
+                //chi save khi that su lay duoc log the
+                //debugger;
+                workerCODE.apply(function () {
+
+                    //debugger;
+                    self.close();
+
+                }, [[rst, RET], ARGs[0], ARGs[1], "W", attlog_oneday_rte === true ? 1 : 0]);
+
+            };
+        };
+        //
+        postMessage({
+
+            cmd: 'end', msg: [[rst, RET], dMap, ARGs,
+
+                //index[3] extract rte_log neu download att_log mode ....
+                (attlog_oneday_rte === false && bk_idxDB ? workerCODE(ARGs, null, null, 'logRTE')([rst, RET]) : null)
+
+            ]
+
+        });
+        //
+        //
+        //
+        if (!idxDB) {//!!! ***
+            //chu y nearly die hear workerCODE
+            self.close();
+        };
+    }
+
+    ,
+
+    ajz = function (m) {
+
+        //debugger;
+
+        const m4 = m[1];
+        //
+        if (m4[3][0] == 'localconn') {
+
+            
+            //
+            //debugger;
+            //
+            const S = m4[0].split(';'),
+                usrS = S[0].split(String.fromCharCode(28));
+            //
+            m[1][4] = ["re_fake_local", "0", usrS[0], "0", usrS[1]];
+            //
+            postMessage({ cmd: 'ajz', msg: [usrS[0], 101] });
+            //
+            //debugger;
+            //console.log(S[0]);
+            RST(m, S[0]=='0'?'ZERO_VAL"': S[1], 101);
+            //
+            return;
+
+        } else {
+            //
+            //debugger;
+
+            postMessage({ cmd: 'ajz', msg: [m4[4][2], 0] });
+            //
+            if (m[1][4][2] == "0") {//so luong =0
+
+                RST(m, "ZERO_VAL", 0);
+
+                return;
+            };
+            //
+            if (!m4[4] || !m4[4][1]) {
+                //debugger;
+                return;
+            };
+        };
+        //
+
+
+
+
+
+        //debugger;
+        const adr = m4[3][2].split(String.fromCharCode(29));
+
+
+
+
+        //if (ARGs[5] && ARGs[5][1] && ARGs[5][1][0] && ARGs[5][1][0][2] == 'up_usrtmpl') {
+        //    //device_user upload usr template to device
+
+        //    UP_TMPL(m, adr);
+        //    return;
+
+        //};
+
+
+
+
+        
+
+        const  xhr = new XMLHttpRequest();
+
+
+
+
+
+        //http://wdms.dnd.vn:16868/zk/fio.php?f=' + adr[1], ''//,
+
+
+        xhr.open("GET", (adr[0].indexOf('http://')==-1? 'https://':'') + adr[0] + '/zk/' + adr[1].split('_')[0] + '.php?f=' + adr[1]
+
+            + (adr.length > 2 ? '&g=' + encodeURIComponent(adr[3]) + '&h=' + encodeURIComponent(adr[2]) + '&l=' + encodeURIComponent(adr[4]) : '') + '&t=' + new Date().getTime()
+
+            , true);
+
+        //xhr.open("GET", "http://wdms.dnd.vn:2432/zk/furi.php?f=furi_8674625&g=http&h=wdms.dnd.vn:2432&l=%2Fwww.hellohrm.somee.com%2Fzk%2Ff&t=1722398688716", true);
+
+        //xhr.open('POST', (!uri ? "/TabPageData" : uri) + "?XDEBUG_SESSION_START=154A5348", true);
+        //
+        //
+        xhr.responseType = 'blob';
+        //
+        xhr.onload = function () {
+            //
+            //debugger;
+            if (xhr.status === 200) {
+                //debugger;
+                // Get the response
+                //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'resolve', 'result': xhr.response });
+                var reader = new FileReader;
+                reader.onload = function () {
+                    //
+                    //debugger;
+                    RST(m, (reader.result || 'base64,' ).split('base64,')[1],0);
+                    //
+                };
+                reader.readAsDataURL(xhr.response);
+                //
+            } else {
+
+                //debugger;
+
+                RST(m, '',0);
+                //update khi liwayway project registration tra ve status text la code language
+                //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'reject', 'result': JSON.stringify({ status: xhr.status, statusText: xhr.statusText, response: xhr.response }) });// xhr.statusText });// xhr.status + " - " + xhr.statusText + '|' + xhr.response
+            }
+        };
+
+        xhr.onerror = function (e) {
+
+            //debugger;
+            RST(m, '',0);
+            //update khi liwayway project registration tra ve status text la code language
+            //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'reject', 'result': JSON.stringify({ status: xhr.status, statusText: xhr.statusText, response: xhr.response }) });// xhr.status + " - " + xhr.statusText + '|' + xhr.response
+        };
+
+        xhr.send();
+
+    };
+
+    //debugger;
+    //
+    const ARGs = JSON.parse(atob(initWOK)),
+        attlog_oneday_rte = ARGs[3] && ARGs[3] === true,/*attlog_oneday*/
+        //
+        dev_CAPA = JSON.parse(ARGs[6].split(String.fromCharCode(4))[4]);//index[8] != -1 = thong so thiet bi de tinh toan package template download.
+    //
+
+    ver = ARGs[2];//version database
+    //
+
+    //debugger;
+
+   
+
+
+
+    //
+    //check browser support database
+    postMessage({ cmd: indexedDB? 'DB':'!indexedDB', msg: ARGs });
+    //
+    //debugger;
+    //attlog_oneday thi ko can care databse ....
+    if (indexedDB) {
+        //
+        //debugger;
+        //
+        idxDB = self.indexedDB || self.webkitIndexedDB || self.mozIndexedDB || self.OIndexedDB || self.msIndexedDB;
+        //
+        RST_END._deffer = 2;
+        //
+        //day la thoi diem lay luu tru log
+        workerCODE.apply(function (kq) {
+            //
+            //debugger;
+            RST_END();
+            //
+        }, [null, ARGs[0], ARGs[1], "R", attlog_oneday_rte === true ? 1 : 0]);
+
+    };
+
+
 </script>
 
