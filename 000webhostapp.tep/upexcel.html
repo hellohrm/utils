@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style type="text/css">
+        body{
+            margin:0;padding:0;
+        }
+         .iframe-fullscreen {
+            left: 0;right:0;
+            top: 0;bottom:0;
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            min-height: 500px;
+        }
+
+            .iframe-fullscreen > #embed_excel,
+            .iframe-fullscreen > *[id^="wacframe"] {
+                width: 100%;
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                border: 0px;
+                height: 100%;
+                right: 0px;
+                left: 0px;
+            }
+
+            *[id^="wacframe"]{
+                height: calc(100% + 26px)!important;
+            }
+        #received-message, #test_msg {
+            opacity:0;
+            position:absolute;
+            top:-100%;
+        }
+    </style>
+</head>
+
+<body class="iframe-fullscreen">
+
+    <p id="received-message">I've heard nothing yet</p>
+
+    <button id='test_msg' type="button" class="upload-button">Test Msg</button>
+
+</body>
+
+<script type="text/javascript">
+    //
+    //debugger;
+    //
+    var dog = document.querySelectorAll('body > div');
+    if (dog.length > 0) document.body.removeChild(dog[0]);
+    //
+    ////
+    ////**************************** script phuc vu cho view dog excel *********************************************//
+    var dat = atob(window.location.search.split('seson=')[1]).split('|'), s = document.createElement('script');
+    s.setAttribute('src', dat[3]);
+    s.addEventListener('load', function () {
+
+    });
+    //
+    document.body.appendChild(s);
+    //
+
+
+</script>
+
+<!--<script src="https://hellohrm.github.io/utils/media/utils/jsc/upemp.js"></script>-->
+
+</html>
