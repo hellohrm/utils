@@ -1,0 +1,703 @@
+﻿<div>
+
+    <style type="text/css">
+        .lightcolor .vertical-bo {
+            border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(151 151 151), rgba(0, 0, 0, 0));
+            /* background-size: 1px; */
+            /* border: 40px solid transparent; */
+            /* border-image: linear-gradient(to right, #ff0000, #0000ff) 1; */
+            border-image-slice: 1;
+        }
+
+        .vertical-bo {
+            border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255 255 255), rgba(0, 0, 0, 0));
+            /* background-size: 1px; */
+            /* border: 40px solid transparent; */
+            /* border-image: linear-gradient(to right, #ff0000, #0000ff) 1; */
+            border-image-slice: 1;
+        }
+
+        .contactForm label.error {
+            font-size: 12px;
+            color: red;
+        }
+
+
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+
+        .swiper-slide {
+          /*text-align: center;*/
+          /*font-size: 18px;*/
+          /*background: #444;*/
+          /*display: flex;
+          justify-content: center;
+          align-items: center;*/
+        }
+
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .swiper-button-disabled {
+            display:none;
+        }
+
+    </style>
+
+    <!--https://codepen.io/RIR360/pen/qBvOzdM-->
+    <div frm='typ_1' class="col">
+
+        <div class="text-center">
+            <h2 class="fs-2">Contact With Us</h2>
+            <p class="my-3 col-md-8 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, maiores sed. Asperiores optio aliquid voluptates exercitationem et</p>
+        </div>
+
+        <div class="my-5 row ">
+
+            <div class="row   no-gutters col-md-6">
+                <div class="col-md-6 d-flex justify-content-center align-items-center second-group p-3">
+                    <div class="text-center">
+                        <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                        <h3 class="fs-4 my-2">Website</h3>
+                        <a href="https://apphrm.dnd.vn" target="_blank">apphrm.dnd.vn</a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center second-group p-3">
+                    <div class="text-center">
+                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+
+                        <h3 class="fs-4 my-2">Email Us</h3>
+                        <a href="mailto:apphrm@hotmail.com" target="_blank">apphrm@hotmail.com</a>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-center align-items-center second-group p-3">
+                    <div class="text-center">
+                        <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+
+                        <h3 class="fs-4 my-2">@apphrm</h3>
+                        <a href="https://www.youtube.com/@apphrm" target="_blank">HRM ONLINE</a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center second-group p-3">
+                    <div class="text-center">
+                        <span class="fa-stack fa-2x  mx-auto" style="scale:0.7;line-height: 28px;height: 28px;">
+                            <i class="fa fa-circle fa-stack-2x text-primary" style="line-height: 28px;"></i>
+                            <i style="margin-top:1px" class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h3 class="fs-4 my-2">apphrm</h3>
+                        <a href="https://www.facebook.com/apphrm" target="_blank">Hello-HRM</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <input type="text" class="w-100 px-2 py-3 bg-light form-control mb-3" placeholder="Your Name" required />
+                <input type="text" class="w-100 px-2 py-3 bg-light form-control mb-3" placeholder="Your Email" required/ />
+                <input type="text" class="d-none w-100 px-2 py-3 bg-light form-control mb-3" placeholder="Subject" required/ />
+                <textarea type="text" class="w-100 px-2 py-3 bg-light form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+                <button class="btn btn-warning w-100">Send Message</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div frm='typ_2' class="content px-3">
+
+
+        <div class="row">
+            <div class="col-md-5 mr-auto">
+                <h2>Contact Us</h2>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quaerat autem corrupti asperiores accusantium et fuga! Facere excepturi, quo eos, nobis doloremque dolor labore expedita illum iusto, aut repellat fuga!</p>
+
+                <ul class="list-unstyled pl-md-5 mb-5">
+                    <li class="d-flex text-black mb-2">
+                        <span class="mr-3"><span class="icon-map"></span></span> 34 Street Name, City Name Here, <br> United States
+                    </li>
+                    <li class="d-flex text-black mb-2"><span class="mr-3"><span class="icon-phone"></span></span> +1 (222) 345 6789</li>
+                   <li class="d-flex text-black"><span class="mr-3"><span class="icon-envelope-o"></span></span> info@mywebsite.com </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <form class="contactForm mb-5" method="post"  name="contactForm">
+                    <div class="row">
+
+                        <div class="col-md-12 form-group">
+                            <label for="name" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" name="name" >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="email" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" name="email" >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="message" class="col-form-label">Message</label>
+                            <textarea class="form-control" name="message" cols="30" rows="7"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12  d-flex mx-2">
+                            <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                            <button class="btn btn-danger ml-auto" style="border-radius: 20px;">
+                                Exit
+                            </button>
+                            <span class="submitting"></span>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="form-message-warning mt-4"></div>
+                <div class="form-message-success">
+                    Your message was sent, thank you!
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div frm='typ_3' class="content px-3 pr-md-0">
+
+
+        <div class="row justify-content-center">
+            <div class="col">
+
+                <div class="row align-items-center">
+                    <div class="col-md-7 mb-5 mb-lg-0" style="align-self: flex-start;">
+
+                        <h2 class="mb-2"  data-lang="lh_013_0|0">Contack Us</h2>
+                        <h5 data-lang="lh_013_0|1">Kindly complete all the required information below.</h5>
+
+                        <form class="contactForm border-md-right pr-md-5 mb-5 vertical-bo" method="post"  name="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="fname" lng-holder="lh_013_1|0"   placeholder="First name">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="lname" lng-holder="lh_013_1|1"  placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <input type="text" class="form-control" name="email"   placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <textarea class="form-control" name="message"  cols="30" rows="7" lng-holder="lh_013_1|2" placeholder="Write your message"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 d-flex mx-2">
+                                    <input type="submit" lng-val="lh_013_0|2"  value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                                    <button class="btn btn-danger ml-auto" style="border-radius: 20px;" data-lang="js_007_37">
+                                        Close
+                                    </button>
+                                    <span class="submitting"></span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="form-message-warning mt-4"></div>
+                        <div class="d-none form-message-success">
+                            Your message was sent, thank you!
+                        </div>
+
+                    </div>
+                    <div class="col-md-5 pl-5 pr-4">
+
+                        <div class="swiper mySwiper overflow-hidden d-none">
+                            <div class="swiper-wrapper align-items-center" >
+
+                                <div class='swiper-slide'>
+                                    <h3 class='mb-2'>🎯 Giải pháp Phần mềm theo yêu cầu</h3>
+                                    <p>💡 Chúng tôi chuyên tùy biến phần mềm theo yêu cầu, giúp bạn:   </p>
+
+                                    <p>
+                                        ✔️ Tối ưu hóa quy trình làm việc.<br/>
+                                        ✔️ Tăng hiệu suất và giảm chi phí vận hành.<br/>
+                                        ✔️ Đáp ứng chính xác các đặc thù các nghiệp vụ quản lý Nhân sự - Chấm công - Tính lương.<br />
+                                        ✔️ Phần mềm hoạt động mượt mà trên nhiều nền tảng phần cứng và hệ điều hành, bao gồm:
+
+                                        <br />Bản cài đặt .Net dành cho yáy tính để bàn, laptop chạy Window.
+                                        <br />App điện thoại Android/iOS.
+                                        <br />Web app cho các trình duyệt phổ biến Chrome, Edge, Safari, Firefox ...
+                                        <br />Tương thích với đa số thiết bị chấm công phổ biến hiện nay.
+                                    </p>
+
+           
+                                    <p><a href='mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!' target='_blank'><i class='fa fa-envelope'></i> apphrm@hotmail.com</a></p>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="mb-2">🔔 Tìm đối tác mua bán máy chấm công</h3>
+                                    <p>Chúng tôi đang tìm kiếm đối tác phần cứng, lắp đặt uy tín, dịch vụ hậu mãi tốt.</p>
+                                    <p>
+                                        🤝 Cùng nhau mang đến giải pháp toàn diện: từ thiết bị phần cứng đến phần mềm – giúp khách hàng tiết kiệm thời gian, chi phí và nâng cao hiệu quả vận hành.
+                                     </p>
+                                     <p>
+                                           Nếu bạn quan tâm đến cơ hội hợp tác, hãy liên hệ với chúng tôi để trao đổi chi tiết!
+                                    </p>
+
+                                    <p><a href="mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!" target="_blank"><i class="fa fa-envelope"></i> apphrm@hotmail.com</a></p>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="mb-2">🧑‍💼📈 Tìm Cộng tác viên kinh doanh</h3>
+                                    <p>Chúng tôi chỉ tập trung phát triển phần mềm  nên cần hợp tác với các dịch vụ Marketing, người đang công tác trong lĩnh vực HR, nhân viên Sale, kỹ thuật IT, Youtuber, Facebooker ....</p>
+                                    <p>💰 Hưởng 20% thu nhập thụ động ổn định từ việc phát triển thuê bao hàng tháng.</p>
+                                    <p>💵 hưởng 40% hoa hồng cho mỗi hợp đồng thành công.</p>
+                                    <p>💡 Lưu ý chúng tôi không chịu thuế.</p>
+                                    <p><a href="mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!" target="_blank"><i class="fa fa-envelope"></i> apphrm@hotmail.com</a></p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="mb-2">🌐 HOSTING - VPS</h3>
+                                    <p>
+                                        <!--Chúng tôi là đơn vị phát triển phần mềm quản lý – chấm công – tính lương trên nền tảng cloud, với nhu cầu mở rộng hạ tầng lưu trữ và vận hành ổn định, bảo mật cao.-->
+                                        📣 Chúng tôi đang tìm kiếm nhà cung cấp dịch vụ hosting uy tín để hợp tác lâu dài.
+                                    </p>
+                                    <p>
+                                        🔍 Yêu cầu đối tác:
+                                        <br/>
+                                        ✔️ Hạ tầng mạnh, tốc độ truy cập ổn định, bảo mật cao.
+                                        <br/>
+                                        ✔️ Hỗ trợ kỹ thuật nhanh chóng, chuyên nghiệp.
+                                        <br/>
+                                        ✔️ Chính sách hợp tác linh hoạt, minh bạch.
+
+                                        <!--Ưu tiên các đơn vị có kinh nghiệm triển khai hosting cho phần mềm SaaS-->
+                                    </p>
+                                    <p>
+
+                                        🤝 Chúng tôi cam kết:
+                                        <br/>
+                                        ✔️ Hợp tác đôi bên cùng phát triển.
+                                        <br/>
+                                        ✔️ Mở rộng thị trường và chia sẻ lợi nhuận rõ ràng.
+                                        <br/>
+                                        ✔️ Đồng hành lâu dài trong các dự án triển khai phần mềm cloud.
+                                    <p>
+                                    <p><a href="mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!" target="_blank"><i class="fa fa-envelope"></i> apphrm@hotmail.com</a></p>
+                                
+                                </div>
+
+                                <div class="swiper-slide">
+
+                                    <h3 class="mb-2">🤝 NHÀ PHÁT TRIỂN WEBSITE - ERP</h3>
+                                    <p>
+                                         📣 Nhằm mở rộng thị trường và mang đến giải pháp toàn diện cho khách hàng, chúng tôi mong muốn hợp tác kinh doanh cùng các đối tác có năng lực trong lĩnh vực:
+                                        <br/>
+                                         ✔️ Phát triển website doanh nghiệp, hệ thống nội bộ.
+                                         <br />
+                                         ✔️ Tích hợp và triển khai ERP, CRM, quản lý sản xuất, kế toán…
+                                    </p>
+
+                                    <p>
+
+                                         🤝 Lợi ích khi hợp tác cùng chúng tôi:
+                                            <br />
+                                            ✔️ Phần mềm chạy cùng DOMAIN của khách sẽ làm tăng giá trị dịch vụ cung cấp cho khách hàng.
+                                            <br />
+                                            ✔️ Cùng đồng hành trong các dự án triển khai thực tế.
+                                     </p>
+                                     <p><a href="mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!" target="_blank"><i class="fa fa-envelope"></i> apphrm@hotmail.com</a></p>
+
+                                </div>
+
+                                <!--<div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>-->
+                            </div>
+                            <div class="swiper-button-next swiper-button-disabled"></div>
+                            <div class="swiper-button-prev swiper-button-disabled"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <!--<h3 class="mb-4">Let's talk about everything.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil deleniti itaque similique magni. Magni, laboriosam perferendis maxime!</p>
+                        <p><a href="#">Read more</a></p>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        (function (_) {
+
+            debugger;
+
+            if (!window['lienhe_me']) window['lienhe_me'] = _();//pass pubArgs later if need
+
+        })(function (c) {
+
+            "use strict";
+
+            var _rawhtm = ''
+                ,
+
+                jDAT = {
+
+                    "typ_3": [
+
+                        ["<h3 class='mb-2'>🎯 Custom Software Solutions</h3>",
+
+                            "<p>💡 We specialize in customizing software to meet your specific needs, helping you:</p>",
+
+                                "<p>",
+                                    "✔️ Optimize your workflow.<br/>",
+                                    "✔️ Increase efficiency and reduce operational costs.<br/>",
+                                    "✔️ Accurately address the unique requirements of HR management, timekeeping, and payroll processes.<br/>",
+                                    "✔️ Ensure smooth performance across various hardware platforms and operating systems, including:",
+
+                                "<br/>- .Net installation for desktop computers and laptops running Windows",
+                                "<br/>- Mobile apps for Android/iOS",
+                                "<br/>- Web apps compatible with popular browsers like Chrome, Edge, Safari, Firefox ...",
+                                "<br/>- Compatibility with most commonly used time attendance devices.",
+                            "</p>",
+
+                            "<p><a href='mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!' target='_blank'><i class='fa fa-envelope'></i> apphrm@hotmail.com</a></p>"
+                        ]
+                        ,
+                        [
+                            "<h3 class='mb-2'>🔔 Looking for Partners to Buy and Sell Time Attendance Devices</h3>",
+                            "<p>We are seeking reputable partners for hardware supply, installation, and reliable after-sales service.</p>",
+                            "<p>",
+                            "🤝 Together, let’s deliver a comprehensive solution—from hardware to software—that helps customers save time, reduce costs, and improve operational efficiency.",
+                            "</p>",
+                            "<p>",
+                            "If you're interested in this partnership opportunity, please contact us to discuss further!",
+                            "</p>",
+
+                            "<p><a href='mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!' target='_blank'><i class='fa fa-envelope'></i> apphrm@hotmail.com</a></p>"
+
+                        ]
+                        ,
+                        [
+
+                            "<h3 class='mb-2'>🧑‍💼📈 Seeking Business Collaborators</h3>",
+                            "<p>We focus solely on software development, so we’re looking to collaborate with marketing services, professionals in HR, sales staff, IT technicians, YouTubers, Facebook content creators, and more ...</p>",
+                            "<p>💰 Earn a stable 20% passive income from monthly subscription growth.</p>",
+                            "<p>💵 Receive 40% commission for each successful contract.</p>",
+                            "<p>💡 Note: We are not responsible for tax obligations.</p>",
+                            "<p><a href='mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!' target='_blank'><i class='fa fa-envelope'></i> apphrm@hotmail.com</a></p>"
+
+                        ]
+                        ,
+                        [
+                            "<h3 class='mb-2'>🌐 HOSTING - VPS</h3>",
+                            "<p>",
+                            "📣 We are looking for a reputable hosting service provider for long-term collaboration.",
+                            "</p>",
+                            "<p>",
+                            "🔍 Partner Requirements:",
+                            "<br/>✔️ Robust infrastructure with stable access speed and high security",
+                            "<br/>✔️ Fast and professional technical support.",
+                            "<br/>✔️ Flexible and transparent partnership policies.",
+                            "</p>",
+                            "<p>",
+
+                            "🤝 Our Commitment:",
+                            "<br/>✔️ Mutual growth through collaboration.",
+                            "<br/>✔️ Clear profit-sharing and market expansion.",
+                            "<br/>✔️ Long-term partnership in cloud software deployment projects.",
+                            "<p>",
+                            "<p><a href='mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!' target='_blank'><i class='fa fa-envelope'></i> apphrm@hotmail.com</a></p>"
+                                
+                        ]
+                        ,
+                        [
+                            "<h3 class='mb-2'>🤝 WEBSITE & ERP DEVELOPMENT</h3>",
+                            "<p>",
+                            "📣 To expand our market and deliver comprehensive solutions to customers, we are seeking business collaboration with capable partners in the following areas:",
+                            "<br/>✔️ Development of corporate websites and internal systems.",
+                            "<br/>✔️ ntegration and deployment of ERP, CRM, production management, accounting systems, and more ...",
+                            "</p>",
+
+                            "<p>",
+
+                            "🤝 Benefits of partnering with us:",
+                            "<br/>✔️ Software operating under the client’s DOMAIN enhances the value of services provided.",
+                            "<br/>✔️ Joint participation in real-world implementation projects.",
+                            "</p>",
+                            "<p><a href='mailto:apphrm@hotmail.com?subject=Meeting%20Request&body=Hi%20there,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%20meeting%20next%20week.%0D%0A%0D%0AThanks!' target='_blank'><i class='fa fa-envelope'></i> apphrm@hotmail.com</a></p>"
+
+                        ]
+
+                    ]
+
+                };
+
+
+            // Form
+
+            const ini_frm = function (_frm) {
+
+                const contactForm = _frm.find('.contactForm');
+
+                if (contactForm.length > 0) {
+
+                    //debugger;
+                    //https://stackoverflow.com/questions/2457032/jquery-validation-change-default-error-message
+                    $.validator.messages = $.extend(true, {}, $.validator.messages, { required: _La$N('lh_013_2|0', jDAT.lng) });
+                    //$.validator.messages.required = _La$N('lh_013_2|0', jDAT.lng);
+
+                    contactForm.validate({
+                        rules: {
+                            fname: "required",
+                            lname: "required",
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            message: {
+                                required: true,
+                                minlength: 5
+                            }
+                        },
+                        messages: {
+                            email: _La$N('lh_013_2|1', jDAT.lng) ||"Please enter a valid email address.",
+                            message: _La$N('lh_013_2|2', jDAT.lng) || "Please enter a message."
+                        },
+                        /* submit via ajax */
+                        submitHandler: function (form) {
+
+                            srclocked(true);
+
+                            const $submit = _frm.find('.submitting'),
+
+                                btnSM = this.submitButton,
+
+                                waitText = 'Submitting...';
+
+                            debugger;
+                            btnSM.value = waitText;
+
+                            const formDataJSON = contactForm.serializeArray();
+
+
+
+                            const body = JSON.stringify(
+
+                                //formDataJSON
+
+                                { 'name': 'hello-hrm', 'data': formDataJSON }
+
+                                );
+
+                            //"{\"name\": \"Apple iPad Air\", \"data\": { \"Generation\": \"4th\", \"Price\": \"519.99\", \"Capacity\": \"256 GB\" }}";
+                            //console.log(JSON.stringify(formDataJSON));
+
+
+                            $.ajax({
+                                type: "POST",
+                                url: "https://api.restful-api.dev/objects",
+
+                                data:body,// contactForm.serialize(),
+
+                                contentType: 'application/json; charset=utf-8',
+
+                                dataType: 'json', // Expecting JSON response
+
+                                beforeSend: function () {
+
+                                    //btnSM.value = waitText;
+
+                                    //$submit.css('display', 'block').text(waitText);
+
+                                }
+                                ,
+                                success: function (msg) {
+
+                                    debugger;
+
+                                    if (msg == 'OK') {
+                                        _frm.find('.form-message-warning').hide();
+                                        setTimeout(function () {
+                                            _frm.fadeOut();
+                                        }, 1000);
+                                        setTimeout(function () {
+                                            _frm.find('.form-message-success').fadeIn();
+                                        }, 1400);
+
+                                    } else {
+                                        //_frm.find('.form-message-warning').html(msg);
+                                        //_frm.find('.form-message-warning').fadeIn();
+                                        //$submit.css('display', 'none');
+                                        $submit.trigger('lienhe_rst');
+                                        //
+                                        toastMsg(_La$N('js_003_ok', aLAN), 'success');
+                                        srclocked(false);
+                                    }
+                                },
+                                error: function (jqXHR, textStatus, errorThrown) {
+
+                                    devDlg(0, (_La$N('js_007_11', aLAN))).show();
+
+                                    srclocked(false);
+                                    //_frm.find('.form-message-warning').html("Something went wrong. Please try again.");
+                                    //_frm.find('.form-message-warning').fadeIn();
+                                    //$submit.css('display', 'none');
+                                }
+                            });
+                        }
+
+                    });
+                }
+            };
+
+            //contactForm();
+
+            function MyObj(opts) { // constructor
+
+
+                //switch (opts.typ) {
+                //    case 'typ_1': {
+                //        break;
+                //    }
+                //}
+                const frm = _rawhtm.clone();
+                frm.find("[frm]:not([frm='" + opts.typ + "'])").remove();
+
+
+
+                _gsC(srcpf$ + '/media/vendor/jquery-validation/dist/jquery.validate.min.js' + src$id, 'js', function () {
+
+                    ini_frm(frm);
+
+                }, 'jquery.validate.min.js');
+
+
+                opts.pu.one('shown.bs.modal', function () {
+                    _gsC('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css', 'css', function (data) {
+                        _gsC('https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js', 'js', function (data) {
+
+                            debugger;
+
+                            const mySWP = frm.find('.swiper-wrapper'),
+                                sld = mySWP.find('.swiper-slide:first-child').clone(),
+                                sld_D = jDAT[opts.typ];
+
+
+                            mySWP.empty();//.removeClass('d-none');
+
+                            for (var z = 0; z < sld_D.length ; z++) {
+                                sld.clone().html(sld_D[z].join('')).appendTo(mySWP);
+                            };
+
+
+
+                            new Swiper(mySWP.parent().removeClass('d-none'), {
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+
+                        });
+                    });
+
+                });
+
+
+
+
+
+
+
+                return frm;
+
+
+            }
+
+            return {
+
+                'ini': function (rawhtm, _elUI, def) {
+
+                    _rawhtm = rawhtm;
+
+                    jDAT.lng = $.extend(true, {}, jDAT.lng, _elUI.lan);
+
+                    const Jri = "https://vpsgiare.dnd.vn/jsn/lienhe_" + apisvr.a$.selected_language + '.json?t=' + new Date().getTime();
+
+                    $.ajax({
+                        url: Jri,//"https://jsonplaceholder.typicode.com/todos/1",
+                        dataType: "json",
+                        cache: false,
+                        success: function (data) {
+                            //
+                            console.log("Success:", data);
+                            //
+                            debugger;
+                            //deep merge 2 json
+                            jDAT = $.extend(true, {}, jDAT, data);
+                            //
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+
+                            console.error("Error:", textStatus, errorThrown);
+
+                        },
+                        complete: function () {
+                            //
+                            console.log("Request complete.");
+                            //
+                            //
+                            debugger;
+                            const lng = $.extend(true, {}, jDAT.lng, aLAN);
+
+                            _rawhtm.find('[data-lang]').each(function (idx, el) {
+                                const key = el.getAttribute('data-lang');
+                                $(el).html(_La$N(key, lng));
+                            });
+
+                            _rawhtm.find('[lng-holder]').each(function (idx, el) {
+                                const key = el.getAttribute('lng-holder');
+                                $(el).attr("placeholder",_La$N(key, lng));
+                            });
+
+                            _rawhtm.find('[lng-val]').each(function (idx, el) {
+                                const key = el.getAttribute('lng-val');
+                                $(el).attr("value", _La$N(key, lng));
+                            });
+
+                            def.resolve();//sure script already .
+                            //
+                        }
+                    });
+
+                }
+                //,
+                //'xls': xls
+                //,
+                //'vid': vid
+                ,
+                'tml': MyObj
+            };
+        });
+
+    </script>
+
+
+</div>  

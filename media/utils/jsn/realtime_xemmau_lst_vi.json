@@ -1,0 +1,178 @@
+﻿{
+  "lng": {
+    "jn_013_0": [
+      "Tham Khảo Thêm ...",
+      "Các báo biểu quản lý chấm công thông dụng",
+      "Chức Năng Dự Kiến",
+      "Chuyên nghiệp hơn, hoàn toàn FREE !",
+      "Đã Hoàn Thiện",
+      "Báo Cáo & Thống Kê Nhân Sự",
+      "Bảng Điều Khiển Nhân Sự"
+    ],
+    "jn_013_1": [
+      "Hiển thị thời gian làm việc, nghỉ phép, đi muộn, về sớm của từng nhân viên theo dạng Biểu đồ hoặc Bảng tổng hợp, có đầy đủ công thức tính. Giúp bộ phận nhân sự dễ dàng kiểm tra, đối chiếu và phát hiện sai sót trong dữ liệu chấm công.",
+      "Dễ dàng tải về file tương thích hoàn toàn với các định dạng bảng tính thông dung như Excel, Google Sheets hay Office 365",
+      "📊 Dashboard HR (bảng điều khiển nhân sự) trong Excel là công cụ trực quan giúp tổng hợp, phân tích và trình bày dữ liệu nhân sự một cách hiệu quả. Nó đóng vai trò như một “trung tâm thông tin” giúp bộ phận nhân sự và lãnh đạo doanh nghiệp đưa ra quyết định nhanh chóng và chính xác.",
+      "🎯 Mục đích chính: Tổng hợp dữ liệu nhân sự từ nhiều nguồn: thông tin cá nhân, lương thưởng, chấm công, đào tạo, đánh giá hiệu suất… Trực quan hóa thông tin bằng biểu đồ, bảng số liệu, chỉ số KPI để dễ theo dõi. Hỗ trợ ra quyết định: giúp quản lý nắm bắt xu hướng, phát hiện vấn đề và đưa ra giải pháp kịp thời.",
+      "✅ <b>Lợi ích khi sử dụng Dashboard HR trong Excel</b>"
+    ],
+    "jn_013_2": [
+      "<strong>Tiết kiệm thời gian:</strong> Không cần xử lý thủ công từng bảng dữ liệu",
+      "<strong>Dễ dàng tùy chỉnh:</strong> Excel cho phép thiết kế Dashboard phù hợp với nhu cầu từng doanh nghiệp.",
+      "<strong>Tăng tính minh bạch:</strong> Tất cả thông tin đều được trình bày rõ ràng, dễ kiểm tra."
+    ],
+    "jn_013_3": [
+      "Liên hệ"
+    ]
+
+  },
+  "rpt_timekeeper": {
+
+    "jsn_sample": [
+      [
+        {
+          "lnk": [
+            {
+              "cmd": [
+                [
+                  "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>Xem mẫu</a>",
+                  "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Liên hệ</a>"
+                ]
+              ]
+            }
+          ],
+
+          "p": [ "Mẫu-01", "Mới" ]
+
+        },
+        {
+          "lnk": [
+            {
+              "cmd": [
+                [
+                  "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>Xem mẫu</a>",
+                  "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Liên hệ</a>"
+                ]
+              ]
+            }
+          ],
+
+          "p": [ "Mẫu-02", "Mới" ]
+
+        }
+      ]
+
+    ],
+
+
+    "thamkhao_more": [
+
+      {
+        "img": [ "https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Attendance-Tracking-Spreadsheet-Template.webp?itok=BMb7MiiO", "Mẫu theo dõi điểm danh" ],
+        "tmpl": [ "https://www.smartsheet.com/sites/default/files/2025-07/IC-Attendance-Tracking-Spreadsheet-Template-8872.xlsx?c0d=vendor" ],
+        "p": [
+          "<b>Khi nào nên sử dụng mẫu này:</b> Bạn có thể sử dụng mẫu bảng tính theo dõi điểm danh này để giám sát việc điểm danh liên tục trong nhiều ngày hoặc với nhiều người tham gia. Nếu bạn phụ trách các nhóm, sự kiện dài hạn hoặc chương trình phi lợi nhuận, mẫu này sẽ rất hữu ích.",
+          "<br/><br/><b>Các tính năng nổi bật của mẫu:</b> Mẫu này bao gồm các trường dành cho ngày tháng và tên, kèm theo công thức hoặc định dạng tích hợp giúp nhận diện các xu hướng. Bạn cũng sẽ tìm thấy không gian dành cho phần tổng kết hoặc tính trung bình để có cái nhìn rõ ràng hơn."
+        ],
+        "cmd": [
+          "Tải xuống Mẫu theo định dạng ...<br/>"
+        ]
+
+      },
+
+      {
+        "img": [ "https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Daily-Attendance-Spreadsheet-Template.webp?itok=Tcltfnzh", "Mẫu điểm danh hàng ngày" ],
+        "tmpl": [ "https://www.smartsheet.com/sites/default/files/2025-07/IC-Daily-Attendance-Spreadsheet-Template-8872.xlsx?c0d=vendor" ],
+        "p": [
+          "<b>Khi nào nên sử dụng mẫu này:</b> Hãy sử dụng bảng tính điểm danh hàng ngày này để theo dõi việc điểm danh trong một ngày duy nhất với thời gian vào và ra chính xác. Mẫu này đặc biệt hữu ích cho việc ghi nhận các sự kiện diễn ra một lần hoặc các lần điểm danh hàng ngày.",
+          "<br/><br/><b>Các tính năng nổi bật của mẫu:</b> Mẫu này có không gian để ghi lại thời gian vào và ra của từng cá nhân. Ngoài ra, còn có trường Ghi chú để người giám sát có thể thêm nhận xét hoặc xác nhận hoạt động."
+        ],
+        "cmd": [
+          "Tải xuống Mẫu theo định dạng ...<br/>"
+        ]
+      },
+      {
+        "img": [ "https://cdn.vertex42.com/ExcelTemplates/Images/attendance-record.gif", "Mẫu ghi nhận có mặt" ],
+        "tmpl": [ "https://www.vertex42.com/Files/exclusive/attendance-record.xlsx?c0d=vendor" ],
+        "p": [
+          "Bảng tính đơn giản này là một cách tuyệt vời để <b>ghi lại việc điểm danh trong các cuộc họp, câu lạc bộ, đội hướng đạo, nhà thờ và các lớp học hoặc công ty.</b> ",
+          "Bạn có thể in mẫu điểm danh trống để bỏ vào sổ tay hoặc kẹp hồ sơ. Sau đó, chuyển thông tin vào bảng tính để lưu trữ bản điểm danh điện tử.",
+          "<br/><br/>Bạn có thể nhập bất kỳ ngày nào để theo dõi việc điểm danh bằng cách nhập ngày đầu tiên vào ô C5 một cách thủ công, rồi sử dụng công thức như =C5+7 để tính cho tuần tiếp theo.",
+          "<br/><br/>Chỉ cần sao chép/chèn/dán các hàng hoặc cột hiện có để thêm người hoặc ngày mới. Tổng số điểm danh sẽ được tính theo từng ngày và từng người."
+        ],
+        "cmd": [
+          "Tải xuống Mẫu theo định dạng ...<br/>"
+        ]
+      }
+
+    ]
+
+  },
+  "hr_dashboard_excel": {
+
+    "jsn_sample": [
+      [
+        {
+          "img": [ "https://github.com/ektad08/HR-Analytics/blob/main/hr%20analytics%20dashboard1.jpg?raw=true", "hr analytics dashboard1.jpg" ],
+          "lnk": [
+            {
+              "tmpl": [
+                "https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor"
+              ],
+              "cmd": [
+                [
+                  "<a mnuu='preview' href='javascript:void(0)' class='btn btn-info mb-3' style='border-radius: 20px;'><i class='ti-eye' style='font-size: 17px;margin: 0 0px 0 -5px;'></i>Xem Demo</a>"
+                ]
+              ],
+              "p": [
+                "<p class='px-3 my-1 text-large' style='opacity:0.75'>",
+                "<mark>",
+                "Xem demo day du du lieu giup ban de dang nam bat toan canh cua report",
+                "</mark>",
+                "</p>"
+              ]
+            },
+            {
+              "tmpl": [
+                "https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor"
+              ],
+              "cmd": [
+                [
+                  "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>Xem Demo</a>",
+                  "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Liên hệ</a>"
+                ]
+              ],
+              "p": [
+                "<p class='px-3 my-1 text-large' style='opacity:0.75'>",
+                "<mark>",
+                "This dashboard is an example of how data visualization can help HR department to make informed decisions. It's user-friendly, interactive, and provides a variety of charts and graphs that help users gain a deeper understanding of the data.",
+                "One of the most impressive features of this dashboard is its ability to filter data. Users can filter the data by education allowing them to focus on the areas that matter most to them. This feature enables users to gain a better understanding of the data and make informed decisions based on the insights provided.",
+                "</mark>",
+                "</p>"
+              ]
+            }
+          ],
+          "p": [ "Mẫu-01", "" ]
+        },
+        {
+          "img": [ "https://adniasolutions.com/wp-content/uploads/2021/04/05-HR-Database-Excel-Template-HR-Dashboard-900x579.png", "HR Database Excel Template" ],
+          "lnk": [
+            {
+              "tmpl": [
+                "https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor"
+              ],
+              "cmd": [
+                [
+                  "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                  "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                ]
+              ]
+            }
+          ],
+          "p": [ "Mẫu-02", "Mới" ]
+        }
+      ]
+    ]
+
+  }
+}

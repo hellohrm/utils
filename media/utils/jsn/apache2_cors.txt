@@ -1,0 +1,1 @@
+﻿https://stackoverflow.com/questions/29150384/how-to-allow-cross-domain-request-in-apache2

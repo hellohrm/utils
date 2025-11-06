@@ -1,0 +1,2204 @@
+﻿<div>
+    <div class="xemmau_lst container-fluid" style="display:none">
+        <style type="text/css">
+            /*---- portfolio  item ----*/
+            .box-shd {
+                box-shadow: 0px 5px 20px 1px rgba(30,37,54,0.15) !important;
+            }
+
+            .portfolio-title {
+                padding: 100px 60px 30px;
+            }
+
+                .portfolio-title span {
+                    display: block;
+                }
+
+            .portfolio-item {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                color: #fff;
+                width: 100%;
+                border: 0;
+                position: relative;
+            }
+
+                .portfolio-item img {
+                    width: 100%;
+                    -webkit-transition: -ms-transform 0.35s;
+                    -o-transform 0.35s;
+                    -moz-transform 0.35s;
+                    transition: transform 0.35s;
+                    -webkit-backface-visibility: hidden;
+                    -o-backface-visibility: hidden;
+                    -ms-backface-visibility: hidden;
+                    -moz-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                }
+
+                .portfolio-item .portfolio-overlay {
+                    width: 100%;
+                    background: transparent;
+                    padding: 30px 0px;
+                    position: absolute;
+                    bottom: -100%; /*-160px;*/
+                    display: block;
+                    margin-top: 0;
+                    float: left;
+                    z-index: 9;
+                    text-align: center;
+                    left: 0;
+                    transition: all 0.5s ease-in-out;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                }
+
+                    .portfolio-item .portfolio-overlay h4 {
+                        font-weight: 600;
+                        margin-bottom: 0px;
+                    }
+
+                    .portfolio-item .portfolio-overlay a:hover {
+                        color: #ffffff;
+                    }
+
+                    .portfolio-item .portfolio-overlay .badge {
+                            line-height: normal!important;
+                            font-weight: 100!important;
+                    }
+
+                        .portfolio-item .portfolio-overlay span a {
+                            color: #ffffff;
+                        }
+
+                            .portfolio-item .portfolio-overlay span a:hover {
+                                color: #ffffff;
+                            }
+
+                .portfolio-item a.popup {
+                    position: absolute;
+                    right: 20px;
+                    top: -20px;
+                    color: #5949d6;
+                    z-index: 9;
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background: #fff;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    padding-left: 0px;
+                    text-align: center;
+                    line-height: 40px;
+                    opacity: 0;
+                    transition: all 0.5s ease-in-out;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                }
+
+                    .portfolio-item a.popup:hover {
+                        background: #5949d6;
+                        color: #ffffff;
+                    }
+
+                .portfolio-item:hover img {
+                    -webkit-transform: scale(1);
+                    -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                    -o-transform: scale(1);
+                    transform: scale(1);
+                    opacity: 0.6;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                }
+
+                .portfolio-item img {
+                    opacity: 1;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                }
+
+                .portfolio-item:hover a.popup {
+                    opacity: 1;
+                    top: 20px;
+                }
+
+                .portfolio-item:before {
+                    content: '';
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background-size: 115%;
+                    -webkit-transition: all 0.7s cubic-bezier(.68, .11, .13, .98);
+                    -moz-transition: all 0.7s cubic-bezier(.68, .11, .13, .98);
+                    transition: all 0.7s cubic-bezier(.68, .11, .13, .98);
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+            .owl-carousel .owl-item .portfolio-item img {
+                width: 100%;
+            }
+
+            .portfolio-item.only-popup {
+                width: 100%;
+                text-align: center;
+            }
+
+                .portfolio-item.only-popup a.popup {
+                    display: inline-block;
+                    left: 50%;
+                    margin-left: -20px;
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                }
+
+            .portfolio-item:hover .portfolio-overlay {
+                bottom: 0;
+            }
+
+
+
+            .portfolio-overlay .mb-5 {
+                margin-bottom: 5px !important;
+            }
+
+            .xemmau_lst .mb-30 {
+                margin-bottom: 30px !important;
+            }
+
+            .xemmau_lst .py-50 {
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+            .xemmau_lst  .py-15 {
+                padding-top: 15px !important;
+                padding-bottom: 15px !important;
+            }
+
+
+        </style>
+
+        <div lst="rpt_timekeeper" class="row">
+
+            <div class="col-12">
+                <div class="note_attsample m-3 m-sm-auto" style="max-width:700px">
+                    <div class="panel panel-white  wow fadeInUp animated" style="border-radius: 30px;background:rgba(191,191,191,0.15);visibility: visible; animation-name: fadeInUp">
+                        <div class="card-body p-0">
+
+                            <div class="d-flex align-items-center mt-3 px-5">
+
+                                <div type="button" class="btn btn-danger" mnu="exit_note_attsample" style="border-radius:20px">
+                                    <i class="ti-arrow-left text-large" style="vertical-align:text-bottom"></i>
+                                    <span data-lang="js_013_5|2" class="d-none d-sm-inline-block">Back</span>
+                                </div>
+
+                                <div style="flex:1">
+                                    <h2 tieu_de class="m-0 pl-3">Dashboard HR</h2>
+                                </div>
+
+                            </div>
+
+                            <div class="alert">
+
+                                <p data-lang="jn_013_1|0">
+                                    Displays working hours, leave, late arrivals, and early departures for each employee in the form of charts or summary tables, complete with calculation formulas. This helps the HR department easily review, cross-check, and detect errors in attendance data.
+                                </p>
+
+                                <p class="mb-0" data-lang="jn_013_1|1">Easily downloadable in a file fully compatible with common spreadsheet formats such as Excel, Google Sheets, or Office 365.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dothi-muiten mx-5" style="z-index:5"></div>
+                </div>
+            </div>
+
+            <div class="col-xl-6  wow fadeInUp  py-50 animated  mx-auto" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-heading text-center">
+                    <h2 class="heading text-light" data-lang="jn_013_0|2">Planned Feature</h2>
+                    <h5 class="mb-30 text-light" data-lang="jn_013_0|3">More professional, completely FREE!</h5>
+                </div>
+
+                <div jsn_sample="0" class="row justify-content-center">
+
+                    <div class="col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div  class="grid-item text-center rounded mb-30">
+
+                            <span class="badge badge-danger tag d-none" style="position: absolute;z-index: 1;transform: translate(-50%,-50%);">New</span>
+
+                            <div class="portfolio-item box-shd rounded">
+
+                                <!--https://www.kaggle.com/datasets/bhavikapuri2811/hr-analytics-dashboard-using-excel-->
+                                <!--https://github.com/Celesttaa/HR-ANALYTICS-DASHBOARD-->
+                                <!--https://github.com/ektad08/HR-Analytics/tree/main-->
+                                <!--https://www.youtube.com/watch?v=4WUzvr9jxGc-->
+                                <!--https://www.youtube.com/watch?v=j3YhwyliwsY&t=794s-->
+
+                                <img alt="hr analytics dashboard1.jpg" src="https://hrm.dnd.vn/src/bangcong.jpg" class="img-fluid" />
+                                <div class="portfolio-overlay">
+                                    <div tmpl="https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor">
+                                        <p class="px-3 my-1 text-large" style="opacity:0.75">
+                                            <mark>
+                                                Xem demo day du du lieu giup ban de dang nam bat toan canh cua report
+                                            </mark>
+                                        </p>
+                                        <span class="text-white d-block mb-5">
+                                            <a mnuu="preview" href="javascript:void(0)" class="btn btn-info" style="border-radius: 20px;">
+                                                <i class="ti-eye" style="font-size: 17px;margin: 0 0px 0 -5px;"></i>
+                                                Xem Demo
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div tmpl="https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx">
+                                        <p>
+                                            <mark>
+                                                This dashboard is an example of how data visualization can help HR department to make informed decisions. It's user-friendly, interactive, and provides a variety of charts and graphs that help users gain a deeper understanding of the data.
+                                                One of the most impressive features of this dashboard is its ability to filter data. Users can filter the data by education allowing them to focus on the areas that matter most to them. This feature enables users to gain a better understanding of the data and make informed decisions based on the insights provided.
+                                            </mark>
+                                        </p>
+                                        <span class="text-white d-block mb-5">
+                                            <a mnuu="download" href="javascript:void(0)" class="btn btn-primary" target="_blank">
+                                                <i class="ti-download" style="font-size: 17px;margin: 0 0px 0 -5px;"></i>
+                                                Xuat Excel
+                                            </a>
+                                            <a mnuu="preview" href="javascript:void(0)" class="btn btn-secondary" target="_blank">
+                                                <i class="ti-new-window" style="font-size: 17px;margin: 0 0px 0 -5px;"></i>
+                                                Xem truoc
+                                            </a>
+                                        </span>
+                                        <span class="text-white d-none">
+                                            <a mnuu="video" href="javascript:void(0)" class="btn d-inline-flex align-items-center" target="_blank">
+                                                <i class="fa fa-3x text-danger fa-youtube-play mr-1"></i>
+                                                Video huong dan
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div  class="grid-item text-center rounded mb-30">
+
+                            <span class="badge badge-danger tag d-none" style="position: absolute;z-index: 1;transform: translate(-50%,-50%);">New</span>
+
+                            <div class="portfolio-item box-shd rounded">
+
+                                <!--https://www.youtube.com/watch?v=HL-6tWexPiI-->
+                                <!--https://www.pk-anexcelexpert.com/attendance-and-overtime-dashboard-in-excel/-->
+
+                                <img src="https://www.pk-anexcelexpert.com/wp-content/uploads/2024/08/Attendance-and-Overtime-Dashboard-in-Excel-1.jpg" class="img-fluid" alt="Attendance and Overtime Dashboard in Excel" />
+
+                                <div tmpl="https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor" class="portfolio-overlay">
+
+                                    <span class="text-white d-block mb-5">
+                                        <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                        <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                    </span>
+
+                                    <!--<span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>-->
+                                </div>
+                            
+                            </div>
+
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Dashboard 1</h4>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xl-6  wow fadeInUp second-group  py-50 animated mx-auto" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-heading text-center">
+                    <h2 class="heading" data-lang="jn_013_0|0">Reference More ...</h2>
+                    <h5 class="mb-30" data-lang="jn_013_0|1">Common timekeeping management Template</h5>
+                </div>
+
+                <div class="thamkhao_more blog-posts">>
+                    <article>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div  class="mb-30">
+                                    <img  class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div tmpl="https://www.vertex42.com/Files/exclusive/attendance-record.xlsx?c0d=vendor"  class="post-content">
+                                    <h4><a mnuu="preview" href="javascript:void(0)" style="text-transform: capitalize;">Attendance Record Template</a></h4>
+                                    <p>
+                                        This simple spreadsheet is a great way to <b>record attendance at meetings, clubs, scouts, church, and Sunday School classes.</b> Print the blank attendance record for your notebook or clipboard. Then transfer the information to your spreadsheet to keep an electronic attendance record.
+
+                                        You can enter arbitrary dates for tracking meeting attendance, or if you are tracking church attendance or Sunday school attendance, you can enter the first date in cell C5 manually and then use a formula like =C5+7 for the following week.
+
+                                        Simply copy/insert/paste existing rows or columns to add additional people or dates. Attendance is totaled by date and by person.
+
+                                        Updated 4/4/2014 : We updated the XLSX version to make it easy to edit with Excel for iPad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-items-center align-items-center post-meta text-light">
+                                    <p cmd class="m-0 pr-3">Download a Attendance Record Template for<br/>
+
+                                        <a href="https://www.vertex42.com/Files/exclusive/attendance-record.xlsx">Excel</a>
+
+                                        &nbsp;|&nbsp;
+                                        <a href="https://www.vertex42.com/WordTemplates/files/attendance-record.docx">Microsoft Word</a>
+
+                                        &nbsp;|&nbsp;
+                                        <a target="_blank" href="https://www.vertex42.com/Files/pdfs/2/attendance-record.pdf">Adobe PDF</a>
+
+                                        &nbsp;| <a href="https://docs.google.com/spreadsheets/d/1UTF_Q4jzitShBGXIy1mkc4fp4Vwve8j-ZXUx9R-_8mM/template/preview">Google Sheets</a>
+                                    </p>
+                                    <a  mnuu="roadmap_contact" href="javascript:void(0)" class="ml-auto btn btn-primary btn-wide btn-scroll btn-scroll-top fa-arrow-right pull-right" data-caption-class="fadeIn" data-caption-delay="900"> 
+                                    <span data-lang="jn_013_3|0">Contact</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--<ul class="pagination mt-5 mb-0 align-items-center justify-content-center">
+                        <li>
+                            <a > « </a>
+                        </li>
+                        <li class="active">
+                            <a > 1 </a>
+                        </li>
+                        <li>
+                            <a > 2 </a>
+                        </li>
+                        <li>
+                            <a> 3 </a>
+                        </li>
+                        <li>
+                            <a > » </a>
+                        </li>
+                    </ul>-->
+                    <ul class="pagination  mt-5 align-items-center justify-content-center">
+                        <li class="page-item">
+                            <a class="d-flex" href="#" aria-label="Previous">
+                                <i class="ti-arrow-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link p-0 d-flex justify-content-center align-items-center" href="#" style="width: 40px;height: 40px;">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link p-0 d-flex justify-content-center align-items-center" href="#" style="width: 40px;height: 40px;">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link p-0 d-flex justify-content-center align-items-center" href="#" style="width: 40px;height: 40px;">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="d-flex" href="#" aria-label="Next">
+                                <i class="ti-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div   class="row justify-content-center px-lg-5 d-none">
+
+                    <!--https://www.smartsheet.com/free-attendance-spreadsheet-templates?srsltid=AfmBOoqlF1xPixrZX_7bmFpPTwg80V6HCeNr8c-mxYO4a2pnVyU9aC8R-->
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <span class="badge badge-danger tag" style="position: absolute;z-index: 1;transform: translate(-50%,-50%);">New</span>
+                            <div class="portfolio-item box-shd rounded">
+
+                                <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Attendance-Tracking-Spreadsheet-Template.webp?itok=BMb7MiiO" class="img-fluid"
+                                      alt="Attendance Tracking Spreadsheet Template" />
+                                <div class="portfolio-overlay">
+
+                                    <div tmpl="https://www.smartsheet.com/sites/default/files/2025-07/IC-Daily-Attendance-Spreadsheet-Template-8872.xlsx?c0d=vendor">
+                                        <span class="text-white d-block mb-5">
+                                            <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                            <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                        </span>
+                                        <!--<span class="text-white d-block mb-5">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                        </span>
+                                        <span class="text-white">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                        </span>-->
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+
+                           
+                                <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Daily-Attendance-Spreadsheet-Template.webp?itok=Tcltfnzh"
+                                        class="img-fluid"
+                                        alt="Daily Attendance Spreadsheet Template" />
+       
+
+                                <div tmpl="https://www.smartsheet.com/sites/default/files/2025-07/IC-Attendance-Tracking-Spreadsheet-Template-8872.xlsx?c0d=vendor" class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                        <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                    </span>
+                                    <!--<span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>-->
+
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 3</h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <span class="badge badge-danger tag" style="position: absolute;z-index: 1;transform: translate(-50%,-50%);">New</span>
+                            <div class="portfolio-item box-shd rounded">
+                               
+                                <img src="https://cdn.vertex42.com/ExcelTemplates/Images/attendance-record.gif" class="img-fluid"
+                                     style="aspect-ratio: 10 / 9;"
+                                        alt="Attendance Record Template" />
+                            
+                                <div tmpl="https://www.vertex42.com/Files/exclusive/attendance-record.xlsx?c0d=vendor" class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                        <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                    </span>
+                                    <!--<span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>-->
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+
+             
+                                <img src="https://cdn.vertex42.com/templates/images/employee-leave-tracker-template.png"
+                                        class="img-fluid"
+                                        alt="Employee Leave Tracker" />
+                       
+
+                                <div tmpl="https://www.vertex42.com/Files/exclusive/employee-leave-tracker.xlsx?c0d=vendor" class="portfolio-overlay">
+
+                                    <span class="text-white d-block mb-5">
+                                        <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                        <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                    </span>
+                                    <!--<span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>-->
+
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 3</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <span class="badge badge-danger tag" style="position: absolute;z-index: 1;transform: translate(-50%,-50%);">New</span>
+                            <div class="portfolio-item box-shd rounded">
+
+                                <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Attendance-Tracking-Spreadsheet-Template.webp?itok=BMb7MiiO" class="img-fluid"
+                                     alt="Attendance Tracking Spreadsheet Template" />
+
+                                <div tmpl="https://www.smartsheet.com/sites/default/files/2025-07/IC-Daily-Attendance-Spreadsheet-Template-8872.xlsx?c0d=vendor" class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                        <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                    </span>
+                                    <!--<span class="text-white d-block mb-5">
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                    </span>
+                    <span class="text-white">
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                    </span>-->
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+
+
+                                <img src="https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Daily-Attendance-Spreadsheet-Template.webp?itok=Tcltfnzh"
+                                     class="img-fluid"
+                                     alt="Daily Attendance Spreadsheet Template" />
+
+
+                                <div tmpl="https://www.smartsheet.com/sites/default/files/2025-07/IC-Attendance-Tracking-Spreadsheet-Template-8872.xlsx?c0d=vendor" class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                        <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                    </span>
+                                    <!--<span class="text-white d-block mb-5">
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                    </span>
+                    <span class="text-white">
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                    </span>-->
+
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 3</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="btn btn-primary">Tai them</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div lst="hr_dashboard_excel" class="row">
+            <div class="col-12">
+                <div class="note_attsample m-3 m-sm-auto" style="max-width:700px">
+                    <div class="panel panel-white  wow fadeInUp animated" style="border-radius: 30px;background:rgba(191,191,191,0.15);visibility: visible; animation-name: fadeInUp">
+                        <div class="card-body p-0">
+
+                            <div class="d-flex align-items-center mt-3 px-5">
+
+                                <div type="button" class="btn btn-danger" mnu="exit_note_attsample" style="border-radius:20px">
+                                    <i class="ti-arrow-left text-large" style="vertical-align:text-bottom"></i>
+                                    <span data-lang="js_013_5|2" class="d-none d-sm-inline-block">Back</span>
+                                </div>
+
+                                <div style="flex:1">
+                                    <h2 class="m-0 pl-3" data-lang="jn_013_0|6">Dashboard HR</h2>
+                                </div>
+
+                            </div>
+
+                            <div class="alert">
+
+                                <p data-lang="jn_013_1|2">📊 The HR Dashboard in Excel is a visual tool that effectively consolidates, analyzes, and presents human resources data. It serves as an “information hub” that enables HR departments and business leaders to make quick and accurate decisions.</p>
+                     
+                                <p data-lang="jn_013_1|3">🎯 Main Purpose: To consolidate HR data from various sources, including personal information, compensation, attendance, training, and performance evaluations. Visualize the information using charts, data tables, and KPI indicators for easier tracking. Support decision-making by helping managers identify trends, detect issues, and provide timely solutions.</p>
+
+
+                                <p data-lang="jn_013_1|4">✅ <b>Benefits of Using the HR Dashboard in Excel</b></p>
+
+                                <ul>
+                                    <li class="pl-2"><p data-lang="jn_013_2|0"><strong>Time-saving:</strong> No need to manually process individual data tables.</p></li>
+                                    <li class="pl-2"><p data-lang="jn_013_2|1"><strong>Easy customization:</strong> Excel allows you to design dashboards tailored to each business’s specific needs</p></li>
+                                    <li class="pl-2"><p data-lang="jn_013_2|2"><strong>Enhanced transparency:</strong> All information is clearly presented and easy to review.></p></li>
+                                </ul>
+     
+                            </div>
+
+                            <!--✅ Sản phẩm đã hoàn chỉnh
+                            Những cụm từ này thể hiện sản phẩm đã sẵn sàng sử dụng, đầy đủ tính năng và ổn định:
+
+                            Final Product – Sản phẩm cuối cùng
+
+                            Production-Ready – Sẵn sàng đưa vào vận hành
+
+                            Stable Release – Phiên bản ổn định
+
+                            GA (General Availability) – Chính thức phát hành
+
+                            Completed Feature – Tính năng đã hoàn thiện
+
+                            Live Version – Phiên bản đang hoạt động
+
+                            Shipped Product – Sản phẩm đã được phát hành
+
+                            Mature Product – Sản phẩm trưởng thành, ổn định
+
+                            Fully Implemented – Đã triển khai đầy đủ
+
+                            Out of Beta – Đã thoát khỏi giai đoạn thử nghiệm
+
+                            🛠️ Sản phẩm trong roadmap (đang phát triển)
+                            Những cụm từ này thể hiện sản phẩm hoặc tính năng đang được lên kế hoạch, phát triển hoặc thử nghiệm:
+
+                            Roadmap Item – Mục trong lộ trình phát triển
+
+                            Planned Feature – Tính năng đang được lên kế hoạch
+
+                            Upcoming Release – Phiên bản sắp ra mắt
+
+                            In Development – Đang phát triển
+
+                            Beta Version – Phiên bản thử nghiệm
+
+                            Prototype – Bản mẫu
+
+                            Work in Progress (WIP) – Đang thực hiện
+
+                            Under Construction – Đang xây dựng
+
+                            Future Enhancement – Nâng cấp trong tương lai
+
+                            Not Yet Released – Chưa phát hành-->
+                        
+                        </div>
+                    </div>
+                    <div class="dothi-muiten mx-5" style="z-index:5"></div>
+                </div>
+            </div>
+            <div class="col-xl-6 text-center wow fadeInUp  py-50 animated  mx-auto" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-heading text-center">
+                    <h2 class="heading" data-lang="jn_013_0|4">Fully Implemented</h2>
+                    <h5 class="mb-30" data-lang="jn_013_0|5">HR Reporting & Analytics</h5>
+                </div>
+
+                <div  jsn_sample="0" class="row justify-content-center px-lg-5 ">
+
+                    <div class="col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+
+                            <span class="badge badge-danger tag d-none" style="position: absolute;z-index: 1;transform: translate(-50%,-50%);">New</span>
+
+                            <div class="portfolio-item box-shd rounded">
+
+                                <!--https://www.kaggle.com/datasets/bhavikapuri2811/hr-analytics-dashboard-using-excel-->
+                                <!--https://github.com/Celesttaa/HR-ANALYTICS-DASHBOARD-->
+                                <!--https://github.com/ektad08/HR-Analytics/tree/main-->
+                                <!--https://www.youtube.com/watch?v=4WUzvr9jxGc-->
+                                <!--https://www.youtube.com/watch?v=j3YhwyliwsY&t=794s-->
+
+                                <img alt="hr analytics dashboard1.jpg" src="https://github.com/ektad08/HR-Analytics/blob/main/hr%20analytics%20dashboard1.jpg?raw=true" class="img-fluid"/>
+
+                                <div class="portfolio-overlay">
+
+                                    <div tmpl="https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor">
+                                        <p class="px-3 my-1 text-large" style="opacity:0.75">
+                                            <mark>
+                                            Xem demo day du du lieu giup ban de dang nam bat toan canh cua report
+                                            </mark>
+                                        </p>
+                                        <span class="text-white d-block mb-5">
+                                            <a mnuu="preview" href="javascript:void(0)" class="btn btn-info" style="border-radius: 20px;">
+                                                <i class="ti-eye" style="font-size: 17px;margin: 0 0px 0 -5px;"></i>
+                                                Xem Demo
+                                            </a>
+                                        </span>
+                                    </div>
+
+                                    <div tmpl="/media/utils/tmplexcel/baocaonhansu.xlsx?c0d=A4">
+
+                                        <p>
+                                            <mark>
+                                                This dashboard is an example of how data visualization can help HR department to make informed decisions. It's user-friendly, interactive, and provides a variety of charts and graphs that help users gain a deeper understanding of the data.
+                                                One of the most impressive features of this dashboard is its ability to filter data. Users can filter the data by education allowing them to focus on the areas that matter most to them. This feature enables users to gain a better understanding of the data and make informed decisions based on the insights provided.
+                                            </mark>
+                                        </p>
+
+                                        <span class="text-white d-block mb-5">
+                                            <a mnuu="download" href="javascript:void(0)" class="btn btn-primary">
+                                                <i class="ti-download" style="font-size: 17px;margin: 0 0px 0 -5px;"></i>
+                                                Xuat Excel
+                                            </a>
+                                            <a mnuu="preview" href="javascript:void(0)" class="btn btn-secondary">
+                                                <i class="ti-new-window" style="font-size: 17px;margin: 0 0px 0 -5px;"></i>
+                                                Xem truoc
+                                            </a>
+                                        </span>
+
+                                        <span class="text-white d-none">
+                                            <a mnuu="video" href="javascript:void(0)" class="btn d-inline-flex align-items-center" target="_blank">
+                                                <i class="fa fa-3x text-danger fa-youtube-play mr-1"></i>
+                                                Video huong dan
+                                            </a>
+                                        </span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 1</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <!--https://adniasolutions.com/excel-templates/hr-database-excel-template/?srsltid=AfmBOooX7sydf7EOYDT4P_wvl-qxzi0dCRF8jtakzyJI0kgOiEp34UWB-->
+                                <img alt="HR Database Excel Template" src="https://adniasolutions.com/wp-content/uploads/2021/04/05-HR-Database-Excel-Template-HR-Dashboard-900x579.png" class="img-fluid"  />
+                                <div class="portfolio-overlay">
+<div class="alert" style="border-right: 1px solid #ffc107 !important;border-left: 1px solid #ffc107 !important;border-radius: 30px;">
+
+                            <p>Oops...Chua co ket noi may cham cong. Va bat ky du lieu cham cong de hien thi.</p>
+                            <hr class="hrx  m-2">
+                            <p class="mb-0">Tuy nhien, ban co the thu nghiem bang viec upload du lieu cham cong hoac hoac chon xem demo.</p>
+
+                            <div class="text-center mt-3">
+                                <div type="button" class="btn btn-warning mr-2 upattdat">
+                                    <i class="ti-upload"></i>
+                                    <span>Upload</span>
+                                </div>
+                                <div type="button" class="btn btn-outline-warning xemmau">
+                                    <i class="ti-eye"></i>
+                                    <span>Xem Mau</span>
+                                </div>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 2</h4>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-xl-6 text-center wow fadeInUp second-group  py-50 animated mx-auto" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-heading text-center">
+                    <h2 class="heading text-light" data-lang="jn_013_0|2">Planned Feature</h2>
+                    <h5 class="mb-30 text-light" data-lang="jn_013_0|3">More professional, completely FREE!</h5>
+                </div>
+
+                <div  jsn_sample="1" class="row justify-content-center px-lg-5">
+
+                    <div class="col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+
+                        <div class="grid-item text-center rounded mb-30">
+
+                            <span class="badge badge-danger tag d-none" style="position: absolute;z-index: 1;transform: translate(-50%,-50%);">New</span>
+
+                            <div class="portfolio-item box-shd rounded">
+
+                                <!--https://github.com/natalieanalyst/HR-Attrition-Analytics-in-Excel-->
+                                <!--https://github.com/Jayita11/HR-Attrition-Dashboard-Excel-->
+
+                                <img src="https://github.com/HoaTha/Hinhanh/blob/main/hinhanh.png?raw=true"
+                                      class="img-fluid" alt="Screenshot 2023-05-20 233230" />
+                                <div class="portfolio-overlay">
+                                    <div tmpl="https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor" class="portfolio-overlay">
+                                        <span  class="text-white d-block mb-5">
+                                            <a   mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                            <a   mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary"  data-lang="jn_013_3|0">Contact</a>
+                                        </span>
+                                        <!--<span class="text-white d-block mb-5">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index2.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index2.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                        </span>
+                                        <span class="text-white">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index2.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index2.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                        </span>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Dashboard 2</h4>
+
+                        </div>
+                    
+                    </div>
+
+
+                    <div class="col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <span class="badge badge-danger tag">New</span>
+                            <div class="portfolio-item box-shd rounded">
+
+                                <!--https://www.myonlinetraininghub.com/workbook-downloads-->
+
+                                <img src="https://i.ytimg.com/vi/rsx43g7TBBs/maxresdefault.jpg" class="img-fluid" alt="Interactive Excel HR Dashboard - FREE Download" />
+                                 <div class="portfolio-overlay">
+                                    <div  tmpl="https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor">
+                                        <span class="text-white d-block mb-5">
+                                            <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                            <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                        </span>
+                                        <!--<span class="text-white d-block mb-5">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                        </span>
+                                        <span class="text-white">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                        </span>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <span class="badge badge-danger tag">New</span>
+                            <div class="portfolio-item box-shd rounded">
+
+                                <!--https://www.slideteam.net/top-10-hr-dashboard-excel-powerpoint-presentation-templates-->
+
+                                <img src="https://www.slideteam.net/media/catalog/product/cache/1280x720/h/r/hr_dashboard_number_of_employees_employee_structure_Slide01.jpg" class="img-fluid" 
+                                     alt="" />
+                                <div class="portfolio-overlay">
+                                    <div  tmpl="https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor">
+                                        <span class="text-white d-block mb-5">
+                                            <a mnuu="preview" href="javascript:void(0)" class="btn btn-primary">Xem mau</a>
+                                            <a mnuu="roadmap_contact" href="javascript:void(0)" class="btn btn-primary" data-lang="jn_013_3|0">Contact</a>
+                                        </span>
+                                        <!--<span class="text-white d-block mb-5">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                        </span>
+                                        <span class="text-white">
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                            <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                        </span>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div lst="mau_realtime" class="row">
+            <div class="col-12">
+                <div class="note_attsample m-3 m-sm-auto" style="max-width:500px">
+                    <div class="panel panel-white  wow fadeInUp animated" style="border-radius: 30px;background:rgba(191,191,191,0.15);visibility: visible; animation-name: fadeInUp">
+                        <div class="card-body p-0">
+                            <div class="alert">
+
+                                <p>Oops...Chua co ket noi may cham cong. Va bat ky du lieu cham cong de hien thi.</p>
+                                <hr class="hrx  m-2" />
+                                <p class="mb-0">Tuy nhien, ban co the thu nghiem bang viec upload du lieu cham cong hoac hoac chon xem demo.</p>
+
+                                <div class="d-flex align-items-center mt-3">
+
+                                    <div type="button" class="btn btn-danger" mnu="exit_note_attsample">
+                                        <i class="ti-arrow-left text-large" style="vertical-align:text-bottom"></i>
+                                        <span data-lang="js_013_5|2" class="d-none d-sm-inline-block">Back</span>
+                                    </div>
+
+                                    <div class="btn btn-sm fa fa-pause mx-3 play_realtime" style="background: none;border: none;font-size: 30px;height: 35px;line-height: 35px;padding: 0 8px;"></div>
+
+
+                                    <div style="flex:1">
+                                        <div class="d-flex" style="justify-content: center; align-items:center; height: 30px;">
+                                            <div class="att_playcontrol" style="background:rgba(191,191,191,0.5)"></div>
+                                            <span style="margin-left:20px">80%</span>
+                                        </div>
+                                        <div class="row mx-1" style="pointer-events: all!important">
+                                            <div>
+                                                <a class="csor-p">
+                                                    <span class="fa fa-id-card-o"></span>
+                                                    <span class="mcc_inf">862</span>
+                                                </a>
+                                                <a class="csor-p mx-3">
+                                                    <span class="ti-user" style="font-size:16px"></span>
+                                                    <span class="mcc_inf">4</span>
+                                                </a>
+                                                <a class="csor-p" pmnu="more1">
+                                                    <span class="ti-more-alt" style="font-size:18px;vertical-align:middle"></span>
+                                                    <small>MORE</small>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dothi-muiten mx-5" style="z-index:5"></div>
+                </div>
+            </div>
+            <div class="col-xl-6 text-center wow fadeInUp  py-50 animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-heading text-center">
+                    <h2 class="heading">Bootstrap 4 Demo</h2>
+                    <h5 class="mb-30">Light, Dark and Horizontal With RTL Ready</h5>
+                </div>
+                <div class="row justify-content-center px-lg-5">
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://newdocer.cache.wpscdn.com/photo/20230731/7ed2beb0360c4efa8de262c3db7bb336.webp" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <span class="badge badge-pill badge-info">Dark (LTR)</span>
+                                        <span class="badge badge-pill badge-info">Dark (RTL)</span>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index5.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index5.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index5.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 1</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://cdn.vertex42.com/ExcelTemplates/Images/attendance-record.gif" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+<div class="alert" style="border-right: 1px solid #ffc107 !important;border-left: 1px solid #ffc107 !important;border-radius: 30px;">
+
+                            <p>Oops...Chua co ket noi may cham cong. Va bat ky du lieu cham cong de hien thi.</p>
+                            <hr class="hrx  m-2">
+                            <p class="mb-0">Tuy nhien, ban co the thu nghiem bang viec upload du lieu cham cong hoac hoac chon xem demo.</p>
+
+                            <div class="text-center mt-3">
+                                <div type="button" class="btn btn-warning mr-2 upattdat">
+                                    <i class="ti-upload"></i>
+                                    <span>Upload</span>
+                                </div>
+                                <div type="button" class="btn btn-outline-warning xemmau">
+                                    <i class="ti-eye"></i>
+                                    <span>Xem Mau</span>
+                                </div>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 2</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://file.eloquens.com/media/thumb/0/109/109948_1_384.png" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic/index-3.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-rtl/index-3.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 3</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://www.hrcabin.com/wp-content/uploads/2021/03/employee-attedance-sheet-in-excel-with-formulas.png" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic/index-4.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-rtl/index-4.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dashboard 4</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <!--https://orbitingweb.com/blog/view-youtube-thumbnail-image/-->
+                                <!--<img src="https://i.ytimg.com/vi/RwEEvTslZNk/maxresdefault.jpg" class="img-fluid" alt="" />-->
+                                <!--<iframe width="100%"
+                                        height="100%"
+                                        src="https://www.youtube.com/embed/RwEEvTslZNk">
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>-->
+
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark/index.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark-rtl/index.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dark Dashboard 1</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <!--<img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/6.jpg" class="img-fluid" alt="" />-->
+
+
+                                <!--<iframe width="100%"
+                                        height="100%"
+                                        src="https://www.youtube.com/embed/il_t1WVLNxk">
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>-->
+
+                                <!--<div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark/index-2.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark-rtl/index-2.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>-->
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dark Dashboard 2</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/7.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark/index-3.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark-rtl/index-3.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dark Dashboard 3</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/8.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark/index-4.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-dark-rtl/index-4.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dark Dashboard 4</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/9.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark/index.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark-rtl/index.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Semidark Dashboard 1</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/10.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark/index-2.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark-rtl/index-2.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Semidark Dashboard 2</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/11.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark/index-3.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark-rtl/index-3.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0">Minimal Semidark Dashboard 3</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/12.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark/index-4.html" class="btn btn-primary" target="_blank">Sass LTR</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/classic-semidark-rtl/index-4.html" class="btn btn-primary" target="_blank">Sass RTL</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Semidark Dashboard 4</h4>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-xl-6 text-center wow fadeInUp second-group  py-50 animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-heading text-center">
+                    <h2 class="heading">Bootstrap 5 Demo</h2>
+                    <h5 class="mb-30">Light, Dark and Horizontal With RTL Ready</h5>
+                </div>
+                <div class="row justify-content-center px-lg-5">
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <span class="badge badge-danger tag">New</span>
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/13.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 1</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <span class="badge badge-danger tag">New</span>
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/14.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index2.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index2.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index2.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index2.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index2.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index2.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 2</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/15.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index3.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index3.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index3.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index3.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index3.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index3.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 3</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/16.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index4.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index4.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index4.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="http://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index4.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index4.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index4.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 4</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/17.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index5.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index5.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index5.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index5.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index5.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index5.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 5</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/18.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index6.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index6.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index6.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index6.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index6.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index6.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 6</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/19.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index7.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index7.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index7.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index7.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index7.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index7.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 7</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/20.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index8.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index8.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index8.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index8.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index8.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index8.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 8</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/21.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index9.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index9.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index9.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index9.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index9.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index9.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 9</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/22.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index10.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index10.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index10.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index10.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index10.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index10.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 10</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/23.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index11.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index11.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index11.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index11.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index11.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index11.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 11</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="portfolio-item box-shd rounded">
+                                <img src="https://crypto-admin-templates.multipurposethemes.com/intro/images/demo-screen/light/24.jpg" class="img-fluid" alt="" />
+                                <div class="portfolio-overlay">
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main/index12.html" class="btn btn-primary" target="_blank">Dark (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-rtl/index12.html" class="btn btn-primary" target="_blank">Dark (RTL)</a>
+                                    </span>
+                                    <span class="text-white d-block mb-5">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index12.html" class="btn btn-primary" target="_blank">Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light-rtl/index12.html" class="btn btn-primary" target="_blank">Light (RTL)</a>
+                                    </span>
+                                    <span class="text-white">
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light/index12.html" class="btn btn-primary" target="_blank">Semi Light (LTR)</a>
+                                        <a href="https://crypto-admin-templates.multipurposethemes.com/sass/bs5/main-semi-light-rtl/index12.html" class="btn btn-primary" target="_blank">Semi Light (RTL)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="py-15 mb-0 text-white" style="padding: 15px 0px;">Dashboard 12</h4>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div lst="import_youtube" class="row">
+            <div class="col-12 text-center wow fadeInUp  py-50 animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="section-heading text-center">
+                    <h2 class="heading">Bootstrap 4 Demo</h2>
+                    <h5 class="mb-30">Light, Dark and Horizontal With RTL Ready</h5>
+                </div>
+
+                <div class="row justify-content-center px-lg-5">
+
+
+                    <div class="col-lg-9">
+
+
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="box-shd rounded">
+                                <!--https://orbitingweb.com/blog/view-youtube-thumbnail-image/-->
+                                <!--<img src="https://i.ytimg.com/vi/RwEEvTslZNk/maxresdefault.jpg" class="img-fluid" alt="" />-->
+
+                                <!--https://www.reddit.com/r/bootstrap/comments/z0bwl7/putting_a_youtube_iframe_inside_a_colauto_div/-->
+                                <!--https://jsfiddle.net/n4yakgmj/-->
+                                <!--<div class="container">
+                                    <div class="row">-->
+                                        <!--<div class="col-12">-->
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qmqtEN2xbJQ?enablejsapi=1"
+                                                       allow="autoplay"  title="YouTube video" allowfullscreen></iframe>
+                                            </div>
+                                        <!--</div>-->
+                                    <!--</div>
+                                </div>-->
+
+
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dark Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!--<div class="row justify-content-center px-lg-5">
+
+
+                    <div class="col-lg-9">
+
+
+                        <div class="grid-item text-center rounded mb-30">
+                            <div class="box-shd rounded">
+
+                                <div class="embed-responsive embed-responsive-16by9">
+
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQRO1Qt12TI?enablejsapi=1"
+                                            title="YouTube video" allowfullscreen></iframe>
+                                </div>
+
+                            </div>
+                            <h4 class="py-15 mb-0" style="padding: 15px 0px;">Minimal Dark Dashboard 1</h4>
+                        </div>
+                    </div>
+
+
+
+                </div>-->
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="text-center m-3 m-md-4 wow fadeInUp animated">
+            <a mnu="back_realscr" class="btn btn-primary btn-o btn-lg">
+                <i class="fa fa-arrow-circle-left"></i>
+                <span data-lang="js_013_5|2">Back</span>
+            </a>
+        </div>
+
+        <script type="text/javascript">
+
+            debugger;
+
+            const xemmau_js_hwnd = {
+            };
+
+            (function (_) {
+
+                debugger;
+
+                if (!window['xls_vid_tml']) window['xls_vid_tml'] = _();//pass pubArgs later if need
+
+            })(function (c) {
+
+                "use strict";
+
+                var _rawhtm = ''
+                    ,
+
+                    jDAT = {
+
+                        //"lng":{}, this item ini in init method
+                        'hr_dashboard_excel': {
+
+                            "jsn_sample": [
+                                [
+                                    {
+                                        "img": ["https://github.com/ektad08/HR-Analytics/blob/main/hr%20analytics%20dashboard1.jpg?raw=true","hr analytics dashboard1.jpg"],
+                                        "lnk":[
+                                            {
+                                                "tmpl": [
+                                                    "https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor"
+                                                ],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-info mb-3' style='border-radius: 20px;'><i class='ti-eye' style='font-size: 17px;margin: 0 0px 0 -5px;'></i>Xem Demo</a>"
+                                                    ]
+                                                ],
+                                                "p": [
+                                                    "<p class='px-3 my-1 text-large' style='opacity:0.75'>",
+                                                    "<mark>",
+                                                    "Xem demo day du du lieu giup ban de dang nam bat toan canh cua report",
+                                                    "</mark>",
+                                                    "</p>"
+                                                ]
+                                            }
+                                            ,
+                                            {
+                                                "tmpl": [
+                                                    "https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor"
+                                                ],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                                                        "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                                                    ]
+                                                ],
+                                                "p": [
+                                                    "<p class='px-3 my-1 text-large' style='opacity:0.75'>",
+                                                    "<mark>",
+                                                        "This dashboard is an example of how data visualization can help HR department to make informed decisions. It's user-friendly, interactive, and provides a variety of charts and graphs that help users gain a deeper understanding of the data.",
+                                                        "One of the most impressive features of this dashboard is its ability to filter data. Users can filter the data by education allowing them to focus on the areas that matter most to them. This feature enables users to gain a better understanding of the data and make informed decisions based on the insights provided.",
+                                                    "</mark>",
+                                                    "</p>"
+                                                ]
+                                            }
+                                        ]
+                                        ,
+                                        "p": ["Form-01", ""]
+                                    }
+                                    ,
+                                    {
+                                        "img": ["https://adniasolutions.com/wp-content/uploads/2021/04/05-HR-Database-Excel-Template-HR-Dashboard-900x579.png", "HR Database Excel Template"],
+                                        "lnk": [
+                                            {
+                                                "tmpl": [
+                                                    "https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor"
+                                                ],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                                                        "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                                                    ]
+                                                ]
+                                            }
+                                        ]
+                                        ,
+                                        "p": ["Form-02", "New"]
+                                    }
+                                ]
+                                ,
+                                [
+                                    {
+                                        "img": ["https://github.com/HoaTha/Hinhanh/blob/main/hinhanh.png?raw=true", "Screenshot 2023-05-20 233230"],
+                                        "lnk": [
+                                            {
+                                                "tmpl": [
+                                                    "https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor"
+                                                ],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                                                        "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                                                    ]
+                                                ]
+                                            }
+                                        ]
+                                        ,
+                                        "p": ["Plan-01", "New"]
+                                    }
+                                    ,
+                                    {
+                                        "img": ["https://i.ytimg.com/vi/rsx43g7TBBs/maxresdefault.jpg", "Interactive Excel HR Dashboard - FREE Download"],
+                                        "lnk": [
+                                            {
+                                                "tmpl": [
+                                                    "https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor"
+                                                ],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                                                        "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                                                    ]
+                                                ]
+                                            }
+                                        ]
+                                        ,
+                                        "p": ["Plan-02", "New"]
+                                    }
+                                    ,
+                                    {
+                                        "img": ["https://www.slideteam.net/media/catalog/product/cache/1280x720/h/r/hr_dashboard_number_of_employees_employee_structure_Slide01.jpg", ""],
+                                        "lnk": [
+                                            {
+                                                "tmpl": [
+                                                    "https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor"
+                                                ],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                                                        "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                                                    ]
+                                                ]
+                                            }
+                                        ]
+                                        ,
+                                        "p": ["Plan-03", "New"]
+                                    }
+                                ]
+                            ]
+                        }
+                        ,
+
+                        'rpt_timekeeper': {
+
+                            "jsn_sample": [
+                                [
+                                    {
+                                        "img": ["https://hrm.dnd.vn/src/bangcong.jpg", "hr analytics dashboard1.jpg"],
+                                        "lnk":[
+                                            {
+                                                "tmpl": ["https://hellohrm.github.io/utils/media/utils/tmplexcel/CongLuong.xlsx?c0d=vendor"],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                                                        "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                                                    ]
+                                                ]
+                                            }
+                                        ],
+                                        "p": ["Form-01", ""]
+                                    }
+                                    ,
+                                    {
+                                        "img": ['https://www.pk-anexcelexpert.com/wp-content/uploads/2024/08/Attendance-and-Overtime-Dashboard-in-Excel-1.jpg', 'Attendance and Overtime Dashboard in Excel'],
+                                        "lnk":[
+                                            {"tmpl": ["https://hellohrm.github.io/utils/media/utils/tmplexcel/misa_baocao_chamcong.xlsx?c0d=vendor"],
+                                                "cmd": [
+                                                    [
+                                                        "<a mnuu='preview' href='javascript:void(0)' class='btn btn-primary'>View demo</a>",
+                                                        "<a mnuu='roadmap_contact' href='javascript:void(0)' class='btn btn-primary'>Contact</a>"
+                                                    ]
+                                                ]
+                                            }
+                                        ],
+                                        "p": ["Form-02", "New"]
+                                    }
+                                ]
+                            ]
+
+                            ,
+
+                            'thamkhao_more': [
+
+                                {
+                                    'img': ['https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Attendance-Tracking-Spreadsheet-Template.webp?itok=BMb7MiiO', 'Attendance Tracking Spreadsheet Template'],
+                                    'tmpl': ["https://www.smartsheet.com/sites/default/files/2025-07/IC-Attendance-Tracking-Spreadsheet-Template-8872.xlsx?c0d=vendor"],
+                                    'p': [
+                                        "<b>When to Use This Template:</b> You can use this attendance tracking spreadsheet template to monitor ongoing attendance across multiple days or participants. If you are in charge of teams, long-term events, and nonprofit programs, you can benefit from the use of this template.",
+                                        "<br/><br/><b>Notable Template Features:</b> This template includes fields for dates and names with built-in formulas or formatting to help spot patterns. You’ll also find space for summaries or averages for clearer insights."
+                                    ],
+                                    'cmd': [
+                                        "Download a Attendance Record Template for<br/>",
+                                        ["Excel", "https://www.smartsheet.com/sites/default/files/2025-07/IC-Daily-Attendance-Spreadsheet-Template-8872.xlsx"],
+                                        ["Microsoft Word", "https://www.smartsheet.com/sites/default/files/2025-07/IC-Daily-Attendance-Spreadsheet-Template-8872_WORD.docx"],
+                                        ["Adobe PDF", "https://www.smartsheet.com/sites/default/files/2025-07/IC-Daily-Attendance-Spreadsheet-Template-8872_PDF.pdf", "_blank"],
+                                        ["Google Sheets", "https://docs.google.com/spreadsheets/d/1horfjfVG187s6LR9o69pOO7r1BcPODxnyvX-MmDkzmI/edit?usp=sharing", "_blank"]
+                                    ]
+
+                                }
+
+                                ,
+
+                                {
+                                    'img': ['https://www.smartsheet.com/sites/default/files/styles/1300px/public/2025-07/IC-Daily-Attendance-Spreadsheet-Template.webp?itok=Tcltfnzh', 'Daily Attendance Spreadsheet Template'],
+                                    'tmpl': ["https://www.smartsheet.com/sites/default/files/2025-07/IC-Daily-Attendance-Spreadsheet-Template-8872.xlsx?c0d=vendor"],
+                                    'p': [
+                                        "<b>When to Use This Template:</b> Use this daily attendance spreadsheet to track a single day’s attendance with precise entry and exit times. Its strengths include noting one-off events or daily check-ins.",
+                                        "<br/><br/><b>Notable Template Features:</b> This template includes space to capture times for check-in and checkout per individual. You’ll also find a Comments field for supervisors to make notes or confirm activity."
+                                    ],
+                                    'cmd': [
+                                        "Download a Daily Attendance Spreadsheet Template for<br/>",
+                                        ["Excel", "https://www.smartsheet.com/sites/default/files/2025-07/IC-Attendance-Tracking-Spreadsheet-Template-8872.xlsx"],
+                                        ["Google Sheets", "https://docs.google.com/spreadsheets/d/1p89U1OAtHJWBNl6GRdUZxP1sBRKddDLzh1GYzBh5Gg4/edit?usp=sharing", "_blank"]
+                                    ]
+                                }
+
+                                ,
+                                {
+                                    'img': ['https://cdn.vertex42.com/ExcelTemplates/Images/attendance-record.gif', 'Attendance Record Template'],
+                                    'tmpl': ["https://www.vertex42.com/Files/exclusive/attendance-record.xlsx?c0d=vendor"],
+                                    'p': ["This simple spreadsheet is a great way to <b>record attendance at meetings, clubs, scouts, church, and Sunday School classes.</b> ",
+                                        "Print the blank attendance record for your notebook or clipboard. Then transfer the information to your spreadsheet to keep an electronic attendance record.",
+                                        "<br/><br/>You can enter arbitrary dates for tracking meeting attendance, or if you are tracking church attendance or Sunday school attendance, you can enter the first date in cell C5 manually and then use a formula like =C5+7 for the following week.",
+                                        "<br/><br/>Simply copy/insert/paste existing rows or columns to add additional people or dates. Attendance is totaled by date and by person."
+                                    ],
+                                    'cmd': [
+                                        "Download a Attendance Record Template for<br/>",
+                                        ["Excel", "https://www.vertex42.com/Files/exclusive/attendance-record.xlsx"],
+                                        ["Microsoft Word", "https://www.vertex42.com/WordTemplates/files/attendance-record.docx"],
+                                        ["Adobe PDF", "https://www.vertex42.com/Files/pdfs/2/attendance-record.pdf", "_blank"],
+                                        ["Google Sheets", "https://docs.google.com/spreadsheets/d/1UTF_Q4jzitShBGXIy1mkc4fp4Vwve8j-ZXUx9R-_8mM/template/preview", "_blank"]
+                                    ]
+                                }
+
+                            ]
+
+
+                        }
+                        
+                    };
+
+                function privateSharedFunction() {
+                    // has access to privateSharedVar
+                    // may also access publicSharedVar via explicit MyObj.prototype
+                    // can't be called via this
+                }
+                function MyObj(opts) { // constructor
+                    //
+                    debugger;
+                    //
+                    if (opts.jDAT) {
+                        $.extend(jDAT, opts.jDAT);
+                    };
+
+                    var privateInstanceVar = 'bar';
+                    this.publicInstanceVar = 'baz';
+                    function privateInstanceFunction() {
+                        // has access to all vars
+                        // can't be called via this
+                    };
+                    this.publicInstanceMethod = function () {
+                        // has access to all vars
+                        // also known as a privileged method
+                    };
+                }
+                MyObj.prototype.publicSharedVar = 'quux';
+                MyObj.prototype.publicSharedMethod = function (param) {
+                    // has access to shared and public vars
+                    // canonical way for method creation:
+                    // try to use this as much as possible
+                };
+
+                const fn = {
+                    'thamkhao_more': function (V, elm) {
+
+                        debugger;
+
+                        const pgz = elm.find('ul.pagination'),
+                            art = pgz.prev();
+
+                        elm.empty();
+
+                        for (var z = 0; z < V.length; z++) {
+                           
+                            const it = art.clone().appendTo(elm),
+                                hinh = it.find('img'),
+                                lnk = it.find('div[tmpl]'),
+                                cmd = it.find('p[cmd]');
+
+                            hinh.attr('src', V[z].img[0]); hinh.attr('alt', V[z].img[1]);
+                            lnk.attr('tmpl', V[z].tmpl[0]);
+
+                            lnk.find('p').html(V[z].p.join(''))
+                                .prev().find('a').html(V[z].tmpl[1] || V[z].img[1]);
+
+                            //
+                            cmd.html(V[z].cmd[0]);
+                            //
+                            const lCMD = [];
+                            for (var W = 1; W < V[z].cmd.length; W++) {
+                                const Y = V[z].cmd[W];
+
+                                lCMD.push('<a ' + (Y[2] ? 'target="_blank"' : '') + ' href="' + Y[1] + '">' + Y[0] + '</a>');
+
+                            };
+                            cmd.append(lCMD.join('&nbsp;|&nbsp;'));
+                            //
+                            //
+                            //
+                            if (z < V.length) {
+                                elm.append('<hr class="hrx"/>');
+                            }
+                        };
+                        //
+                        pgz.clone().appendTo(elm);
+                    }
+                    ,
+
+                    'jsn_sample': function (Y, elm) {
+
+                        debugger;
+              
+                        for (var z = 0; z < elm.length; z++) {
+
+                            const samp = elm.eq(z),
+                                art = samp.children().first(),
+                                idx = samp.attr('jsn_sample');
+
+                            samp.empty();
+              
+                            if (idx && Y.length > parseInt(idx)) {
+
+                                for (var K = 0; K < Y[idx].length; K++) {
+                                    //
+                                    debugger;
+                                    //
+                                    //art.clone().appendTo(samp);
+                                    const V = Y[idx][K],
+
+                                         it = art.clone().appendTo(samp),
+
+                                         hinh = it.find('img'),
+
+                                         lks = it.find('div[tmpl]'),
+
+                                         cmd = lks.find('>span').first().clone().empty(),
+
+                                         paLK = lks.parent().empty();//(lks.hasClass('portfolio-overlay') ?lks: lks.parent()).empty();
+
+
+                                    hinh.attr('src', V.img[0]); hinh.attr('alt', V.img[1]);
+
+                                    for (var F = 0; F < V.lnk.length; F++) {
+
+                                        const lnk = lks.first().clone(),
+                                            daLK = V.lnk[F];
+                                            
+
+                                        lnk.attr('tmpl', daLK.tmpl[0]);
+                                        //
+                                        lnk.empty();
+                                        //
+                                        if (daLK.p) {
+                                            paLK.append(daLK.p.join(''));
+                                        };
+
+                                        for (var W = 0; W < daLK.cmd.length; W++) {
+                                        
+                                            cmd.clone().append(daLK.cmd[W].join('&nbsp;')).appendTo(paLK);
+
+                                        };
+
+                                    };
+
+
+                                    hinh.parent().next().html(V.p[0]);
+
+                                    if (V.p[1]) {//new
+                                        hinh.parent().prev().removeClass('d-none').html(V.p[1]);
+                                    }
+
+
+
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                const vid = function () {
+                    //
+                    const form_container = arguments[0][0];
+                    debugger;
+                    form_container.slideUp();
+
+                    if (!tha.vid.rawhtml) {
+                        tha.vid.rawhtml = _rawhtm.find('.xemmau_lst').clone();
+                        tha.vid.rawhtml.find("[lst]:not([lst='import_youtube'])").remove();//chu y dau nhay kep phai o trong ????
+                    };
+
+                    const xemmau_lst = tha.vid.rawhtml.clone().show().insertAfter(form_container).on('click', '.btn', function () {
+
+                        xemmau_lst.slideUp(function () { xemmau_lst.remove() })
+                        form_container.slideDown();
+
+
+
+                    });
+
+                    //debugger;
+
+                    //$("iframe.embed-responsive-item").on("load ", function () {
+                    //    //https://stackoverflow.com/questions/50512309/youtube-iframe-not-responding-to-postmessage-commands
+                    //    //https://codepen.io/smonn/pen/gaeVae
+                    //    //https://codepen.io/zavan/pen/PoGQWmG
+                    //    //debugger;
+                    //    //this.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+
+                    //    this.contentWindow.postMessage('{"event": "listening"}', '*');
+
+                    //    (function (tha) {
+
+                    //        const jsonMessage = JSON.stringify({
+                    //            event: 'command',
+                    //            func: 'playVideo' // or 'pauseVideo' or 'stopVideo'
+                    //        });
+
+                    //        setTimeout(function () {
+
+                    //            tha.contentWindow.postMessage(jsonMessage, '*');
+
+                    //        }, 500);
+
+                    //    })(this);
+
+                    //});
+
+                    //window.addEventListener('message', function (event) {
+                    //    //debugger;
+                    //    if (event.origin === 'https://www.youtube.com') {
+                    //        // You will receive messages with the player's state here
+                    //        console.log(event.data);
+                    //    }
+                    //});
+
+
+                    //xemmau_lst.
+                    xemmau_lst.find(".fadeInUp").removeClass('fadeInUp animated');
+
+
+                }
+
+                ,
+
+                xls = function () {
+
+                    const form_container = arguments[0][0],
+                        jobACT = arguments[0][1],
+                        mnuppCLK = arguments[0][2];
+                    //
+                    //
+
+
+                    if (!tha.xls.rawhtml) {
+
+                        tha.xls.rawhtml = _rawhtm.find('.xemmau_lst');
+
+                        debugger;
+                        const lng = $.extend(true, {}, jDAT.lng, aLAN);
+
+                        tha.xls.rawhtml.find('[data-lang]').each(function (idx, el) {
+                            var key = el.getAttribute('data-lang');
+                            $(el).html(_La$N(key, lng));
+                        });
+
+
+ 
+                        // arguments[0][1] == menu action job ...
+                        //tha.xls.rawhtml.find("[lst]:not([lst='" + jobACT + "'])").remove();//chu y dau nhay kep phai o trong ????
+                    };
+                    //
+                    const xemmau_lst = tha.xls.rawhtml.clone();
+                    xemmau_lst.find("[lst]:not([lst='" + jobACT + "'])").remove();
+                    //
+
+     
+                    //build dynamic html for jobACT
+                    $.each(jDAT[jobACT], function (K, V) {
+
+                        debugger;
+
+                        if (fn[K]) fn[K](V, xemmau_lst.find('[' + K + '],.' + K));
+
+
+                    });
+
+
+
+
+
+
+                    xemmau_lst.insertAfter(form_container).on('click', '.btn,a[mnuu="preview"]', function (evt) {
+
+                        evt.preventDefault(); // Now link won't go anywhere
+                        evt.stopPropagation(); // Now the event won't bubble up
+
+                        debugger;
+
+                        const mnuu = $(evt.currentTarget).attr('mnuu');
+                        if (mnuu) {
+                            //ben JS_JS_nhapxuat.js co listen event preview or download ....
+                            xemmau_lst.trigger(jobACT, [mnuu, $(evt.currentTarget).closest('div').attr('tmpl')]);
+                            //
+                        } else {
+                            xemmau_lst.slideUp(function () { xemmau_lst.remove() })
+                            form_container.slideDown(function () {
+                                //
+                                //2. trigger to JS_JSnhapxuat.js de lazy render .
+                                form_container.trigger('onActived', { state: 'hide_xls_list' });
+                                //
+                            });
+                        };
+
+                    });
+
+                    // Select the target node.
+                    ////var target = xemmau_lst.find('#fucking_b')[0];
+
+                    ////// Create an observer instance.
+                    ////var observer = new MutationObserver(function (mutations) {
+                    ////    console.log(target.innerText);
+                    ////});
+
+                    ////// Pass in the target node, as well as the observer options.
+                    ////observer.observe(target, {
+                    ////    attributes: true,
+                    ////    childList: true,
+                    ////    characterData: true
+                    ////});
+      
+                    //
+                    const fadeInUp=xemmau_lst.find(".fadeInUp").on('animationend', function (an) {
+                        //console.log(new Date().getTime(), 'animationend');
+                        xemmau_lst.__fadeInUp--;
+                        if (xemmau_lst.__fadeInUp < 2) {
+                            fadeInUp.removeClass('fadeInUp animated');
+                        };
+                    });
+                    //
+                    xemmau_lst.__fadeInUp = fadeInUp.length;
+                    xemmau_lst.find('h2[tieu_de]').html(mnuppCLK.html());
+                    //
+                    //
+                    debugger;
+                    form_container.slideUp(function () {
+                        xemmau_lst.show()
+                    });
+                    //
+
+                    //
+                    //setTimeout(function () {
+                    //    xemmau_lst.find(".fadeInUp").removeClass('fadeInUp animated');
+                    //}, 500);
+                    //
+                };
+
+
+                const tha= {
+
+                    'ini': function (rawhtm, _elUI,def) {
+
+                        debugger;
+
+                        _rawhtm = rawhtm;
+
+                        jDAT.lng = $.extend(true, {}, jDAT.lng, _elUI.lan);
+
+                        const Jri = "https://vpsgiare.dnd.vn/jsn/realtime_xemmau_lst_" + apisvr.a$.selected_language + '.json?t=' + new Date().getTime();
+
+                        $.ajax({
+                            url: Jri,//"https://jsonplaceholder.typicode.com/todos/1",
+                            dataType: "json",
+                            cache: false,
+                            success: function (data) {
+                                //
+                                console.log("Success:", data);
+                                //
+                                debugger;
+                                //deep merge 2 json
+                                jDAT = $.extend(true, {}, jDAT, data);
+                                //
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+
+                                console.error("Error:", textStatus, errorThrown);
+
+                            },
+                            complete: function () {
+                                //
+                                console.log("Request complete.");
+                                //
+                                //
+                                def.resolve();//sure script already .
+                                //
+                            }
+                        });
+                    }
+                    ,
+                    'xls': xls
+                    ,
+                    'vid': vid
+                    ,
+                    'tml':MyObj
+                };
+
+                return tha;
+
+            });
+
+
+
+        </script>
+
+</div>
+</div>

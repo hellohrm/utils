@@ -62,8 +62,8 @@
                                 <span data-lang="js_013_4|0">or</span>
                                 <span class="browse-files">
                                     <span class="browse-files-text">
-                                        <!--https://stackoverflow.com/questions/11832930/html-input-file-accept-attribute-file-type-csv-->
-                                        <input type="file" class="default-file-input" accept=".xls,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                                        <!--https://stackoverflow.com/questions/11832930/html-input-file-accept-attribute-file-type-csv application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv-->
+                                        <input type="file" class="default-file-input" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,.csv" />
                                         <i data-lang="js_013_4|1" aria-hidden="true">browse file</i>
                                     </span>
                                     <span data-lang="js_013_4|2">from device</span>
@@ -84,7 +84,15 @@
                             <span class="fa fa-trash-o remove-file-icon" style="margin-top:-3px;"></span>
                             <div class="progress-upload"></div>
                         </div>
-                        <button type="button" class="upload-button" data-lang="js_013_5|0">Upload</button>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="btn btn-danger btn-o">
+                               <i class="fa fa-arrow-circle-left mr-2"></i>
+                                <span data-lang='js_013_5|2'>Back</span>
+
+                            </div>
+                            <button type="button" class="upload-button" data-lang="js_013_5|0">Upload</button>
+                        </div>
+                       
                     </div>
                 </div>
                 <div class="m-auto px-3 pt-4 text-center" style="max-width:800px">
@@ -163,7 +171,7 @@
 
             <div class="xemtruoc m-3" style="display:none">
 
-                <div class="alert mx-auto mb-3 text-center" role="alert" style="max-width:1000px">
+                <div class="alert mx-auto mb-3 text-center" role="alert" style="max-width:1000px;width: fit-content;">
 
 
                 </div>
@@ -2245,7 +2253,7 @@
         }
 
         .sel_buoc2 {
-            max-width: 800px;
+            /*max-width: 800px;*/
             margin: 0 auto;
             border-radius: 20px;
             box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.3);
