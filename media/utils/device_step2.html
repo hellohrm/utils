@@ -1882,7 +1882,7 @@ var ArchUtils=function(){"use strict";
         //http://wdms.dnd.vn:16868/zk/fio.php?f=' + adr[1], ''//,
 
 
-        xhr.open("GET", _adr && adr || (adr[0].indexOf('http://') == -1 ? 'https://' : '') + adr[0] + '/zk/' + adr[1].split('_')[0] + '.php?f=' + adr[1]
+        xhr.open("GET", _adr && ((_adr.indexOf('http://') == -1 ? 'https://' : '') + _adr) || (adr[0].indexOf('http://') == -1 ? 'https://' : '') + adr[0] + '/zk/' + adr[1].split('_')[0] + '.php?f=' + adr[1]
 
             + (adr.length > 2 ? '&g=' + encodeURIComponent(adr[3]) + '&h=' + encodeURIComponent(adr[2]) + '&l=' + encodeURIComponent(adr[4]) : '') + '&t=' + new Date().getTime()
 
@@ -1985,6 +1985,7 @@ var ArchUtils=function(){"use strict";
         }, [null, ARGs[0], ARGs[1], "R", attlog_oneday_rte === true ? 1 : 0]);
 
     };
+
 
 </script>
 
