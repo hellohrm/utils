@@ -1216,8 +1216,775 @@ var ArchUtils=function(){"use strict";
 
 <script type="text/javascript">
 
-onmessage=function(e){var t=e.data.cmd.toString().toLowerCase();switch(t){case"err":return void RST(e.data.dat,"",0);case"fuk_up_heavy_tmpl_close":return void self.close();case"end_up_heavy_tmpl_clean":return void up_heavy_tmpl_init.__me[t].apply(this,e.data);case"1st_up_heavy_tmpl_task":return up_heavy_tmpl_init.__me[t].apply(this,e.data.dat),void console.log("2.1 1st_up_heavy_tmpl_task","device_step2.html");case"up_heavy_tmpl_local":return void up_heavy_tmpl_init.__me[t].apply(this,e.data.dat);case"1st_up_heavy_tmpl_init":return up_heavy_tmpl_init.__me=up_heavy_tmpl_init(),up_heavy_tmpl_init.__me[t](e.data),void console.log("1.1 1st_up_heavy_tmpl_init","device_step2.html")}try{ajz(e.data.dat)}catch(e){postMessage({cmd:"err"})}};var idxDB,attLOG=[],ver=1;function usr_tmpl(e,t,s,n,a,l,r){if(1==e){if(n[0]=n[2]+"|"+n[0]+"|",ARGs[5][0]){var o=ARGs[5][0],i=workerCODE(l,null,null,"l0g_SUM")([],s,n),p=i[0];l[l.length-2]=i[3][1],ARGs[5][0]=[];for(var _=n[2]=0;_<o.length;_++){var d=p.indexOf("|"+o[_]);-1<d&&(n[2]+=parseInt(p[d+1]),ARGs[5][0].push([o[_],p[d+1]]))}ARGs[5][1][0][0]=0}else l[l.length-2]=l[l.length-2].replace(n[0],""),n[2]=s[1];n[4]=0,n[s[1]=s[5]=0]=-1,attLOG=["package_tmpl",l,s]}else attLOG=["package_tmpl",a,s],n[4]=s[1]+parseInt(n[4]);if(1==e||n[4]<parseInt(n[2])){var c="localconn"==t[1][3][0]?150:300;if(ARGs[5][0]){for(var u=ARGs[5][0],f=ARGs[5][1][0][0],m=[[],0],R=0;f<u.length;f++)if(R=m[1]+u[f][1],m[0].push(u[f][0]),c<=(m[1]=R)){c=R,ARGs[5][1][0][0]=f+1;break}R<c&&(c=R),n[5]=ARGs[5][1][0][1]+" Where pin in("+m[0].join(",")+")"}if(0<(n[1]=c))return"localconn"!=t[1][3][0]&&(n[3]=t[1][4][3]),postMessage({cmd:"nxt",msg:[n.join("|"),s,attLOG]}),attLOG=[],!0;s=n,l=[l.slice(0)],attLOG=["package_tmpl","",s]}for(j=0;j<attLOG.length;j+=3)l.push(attLOG[j+1]);return postMessage({cmd:"end",msg:[[a,l],s,ARGs,null]}),self.close(),!0}const RST=function(t,e,s){var n,a=[],l=t[4].split("|");solg=l[1];try{if("OK"==t[0]&&parseInt(t[3])<0&&"2"===t[1][4][4]&&((a=t[4].split("|"))[1]=parseInt(a[1]),usr_tmpl(parseInt(t[1][4][4]),t,a,l,e,[],s)))return;if(!(n=ArchUtils.bz2.decode(atob(e)))||""==n.trim())throw e="ZERO_VAL";for(var r=n.split(/\r|\r\n|\n/),o=[],i=5<r.length?5:r.length-1;-1<i;i--)-1<r[i].indexOf("isThreadsafe:0,")&&(o=r.splice(i,1),0<i)&&(n=n.split(o[0]+"\n")[1]);if(o=[],!(0<parseInt(t[3]))){var p=parseInt(t[1][4][4]);a=[0,0,null,null,t[1][4][4],0];for(var _=r.length-1;-1<_;_--)if(""!=r[_].trim()){var d=r[_].split("|");if(l[2]=d.splice(0,1)[0],l[0]=d[0],a[0]=d[0],a[1]=a[5]=_+1,p<9&&usr_tmpl(p,t,a,l,n,r,s))return;break}return 1e5==parseInt(l[1])&&parseInt(t[3]),postMessage({cmd:"OK",msg:[[n,r],a,ARGs,null],"m[1][4]":t[1][4]}),void self.close()}var c=workerCODE(r,null,null,"l0g_SUM")(o,a,l),u=c[3],o=c[0],a=c[1],l=c[2];if(u&&(n=n.replace(u[0],u[1])),attLOG=attLOG.concat([t[1][3][2],n,a]),l[4]=a[1]+parseInt(l[4]),l[4]<parseInt(l[2]))return l[1]=parseInt(l[2])-parseInt(l[4]),101==s?2e4<l[1]&&(l[1]=2e4):1e4<l[1]&&(l[1]=3e4),"localconn"!=t[1][3][0]&&(l[3]=t[1][4][3]),void postMessage({cmd:"nxt",msg:[l.join("|"),a]})}catch(e){if(parseInt(t[3])<0)return a=[0,0,null,null,"",0],void postMessage({cmd:t[0],msg:[[n,[]],a,ARGs,null],"m[1][4]":t[1][4]})}RST_END.bkRST=[a,l,"ZERO_VAL"==e?"-2":"-1"],RST_END()},RST_END=function(){if(RST_END._deffer--,!(0<RST_END._deffer)){var e=workerCODE[ARGs[0]];if(e)for(var t=0;t<e.length;t++)attLOG.unshift(e[t][1]),attLOG.unshift(e[t][0]),attLOG.unshift(t);var s=idxDB,n=workerCODE(null,null,null,"SU").bind(attLOG)(),a=n[0],n=n[1],l=RST_END.bkRST[0],r=RST_END.bkRST[1];0==l.length?(e?(l=JSON.parse(JSON.stringify(a)))[4]=parseInt(l[4].length/2):l=[RST_END.bkRST[2],parseInt(r[2])-a[0],a[2],a[3],a[1],r[2]],idxDB=null):idxDB&&workerCODE.apply(function(){self.close()},[[n,a],ARGs[0],ARGs[1],"W",!0===attlog_oneday_rte?1:0]),postMessage({cmd:"end",msg:[[n,a],l,ARGs,!1===attlog_oneday_rte&&s?workerCODE(ARGs,null,null,"logRTE")([n,a]):null]}),idxDB||//!!! ***
-self.close()}},ajz=function(t){var e=t[1];if("localconn"==e[3][0])s=(n=e[0].split(";"))[0].split(String.fromCharCode(28)),t[1][4]=["re_fake_local","0",s[0],"0",s[1]],postMessage({cmd:"ajz",msg:[s[0],101]}),RST(t,"0"==n[0]?'ZERO_VAL"':n[1],101);else if(postMessage({cmd:"ajz",msg:[e[4][2],0]}),"0"==t[1][4][2])RST(t,"ZERO_VAL",0);else if(e[4]&&e[4][1]){var s=e[4][5]&&e[4][5].split("(deli)")[1],n=s&&atob(s)||e[3][2].split(String.fromCharCode(29));const a=new XMLHttpRequest;a.open("GET",s&&n||(-1==n[0].indexOf("http://")?"https://":"")+n[0]+"/zk/"+n[1].split("_")[0]+".php?f="+n[1]+(2<n.length?"&g="+encodeURIComponent(n[3])+"&h="+encodeURIComponent(n[2])+"&l="+encodeURIComponent(n[4]):"")+"&t="+(new Date).getTime(),!0),a.responseType="blob",a.onload=function(){var e;200===a.status?((e=new FileReader).onload=function(){RST(t,(e.result||"base64,").split("base64,")[1],0)},e.readAsDataURL(a.response)):RST(t,"",0)},a.onerror=function(e){t[0]="err",RST(t,"",0)},a.send()}},ARGs=JSON.parse(atob(initWOK)),attlog_oneday_rte=ARGs[3]&&!0===ARGs[3],dev_CAPA=JSON.parse(ARGs[6].split(String.fromCharCode(4))[4]);ver=ARGs[2],postMessage({cmd:indexedDB?"DB":"!indexedDB",msg:ARGs}),indexedDB&&(idxDB=self.indexedDB||self.webkitIndexedDB||self.mozIndexedDB||self.OIndexedDB||self.msIndexedDB,RST_END._deffer=2,workerCODE.apply(function(e){RST_END()},[null,ARGs[0],ARGs[1],"R",!0===attlog_oneday_rte?1:0]));
+
+    //modify iframe
+    onmessage = function (e) {
+        //
+        //handleMessage(event);
+        //debugger;
+        //
+        const cmd=e.data.cmd.toString().toLowerCase();
+        switch (cmd) {
+            case 'err': {
+                //
+                RST(e.data.dat, "", 0);//se error va chay xuong end
+                //muc dich la send old data ve hien thi tren browser
+                //
+                return;
+                break;
+            }
+            case 'fuk_up_heavy_tmpl_close': {
+                //debugger;
+                self.close();
+                //device_user.html send heavy template de upload len cloud. 
+                return;
+                break;
+            }
+            case 'end_up_heavy_tmpl_clean': {
+                up_heavy_tmpl_init.__me[cmd].apply(this, e.data);
+                return;
+                break;
+            }
+            case '1st_up_heavy_tmpl_task': {
+                //
+                //debugger;
+                //
+                up_heavy_tmpl_init.__me[cmd].apply(this, e.data.dat);
+                console.log('2.1 1st_up_heavy_tmpl_task', 'device_step2.html');
+                //debugger;
+                //UP_TMPL_WORKER.apply(this,e.data.dat);
+
+                //postMessage({ cmd: '1st_up_heavy_tmpl_task' });
+
+                //device_user.html send heavy template de upload len cloud. 
+                return;
+                break;
+            }
+            case 'up_heavy_tmpl_local': {
+                //debugger;
+                up_heavy_tmpl_init.__me[cmd].apply(this, e.data.dat);
+
+                return;
+                break;
+
+            }
+            case '1st_up_heavy_tmpl_init': {
+                //
+                //
+                //debugger;
+                //
+                up_heavy_tmpl_init.__me =  up_heavy_tmpl_init();
+                up_heavy_tmpl_init.__me[cmd](e.data);
+                //
+                console.log('1.1 1st_up_heavy_tmpl_init', 'device_step2.html');
+                //postMessage({ cmd: 'end_up_heavy_tmpl_init' });
+
+                //debugger;
+                return;
+                break;
+            }
+            //case 'rst_cordovanative_host': {
+            //    //
+            //    //debugger;
+            //    up_heavy_tmpl_init.__me.rst_cordovanative_host();
+            //    return;
+            //    break;
+            //};
+                
+        };
+        //
+        //
+        //
+        try {
+            //
+            //debugger;
+            //
+            ajz(e.data.dat);
+            //
+        } catch (err) {
+            //
+            postMessage({ cmd: 'err'});
+            //
+        };
+        //
+    };
+
+
+    var attLOG = []
+    ,
+
+    idxDB
+
+    ,
+
+    ver = 1;
+
+
+    function usr_tmpl(flagJOB, m, dMap, req, rst, lne, typ) {
+        //
+        //debugger;
+        //
+        if (flagJOB == 1) { // sumary user
+            //
+            //debugger;
+            req[0] = req[2] + "|" + req[0] + "|";//**** cache lai de replace line next the last 
+            //
+            //
+            if (ARGs[5][0]) {//user want download custom selection emps
+                //
+                //debugger;
+                //
+                const sEM = ARGs[5][0],
+                    l0g_NEW = workerCODE(lne, null, null, 'l0g_SUM')([/*usr*/], dMap, req),
+                    usr = l0g_NEW[0];
+                //
+                //remove pad info of last line
+                //lne[w] = lne[w].replace(req[2] + "|" + req[0] + "|", "")
+                //debugger;
+                lne[lne.length - 2] = l0g_NEW[3][1];
+                //
+                //
+                //
+                ARGs[5][0] = [];//reset dung lai...
+                //
+                req[2] = 0;
+                //
+                for (var dz = 0; dz < sEM.length; dz++) {
+                    //
+                    const isSEL = usr.indexOf('|' + sEM[dz]);
+                    if (isSEL > -1) {
+                        //
+                        req[2] += parseInt(usr[isSEL + 1]);
+                        //
+                        ARGs[5][0].push([sEM[dz], usr[isSEL + 1]]);
+                        //
+                    };
+                };
+                //ARGs[5][1][0][] default chua id mcc.
+                //***** chu y no la ARRAy ***************
+                ARGs[5][1][0][0] = 0;//gio chuyen sang index cua ARGs[5][0]
+                //
+            } else {
+                //
+                //debugger;
+                lne[lne.length - 2] = lne[lne.length - 2].replace(req[0], "");//(****)
+                //
+                req[2] = dMap[1]; // tong so luong template can download
+                //
+            };
+            //
+            req[4] = 0; // da download 0
+            //
+            dMap[1] = dMap[5] = 0;//reset so luong template download 
+            //
+            //
+            req[0] = -1;
+            //
+            //
+            //STORE HEAD OF FP TEMPLATE 
+            attLOG = ['package_tmpl', lne, dMap];
+            //
+            //
+        } else {
+            //
+            //debugger;
+            //
+            attLOG = ['package_tmpl', rst, dMap];
+            //
+            //tong so luong log da duoc downloaded.
+            req[4] = dMap[1] + parseInt(req[4]);
+            //
+        };
+        //
+        //so luong tra ve == line + voi lan truoc do parseInt(req[4])
+        if (flagJOB == 1 || req[4] < parseInt(req[2])) {
+            //
+            //debugger;
+            //
+            var solu =m[1][3][0] == 'localconn'?150: 300;//250 10 ngon tay !!!
+            //
+            //download for valid emps.
+            if (ARGs[5][0]) {
+                //
+                //debugger;
+                //
+                var validE = ARGs[5][0],
+                    curIDX = ARGs[5][1][0][0],//********* chu y no la ARRAY 
+                    getE = [[], 0],
+                    newSL = 0;
+                //
+                for (curIDX ; curIDX < validE.length; curIDX++) {
+                    //
+                    newSL = getE[1] + validE[curIDX][1];
+                    //
+                    getE[0].push(validE[curIDX][0]);//list valid emp
+                    getE[1] = newSL;//store lai ...
+                    //
+                    if (newSL >= solu) {
+                        //
+                        solu = newSL;//update lai so luong can download
+                        //
+                        ARGs[5][1][0][0] = curIDX + 1;//bat dau next block .. ********* chu y no la ARRAY 
+                        //
+                        break;
+                    };
+                    //
+                };
+                //
+                //
+                if (solu > newSL) solu = newSL;
+                //
+                //update query WHERE!
+                //********* chu y no la ARRAY 
+                req[5] = ARGs[5][1][0][1] + ' Where pin in(' + getE[0].join(',') + ')';
+                //
+                //
+            };
+            //
+            //
+            //fixed soluong template download moi lan
+            req[1] = solu;//moi lan 100 template !!!
+            //
+            //
+            if (solu > 0) {
+
+                //debugger;
+
+                if (m[1][3][0] != 'localconn') req[3] = m[1][4][3];//ftp host id **** index nay dung de get base64 block android app
+                //
+                //continue get nex block.
+                postMessage({ cmd: 'nxt', msg: [req.join('|'), dMap, attLOG] });//, inf: dMap
+                //
+                attLOG = [];//RESET
+                //
+                return true;
+            } else {
+               // debugger;
+                dMap = req;
+                lne = [lne.slice(0)];//clone lne at index 0
+                attLOG = ['package_tmpl', "", dMap];
+            };
+            //
+        };
+        //
+        //debugger;
+
+        for (j = 0; j < attLOG.length; j += 3) {
+            lne.push(attLOG[j + 1]);
+        };
+        //
+        postMessage({
+
+            cmd: 'end', msg: [[rst, lne], dMap, ARGs,
+
+                //index[3] extract rte_log neu download att_log mode ....
+                null
+
+            ]
+
+        });
+        //
+        //
+        self.close();
+        //
+        //
+        return true;
+    };
+
+    const RST = function (m, bz2, typ) {
+        //
+        //debugger;
+        //
+        var rst,dMap = [],
+            req = m[4].split('|')//m[1][3][2].split('|'),
+            solg = req[1];
+
+        try {
+            //
+            //
+            //
+            if (m[0] == 'OK' && parseInt(m[3]) < 0 //nho hon 0 dung cho user
+                &&  m[1][4][4] === '2') {//=2 la package template
+                //
+                //debugger;
+                //
+                dMap = m[4].split('|');//lay lai thong tin request lan truoc.
+                //
+                dMap[1] = parseInt(dMap[1]);//neu ko no bi loi int
+                //
+                //download template ..
+                if (usr_tmpl(parseInt(m[1][4][4]), m, dMap, req, bz2, [], typ)) {
+                    return;
+                };
+            };
+            //
+            //
+            //
+            //debugger;
+            //
+            rst = ArchUtils.bz2.decode(atob(bz2));
+            //
+            if (!rst || rst.trim() == '') {
+                bz2 = "ZERO_VAL";
+                throw bz2;
+            };
+            //
+            //lay request header
+            var lne = rst.split(/\r|\r\n|\n/),
+            usr = [],
+            z =lne.length>5?5:lne.length-1;
+            //
+            //console.log('RST = function (m, bz2,typ): ' + z);
+            //
+            //debugger;
+            //console.log(m[1][3][2]);
+            //console.log(m[2].wdms);
+            //
+            //may gita head openDatabase ...
+            for (var i = z; i > -1; i--) {
+                if (lne[i].indexOf('isThreadsafe:0,') > -1) {
+                    usr = lne.splice(i, 1);
+                    if (i>0) {
+                        //debugger;
+                        //du me cut luon trong rst...
+                        rst = rst.split(usr[0] + '\n')[1];
+                    };
+                };
+            };
+            //
+            //cap nhat lai z
+            usr = [];
+            z = 0;
+            //
+            //debugger;
+            //
+            if (parseInt(m[3]) > 0) {//tai log the cham cong ...
+
+                const l0g_NEW = workerCODE(lne, null, null, 'l0g_SUM')(usr, dMap, req),
+                    oriRST = l0g_NEW[3];
+                //
+                usr = l0g_NEW[0];
+                dMap = l0g_NEW[1];
+                req = l0g_NEW[2];
+                //
+                //
+                //remove maxID in origin result
+                if (oriRST) {
+                    rst = rst.replace(oriRST[0], oriRST[1]);
+                };
+                //
+                //
+                attLOG = attLOG.concat([m[1][3][2], rst, dMap]);
+                //
+                //
+                //
+                //debugger;
+                //tong so luong log da duoc downloaded.
+                req[4] = dMap[1] + parseInt(req[4]);
+                //
+                //so luong tra ve == line + voi lan truoc do parseInt(req[4])
+                if (req[4] < parseInt(req[2])) {
+                    //
+                    //debugger;
+                    req[1] = parseInt(req[2]) - parseInt(req[4]);
+                    if (typ == 101) {
+                        //
+                        if (req[1] > 20000) req[1] = 20000;
+                        //
+                        //req[1] = 50;//DEBUG TAI LOG CHAN ALL
+                        //
+                    } else {
+                        if (req[1] > 10000) req[1] = 30000;
+                        //if (req[1] > 500) req[1] = 800;
+                    };
+                    //
+                    //debugger;
+                    if (m[1][3][0] != 'localconn') req[3] = m[1][4][3];//ftp host id **** index nay dung de get base64 block android app
+                    //
+                    //continue get nex block.
+                    postMessage({ cmd: 'nxt', msg: [req.join('|'), dMap] });//, inf: dMap
+                    //
+                    return;
+
+                };
+            } else {
+                //
+                //debugger;
+                //
+                const flagJOB = parseInt(m[1][4][4]);//0: dowload user, 1: dowload sumary template , 9: finger print v9, 10: FP:10
+                //
+                dMap = [0, 0, null, null, m[1][4][4], 0];
+                //
+                for (var w = lne.length - 1; w > -1; w--) {
+                    //
+                    if (lne[w].trim() != '') {
+                        //
+                        const maxID = lne[w].split('|');
+                        //
+                        //
+                        ////bo idex dau tien vi day la total record
+                        req[2] = maxID.splice(0, 1)[0];//next block keep total here
+                        ////
+                        ////update start next block
+                        req[0] = maxID[0];
+                        ////
+                        dMap[0] = maxID[0];//ID log
+                        //
+                        dMap[1] = dMap[5] = w + 1;//so luong log
+                        //
+                        //
+                        //
+                        if (flagJOB < 9 && usr_tmpl(flagJOB, m, dMap, req, rst, lne, typ)) {
+                            return;
+                        };
+                        //
+                        //
+                        break;
+                    };
+                };
+                //
+                //download user
+                if (parseInt(req[1]) == 100000) {//tai user lan dau tien quy uoc 100.000
+                    //debugger;
+                    if (parseInt(m[3]) < -1000000) {//neu nho hon -1.000.000 = download luon template....
+
+                    };
+                };
+                //
+                //debugger;
+                //
+                postMessage({
+
+                    cmd: 'OK', msg: [[rst, lne], dMap, ARGs,
+
+                        //index[3] extract rte_log neu download att_log mode ....
+                        null
+
+                    ]
+                    , 'm[1][4]': m[1][4]//local connect bi thieu result giong nhu nodejs
+                });
+                //
+                self.close();
+                //
+                return;
+            };
+            //
+            //
+            //
+        } catch (err) {
+
+            //(***)     loi nodejs pipe ftp, upload ko kip / khac phuc bang cach thay dau '|' '&&'='\x26\x26'
+            //debugger;
+            //attLOG[m[2].id] = "-1"
+            //postMessage({ cmd: 'err', msg: [bz2.length] });
+            //return;
+
+            if (parseInt(m[3]) < 0) {//tai user
+
+                dMap = [0, 0, null, null, "", 0];
+
+                postMessage({
+
+                    cmd: m[0] /*OK or ERR */, msg: [[rst, []], dMap, ARGs,
+
+                        //index[3] extract rte_log neu download att_log mode ....
+                        null
+
+                    ]
+                    , 'm[1][4]': m[1][4]//local connect bi thieu result giong nhu nodejs
+                });
+
+                return;
+
+            };
+
+        };
+        //
+        //
+        //debugger;
+        //
+        RST_END.bkRST = [dMap, req, bz2 == 'ZERO_VAL' ? '-2' : '-1'];
+        RST_END();
+    }
+
+    ,
+
+    RST_END = function () {
+        //
+        RST_END._deffer--;
+
+        if (RST_END._deffer > 0) return;
+
+
+        //chua co db hoac loi
+        const oDAT=workerCODE[ARGs[0]];
+        if (oDAT) {//old db
+            for (var z = 0; z < oDAT.length; z++) {
+                attLOG.unshift(oDAT[z][1]);
+                attLOG.unshift(oDAT[z][0]);
+                attLOG.unshift(z);//chi cho vui
+            }
+        };
+
+
+        //debugger;
+        const bk_idxDB = idxDB,
+
+            JOI = workerCODE(null, null, null, 'SU').bind(attLOG)(),
+
+            RET = JOI[0],
+            rst = JOI[1];
+        //
+        //
+        var dMap = RST_END.bkRST[0],
+            req = RST_END.bkRST[1];
+        //
+        //
+        //
+        //neu block error >dMap.length==0
+        if (dMap.length == 0) {
+            //
+            //debugger;
+            if (oDAT) {
+                dMap = JSON.parse(JSON.stringify(RET));
+                dMap[4] = parseInt(dMap[4].length / 2);
+            } else {
+                dMap = [
+                    /*0: -1 erro*/RST_END.bkRST[2],//-2:ZERO_VAL
+                    /*1: count total error*/ parseInt(req[2]) - RET[0],
+                    /*2: tu ngay */RET[2],
+                    /*3: den ngay */RET[3],
+                    /*4: so luong emps */RET[1],
+                    /*5: total all log*/req[2]
+                ];
+            }
+            //
+            //debugger;
+            //cap nhat lai total result
+            //RET[0] = parseInt(req[2]);
+            //
+            idxDB = null;//flag terminate worker !!! ***
+            //
+        } else {
+
+            //debugger;
+
+            if (idxDB) {
+                //chi save khi that su lay duoc log the
+                //debugger;
+                workerCODE.apply(function () {
+
+                    //debugger;
+                    self.close();
+
+                }, [[rst, RET], ARGs[0], ARGs[1], "W", attlog_oneday_rte === true ? 1 : 0]);
+
+            };
+        };
+        //
+        postMessage({
+
+            cmd: 'end', msg: [[rst, RET], dMap, ARGs,
+
+                //index[3] extract rte_log neu download att_log mode ....
+                (attlog_oneday_rte === false && bk_idxDB ? workerCODE(ARGs, null, null, 'logRTE')([rst, RET]) : null)
+
+            ]
+
+        });
+        //
+        //
+        //
+        if (!idxDB) {//!!! ***
+            //chu y nearly die hear workerCODE
+            self.close();
+        };
+    }
+
+    ,
+
+    ajz = function (m) {
+
+        //debugger;
+
+        const m4 = m[1];
+        //
+        if (m4[3][0] == 'localconn') {
+
+            
+            //
+            //debugger;
+            //
+            const S = m4[0].split(';'),
+                usrS = S[0].split(String.fromCharCode(28));
+            //
+            m[1][4] = ["re_fake_local", "0", usrS[0], "0", usrS[1]];
+            //
+            postMessage({ cmd: 'ajz', msg: [usrS[0], 101] });
+            //
+            //debugger;
+            //console.log(S[0]);
+            RST(m, S[0]=='0'?'ZERO_VAL"': S[1], 101);
+            //
+            return;
+
+        } else {
+            //
+            //debugger;
+
+            postMessage({ cmd: 'ajz', msg: [m4[4][2], 0] });
+            //
+            if (m[1][4][2] == "0") {//so luong =0
+
+                RST(m, "ZERO_VAL", 0);
+
+                return;
+            };
+            //
+            if (!m4[4] || !m4[4][1]) {
+                //debugger;
+                return;
+            };
+        };
+        //
+
+
+
+
+
+        debugger;
+        const _adr = m4[4][5] && m4[4][5].split('(deli)')[1];
+        //
+        const adr = _adr && atob(_adr) || m4[3][2].split(String.fromCharCode(29));
+
+
+
+
+        //if (ARGs[5] && ARGs[5][1] && ARGs[5][1][0] && ARGs[5][1][0][2] == 'up_usrtmpl') {
+        //    //device_user upload usr template to device
+
+        //    UP_TMPL(m, adr);
+        //    return;
+
+        //};
+
+
+
+
+        
+
+        const  xhr = new XMLHttpRequest();
+
+
+
+
+
+        //http://wdms.dnd.vn:16868/zk/fio.php?f=' + adr[1], ''//,
+
+
+        xhr.open("GET", _adr && adr || (adr[0].indexOf('http://') == -1 ? 'https://' : '') + adr[0] + '/zk/' + adr[1].split('_')[0] + '.php?f=' + adr[1]
+
+            + (adr.length > 2 ? '&g=' + encodeURIComponent(adr[3]) + '&h=' + encodeURIComponent(adr[2]) + '&l=' + encodeURIComponent(adr[4]) : '') + '&t=' + new Date().getTime()
+
+            , true);
+
+        //xhr.open("GET", "http://wdms.dnd.vn:2432/zk/furi.php?f=furi_8674625&g=http&h=wdms.dnd.vn:2432&l=%2Fwww.hellohrm.somee.com%2Fzk%2Ff&t=1722398688716", true);
+
+        //xhr.open('POST', (!uri ? "/TabPageData" : uri) + "?XDEBUG_SESSION_START=154A5348", true);
+        //
+        //
+        //debugger;
+
+        xhr.responseType = 'blob';
+        //
+        xhr.onload = function () {
+            //
+            //debugger;
+            if (xhr.status === 200) {
+                //debugger;
+                // Get the response
+                //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'resolve', 'result': xhr.response });
+
+                //console.log('xhr.response: ', xhr.response);
+
+                var reader = new FileReader;
+                reader.onload = function () {
+                    //
+                    //debugger;
+                    RST(m, (reader.result || 'base64,' ).split('base64,')[1],0);
+                    //
+                };
+                reader.readAsDataURL(xhr.response);
+                //
+            } else {
+
+                //console.log('xhr.status: ', xhr.status);
+
+                //debugger;
+
+                RST(m, '',0);
+                //update khi liwayway project registration tra ve status text la code language
+                //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'reject', 'result': JSON.stringify({ status: xhr.status, statusText: xhr.statusText, response: xhr.response }) });// xhr.statusText });// xhr.status + " - " + xhr.statusText + '|' + xhr.response
+            }
+        };
+
+        xhr.onerror = function (e) {
+
+            //console.log('xhr.onerror: ',e);
+
+            //debugger;
+
+            m[0] = 'err';
+            RST(m, '', 0);
+            //
+            //update khi liwayway project registration tra ve status text la code language
+            //cb({ 'msgtype': 'newTabPage', 'ajaxsession': ajaxsession, 'kq': 'reject', 'result': JSON.stringify({ status: xhr.status, statusText: xhr.statusText, response: xhr.response }) });// xhr.status + " - " + xhr.statusText + '|' + xhr.response
+        };
+
+        xhr.send();
+
+    };
+
+    //debugger;
+    //
+    const ARGs = JSON.parse(atob(initWOK)),
+        attlog_oneday_rte = ARGs[3] && ARGs[3] === true,/*attlog_oneday*/
+        //
+        dev_CAPA = JSON.parse(ARGs[6].split(String.fromCharCode(4))[4]);//index[8] != -1 = thong so thiet bi de tinh toan package template download.
+    //
+
+    ver = ARGs[2];//version database
+    //
+
+    //debugger;
+
+   
+
+
+
+    //
+    //check browser support database
+    postMessage({ cmd: indexedDB? 'DB':'!indexedDB', msg: ARGs });
+    //
+    //debugger;
+    //attlog_oneday thi ko can care databse ....
+    if (indexedDB) {
+        //
+        //debugger;
+        //
+        idxDB = self.indexedDB || self.webkitIndexedDB || self.mozIndexedDB || self.OIndexedDB || self.msIndexedDB;
+        //
+        RST_END._deffer = 2;
+        //
+        //day la thoi diem lay luu tru log
+        workerCODE.apply(function (kq) {
+            //
+            //debugger;
+            RST_END();
+            //
+        }, [null, ARGs[0], ARGs[1], "R", attlog_oneday_rte === true ? 1 : 0]);
+
+    };
 
 </script>
 
